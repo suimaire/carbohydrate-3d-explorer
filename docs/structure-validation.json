@@ -1,0 +1,100 @@
+{
+  "GLC": {
+    "CIP_from_3D": {
+      "C1": "S",
+      "C2": "R",
+      "C3": "S",
+      "C4": "S",
+      "C5": "R"
+    },
+    "CIP_matches_CCD": true,
+    "ringSize": 6,
+    "axialNormalCosines": {
+      "C1": 0.9996,
+      "C2": 0.3639,
+      "C3": 0.3525,
+      "C4": 0.3638,
+      "C5": 0.3559
+    },
+    "chair": "4C1",
+    "chairHeights": {
+      "C1": -0.6823332931437966,
+      "C4": 0.7044074855713184
+    }
+  },
+  "BGC": {
+    "CIP_from_3D": {
+      "C2": "R",
+      "C3": "S",
+      "C4": "S",
+      "C5": "R",
+      "C1": "R"
+    },
+    "CIP_matches_CCD": true,
+    "ringSize": 6,
+    "axialNormalCosines": {
+      "C1": 0.3566,
+      "C2": 0.3641,
+      "C3": 0.3519,
+      "C4": 0.3639,
+      "C5": 0.3564
+    },
+    "chair": "4C1",
+    "chairHeights": {
+      "C1": -0.6831863920684409,
+      "C4": 0.7051007597200777
+    }
+  },
+  "GAL": {
+    "CIP_from_3D": {
+      "C1": "R",
+      "C2": "R",
+      "C3": "S",
+      "C4": "R",
+      "C5": "R"
+    },
+    "CIP_matches_CCD": true,
+    "ringSize": 6,
+    "axialNormalCosines": {
+      "C1": 0.3569,
+      "C2": 0.3635,
+      "C3": 0.3519,
+      "C4": 0.9995,
+      "C5": 0.3564
+    },
+    "chair": "4C1",
+    "chairHeights": {
+      "C1": -0.6821753729754051,
+      "C4": 0.7050796501997364
+    }
+  },
+  "FRU": {
+    "CIP_from_3D": {
+      "C2": "R",
+      "C3": "S",
+      "C4": "S",
+      "C5": "R"
+    },
+    "CIP_matches_CCD": true,
+    "ringSize": 5
+  },
+  "BDR": {
+    "CIP_from_3D": {
+      "C4": "R",
+      "C1": "R",
+      "C2": "R",
+      "C3": "S"
+    },
+    "CIP_matches_CCD": true,
+    "ringSize": 5
+  },
+  "2DR": {
+    "CIP_from_3D": {
+      "C3": "S",
+      "C4": "R",
+      "C1": "R"
+    },
+    "CIP_matches_CCD": true,
+    "ringSize": 5
+  }
+}

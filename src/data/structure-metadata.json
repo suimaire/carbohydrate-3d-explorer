@@ -1,0 +1,998 @@
+{
+  "GLC": {
+    "atoms": [
+      {
+        "name": "C1",
+        "element": "C",
+        "index": 0
+      },
+      {
+        "name": "C2",
+        "element": "C",
+        "index": 1
+      },
+      {
+        "name": "C3",
+        "element": "C",
+        "index": 2
+      },
+      {
+        "name": "C4",
+        "element": "C",
+        "index": 3
+      },
+      {
+        "name": "C5",
+        "element": "C",
+        "index": 4
+      },
+      {
+        "name": "C6",
+        "element": "C",
+        "index": 5
+      },
+      {
+        "name": "O1",
+        "element": "O",
+        "index": 6
+      },
+      {
+        "name": "O2",
+        "element": "O",
+        "index": 7
+      },
+      {
+        "name": "O3",
+        "element": "O",
+        "index": 8
+      },
+      {
+        "name": "O4",
+        "element": "O",
+        "index": 9
+      },
+      {
+        "name": "O5",
+        "element": "O",
+        "index": 10
+      },
+      {
+        "name": "O6",
+        "element": "O",
+        "index": 11
+      },
+      {
+        "name": "H1",
+        "element": "H",
+        "index": 12
+      },
+      {
+        "name": "H2",
+        "element": "H",
+        "index": 13
+      },
+      {
+        "name": "H3",
+        "element": "H",
+        "index": 14
+      },
+      {
+        "name": "H4",
+        "element": "H",
+        "index": 15
+      },
+      {
+        "name": "H5",
+        "element": "H",
+        "index": 16
+      },
+      {
+        "name": "H61",
+        "element": "H",
+        "index": 17
+      },
+      {
+        "name": "H62",
+        "element": "H",
+        "index": 18
+      },
+      {
+        "name": "HO1",
+        "element": "H",
+        "index": 19
+      },
+      {
+        "name": "HO2",
+        "element": "H",
+        "index": 20
+      },
+      {
+        "name": "HO3",
+        "element": "H",
+        "index": 21
+      },
+      {
+        "name": "HO4",
+        "element": "H",
+        "index": 22
+      },
+      {
+        "name": "HO6",
+        "element": "H",
+        "index": 23
+      }
+    ],
+    "carbons": {
+      "C1": 0,
+      "C2": 1,
+      "C3": 2,
+      "C4": 3,
+      "C5": 4,
+      "C6": 5
+    },
+    "ringAtoms": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      10
+    ],
+    "hydroxylAtoms": [
+      6,
+      7,
+      8,
+      9,
+      11,
+      19,
+      20,
+      21,
+      22,
+      23
+    ],
+    "anomericAtom": 0,
+    "sourceUrl": "https://www.rcsb.org/ligand/GLC",
+    "downloadUrl": "https://files.rcsb.org/ligands/download/GLC.cif",
+    "retrieved": "2026-09-07",
+    "sourceSHA256": "07eedff69de20c995d0aaf1f582bc6b9ecbf63bd6b4702dbb5141dcb3ab0f260",
+    "sdfSHA256": "4f4a2983519d913f02c1b497c0ad3dbc0868c96e70c045a0bf8996f96402fb9b",
+    "coordinateKind": "CCD ideal coordinates; rigid alignment only",
+    "validation": {
+      "CIP_from_3D": {
+        "C1": "S",
+        "C2": "R",
+        "C3": "S",
+        "C4": "S",
+        "C5": "R"
+      },
+      "CIP_matches_CCD": true,
+      "ringSize": 6,
+      "axialNormalCosines": {
+        "C1": 0.9996,
+        "C2": 0.3639,
+        "C3": 0.3525,
+        "C4": 0.3638,
+        "C5": 0.3559
+      },
+      "chair": "4C1",
+      "chairHeights": {
+        "C1": -0.6823332931437966,
+        "C4": 0.7044074855713184
+      }
+    }
+  },
+  "BGC": {
+    "atoms": [
+      {
+        "name": "C2",
+        "element": "C",
+        "index": 0
+      },
+      {
+        "name": "C3",
+        "element": "C",
+        "index": 1
+      },
+      {
+        "name": "C4",
+        "element": "C",
+        "index": 2
+      },
+      {
+        "name": "C5",
+        "element": "C",
+        "index": 3
+      },
+      {
+        "name": "C6",
+        "element": "C",
+        "index": 4
+      },
+      {
+        "name": "C1",
+        "element": "C",
+        "index": 5
+      },
+      {
+        "name": "O1",
+        "element": "O",
+        "index": 6
+      },
+      {
+        "name": "O2",
+        "element": "O",
+        "index": 7
+      },
+      {
+        "name": "O3",
+        "element": "O",
+        "index": 8
+      },
+      {
+        "name": "O4",
+        "element": "O",
+        "index": 9
+      },
+      {
+        "name": "O5",
+        "element": "O",
+        "index": 10
+      },
+      {
+        "name": "O6",
+        "element": "O",
+        "index": 11
+      },
+      {
+        "name": "H2",
+        "element": "H",
+        "index": 12
+      },
+      {
+        "name": "H3",
+        "element": "H",
+        "index": 13
+      },
+      {
+        "name": "H4",
+        "element": "H",
+        "index": 14
+      },
+      {
+        "name": "H5",
+        "element": "H",
+        "index": 15
+      },
+      {
+        "name": "H61",
+        "element": "H",
+        "index": 16
+      },
+      {
+        "name": "H62",
+        "element": "H",
+        "index": 17
+      },
+      {
+        "name": "H1",
+        "element": "H",
+        "index": 18
+      },
+      {
+        "name": "HO1",
+        "element": "H",
+        "index": 19
+      },
+      {
+        "name": "HO2",
+        "element": "H",
+        "index": 20
+      },
+      {
+        "name": "HO3",
+        "element": "H",
+        "index": 21
+      },
+      {
+        "name": "HO4",
+        "element": "H",
+        "index": 22
+      },
+      {
+        "name": "HO6",
+        "element": "H",
+        "index": 23
+      }
+    ],
+    "carbons": {
+      "C2": 0,
+      "C3": 1,
+      "C4": 2,
+      "C5": 3,
+      "C6": 4,
+      "C1": 5
+    },
+    "ringAtoms": [
+      5,
+      0,
+      1,
+      2,
+      3,
+      10
+    ],
+    "hydroxylAtoms": [
+      6,
+      7,
+      8,
+      9,
+      11,
+      19,
+      20,
+      21,
+      22,
+      23
+    ],
+    "anomericAtom": 5,
+    "sourceUrl": "https://www.rcsb.org/ligand/BGC",
+    "downloadUrl": "https://files.rcsb.org/ligands/download/BGC.cif",
+    "retrieved": "2026-09-07",
+    "sourceSHA256": "f5bb693508c257f731303e53d18fdcc03cd572bfce1d289c21ec1a2e76f3bb82",
+    "sdfSHA256": "1a62a7c6fbc1d6cf370f5f6cc673ba361cfc0a988c7d39d5dd988ca1dcea9bec",
+    "coordinateKind": "CCD ideal coordinates; rigid alignment only",
+    "validation": {
+      "CIP_from_3D": {
+        "C2": "R",
+        "C3": "S",
+        "C4": "S",
+        "C5": "R",
+        "C1": "R"
+      },
+      "CIP_matches_CCD": true,
+      "ringSize": 6,
+      "axialNormalCosines": {
+        "C1": 0.3566,
+        "C2": 0.3641,
+        "C3": 0.3519,
+        "C4": 0.3639,
+        "C5": 0.3564
+      },
+      "chair": "4C1",
+      "chairHeights": {
+        "C1": -0.6831863920684409,
+        "C4": 0.7051007597200777
+      }
+    }
+  },
+  "GAL": {
+    "atoms": [
+      {
+        "name": "C1",
+        "element": "C",
+        "index": 0
+      },
+      {
+        "name": "C2",
+        "element": "C",
+        "index": 1
+      },
+      {
+        "name": "C3",
+        "element": "C",
+        "index": 2
+      },
+      {
+        "name": "C4",
+        "element": "C",
+        "index": 3
+      },
+      {
+        "name": "C5",
+        "element": "C",
+        "index": 4
+      },
+      {
+        "name": "C6",
+        "element": "C",
+        "index": 5
+      },
+      {
+        "name": "O1",
+        "element": "O",
+        "index": 6
+      },
+      {
+        "name": "O2",
+        "element": "O",
+        "index": 7
+      },
+      {
+        "name": "O3",
+        "element": "O",
+        "index": 8
+      },
+      {
+        "name": "O4",
+        "element": "O",
+        "index": 9
+      },
+      {
+        "name": "O5",
+        "element": "O",
+        "index": 10
+      },
+      {
+        "name": "O6",
+        "element": "O",
+        "index": 11
+      },
+      {
+        "name": "H1",
+        "element": "H",
+        "index": 12
+      },
+      {
+        "name": "H2",
+        "element": "H",
+        "index": 13
+      },
+      {
+        "name": "H3",
+        "element": "H",
+        "index": 14
+      },
+      {
+        "name": "H4",
+        "element": "H",
+        "index": 15
+      },
+      {
+        "name": "H5",
+        "element": "H",
+        "index": 16
+      },
+      {
+        "name": "H61",
+        "element": "H",
+        "index": 17
+      },
+      {
+        "name": "H62",
+        "element": "H",
+        "index": 18
+      },
+      {
+        "name": "HO1",
+        "element": "H",
+        "index": 19
+      },
+      {
+        "name": "HO2",
+        "element": "H",
+        "index": 20
+      },
+      {
+        "name": "HO3",
+        "element": "H",
+        "index": 21
+      },
+      {
+        "name": "HO4",
+        "element": "H",
+        "index": 22
+      },
+      {
+        "name": "HO6",
+        "element": "H",
+        "index": 23
+      }
+    ],
+    "carbons": {
+      "C1": 0,
+      "C2": 1,
+      "C3": 2,
+      "C4": 3,
+      "C5": 4,
+      "C6": 5
+    },
+    "ringAtoms": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      10
+    ],
+    "hydroxylAtoms": [
+      6,
+      7,
+      8,
+      9,
+      11,
+      19,
+      20,
+      21,
+      22,
+      23
+    ],
+    "anomericAtom": 0,
+    "sourceUrl": "https://www.rcsb.org/ligand/GAL",
+    "downloadUrl": "https://files.rcsb.org/ligands/download/GAL.cif",
+    "retrieved": "2026-09-07",
+    "sourceSHA256": "404cefc4700fba1eb89e24f7cdaf5b831138c7056cd796ed7ef24e82ce0bc45a",
+    "sdfSHA256": "555481ce678f16d7ecb0e586f69f3fa1a1e341f955a5961faf7179649b6320d5",
+    "coordinateKind": "CCD ideal coordinates; rigid alignment only",
+    "validation": {
+      "CIP_from_3D": {
+        "C1": "R",
+        "C2": "R",
+        "C3": "S",
+        "C4": "R",
+        "C5": "R"
+      },
+      "CIP_matches_CCD": true,
+      "ringSize": 6,
+      "axialNormalCosines": {
+        "C1": 0.3569,
+        "C2": 0.3635,
+        "C3": 0.3519,
+        "C4": 0.9995,
+        "C5": 0.3564
+      },
+      "chair": "4C1",
+      "chairHeights": {
+        "C1": -0.6821753729754051,
+        "C4": 0.7050796501997364
+      }
+    }
+  },
+  "FRU": {
+    "atoms": [
+      {
+        "name": "C1",
+        "element": "C",
+        "index": 0
+      },
+      {
+        "name": "C2",
+        "element": "C",
+        "index": 1
+      },
+      {
+        "name": "C3",
+        "element": "C",
+        "index": 2
+      },
+      {
+        "name": "C4",
+        "element": "C",
+        "index": 3
+      },
+      {
+        "name": "C5",
+        "element": "C",
+        "index": 4
+      },
+      {
+        "name": "C6",
+        "element": "C",
+        "index": 5
+      },
+      {
+        "name": "O1",
+        "element": "O",
+        "index": 6
+      },
+      {
+        "name": "O2",
+        "element": "O",
+        "index": 7
+      },
+      {
+        "name": "O3",
+        "element": "O",
+        "index": 8
+      },
+      {
+        "name": "O4",
+        "element": "O",
+        "index": 9
+      },
+      {
+        "name": "O5",
+        "element": "O",
+        "index": 10
+      },
+      {
+        "name": "O6",
+        "element": "O",
+        "index": 11
+      },
+      {
+        "name": "H11",
+        "element": "H",
+        "index": 12
+      },
+      {
+        "name": "H12",
+        "element": "H",
+        "index": 13
+      },
+      {
+        "name": "H3",
+        "element": "H",
+        "index": 14
+      },
+      {
+        "name": "H4",
+        "element": "H",
+        "index": 15
+      },
+      {
+        "name": "H5",
+        "element": "H",
+        "index": 16
+      },
+      {
+        "name": "H61",
+        "element": "H",
+        "index": 17
+      },
+      {
+        "name": "H62",
+        "element": "H",
+        "index": 18
+      },
+      {
+        "name": "HO1",
+        "element": "H",
+        "index": 19
+      },
+      {
+        "name": "HO2",
+        "element": "H",
+        "index": 20
+      },
+      {
+        "name": "HO3",
+        "element": "H",
+        "index": 21
+      },
+      {
+        "name": "HO4",
+        "element": "H",
+        "index": 22
+      },
+      {
+        "name": "HO6",
+        "element": "H",
+        "index": 23
+      }
+    ],
+    "carbons": {
+      "C1": 0,
+      "C2": 1,
+      "C3": 2,
+      "C4": 3,
+      "C5": 4,
+      "C6": 5
+    },
+    "ringAtoms": [
+      1,
+      2,
+      3,
+      4,
+      10
+    ],
+    "hydroxylAtoms": [
+      6,
+      7,
+      8,
+      9,
+      11,
+      19,
+      20,
+      21,
+      22,
+      23
+    ],
+    "anomericAtom": 1,
+    "sourceUrl": "https://www.rcsb.org/ligand/FRU",
+    "downloadUrl": "https://files.rcsb.org/ligands/download/FRU.cif",
+    "retrieved": "2026-09-07",
+    "sourceSHA256": "703e377c5b9ececb7d03266cbe4d49b0fa9c2eacc1f975d09613afee12f165ad",
+    "sdfSHA256": "46403a8314253f732daacc753c058f69f1d41eb372fa4d2d33135bd702425bad",
+    "coordinateKind": "CCD ideal coordinates; rigid alignment only",
+    "validation": {
+      "CIP_from_3D": {
+        "C2": "R",
+        "C3": "S",
+        "C4": "S",
+        "C5": "R"
+      },
+      "CIP_matches_CCD": true,
+      "ringSize": 5
+    }
+  },
+  "BDR": {
+    "atoms": [
+      {
+        "name": "C4",
+        "element": "C",
+        "index": 0
+      },
+      {
+        "name": "O4",
+        "element": "O",
+        "index": 1
+      },
+      {
+        "name": "C1",
+        "element": "C",
+        "index": 2
+      },
+      {
+        "name": "O1",
+        "element": "O",
+        "index": 3
+      },
+      {
+        "name": "C2",
+        "element": "C",
+        "index": 4
+      },
+      {
+        "name": "O2",
+        "element": "O",
+        "index": 5
+      },
+      {
+        "name": "C3",
+        "element": "C",
+        "index": 6
+      },
+      {
+        "name": "O3",
+        "element": "O",
+        "index": 7
+      },
+      {
+        "name": "C5",
+        "element": "C",
+        "index": 8
+      },
+      {
+        "name": "O5",
+        "element": "O",
+        "index": 9
+      },
+      {
+        "name": "H4",
+        "element": "H",
+        "index": 10
+      },
+      {
+        "name": "H1",
+        "element": "H",
+        "index": 11
+      },
+      {
+        "name": "HO1",
+        "element": "H",
+        "index": 12
+      },
+      {
+        "name": "H2",
+        "element": "H",
+        "index": 13
+      },
+      {
+        "name": "HO2",
+        "element": "H",
+        "index": 14
+      },
+      {
+        "name": "H3",
+        "element": "H",
+        "index": 15
+      },
+      {
+        "name": "HO3",
+        "element": "H",
+        "index": 16
+      },
+      {
+        "name": "H51",
+        "element": "H",
+        "index": 17
+      },
+      {
+        "name": "H52",
+        "element": "H",
+        "index": 18
+      },
+      {
+        "name": "HO5",
+        "element": "H",
+        "index": 19
+      }
+    ],
+    "carbons": {
+      "C4": 0,
+      "C1": 2,
+      "C2": 4,
+      "C3": 6,
+      "C5": 8
+    },
+    "ringAtoms": [
+      2,
+      4,
+      6,
+      0,
+      1
+    ],
+    "hydroxylAtoms": [
+      3,
+      5,
+      7,
+      9,
+      12,
+      14,
+      16,
+      19
+    ],
+    "anomericAtom": 2,
+    "sourceUrl": "https://www.rcsb.org/ligand/BDR",
+    "downloadUrl": "https://files.rcsb.org/ligands/download/BDR.cif",
+    "retrieved": "2026-09-07",
+    "sourceSHA256": "2741c99254b1f32d0f35506be12e813974d15dca573efd61accd95f7e80b6dfa",
+    "sdfSHA256": "f4397d87ae97e418301254df48b7a06f1c85ff08206fb720ac2b50617d770a9a",
+    "coordinateKind": "CCD ideal coordinates; rigid alignment only",
+    "validation": {
+      "CIP_from_3D": {
+        "C4": "R",
+        "C1": "R",
+        "C2": "R",
+        "C3": "S"
+      },
+      "CIP_matches_CCD": true,
+      "ringSize": 5
+    }
+  },
+  "2DR": {
+    "atoms": [
+      {
+        "name": "C2",
+        "element": "C",
+        "index": 0
+      },
+      {
+        "name": "C3",
+        "element": "C",
+        "index": 1
+      },
+      {
+        "name": "C4",
+        "element": "C",
+        "index": 2
+      },
+      {
+        "name": "C5",
+        "element": "C",
+        "index": 3
+      },
+      {
+        "name": "O1",
+        "element": "O",
+        "index": 4
+      },
+      {
+        "name": "O3",
+        "element": "O",
+        "index": 5
+      },
+      {
+        "name": "O4",
+        "element": "O",
+        "index": 6
+      },
+      {
+        "name": "O5",
+        "element": "O",
+        "index": 7
+      },
+      {
+        "name": "C1",
+        "element": "C",
+        "index": 8
+      },
+      {
+        "name": "H2",
+        "element": "H",
+        "index": 9
+      },
+      {
+        "name": "H22C",
+        "element": "H",
+        "index": 10
+      },
+      {
+        "name": "H3",
+        "element": "H",
+        "index": 11
+      },
+      {
+        "name": "H1",
+        "element": "H",
+        "index": 12
+      },
+      {
+        "name": "H4",
+        "element": "H",
+        "index": 13
+      },
+      {
+        "name": "HO3",
+        "element": "H",
+        "index": 14
+      },
+      {
+        "name": "H51",
+        "element": "H",
+        "index": 15
+      },
+      {
+        "name": "H52",
+        "element": "H",
+        "index": 16
+      },
+      {
+        "name": "HO5",
+        "element": "H",
+        "index": 17
+      },
+      {
+        "name": "HO1",
+        "element": "H",
+        "index": 18
+      }
+    ],
+    "carbons": {
+      "C2": 0,
+      "C3": 1,
+      "C4": 2,
+      "C5": 3,
+      "C1": 8
+    },
+    "ringAtoms": [
+      8,
+      0,
+      1,
+      2,
+      6
+    ],
+    "hydroxylAtoms": [
+      4,
+      5,
+      7,
+      18,
+      14,
+      17
+    ],
+    "anomericAtom": 8,
+    "sourceUrl": "https://www.rcsb.org/ligand/2DR",
+    "downloadUrl": "https://files.rcsb.org/ligands/download/2DR.cif",
+    "retrieved": "2026-09-07",
+    "sourceSHA256": "4335fadd039ac24fc4ec14083bbbefe1343975c623f3b8381ef32af843e2bcdb",
+    "sdfSHA256": "a5da03a27208c24823c49c72ac379d99be0380feb4f3c4d9f3cbd9c88724c955",
+    "coordinateKind": "CCD ideal coordinates; rigid alignment only",
+    "validation": {
+      "CIP_from_3D": {
+        "C3": "S",
+        "C4": "R",
+        "C1": "R"
+      },
+      "CIP_matches_CCD": true,
+      "ringSize": 5
+    }
+  }
+}
