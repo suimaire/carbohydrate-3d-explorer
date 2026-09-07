@@ -38,7 +38,7 @@ npm run preview
 
 ## GitHub Pages
 
-`vite.config.ts`의 `base: './'`와 `import.meta.env.BASE_URL`을 사용하므로 `/repository-name/`에서도 JS/CSS/SDF/service worker 경로가 상대적으로 해석됩니다. `npm run build` 후 **dist 폴더 내용**을 Pages에 배포하세요. 별도 서버 라우팅은 없습니다. 이 저장소에는 GitHub 원격이나 자동 배포 workflow를 임의로 설정하지 않습니다. `.openai/hosting.json`은 선택적인 Sites 배포 메타데이터이며 Pages 실행에는 필요하지 않습니다.
+`vite.config.ts`의 `base: '/carbohydrate-3d-explorer/'`와 `import.meta.env.BASE_URL`을 사용하므로 JS/CSS/SDF/service worker 경로가 모두 `https://suimaire.github.io/carbohydrate-3d-explorer/` 하위를 가리킵니다. `.github/workflows/deploy.yml`이 main/master push 시 `npm run build` 후 `dist`를 Pages에 배포합니다 (저장소 Settings → Pages → Source를 GitHub Actions로 설정해야 합니다). 별도 서버 라우팅은 없습니다. 이 저장소의 git remote나 branch 설정은 변경하지 않았습니다. `.openai/hosting.json`은 선택적인 Sites 배포 메타데이터이며 Pages 실행에는 필요하지 않습니다.
 
 ## 분자 데이터 및 검증
 
