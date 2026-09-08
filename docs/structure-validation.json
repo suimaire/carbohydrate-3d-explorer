@@ -18,8 +18,12 @@
     },
     "chair": "4C1",
     "chairHeights": {
-      "C1": -0.6823332931437966,
-      "C4": 0.7044074855713184
+      "C1": -0.6823,
+      "C4": 0.7044
+    },
+    "anomericConfiguration": {
+      "anomer": "alpha",
+      "anomericSignedVolume": 2.4059
     }
   },
   "BGC": {
@@ -41,8 +45,12 @@
     },
     "chair": "4C1",
     "chairHeights": {
-      "C1": -0.6831863920684409,
-      "C4": 0.7051007597200777
+      "C1": -0.6832,
+      "C4": 0.7051
+    },
+    "anomericConfiguration": {
+      "anomer": "beta",
+      "anomericSignedVolume": -2.4098
     }
   },
   "GAL": {
@@ -64,8 +72,12 @@
     },
     "chair": "4C1",
     "chairHeights": {
-      "C1": -0.6821753729754051,
-      "C4": 0.7050796501997364
+      "C1": -0.6822,
+      "C4": 0.7051
+    },
+    "anomericConfiguration": {
+      "anomer": "beta",
+      "anomericSignedVolume": -2.4085
     }
   },
   "FRU": {
@@ -76,7 +88,11 @@
       "C5": "R"
     },
     "CIP_matches_CCD": true,
-    "ringSize": 5
+    "ringSize": 5,
+    "anomericConfiguration": {
+      "anomer": "beta",
+      "anomericSignedVolume": -2.4716
+    }
   },
   "BDR": {
     "CIP_from_3D": {
@@ -86,7 +102,11 @@
       "C3": "S"
     },
     "CIP_matches_CCD": true,
-    "ringSize": 5
+    "ringSize": 5,
+    "anomericConfiguration": {
+      "anomer": "beta",
+      "anomericSignedVolume": -2.5485
+    }
   },
   "2DR": {
     "CIP_from_3D": {
@@ -95,6 +115,1646 @@
       "C1": "R"
     },
     "CIP_matches_CCD": true,
-    "ringSize": 5
+    "ringSize": 5,
+    "anomericConfiguration": {
+      "anomer": "beta",
+      "anomericSignedVolume": -2.5594
+    }
+  },
+  "anomericReference": {
+    "alphaSign": 1,
+    "referenceVolumes": {
+      "GLC": 2.4059,
+      "BGC": -2.4098,
+      "GAL": -2.4085,
+      "FRU": -2.4716,
+      "BDR": -2.5485,
+      "2DR": -2.5594
+    }
+  },
+  "MAL": {
+    "source": "wwPDB Chemical Component Dictionary",
+    "component": "MAL",
+    "CIP_from_3D": {
+      "C1'": "S",
+      "C2'": "R",
+      "C3'": "R",
+      "C4'": "S",
+      "C5'": "R",
+      "C1": "R",
+      "C2": "R",
+      "C3": "S",
+      "C4": "S",
+      "C5": "R"
+    },
+    "CIP_matches_CCD": true,
+    "CIP_after_serialisation": true,
+    "rings": [
+      6,
+      6
+    ],
+    "residues": {
+      "1": {
+        "component": "GLC",
+        "anomer": "alpha",
+        "superpositionRmsd": 0.0086,
+        "anomericSignedVolume": 2.4047,
+        "freeAnomericOH": true
+      },
+      "2": {
+        "component": "GLC",
+        "anomer": "alpha",
+        "superpositionRmsd": 0.0006,
+        "anomericSignedVolume": 2.4077,
+        "freeAnomericOH": false
+      }
+    },
+    "linkage": {
+      "notation": "\u03b1(1\u21924)",
+      "bond": 1.429,
+      "angle": 114.01,
+      "phi": 72.67,
+      "psi": 85.82
+    },
+    "reducingEnds": [
+      "B"
+    ]
+  },
+  "CBI": {
+    "source": "wwPDB Chemical Component Dictionary",
+    "component": "CBI",
+    "CIP_from_3D": {
+      "C2'": "R",
+      "C3'": "R",
+      "C4'": "S",
+      "C5'": "R",
+      "C1'": "R",
+      "C2": "R",
+      "C3": "S",
+      "C4": "S",
+      "C5": "R",
+      "C1": "S"
+    },
+    "CIP_matches_CCD": true,
+    "CIP_after_serialisation": true,
+    "rings": [
+      6,
+      6
+    ],
+    "residues": {
+      "1": {
+        "component": "BGC",
+        "anomer": "beta",
+        "superpositionRmsd": 0.0008,
+        "anomericSignedVolume": -2.4078,
+        "freeAnomericOH": true
+      },
+      "2": {
+        "component": "BGC",
+        "anomer": "beta",
+        "superpositionRmsd": 0.0006,
+        "anomericSignedVolume": -2.4081,
+        "freeAnomericOH": false
+      }
+    },
+    "linkage": {
+      "notation": "\u03b2(1\u21924)",
+      "bond": 1.429,
+      "angle": 114.05,
+      "phi": -65.05,
+      "psi": 90.02
+    },
+    "reducingEnds": [
+      "B"
+    ]
+  },
+  "LAT": {
+    "source": "wwPDB Chemical Component Dictionary",
+    "component": "LAT",
+    "CIP_from_3D": {
+      "C2'": "R",
+      "C3'": "R",
+      "C4'": "S",
+      "C5'": "R",
+      "C1'": "R",
+      "C1": "S",
+      "C2": "R",
+      "C3": "S",
+      "C4": "R",
+      "C5": "R"
+    },
+    "CIP_matches_CCD": true,
+    "CIP_after_serialisation": true,
+    "rings": [
+      6,
+      6
+    ],
+    "residues": {
+      "1": {
+        "component": "BGC",
+        "anomer": "beta",
+        "superpositionRmsd": 0.0006,
+        "anomericSignedVolume": -2.4078,
+        "freeAnomericOH": true
+      },
+      "2": {
+        "component": "GAL",
+        "anomer": "beta",
+        "superpositionRmsd": 0.0007,
+        "anomericSignedVolume": -2.4041,
+        "freeAnomericOH": false
+      }
+    },
+    "linkage": {
+      "notation": "\u03b2(1\u21924)",
+      "bond": 1.428,
+      "angle": 114.03,
+      "phi": -65.01,
+      "psi": 89.95
+    },
+    "reducingEnds": [
+      "B"
+    ]
+  },
+  "SUC": {
+    "source": "wwPDB Chemical Component Dictionary",
+    "component": "SUC",
+    "CIP_from_3D": {
+      "C1": "R",
+      "C2": "R",
+      "C3": "S",
+      "C4": "S",
+      "C5": "R",
+      "C2'": "S",
+      "C3'": "S",
+      "C4'": "S",
+      "C5'": "R"
+    },
+    "CIP_matches_CCD": true,
+    "CIP_after_serialisation": true,
+    "rings": [
+      6,
+      5
+    ],
+    "residues": {
+      "1": {
+        "component": "GLC",
+        "anomer": "alpha",
+        "superpositionRmsd": 0.0007,
+        "anomericSignedVolume": 2.4062,
+        "freeAnomericOH": false
+      },
+      "2": {
+        "component": "FRU",
+        "anomer": "beta",
+        "superpositionRmsd": 0.0593,
+        "anomericSignedVolume": -2.4713,
+        "freeAnomericOH": false
+      }
+    },
+    "linkage": {
+      "notation": "\u03b1(1\u21922)\u03b2",
+      "bond": 1.429,
+      "angle": 114.02,
+      "phi": 69.01,
+      "psi": 55.16
+    },
+    "reducingEnds": []
+  },
+  "glycosidicLinkageReferences": {
+    "a14": {
+      "source": "PubChem CID 439186 (maltose), computed 3D conformer",
+      "donorRingRmsd": 0.0321,
+      "donorAnomer": "alpha",
+      "donorAnomericSignedVolume": 2.1716,
+      "bond": 1.426,
+      "angle": 111.35,
+      "phi": 86.31,
+      "psi": 88.71,
+      "file": "public/molecules/references/maltose-PubChem-CID439186.sdf",
+      "sourceSHA256": "938aa1307c02195abda6d9e7c68581f2c4cbda97f59bcc21eb16c9b4cdeb788f",
+      "sourceUrl": "https://pubchem.ncbi.nlm.nih.gov/compound/439186"
+    },
+    "b14": {
+      "source": "PubChem CID 439178 (cellobiose), computed 3D conformer",
+      "donorRingRmsd": 0.0382,
+      "donorAnomer": "beta",
+      "donorAnomericSignedVolume": -2.3999,
+      "bond": 1.427,
+      "angle": 111.31,
+      "phi": -59.19,
+      "psi": 118.71,
+      "file": "public/molecules/references/cellobiose-PubChem-CID439178.sdf",
+      "sourceSHA256": "3668b0fb9e21be0c128703540175363c0d7c33002acd247dfbe0f04407d5a14a",
+      "sourceUrl": "https://pubchem.ncbi.nlm.nih.gov/compound/439178"
+    },
+    "a16": {
+      "source": "PubChem CID 439193 (isomaltose), computed 3D conformer",
+      "donorRingRmsd": 0.0321,
+      "donorAnomer": "alpha",
+      "donorAnomericSignedVolume": 2.1719,
+      "bond": 1.426,
+      "angle": 111.74,
+      "phi": 54.61,
+      "psi": 180.0,
+      "omega": -61.22,
+      "file": "public/molecules/references/isomaltose-PubChem-CID439193.sdf",
+      "sourceSHA256": "92f29b8f3826db0f1a60ba060f54aa08558d17ed5c27a1261cfa7033f5446e82",
+      "sourceUrl": "https://pubchem.ncbi.nlm.nih.gov/compound/439193"
+    }
+  },
+  "glycosidicLinkageCrossCheck": {
+    "a14": {
+      "source": "wwPDB CCD MAL",
+      "acceptorRingRmsd": 0.0006,
+      "donorRingRmsd": 0.0006,
+      "bridgingOxygenDeviation": 0.0007,
+      "bond": 1.429,
+      "angle": 114.01,
+      "phi": 72.67,
+      "psi": 85.82
+    },
+    "b14": {
+      "source": "wwPDB CCD CBI",
+      "acceptorRingRmsd": 0.0006,
+      "donorRingRmsd": 0.0007,
+      "bridgingOxygenDeviation": 0.0009,
+      "bond": 1.429,
+      "angle": 114.05,
+      "phi": -65.05,
+      "psi": 90.02
+    }
+  },
+  "AMYLOSE": {
+    "kind": "representative fragment, assembled from validated residues",
+    "residues": 10,
+    "atoms": 213,
+    "residueChecks": [
+      {
+        "id": "A",
+        "anomer": "alpha",
+        "anomericSignedVolume": 2.1612,
+        "ringChiralitySigns": {
+          "C2": -1,
+          "C3": 1,
+          "C4": -1,
+          "C5": 1
+        },
+        "CIP": {
+          "C1": "R",
+          "C2": "R",
+          "C3": "S",
+          "C4": "S",
+          "C5": "R"
+        }
+      },
+      {
+        "id": "B",
+        "anomer": "alpha",
+        "anomericSignedVolume": 2.1612,
+        "ringChiralitySigns": {
+          "C2": -1,
+          "C3": 1,
+          "C4": -1,
+          "C5": 1
+        },
+        "CIP": {
+          "C1": "R",
+          "C2": "R",
+          "C3": "R",
+          "C4": "S",
+          "C5": "R"
+        }
+      },
+      {
+        "id": "C",
+        "anomer": "alpha",
+        "anomericSignedVolume": 2.1612,
+        "ringChiralitySigns": {
+          "C2": -1,
+          "C3": 1,
+          "C4": -1,
+          "C5": 1
+        },
+        "CIP": {
+          "C1": "R",
+          "C2": "R",
+          "C3": "R",
+          "C4": "S",
+          "C5": "R"
+        }
+      },
+      {
+        "id": "D",
+        "anomer": "alpha",
+        "anomericSignedVolume": 2.1612,
+        "ringChiralitySigns": {
+          "C2": -1,
+          "C3": 1,
+          "C4": -1,
+          "C5": 1
+        },
+        "CIP": {
+          "C1": "R",
+          "C2": "R",
+          "C3": "R",
+          "C4": "S",
+          "C5": "R"
+        }
+      },
+      {
+        "id": "E",
+        "anomer": "alpha",
+        "anomericSignedVolume": 2.1612,
+        "ringChiralitySigns": {
+          "C2": -1,
+          "C3": 1,
+          "C4": -1,
+          "C5": 1
+        },
+        "CIP": {
+          "C1": "R",
+          "C2": "R",
+          "C3": "R",
+          "C4": "S",
+          "C5": "R"
+        }
+      },
+      {
+        "id": "F",
+        "anomer": "alpha",
+        "anomericSignedVolume": 2.1612,
+        "ringChiralitySigns": {
+          "C2": -1,
+          "C3": 1,
+          "C4": -1,
+          "C5": 1
+        },
+        "CIP": {
+          "C1": "R",
+          "C2": "R",
+          "C3": "R",
+          "C4": "S",
+          "C5": "R"
+        }
+      },
+      {
+        "id": "G",
+        "anomer": "alpha",
+        "anomericSignedVolume": 2.1612,
+        "ringChiralitySigns": {
+          "C2": -1,
+          "C3": 1,
+          "C4": -1,
+          "C5": 1
+        },
+        "CIP": {
+          "C1": "R",
+          "C2": "R",
+          "C3": "R",
+          "C4": "S",
+          "C5": "R"
+        }
+      },
+      {
+        "id": "H",
+        "anomer": "alpha",
+        "anomericSignedVolume": 2.1612,
+        "ringChiralitySigns": {
+          "C2": -1,
+          "C3": 1,
+          "C4": -1,
+          "C5": 1
+        },
+        "CIP": {
+          "C1": "R",
+          "C2": "R",
+          "C3": "R",
+          "C4": "S",
+          "C5": "R"
+        }
+      },
+      {
+        "id": "I",
+        "anomer": "alpha",
+        "anomericSignedVolume": 2.1612,
+        "ringChiralitySigns": {
+          "C2": -1,
+          "C3": 1,
+          "C4": -1,
+          "C5": 1
+        },
+        "CIP": {
+          "C1": "R",
+          "C2": "R",
+          "C3": "R",
+          "C4": "S",
+          "C5": "R"
+        }
+      },
+      {
+        "id": "J",
+        "anomer": "alpha",
+        "anomericSignedVolume": 2.4049,
+        "ringChiralitySigns": {
+          "C2": -1,
+          "C3": 1,
+          "C4": -1,
+          "C5": 1
+        },
+        "CIP": {
+          "C1": "S",
+          "C2": "R",
+          "C3": "R",
+          "C4": "S",
+          "C5": "R"
+        }
+      }
+    ],
+    "linkages": [
+      {
+        "id": "L1",
+        "notation": "\u03b1(1\u21924)",
+        "bond": 1.424,
+        "angle": 111.69,
+        "phi": 86.69,
+        "psi": 88.4
+      },
+      {
+        "id": "L2",
+        "notation": "\u03b1(1\u21924)",
+        "bond": 1.424,
+        "angle": 111.69,
+        "phi": 86.69,
+        "psi": 88.4
+      },
+      {
+        "id": "L3",
+        "notation": "\u03b1(1\u21924)",
+        "bond": 1.424,
+        "angle": 111.69,
+        "phi": 86.69,
+        "psi": 88.4
+      },
+      {
+        "id": "L4",
+        "notation": "\u03b1(1\u21924)",
+        "bond": 1.424,
+        "angle": 111.69,
+        "phi": 86.69,
+        "psi": 88.4
+      },
+      {
+        "id": "L5",
+        "notation": "\u03b1(1\u21924)",
+        "bond": 1.424,
+        "angle": 111.69,
+        "phi": 86.69,
+        "psi": 88.4
+      },
+      {
+        "id": "L6",
+        "notation": "\u03b1(1\u21924)",
+        "bond": 1.424,
+        "angle": 111.69,
+        "phi": 86.69,
+        "psi": 88.4
+      },
+      {
+        "id": "L7",
+        "notation": "\u03b1(1\u21924)",
+        "bond": 1.424,
+        "angle": 111.69,
+        "phi": 86.69,
+        "psi": 88.4
+      },
+      {
+        "id": "L8",
+        "notation": "\u03b1(1\u21924)",
+        "bond": 1.424,
+        "angle": 111.69,
+        "phi": 86.69,
+        "psi": 88.4
+      },
+      {
+        "id": "L9",
+        "notation": "\u03b1(1\u21924)",
+        "bond": 1.424,
+        "angle": 111.69,
+        "phi": 86.69,
+        "psi": 88.4
+      }
+    ],
+    "linkageCounts": {
+      "a14": 9
+    },
+    "branchTorsions": [],
+    "minimumNonAdjacentResidueDistance": 4.717,
+    "closestNonAdjacentResidues": [
+      "H",
+      "F"
+    ],
+    "minimumNonBondedHeavyDistance": 2.913,
+    "closestNonBondedPair": [
+      "I:C1",
+      "J:O3"
+    ],
+    "hydrogenRelaxationHeavyAtomShift": 0.0003,
+    "ringSizes": [
+      6,
+      6,
+      6,
+      6,
+      6,
+      6,
+      6,
+      6,
+      6,
+      6
+    ],
+    "residueTemplate": "GLC",
+    "templateRingChiralitySigns": {
+      "C2": -1,
+      "C3": 1,
+      "C4": -1,
+      "C5": 1
+    },
+    "stereochemistryUnchangedAfterSerialisation": true,
+    "screw": {
+      "degreesPerResidue": 56.9,
+      "residuesPerTurn": 6.33,
+      "risePerResidue": 4.0
+    }
+  },
+  "AMYLOPECTIN": {
+    "kind": "representative fragment, assembled from validated residues",
+    "residues": 12,
+    "atoms": 255,
+    "residueChecks": [
+      {
+        "id": "A",
+        "anomer": "alpha",
+        "anomericSignedVolume": 2.1612,
+        "ringChiralitySigns": {
+          "C2": -1,
+          "C3": 1,
+          "C4": -1,
+          "C5": 1
+        },
+        "CIP": {
+          "C1": "R",
+          "C2": "R",
+          "C3": "S",
+          "C4": "S",
+          "C5": "R"
+        }
+      },
+      {
+        "id": "B",
+        "anomer": "alpha",
+        "anomericSignedVolume": 2.1612,
+        "ringChiralitySigns": {
+          "C2": -1,
+          "C3": 1,
+          "C4": -1,
+          "C5": 1
+        },
+        "CIP": {
+          "C1": "R",
+          "C2": "R",
+          "C3": "R",
+          "C4": "S",
+          "C5": "R"
+        }
+      },
+      {
+        "id": "C",
+        "anomer": "alpha",
+        "anomericSignedVolume": 2.1612,
+        "ringChiralitySigns": {
+          "C2": -1,
+          "C3": 1,
+          "C4": -1,
+          "C5": 1
+        },
+        "CIP": {
+          "C1": "R",
+          "C2": "R",
+          "C3": "R",
+          "C4": "S",
+          "C5": "R"
+        }
+      },
+      {
+        "id": "D",
+        "anomer": "alpha",
+        "anomericSignedVolume": 2.1613,
+        "ringChiralitySigns": {
+          "C2": -1,
+          "C3": 1,
+          "C4": -1,
+          "C5": 1
+        },
+        "CIP": {
+          "C1": "R",
+          "C2": "R",
+          "C3": "R",
+          "C4": "S",
+          "C5": "R"
+        }
+      },
+      {
+        "id": "E",
+        "anomer": "alpha",
+        "anomericSignedVolume": 2.1612,
+        "ringChiralitySigns": {
+          "C2": -1,
+          "C3": 1,
+          "C4": -1,
+          "C5": 1
+        },
+        "CIP": {
+          "C1": "R",
+          "C2": "R",
+          "C3": "R",
+          "C4": "S",
+          "C5": "R"
+        }
+      },
+      {
+        "id": "F",
+        "anomer": "alpha",
+        "anomericSignedVolume": 2.1612,
+        "ringChiralitySigns": {
+          "C2": -1,
+          "C3": 1,
+          "C4": -1,
+          "C5": 1
+        },
+        "CIP": {
+          "C1": "R",
+          "C2": "R",
+          "C3": "R",
+          "C4": "S",
+          "C5": "R"
+        }
+      },
+      {
+        "id": "G",
+        "anomer": "alpha",
+        "anomericSignedVolume": 2.1612,
+        "ringChiralitySigns": {
+          "C2": -1,
+          "C3": 1,
+          "C4": -1,
+          "C5": 1
+        },
+        "CIP": {
+          "C1": "R",
+          "C2": "R",
+          "C3": "R",
+          "C4": "S",
+          "C5": "R"
+        }
+      },
+      {
+        "id": "H",
+        "anomer": "alpha",
+        "anomericSignedVolume": 2.4049,
+        "ringChiralitySigns": {
+          "C2": -1,
+          "C3": 1,
+          "C4": -1,
+          "C5": 1
+        },
+        "CIP": {
+          "C1": "S",
+          "C2": "R",
+          "C3": "R",
+          "C4": "S",
+          "C5": "R"
+        }
+      },
+      {
+        "id": "I",
+        "anomer": "alpha",
+        "anomericSignedVolume": 2.1612,
+        "ringChiralitySigns": {
+          "C2": -1,
+          "C3": 1,
+          "C4": -1,
+          "C5": 1
+        },
+        "CIP": {
+          "C1": "R",
+          "C2": "R",
+          "C3": "S",
+          "C4": "S",
+          "C5": "R"
+        }
+      },
+      {
+        "id": "J",
+        "anomer": "alpha",
+        "anomericSignedVolume": 2.1612,
+        "ringChiralitySigns": {
+          "C2": -1,
+          "C3": 1,
+          "C4": -1,
+          "C5": 1
+        },
+        "CIP": {
+          "C1": "R",
+          "C2": "R",
+          "C3": "R",
+          "C4": "S",
+          "C5": "R"
+        }
+      },
+      {
+        "id": "K",
+        "anomer": "alpha",
+        "anomericSignedVolume": 2.1612,
+        "ringChiralitySigns": {
+          "C2": -1,
+          "C3": 1,
+          "C4": -1,
+          "C5": 1
+        },
+        "CIP": {
+          "C1": "R",
+          "C2": "R",
+          "C3": "R",
+          "C4": "S",
+          "C5": "R"
+        }
+      },
+      {
+        "id": "L",
+        "anomer": "alpha",
+        "anomericSignedVolume": 2.1617,
+        "ringChiralitySigns": {
+          "C2": -1,
+          "C3": 1,
+          "C4": -1,
+          "C5": 1
+        },
+        "CIP": {
+          "C1": "S",
+          "C2": "R",
+          "C3": "R",
+          "C4": "S",
+          "C5": "R"
+        }
+      }
+    ],
+    "linkages": [
+      {
+        "id": "L1",
+        "notation": "\u03b1(1\u21924)",
+        "bond": 1.424,
+        "angle": 111.69,
+        "phi": 86.69,
+        "psi": 88.4
+      },
+      {
+        "id": "L2",
+        "notation": "\u03b1(1\u21924)",
+        "bond": 1.424,
+        "angle": 111.69,
+        "phi": 86.69,
+        "psi": 88.4
+      },
+      {
+        "id": "L3",
+        "notation": "\u03b1(1\u21924)",
+        "bond": 1.424,
+        "angle": 111.68,
+        "phi": 86.69,
+        "psi": 88.4
+      },
+      {
+        "id": "L4",
+        "notation": "\u03b1(1\u21924)",
+        "bond": 1.424,
+        "angle": 111.69,
+        "phi": 86.69,
+        "psi": 88.4
+      },
+      {
+        "id": "L5",
+        "notation": "\u03b1(1\u21924)",
+        "bond": 1.424,
+        "angle": 111.69,
+        "phi": 86.69,
+        "psi": 88.4
+      },
+      {
+        "id": "L6",
+        "notation": "\u03b1(1\u21924)",
+        "bond": 1.424,
+        "angle": 111.69,
+        "phi": 86.69,
+        "psi": 88.4
+      },
+      {
+        "id": "L7",
+        "notation": "\u03b1(1\u21924)",
+        "bond": 1.424,
+        "angle": 111.69,
+        "phi": 86.69,
+        "psi": 88.4
+      },
+      {
+        "id": "L8",
+        "notation": "\u03b1(1\u21924)",
+        "bond": 1.424,
+        "angle": 111.69,
+        "phi": 86.69,
+        "psi": 88.4
+      },
+      {
+        "id": "L9",
+        "notation": "\u03b1(1\u21924)",
+        "bond": 1.424,
+        "angle": 111.69,
+        "phi": 86.69,
+        "psi": 88.4
+      },
+      {
+        "id": "L10",
+        "notation": "\u03b1(1\u21924)",
+        "bond": 1.424,
+        "angle": 111.69,
+        "phi": 86.68,
+        "psi": 88.4
+      },
+      {
+        "id": "L11",
+        "notation": "\u03b1(1\u21926)",
+        "bond": 1.424,
+        "angle": 112.15,
+        "phi": 54.9,
+        "psi": -180.0
+      }
+    ],
+    "linkageCounts": {
+      "a14": 10,
+      "a16": 1
+    },
+    "branchTorsions": [
+      {
+        "psi": 180.0,
+        "omega": 60.0
+      }
+    ],
+    "minimumNonAdjacentResidueDistance": 3.776,
+    "closestNonAdjacentResidues": [
+      "C",
+      "L"
+    ],
+    "minimumNonBondedHeavyDistance": 2.913,
+    "closestNonBondedPair": [
+      "E:C1",
+      "F:O3"
+    ],
+    "hydrogenRelaxationHeavyAtomShift": 0.0003,
+    "ringSizes": [
+      6,
+      6,
+      6,
+      6,
+      6,
+      6,
+      6,
+      6,
+      6,
+      6,
+      6,
+      6
+    ],
+    "residueTemplate": "GLC",
+    "templateRingChiralitySigns": {
+      "C2": -1,
+      "C3": 1,
+      "C4": -1,
+      "C5": 1
+    },
+    "stereochemistryUnchangedAfterSerialisation": true
+  },
+  "GLYCOGEN": {
+    "kind": "representative fragment, assembled from validated residues",
+    "residues": 16,
+    "atoms": 339,
+    "residueChecks": [
+      {
+        "id": "A",
+        "anomer": "alpha",
+        "anomericSignedVolume": 2.1612,
+        "ringChiralitySigns": {
+          "C2": -1,
+          "C3": 1,
+          "C4": -1,
+          "C5": 1
+        },
+        "CIP": {
+          "C1": "R",
+          "C2": "R",
+          "C3": "S",
+          "C4": "S",
+          "C5": "R"
+        }
+      },
+      {
+        "id": "B",
+        "anomer": "alpha",
+        "anomericSignedVolume": 2.1612,
+        "ringChiralitySigns": {
+          "C2": -1,
+          "C3": 1,
+          "C4": -1,
+          "C5": 1
+        },
+        "CIP": {
+          "C1": "R",
+          "C2": "R",
+          "C3": "R",
+          "C4": "S",
+          "C5": "R"
+        }
+      },
+      {
+        "id": "C",
+        "anomer": "alpha",
+        "anomericSignedVolume": 2.1612,
+        "ringChiralitySigns": {
+          "C2": -1,
+          "C3": 1,
+          "C4": -1,
+          "C5": 1
+        },
+        "CIP": {
+          "C1": "R",
+          "C2": "R",
+          "C3": "R",
+          "C4": "S",
+          "C5": "R"
+        }
+      },
+      {
+        "id": "D",
+        "anomer": "alpha",
+        "anomericSignedVolume": 2.1612,
+        "ringChiralitySigns": {
+          "C2": -1,
+          "C3": 1,
+          "C4": -1,
+          "C5": 1
+        },
+        "CIP": {
+          "C1": "R",
+          "C2": "R",
+          "C3": "R",
+          "C4": "S",
+          "C5": "R"
+        }
+      },
+      {
+        "id": "E",
+        "anomer": "alpha",
+        "anomericSignedVolume": 2.1613,
+        "ringChiralitySigns": {
+          "C2": -1,
+          "C3": 1,
+          "C4": -1,
+          "C5": 1
+        },
+        "CIP": {
+          "C1": "R",
+          "C2": "R",
+          "C3": "R",
+          "C4": "S",
+          "C5": "R"
+        }
+      },
+      {
+        "id": "F",
+        "anomer": "alpha",
+        "anomericSignedVolume": 2.1612,
+        "ringChiralitySigns": {
+          "C2": -1,
+          "C3": 1,
+          "C4": -1,
+          "C5": 1
+        },
+        "CIP": {
+          "C1": "R",
+          "C2": "R",
+          "C3": "R",
+          "C4": "S",
+          "C5": "R"
+        }
+      },
+      {
+        "id": "G",
+        "anomer": "alpha",
+        "anomericSignedVolume": 2.4049,
+        "ringChiralitySigns": {
+          "C2": -1,
+          "C3": 1,
+          "C4": -1,
+          "C5": 1
+        },
+        "CIP": {
+          "C1": "S",
+          "C2": "R",
+          "C3": "R",
+          "C4": "S",
+          "C5": "R"
+        }
+      },
+      {
+        "id": "H",
+        "anomer": "alpha",
+        "anomericSignedVolume": 2.1612,
+        "ringChiralitySigns": {
+          "C2": -1,
+          "C3": 1,
+          "C4": -1,
+          "C5": 1
+        },
+        "CIP": {
+          "C1": "R",
+          "C2": "R",
+          "C3": "S",
+          "C4": "S",
+          "C5": "R"
+        }
+      },
+      {
+        "id": "I",
+        "anomer": "alpha",
+        "anomericSignedVolume": 2.1612,
+        "ringChiralitySigns": {
+          "C2": -1,
+          "C3": 1,
+          "C4": -1,
+          "C5": 1
+        },
+        "CIP": {
+          "C1": "R",
+          "C2": "R",
+          "C3": "R",
+          "C4": "S",
+          "C5": "R"
+        }
+      },
+      {
+        "id": "J",
+        "anomer": "alpha",
+        "anomericSignedVolume": 2.1612,
+        "ringChiralitySigns": {
+          "C2": -1,
+          "C3": 1,
+          "C4": -1,
+          "C5": 1
+        },
+        "CIP": {
+          "C1": "R",
+          "C2": "R",
+          "C3": "R",
+          "C4": "S",
+          "C5": "R"
+        }
+      },
+      {
+        "id": "K",
+        "anomer": "alpha",
+        "anomericSignedVolume": 2.1612,
+        "ringChiralitySigns": {
+          "C2": -1,
+          "C3": 1,
+          "C4": -1,
+          "C5": 1
+        },
+        "CIP": {
+          "C1": "R",
+          "C2": "R",
+          "C3": "R",
+          "C4": "S",
+          "C5": "R"
+        }
+      },
+      {
+        "id": "L",
+        "anomer": "alpha",
+        "anomericSignedVolume": 2.1618,
+        "ringChiralitySigns": {
+          "C2": -1,
+          "C3": 1,
+          "C4": -1,
+          "C5": 1
+        },
+        "CIP": {
+          "C1": "S",
+          "C2": "R",
+          "C3": "R",
+          "C4": "S",
+          "C5": "R"
+        }
+      },
+      {
+        "id": "M",
+        "anomer": "alpha",
+        "anomericSignedVolume": 2.1612,
+        "ringChiralitySigns": {
+          "C2": -1,
+          "C3": 1,
+          "C4": -1,
+          "C5": 1
+        },
+        "CIP": {
+          "C1": "R",
+          "C2": "R",
+          "C3": "S",
+          "C4": "S",
+          "C5": "R"
+        }
+      },
+      {
+        "id": "N",
+        "anomer": "alpha",
+        "anomericSignedVolume": 2.1612,
+        "ringChiralitySigns": {
+          "C2": -1,
+          "C3": 1,
+          "C4": -1,
+          "C5": 1
+        },
+        "CIP": {
+          "C1": "R",
+          "C2": "R",
+          "C3": "R",
+          "C4": "S",
+          "C5": "R"
+        }
+      },
+      {
+        "id": "O",
+        "anomer": "alpha",
+        "anomericSignedVolume": 2.1612,
+        "ringChiralitySigns": {
+          "C2": -1,
+          "C3": 1,
+          "C4": -1,
+          "C5": 1
+        },
+        "CIP": {
+          "C1": "R",
+          "C2": "R",
+          "C3": "R",
+          "C4": "S",
+          "C5": "R"
+        }
+      },
+      {
+        "id": "P",
+        "anomer": "alpha",
+        "anomericSignedVolume": 2.1617,
+        "ringChiralitySigns": {
+          "C2": -1,
+          "C3": 1,
+          "C4": -1,
+          "C5": 1
+        },
+        "CIP": {
+          "C1": "S",
+          "C2": "R",
+          "C3": "R",
+          "C4": "S",
+          "C5": "R"
+        }
+      }
+    ],
+    "linkages": [
+      {
+        "id": "L1",
+        "notation": "\u03b1(1\u21924)",
+        "bond": 1.424,
+        "angle": 111.69,
+        "phi": 86.69,
+        "psi": 88.4
+      },
+      {
+        "id": "L2",
+        "notation": "\u03b1(1\u21924)",
+        "bond": 1.424,
+        "angle": 111.69,
+        "phi": 86.69,
+        "psi": 88.4
+      },
+      {
+        "id": "L3",
+        "notation": "\u03b1(1\u21924)",
+        "bond": 1.424,
+        "angle": 111.69,
+        "phi": 86.69,
+        "psi": 88.4
+      },
+      {
+        "id": "L4",
+        "notation": "\u03b1(1\u21924)",
+        "bond": 1.424,
+        "angle": 111.68,
+        "phi": 86.69,
+        "psi": 88.4
+      },
+      {
+        "id": "L5",
+        "notation": "\u03b1(1\u21924)",
+        "bond": 1.424,
+        "angle": 111.69,
+        "phi": 86.69,
+        "psi": 88.4
+      },
+      {
+        "id": "L6",
+        "notation": "\u03b1(1\u21924)",
+        "bond": 1.424,
+        "angle": 111.69,
+        "phi": 86.69,
+        "psi": 88.4
+      },
+      {
+        "id": "L7",
+        "notation": "\u03b1(1\u21924)",
+        "bond": 1.424,
+        "angle": 111.69,
+        "phi": 86.69,
+        "psi": 88.4
+      },
+      {
+        "id": "L8",
+        "notation": "\u03b1(1\u21924)",
+        "bond": 1.424,
+        "angle": 111.69,
+        "phi": 86.69,
+        "psi": 88.4
+      },
+      {
+        "id": "L9",
+        "notation": "\u03b1(1\u21924)",
+        "bond": 1.424,
+        "angle": 111.68,
+        "phi": 86.69,
+        "psi": 88.4
+      },
+      {
+        "id": "L10",
+        "notation": "\u03b1(1\u21924)",
+        "bond": 1.424,
+        "angle": 111.69,
+        "phi": 86.69,
+        "psi": 88.4
+      },
+      {
+        "id": "L11",
+        "notation": "\u03b1(1\u21926)",
+        "bond": 1.424,
+        "angle": 112.16,
+        "phi": 54.9,
+        "psi": -180.0
+      },
+      {
+        "id": "L12",
+        "notation": "\u03b1(1\u21924)",
+        "bond": 1.424,
+        "angle": 111.69,
+        "phi": 86.69,
+        "psi": 88.4
+      },
+      {
+        "id": "L13",
+        "notation": "\u03b1(1\u21924)",
+        "bond": 1.424,
+        "angle": 111.69,
+        "phi": 86.69,
+        "psi": 88.4
+      },
+      {
+        "id": "L14",
+        "notation": "\u03b1(1\u21924)",
+        "bond": 1.424,
+        "angle": 111.69,
+        "phi": 86.69,
+        "psi": 88.4
+      },
+      {
+        "id": "L15",
+        "notation": "\u03b1(1\u21926)",
+        "bond": 1.424,
+        "angle": 112.15,
+        "phi": 54.9,
+        "psi": -180.0
+      }
+    ],
+    "linkageCounts": {
+      "a14": 13,
+      "a16": 2
+    },
+    "branchTorsions": [
+      {
+        "psi": 180.0,
+        "omega": 60.0
+      },
+      {
+        "psi": 180.0,
+        "omega": 60.0
+      }
+    ],
+    "minimumNonAdjacentResidueDistance": 3.776,
+    "closestNonAdjacentResidues": [
+      "D",
+      "L"
+    ],
+    "minimumNonBondedHeavyDistance": 2.913,
+    "closestNonBondedPair": [
+      "F:C1",
+      "G:O3"
+    ],
+    "hydrogenRelaxationHeavyAtomShift": 0.0003,
+    "ringSizes": [
+      6,
+      6,
+      6,
+      6,
+      6,
+      6,
+      6,
+      6,
+      6,
+      6,
+      6,
+      6,
+      6,
+      6,
+      6,
+      6
+    ],
+    "residueTemplate": "GLC",
+    "templateRingChiralitySigns": {
+      "C2": -1,
+      "C3": 1,
+      "C4": -1,
+      "C5": 1
+    },
+    "stereochemistryUnchangedAfterSerialisation": true
+  },
+  "CELLULOSE": {
+    "kind": "representative fragment, assembled from validated residues",
+    "residues": 8,
+    "atoms": 171,
+    "residueChecks": [
+      {
+        "id": "A",
+        "anomer": "beta",
+        "anomericSignedVolume": -2.4346,
+        "ringChiralitySigns": {
+          "C2": -1,
+          "C3": 1,
+          "C4": -1,
+          "C5": 1
+        },
+        "CIP": {
+          "C1": "S",
+          "C2": "R",
+          "C3": "S",
+          "C4": "S",
+          "C5": "R"
+        }
+      },
+      {
+        "id": "B",
+        "anomer": "beta",
+        "anomericSignedVolume": -2.4347,
+        "ringChiralitySigns": {
+          "C2": -1,
+          "C3": 1,
+          "C4": -1,
+          "C5": 1
+        },
+        "CIP": {
+          "C1": "S",
+          "C2": "R",
+          "C3": "R",
+          "C4": "S",
+          "C5": "R"
+        }
+      },
+      {
+        "id": "C",
+        "anomer": "beta",
+        "anomericSignedVolume": -2.4347,
+        "ringChiralitySigns": {
+          "C2": -1,
+          "C3": 1,
+          "C4": -1,
+          "C5": 1
+        },
+        "CIP": {
+          "C1": "S",
+          "C2": "R",
+          "C3": "R",
+          "C4": "S",
+          "C5": "R"
+        }
+      },
+      {
+        "id": "D",
+        "anomer": "beta",
+        "anomericSignedVolume": -2.4347,
+        "ringChiralitySigns": {
+          "C2": -1,
+          "C3": 1,
+          "C4": -1,
+          "C5": 1
+        },
+        "CIP": {
+          "C1": "S",
+          "C2": "R",
+          "C3": "R",
+          "C4": "S",
+          "C5": "R"
+        }
+      },
+      {
+        "id": "E",
+        "anomer": "beta",
+        "anomericSignedVolume": -2.4347,
+        "ringChiralitySigns": {
+          "C2": -1,
+          "C3": 1,
+          "C4": -1,
+          "C5": 1
+        },
+        "CIP": {
+          "C1": "S",
+          "C2": "R",
+          "C3": "R",
+          "C4": "S",
+          "C5": "R"
+        }
+      },
+      {
+        "id": "F",
+        "anomer": "beta",
+        "anomericSignedVolume": -2.4347,
+        "ringChiralitySigns": {
+          "C2": -1,
+          "C3": 1,
+          "C4": -1,
+          "C5": 1
+        },
+        "CIP": {
+          "C1": "S",
+          "C2": "R",
+          "C3": "R",
+          "C4": "S",
+          "C5": "R"
+        }
+      },
+      {
+        "id": "G",
+        "anomer": "beta",
+        "anomericSignedVolume": -2.4346,
+        "ringChiralitySigns": {
+          "C2": -1,
+          "C3": 1,
+          "C4": -1,
+          "C5": 1
+        },
+        "CIP": {
+          "C1": "S",
+          "C2": "R",
+          "C3": "R",
+          "C4": "S",
+          "C5": "R"
+        }
+      },
+      {
+        "id": "H",
+        "anomer": "beta",
+        "anomericSignedVolume": -2.4096,
+        "ringChiralitySigns": {
+          "C2": -1,
+          "C3": 1,
+          "C4": -1,
+          "C5": 1
+        },
+        "CIP": {
+          "C1": "R",
+          "C2": "R",
+          "C3": "R",
+          "C4": "S",
+          "C5": "R"
+        }
+      }
+    ],
+    "linkages": [
+      {
+        "id": "L1",
+        "notation": "\u03b2(1\u21924)",
+        "bond": 1.425,
+        "angle": 111.79,
+        "phi": -58.25,
+        "psi": 119.18
+      },
+      {
+        "id": "L2",
+        "notation": "\u03b2(1\u21924)",
+        "bond": 1.425,
+        "angle": 111.8,
+        "phi": -58.25,
+        "psi": 119.18
+      },
+      {
+        "id": "L3",
+        "notation": "\u03b2(1\u21924)",
+        "bond": 1.425,
+        "angle": 111.8,
+        "phi": -58.25,
+        "psi": 119.18
+      },
+      {
+        "id": "L4",
+        "notation": "\u03b2(1\u21924)",
+        "bond": 1.425,
+        "angle": 111.8,
+        "phi": -58.25,
+        "psi": 119.18
+      },
+      {
+        "id": "L5",
+        "notation": "\u03b2(1\u21924)",
+        "bond": 1.425,
+        "angle": 111.8,
+        "phi": -58.25,
+        "psi": 119.18
+      },
+      {
+        "id": "L6",
+        "notation": "\u03b2(1\u21924)",
+        "bond": 1.425,
+        "angle": 111.8,
+        "phi": -58.25,
+        "psi": 119.18
+      },
+      {
+        "id": "L7",
+        "notation": "\u03b2(1\u21924)",
+        "bond": 1.425,
+        "angle": 111.8,
+        "phi": -58.25,
+        "psi": 119.18
+      }
+    ],
+    "linkageCounts": {
+      "b14": 7
+    },
+    "branchTorsions": [],
+    "minimumNonAdjacentResidueDistance": 5.502,
+    "closestNonAdjacentResidues": [
+      "C",
+      "A"
+    ],
+    "minimumNonBondedHeavyDistance": 2.851,
+    "closestNonBondedPair": [
+      "B:O5",
+      "C:O3"
+    ],
+    "hydrogenRelaxationHeavyAtomShift": 0.0002,
+    "ringSizes": [
+      6,
+      6,
+      6,
+      6,
+      6,
+      6,
+      6,
+      6
+    ],
+    "residueTemplate": "BGC",
+    "templateRingChiralitySigns": {
+      "C2": -1,
+      "C3": 1,
+      "C4": -1,
+      "C5": 1
+    },
+    "stereochemistryUnchangedAfterSerialisation": true,
+    "screw": {
+      "degreesPerResidue": 130.4,
+      "residuesPerTurn": 2.76,
+      "risePerResidue": 4.95
+    }
   }
 }

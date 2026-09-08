@@ -95,14 +95,27 @@ h2 {
   margin: 8px 0 18px;
   line-height: 1.35;
 }
-.sidebar h2 {
+.molecule-category h2 {
   display: flex;
   justify-content: space-between;
+  align-items: baseline;
+  gap: 10px;
+  font-size: 19px;
+  margin: 0 0 4px;
 }
-.sidebar h2 span {
-  font-size: 14px;
+.molecule-category h2 span {
+  font-size: 13px;
   color: #758287;
   font-weight: 400;
+  font-variant-numeric: tabular-nums;
+}
+.molecule-category + .molecule-category {
+  margin-top: 26px;
+  padding-top: 22px;
+  border-top: 1px solid var(--line);
+}
+.molecule-category:first-of-type {
+  margin-top: 14px;
 }
 .molecule-group {
   margin: 24px 0;
@@ -309,8 +322,31 @@ h2 {
     border-bottom: 1px solid var(--line);
   }
   .sidebar > .section-kicker,
-  .sidebar > h2,
   .library-note {
+    display: none;
+  }
+  .molecule-category,
+  .molecule-category + .molecule-category {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin: 0;
+    padding: 0 0 0 12px;
+    border-top: 0;
+    border-left: 1px solid var(--line);
+  }
+  .molecule-category:first-of-type {
+    margin-top: 0;
+    padding-left: 0;
+    border-left: 0;
+  }
+  .molecule-category h2 {
+    font-size: 12px;
+    margin: 0;
+    white-space: nowrap;
+    color: #68767c;
+  }
+  .molecule-category h2 span {
     display: none;
   }
   .molecule-group {
@@ -675,4 +711,141 @@ dialog h3 {
   * {
     scroll-behavior: auto !important;
   }
+}
+
+.fragment-tag {
+  display: inline-block;
+  font-size: 12px;
+  color: #5b5136;
+  background: #faf6ee;
+  border: 1px solid #e3d6b8;
+  border-radius: 3px;
+  padding: 4px 9px;
+  margin: 0 0 14px;
+}
+.residue-list,
+.linkage-list {
+  border-top: 1px solid var(--line);
+  margin-top: 24px;
+  padding-top: 4px;
+}
+.residue-list h3,
+.linkage-list h3,
+.schematic h3 {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 10px;
+}
+.residue-list h3 span,
+.linkage-list h3 span,
+.schematic h3 span {
+  font-size: 12px;
+  font-weight: 400;
+  color: #718087;
+  text-align: right;
+}
+.chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+.info .chip {
+  display: block;
+  text-align: left;
+  font-size: 13px;
+  line-height: 1.35;
+  padding: 6px 9px;
+  min-height: 40px;
+  border-color: #d3dbdf;
+}
+.info .chip small {
+  display: block;
+  font-size: 11px;
+  color: #6c7a80;
+}
+.info .chip.selected {
+  border-color: var(--accent);
+  background: #e4f1ec;
+}
+.info .chip.linkage {
+  border-left: 3px solid #2f5fa8;
+}
+.info .chip.linkage.branch {
+  border-left: 3px solid #7b3f9d;
+}
+.schematic {
+  border-top: 1px solid var(--line);
+  margin-top: 26px;
+}
+.schematic svg {
+  width: 100%;
+  max-height: 260px;
+  margin: 4px 0 2px;
+}
+.schematic-node,
+.schematic-link line[role="button"] {
+  cursor: pointer;
+}
+.schematic-node:hover circle {
+  stroke: #126354;
+  stroke-width: 2.6;
+}
+.schematic-legend {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px 16px;
+  padding: 0;
+  margin: 2px 0 8px;
+}
+.info .schematic-legend li {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 12px;
+  color: #5d6b72;
+  margin: 0;
+  padding: 0;
+}
+.schematic-legend i {
+  width: 20px;
+  height: 0;
+  border-top: 2.4px solid #5b6a72;
+}
+.schematic-legend i.branch {
+  border-top-style: dashed;
+  border-top-color: #7b3f9d;
+}
+.schematic-legend i.reducing {
+  height: 10px;
+  width: 10px;
+  border: 1.6px solid #1b7f3b;
+  border-radius: 50%;
+}
+.schematic p {
+  font-size: 13px;
+  color: #69777d;
+}
+.schematic-pair {
+  border-top: 1px solid var(--line);
+  margin-top: 22px;
+}
+.schematic-pair h4 {
+  font-size: 14px;
+  margin: 18px 0 0;
+}
+.schematic-pair .schematic {
+  border-top: 0;
+  margin-top: 0;
+}
+.schematic-pair .schematic h3 {
+  display: none;
+}
+.linkage-note {
+  background: #eef2fa;
+  border-top-color: #d5deef;
+}
+.linkage-note strong {
+  color: #23477e;
 }

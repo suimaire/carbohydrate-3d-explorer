@@ -1,15 +1,26 @@
-import { useCallback, useEffect, useState } from "react";
+import { useCallback, useEffect, useMemo, useState } from "react";
 import { MoleculeSidebar } from "./components/MoleculeSidebar";
 import { MoleculeInfo } from "./components/MoleculeInfo";
-import { ComparisonViewer, comparisons } from "./components/ComparisonViewer";
+import {
+  ComparisonViewer,
+  comparisonCapabilities,
+  comparisons,
+} from "./components/ComparisonViewer";
 import type { ComparisonKind } from "./components/ComparisonViewer";
 import { ObservationQuestions } from "./components/ObservationQuestions";
+import { PolymerSchematic } from "./components/PolymerSchematic";
 import { HelpDialog } from "./components/HelpDialog";
 import { registerExplorerTool } from "./lib/webmcp";
 import { OfflineStatus } from "./components/OfflineStatus";
 import { ViewerControls } from "./components/ViewerControls";
-import { defaultOptions, moleculeById, isGlucose } from "./data/carbohydrates";
-import type { MoleculeId } from "./types/carbohydrate";
+import {
+  capabilitiesOf,
+  defaultOptions,
+  moleculeById,
+  NO_FOCUS,
+  structures,
+} from "./data/carbohydrates";
+import type { FocusState, MoleculeId } from "./types/carbohydrate";
 export default function App() {
   const [id, setId] = useState<MoleculeId>("BGC");
   const [options, setOptions] = useState(defaultOptions);
@@ -18,13 +29,28 @@ export default function App() {
   const [kind, setKind] = useState<ComparisonKind>("anomer");
   const [sync, setSync] = useState(true);
   const [help, setHelp] = useState(false);
-  const [focus, setFocus] = useState<string | null>(null);
+  const [focus, setFocus] = useState<FocusState>(NO_FOCUS);
   const m = moleculeById(id);
+  const capabilities = useMemo(
+    () => (compare ? comparisonCapabilities(kind) : capabilitiesOf(id)),
+    [compare, kind, id],
+  );
   const select = useCallback((next: MoleculeId) => {
     setId(next);
     setCompare(false);
-    setFocus(null);
-    setOptions((o) => ({ ...o, axial: false, spinning: false }));
+    setFocus(NO_FOCUS);
+    setOptions((o) => ({
+      ...o,
+      axial: false,
+      glycosidic: false,
+      reducing: false,
+      branch: false,
+      spinning: false,
+      // A polysaccharide fragment is busy enough without every hydrogen; the
+      // toggle stays available.
+      hydrogen:
+        moleculeById(next).category === "polysaccharide" ? false : o.hydrogen,
+    }));
   }, []);
   useEffect(() => registerExplorerTool(select), [select]);
   useEffect(() => {
@@ -39,16 +65,34 @@ export default function App() {
   const resetView = () => {
     setOptions((o) => ({ ...o, spinning: false }));
     setReset((r) => r + 1);
-    setFocus(null);
+    setFocus(NO_FOCUS);
   };
   const toggleCompare = () => {
     setCompare((c) => !c);
     setKind("anomer");
     setSync(true);
     setOptions((o) => ({ ...o, spinning: false }));
-    setFocus(null);
+    setFocus(NO_FOCUS);
     setReset((r) => r + 1);
   };
+  const focusCarbon = (name: string) =>
+    setFocus((f) => ({ ...f, carbon: f.carbon === name ? null : name }));
+  const focusResidue = (residue: string) =>
+    setFocus((f) =>
+      f.residue === residue
+        ? NO_FOCUS
+        : { carbon: null, residue, bond: null },
+    );
+  const focusBond = (bond: string) => {
+    setFocus((f) =>
+      f.bond === bond ? NO_FOCUS : { carbon: null, residue: null, bond },
+    );
+    setOptions((o) => ({ ...o, glycosidic: true }));
+  };
+  const pair = comparisons[kind];
+  const comparingPolymers =
+    moleculeById(pair.left).category === "polysaccharide" &&
+    moleculeById(pair.right).category === "polysaccharide";
   return (
     <>
       <a className="skip-link" href="#viewer-controls">
@@ -86,18 +130,21 @@ export default function App() {
                   value={kind}
                   onChange={(e) => {
                     setKind(e.target.value as ComparisonKind);
-                    setFocus(null);
+                    setFocus(NO_FOCUS);
                     setOptions((o) => ({
                       ...o,
                       axial: false,
+                      glycosidic: false,
+                      reducing: false,
+                      branch: false,
                       spinning: false,
                     }));
                     setReset((r) => r + 1);
                   }}
                 >
-                  {Object.entries(comparisons).map(([key, pair]) => (
+                  {Object.entries(comparisons).map(([key, entry]) => (
                     <option value={key} key={key}>
-                      {pair.label}
+                      {entry.label}
                     </option>
                   ))}
                 </select>
@@ -114,14 +161,23 @@ export default function App() {
             sync={sync}
             options={options}
             resetToken={reset}
-            focusCarbon={focus}
+            focus={focus}
           />
-          {options.axial && (!compare ? isGlucose(id) : kind === "anomer") && (
+          {options.axial && capabilities.axial && (
             <div className="axis-note">
               <strong>axial / equatorial ≠ up / down</strong>
               <span>
                 현재 ⁴C₁ 의자형에서의 배치입니다. 고리의 어느 쪽인지를 나타내는
                 위/아래와 구별하세요.
+              </span>
+            </div>
+          )}
+          {options.glycosidic && capabilities.glycosidic && (
+            <div className="axis-note linkage-note">
+              <strong>글리코시드 결합</strong>
+              <span>
+                파란 실선 관은 사슬을 잇는 결합, 보라 점선 관은 가지를 만드는
+                결합입니다. 각 결합에는 표기가 함께 붙습니다.
               </span>
             </div>
           )}
@@ -136,20 +192,30 @@ export default function App() {
         </div>
         {compare ? (
           <aside className="info comparison-info">
-            <div className="section-kicker">COMPARE & OBSERVE</div>
+            <div className="section-kicker">COMPARE &amp; OBSERVE</div>
             <h2>차이를 찾아보세요</h2>
-            <p>
-              {kind === "anomer"
-                ? "α형과 β형은 아노머입니다. 같은 고리 원자를 기준으로 맞춘 두 구조를 관찰하세요."
-                : kind === "epimer"
-                  ? "같은 β형끼리 비교합니다. 한 입체중심의 차이를 찾아보세요."
-                  : "두 분자는 β형 푸라노스입니다. C2의 원자 구성을 비교하세요."}
-            </p>
+            <p>{pair.intro}</p>
             <ObservationQuestions
               key={kind}
-              questions={[comparisons[kind].question]}
-              answer={comparisons[kind].answer}
+              questions={[pair.question]}
+              answer={pair.answer}
             />
+            {comparingPolymers && (
+              <div className="schematic-pair">
+                {[pair.left, pair.right].map((side) => (
+                  <div key={side}>
+                    <h4>{moleculeById(side).koreanName}</h4>
+                    <PolymerSchematic
+                      data={structures[side]}
+                      selectedResidue={focus.residue}
+                      onSelectResidue={focusResidue}
+                      selectedBond={focus.bond}
+                      onSelectBond={focusBond}
+                    />
+                  </div>
+                ))}
+              </div>
+            )}
             <div className="concept-note">
               <strong>비교할 때 기억하세요</strong>
               <p>
@@ -158,16 +224,18 @@ export default function App() {
               </p>
             </div>
             <p className="small-note">
-              3D 구조는 각각의 대표 conformer입니다. 수용액의 구조 변화나 α↔β
-              전환 반응을 재현한 장면은 아닙니다.
+              3D 구조는 각각의 대표 conformer이거나 대표 fragment입니다.
+              수용액의 구조 변화나 고분자 전체의 크기를 재현한 장면은 아닙니다.
             </p>
           </aside>
         ) : (
           <MoleculeInfo
             molecule={m}
             anomeric={options.anomeric}
-            focusCarbon={focus}
-            onFocus={(n) => setFocus((f) => (f === n ? null : n))}
+            focus={focus}
+            onFocusCarbon={focusCarbon}
+            onFocusResidue={focusResidue}
+            onFocusBond={focusBond}
           />
         )}
       </main>
@@ -176,13 +244,13 @@ export default function App() {
           options={options}
           onChange={setOptions}
           onReset={resetView}
-          allowAxial={compare ? kind === "anomer" : isGlucose(id)}
+          capabilities={capabilities}
         />
       </div>
       <footer className="page-footer">
         <span>Carbohydrate 3D Explorer</span>
         <OfflineStatus />
-        <span>데이터: wwPDB CCD</span>
+        <span>데이터: wwPDB CCD · PubChem</span>
       </footer>
       <HelpDialog open={help} onClose={() => setHelp(false)} />
     </>

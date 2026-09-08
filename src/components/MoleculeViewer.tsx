@@ -1,22 +1,35 @@
 import { useEffect, useRef, useState } from "react";
 import { createViewer } from "../lib/molecularViewer";
 import type { GLViewer } from "../lib/molecularViewer";
-import type { Carbohydrate, ViewerOptions } from "../types/carbohydrate";
-import { structures } from "../data/carbohydrates";
+import type {
+  Carbohydrate,
+  FocusState,
+  ViewerOptions,
+} from "../types/carbohydrate";
+import { NO_FOCUS, structures } from "../data/carbohydrates";
 import { applyAnnotations } from "../lib/annotations";
 import { changeViewWithKey } from "../lib/keyboardView";
+/** Short shape tag: what kind of rings, or that this is only a fragment. */
+function formTag(molecule: Carbohydrate) {
+  if (molecule.representationType === "fragment") return "대표 fragment";
+  const forms = new Set(
+    structures[molecule.id].residues.map((r) => r.ringForm),
+  );
+  if (forms.size > 1) return "pyranose + furanose";
+  return forms.has("pyranose") ? "⁴C₁ chair" : "furanose";
+}
 export function MoleculeViewer({
   molecule,
   options,
   onReady,
   resetToken = 0,
-  focusCarbon = null,
+  focus = NO_FOCUS,
 }: {
   molecule: Carbohydrate;
   options: ViewerOptions;
   onReady?: (viewer: GLViewer | null) => void;
   resetToken?: number;
-  focusCarbon?: string | null;
+  focus?: FocusState;
 }) {
   const host = useRef<HTMLDivElement>(null);
   const viewer = useRef<GLViewer | null>(null);
@@ -96,8 +109,8 @@ export function MoleculeViewer({
       viewer.current &&
       loadedId.current === molecule.id
     )
-      applyAnnotations(viewer.current, molecule, options, focusCarbon);
-  }, [status, molecule, options, focusCarbon]);
+      applyAnnotations(viewer.current, molecule, options, focus);
+  }, [status, molecule, options, focus]);
   useEffect(() => {
     const v = viewer.current;
     if (status === "ready" && v) {
@@ -120,9 +133,7 @@ export function MoleculeViewer({
           <h2>{molecule.name}</h2>
           <p>{molecule.stereochemicalForm}</p>
         </div>
-        <span className="form-tag">
-          {molecule.ringForm.startsWith("피라노스") ? "⁴C₁ chair" : "furanose"}
-        </span>
+        <span className="form-tag">{formTag(molecule)}</span>
       </div>
       <div
         ref={host}

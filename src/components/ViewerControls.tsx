@@ -1,17 +1,28 @@
-import type { ViewerOptions } from "../types/carbohydrate";
+import type {
+  MoleculeCapabilities,
+  ViewerOptions,
+} from "../types/carbohydrate";
+type BooleanOption = Exclude<keyof ViewerOptions, "representation">;
 export function ViewerControls({
   options,
   onChange,
   onReset,
-  allowAxial = true,
+  capabilities,
 }: {
   options: ViewerOptions;
   onChange: (o: ViewerOptions) => void;
   onReset: () => void;
-  allowAxial?: boolean;
+  capabilities: MoleculeCapabilities;
 }) {
-  const toggle = (key: keyof ViewerOptions) =>
+  const toggle = (key: BooleanOption) =>
     onChange({ ...options, [key]: !options[key] });
+  // Only the controls the current structure can actually answer are offered.
+  const structural: [BooleanOption, string, boolean][] = [
+    ["glycosidic", "글리코시드 결합", capabilities.glycosidic],
+    ["reducing", "환원 말단", capabilities.reducing],
+    ["branch", "가지 결합", capabilities.branch],
+    ["axial", "axial / equatorial", capabilities.axial],
+  ];
   return (
     <div className="viewer-controls" aria-label="3D 보기 설정">
       <div className="control-group">
@@ -47,14 +58,20 @@ export function ViewerControls({
             {label}
           </button>
         ))}
-        <button
-          disabled={!allowAxial}
-          title={!allowAxial ? "포도당의 ⁴C₁ chair에서 사용합니다." : undefined}
-          aria-pressed={options.axial && allowAxial}
-          onClick={() => toggle("axial")}
-        >
-          axial / equatorial
-        </button>
+      </div>
+      <div className="control-group">
+        <span>구조</span>
+        {structural
+          .filter(([, , available]) => available)
+          .map(([key, label]) => (
+            <button
+              key={key}
+              aria-pressed={options[key]}
+              onClick={() => toggle(key)}
+            >
+              {label}
+            </button>
+          ))}
       </div>
       <div className="control-group">
         <span>조작</span>
