@@ -251,6 +251,10 @@ export default function App() {
         <span>Carbohydrate 3D Explorer</span>
         <OfflineStatus />
         <span>데이터: wwPDB CCD · PubChem</span>
+        <span className="page-footer__brand">
+          <b>HAFS Biology Lab</b>
+          <span>Teacher-built interactive science tools · CH Park</span>
+        </span>
         {/* 조회수: index.html 이 로드하는 포털 공통 모듈이 채움 */}
         <span data-page-views="" hidden />
       </footer>

@@ -547,6 +547,16 @@ a {
   font-size: 12px;
   color: #748188;
 }
+.page-footer__brand {
+  display: grid;
+  line-height: 1.45;
+}
+.page-footer__brand b {
+  color: #34444b;
+}
+.page-footer__brand span {
+  font-size: 11px;
+}
 .skip-link {
   position: absolute;
   left: 10px;
