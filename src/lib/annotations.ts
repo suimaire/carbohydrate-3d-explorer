@@ -14,7 +14,7 @@ import {
   residueLabel,
   structures,
 } from "../data/carbohydrates";
-const COLOR = {
+export const COLOR = {
   base: { prop: "elem", map: { C: 0x626b75, O: 0xd93835, H: 0xd9dfe5 } },
   hydroxyl: "#bd2674",
   anomeric: "#c07800",
@@ -27,6 +27,12 @@ const COLOR = {
   equatorial: "#166b58",
   text: "#233d56",
 };
+/** Shared appearance for static annotations and moving atom labels. */
+export const atomLabelStyle = (atom: AtomSpec, color = COLOR.text, offset = 0.55) => ({
+  position: { x: atom.x! + offset, y: atom.y! + offset, z: atom.z! + 0.35 },
+  fontSize: 15, fontColor: color, backgroundColor: "#ffffff",
+  backgroundOpacity: 0.92, borderColor: color, borderThickness: 0.5, inFront: true,
+});
 /** Labels are the first thing that makes a large fragment unreadable. */
 const LABEL_BUDGET = 30;
 function residuesInFocus(
@@ -96,16 +102,7 @@ export function applyAnnotations(
       y: atom.y! + offset,
       z: atom.z! + 0.35,
     };
-    v.addLabel(text, {
-      position,
-      fontSize: 15,
-      fontColor: color,
-      backgroundColor: "#ffffff",
-      backgroundOpacity: 0.92,
-      borderColor: color,
-      borderThickness: 0.5,
-      inFront: true,
-    });
+    v.addLabel(text, atomLabelStyle(atom, color, offset));
     v.addLine({
       start: { x: atom.x!, y: atom.y!, z: atom.z! },
       end: position,

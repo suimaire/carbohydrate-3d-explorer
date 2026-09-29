@@ -1,0 +1,8 @@
+{
+  "sourceIdentifier": "PubChem CID 107526",
+  "sourceUrl": "https://pubchem.ncbi.nlm.nih.gov/compound/107526",
+  "downloadUrl": "https://pubchem.ncbi.nlm.nih.gov/rest/pug/compound/cid/107526/SDF?record_type=3d",
+  "retrieved": "2026-09-29T02:05:12.132Z",
+  "sourceSHA256": "a2ca186d462d2762fa36429b6f3c1f8e0dfe63b1e5487d74916c98df82897e94",
+  "coordinateKind": "PubChem computed 3D conformer; not an experimental reaction trajectory"
+}

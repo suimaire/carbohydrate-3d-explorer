@@ -859,3 +859,34 @@ dialog h3 {
 .linkage-note strong {
   color: #23477e;
 }
+
+/* Glucose-only mode: keep the existing stage and add controls in normal flow. */
+.ring-chain-entry { display: flex; align-items: center; flex-wrap: wrap; gap: 12px; padding: 14px 24px 0; }
+.ring-chain-entry > span { font-size: 13px; color: #65736e; }
+.workspace.ring-chain-layout { height: auto; }
+@media (min-width: 1101px) {
+  .ring-chain-layout .sidebar { max-height: calc(100dvh - 250px); position: sticky; top: 0; }
+}
+.ring-chain-stage .canvas-host { position: relative; inset: auto; width: 100%; height: clamp(320px, 46vh, 520px); }
+.ring-chain-stage .stage-footer { position: relative; }
+.ring-chain-stage .stage-heading { padding-bottom: 8px; }
+.ring-chain-controls { margin: 4px 22px 22px; padding: 18px; border: 1px solid var(--line); border-radius: 6px; background: #f8fbf9; }
+.ring-chain-heading, .ring-chain-actions { display: flex; align-items: center; flex-wrap: wrap; gap: 10px; }
+.ring-chain-heading { justify-content: space-between; }
+.ring-chain-controls p { margin: 10px 0; }
+.ring-chain-controls [role="status"] { color: #145847; font-weight: 700; min-height: 26px; }
+.timeline-label { display: block; font-size: 13px; font-weight: 600; }
+.timeline-label input { display: block; width: 100%; min-height: 44px; margin: 0; accent-color: var(--accent); cursor: pointer; }
+.ring-chain-steps { display: flex; gap: 5px; flex-wrap: wrap; margin: 0 0 12px; }
+.ring-chain-steps button { flex: 1; padding: 6px 8px; font-size: 13px; white-space: nowrap; }
+.closure-choice { margin: 14px 0; border: 1px solid #a6c8bc; border-radius: 5px; padding: 10px; }
+.closure-choice legend { padding: 0 5px; font-weight: 600; }
+.closure-choice button { margin: 3px 6px 3px 0; }
+.ring-chain-science { font-size: 13px; border-top: 1px solid var(--line); padding-top: 12px; }
+.ring-chain-science summary { cursor: pointer; min-height: 30px; }
+@media (max-width: 700px) {
+  .ring-chain-controls { margin: 5px 10px 14px; padding: 12px; }
+  .ring-chain-stage .stage-heading { flex-wrap: wrap; }
+  .ring-chain-entry { padding: 12px 14px 0; }
+  .ring-chain-stage .canvas-host { height: 340px; }
+}

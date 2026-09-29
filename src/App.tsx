@@ -21,11 +21,13 @@ import {
   structures,
 } from "./data/carbohydrates";
 import type { FocusState, MoleculeId } from "./types/carbohydrate";
+import { isGlucose } from "./lib/ringChain";
 export default function App() {
   const [id, setId] = useState<MoleculeId>("BGC");
   const [options, setOptions] = useState(defaultOptions);
   const [reset, setReset] = useState(0);
   const [compare, setCompare] = useState(false);
+  const [interconversion, setInterconversion] = useState(false);
   const [kind, setKind] = useState<ComparisonKind>("anomer");
   const [sync, setSync] = useState(true);
   const [help, setHelp] = useState(false);
@@ -37,6 +39,7 @@ export default function App() {
   );
   const select = useCallback((next: MoleculeId) => {
     setId(next);
+    setInterconversion(false);
     setCompare(false);
     setFocus(NO_FOCUS);
     setOptions((o) => ({
@@ -68,6 +71,7 @@ export default function App() {
     setFocus(NO_FOCUS);
   };
   const toggleCompare = () => {
+    setInterconversion(false);
     setCompare((c) => !c);
     setKind("anomer");
     setSync(true);
@@ -119,7 +123,7 @@ export default function App() {
           <button onClick={() => setHelp(true)}>도움말</button>
         </div>
       </header>
-      <main className={`workspace ${compare ? "comparison-layout" : ""}`}>
+      <main className={`workspace ${compare ? "comparison-layout" : ""} ${interconversion ? "ring-chain-layout" : ""}`}>
         <MoleculeSidebar selected={id} onSelect={select} />
         <div className="viewer-area">
           {compare && (
@@ -154,8 +158,19 @@ export default function App() {
               </button>
             </div>
           )}
+          {!compare && isGlucose(id) && (
+            <div className="ring-chain-entry">
+              <button aria-pressed={interconversion} onClick={() => {
+                setInterconversion(active => !active);
+                setOptions(o => ({ ...o, spinning: false }));
+                setFocus(NO_FOCUS);
+              }}>{interconversion ? "일반 구조 보기로" : "고리 ↔ 사슬 전환"}</button>
+              <span>α · 사슬형 · β의 연결을 관찰하세요</span>
+            </div>
+          )}
           <ComparisonViewer
             selected={id}
+            interconversion={interconversion}
             compare={compare}
             kind={kind}
             sync={sync}
@@ -163,7 +178,7 @@ export default function App() {
             resetToken={reset}
             focus={focus}
           />
-          {options.axial && capabilities.axial && (
+          {!interconversion && options.axial && capabilities.axial && (
             <div className="axis-note">
               <strong>axial / equatorial ≠ up / down</strong>
               <span>
@@ -181,7 +196,7 @@ export default function App() {
               </span>
             </div>
           )}
-          {options.hydroxyl && (
+          {!interconversion && options.hydroxyl && (
             <p className="highlight-note">
               분홍색: OH의 산소
               {options.hydrogen
@@ -228,6 +243,16 @@ export default function App() {
               수용액의 구조 변화나 고분자 전체의 크기를 재현한 장면은 아닙니다.
             </p>
           </aside>
+        ) : interconversion ? (
+          <aside className="info">
+            <div className="section-kicker">RING &amp; CHAIN</div>
+            <h2>고리가 열리면?</h2>
+            <p>C1–O5 결합이 열리고 C1–O1이 이중 결합인 사슬형으로 바뀝니다.</p>
+            <p>C1은 고리형의 사면체 모양에서 사슬형의 평면 삼각형 모양으로 바뀝니다.</p>
+            <p>사슬형에는 α/β 구분이 없습니다. 사슬형에 도착하면 어느 형태로 고리를 닫을지 선택하세요.</p>
+            <p className="small-note">탄소 번호와 핵심 원자 추적으로 같은 원자를 따라가 보세요. 일반 구조 보기로 돌아가면 기존 표시 설정이 복원됩니다.</p>
+            <p className="small-note">양 끝 구조는 검증된 대표 구조이며, 중간 장면은 교육용 보간입니다. 실제 반응 경로나 전이상태를 나타내지 않습니다.</p>
+          </aside>
         ) : (
           <MoleculeInfo
             molecule={m}
@@ -245,6 +270,7 @@ export default function App() {
           onChange={setOptions}
           onReset={resetView}
           capabilities={capabilities}
+          interconversion={interconversion}
         />
       </div>
       <footer className="page-footer">

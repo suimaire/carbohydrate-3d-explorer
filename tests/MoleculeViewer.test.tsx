@@ -71,7 +71,7 @@ it("loads static data, defaults to stopped rotation, and clears on unmount", asy
   );
   expect(fetch).toHaveBeenCalledWith("/molecules/BGC.sdf", expect.anything());
   const v = mocks.create.mock.results[0].value;
-  expect(v.spin).toHaveBeenCalledWith(false, 0.6);
+  await waitFor(() => expect(v.spin).toHaveBeenCalledWith(false, 0.6));
   r.unmount();
   expect(onReady).toHaveBeenLastCalledWith(null);
   expect(v.clear).toHaveBeenCalled();

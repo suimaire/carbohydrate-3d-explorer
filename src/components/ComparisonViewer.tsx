@@ -108,6 +108,7 @@ export function ComparisonViewer({
   options,
   resetToken,
   focus,
+  interconversion = false,
 }: {
   selected: MoleculeId;
   compare: boolean;
@@ -116,6 +117,7 @@ export function ComparisonViewer({
   options: ViewerOptions;
   resetToken: number;
   focus: FocusState;
+  interconversion?: boolean;
 }) {
   const [left, setLeft] = useState<GLViewer | null>(null);
   const [right, setRight] = useState<GLViewer | null>(null);
@@ -144,6 +146,7 @@ export function ComparisonViewer({
         resetToken={resetToken}
         focus={focus}
         onReady={setLeft}
+        interconversion={!compare && interconversion}
       />
       {(wasCompared || compare) && (
         <div className="comparison-right" hidden={!compare}>

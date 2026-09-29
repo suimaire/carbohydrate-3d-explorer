@@ -1,5 +1,12 @@
 # 입체화학 검증 기록
 
+2026-09-29 추가: D-glucose 고리–사슬 전환의 PubChem CID 107526 원본, 명시적
+atom mapping, C1 carbonyl 평면성, C2–C5 입체배치와 중간 장면의 검증 범위는
+[RING_CHAIN_INTERCONVERSION.md](RING_CHAIN_INTERCONVERSION.md), 수치는
+[ring-chain-validation.json](ring-chain-validation.json)에 있습니다. 기존 14종
+구조 데이터와 아래 검증 기록은 유지합니다.
+
+
 단당류·이당류 검증일: 2026-09-07 / 2026-09-09. 데이터: wwPDB Chemical Component
 Dictionary(CCD)가 제공하는 **idealized coordinates**(`pdbx_model_Cartn_*_ideal`).
 

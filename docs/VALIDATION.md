@@ -84,3 +84,43 @@ O···O 거리 기준값과의 비교는 근거를 댈 수 없어 문서에서 
 5. 14종을 전환하고 표시 옵션이 구조에 따라 바뀌는지 확인합니다.
 6. 태블릿 두 손가락 확대와 화면 회전을 확인합니다.
 7. 배포본의 '오프라인 사용 준비 완료' 후 연결을 끊고 새로고침 및 14종 전환을 확인합니다.
+
+## 2026-09-29 · D-glucose 고리–사슬 전환 추가
+
+- 사전 상태: main, 미커밋 변경 없음. 수정 전 92개 테스트 / 타입 검사 / 빌드 통과.
+- 최종 `npm test`: **10개 파일, 113개 테스트 통과** (기존 92개 + 신규 21개).
+- `npm run typecheck`: 통과.
+- `npm run build`: 통과. 기존 3Dmol 내부 direct-eval 경고만 유지.
+- `node scripts/check-build.mjs`: 통과. 기존 14종 SDF와 18개 필수 리소스 캐시.
+- numpy + RDKit 준비 스크립트: 보존한 PubChem 3D 원본의 분자식, 무고리 그래프,
+  C2 R/C3 S/C4 R/C5 R, C1 carbonyl의 평면성 검사 통과.
+- 신규 테스트: 명시적 atom mapping, source hash/강체 정렬, 12원자 identity,
+  양 endpoint와 네 α/β 경로, bond order, finite/충돌/결합길이/입체배치/연속성,
+  고리 C1 사면체와 사슬 C1 평면성, 실제 3Dmol 단일 frame/동일 원자 객체,
+  카메라 비변경, RAF 취소/늦은 callback, 모드 종료/분자 변경/비교/unmount,
+  H 설정 복원, reduced-motion 및 수동 장면 이동.
+- 기존 MoleculeViewer 테스트의 spin assertion만 effect 완료를 기다리도록
+  `waitFor`로 감쌌다. 원래 assertion은 그대로이며 테스트를 삭제하거나 완화하지 않았다.
+
+실제 로컬 Edge / WebGL (headless, SwiftShader)에서 다음을 확인했다:
+α 진입, 재생 중 drag/wheel, pause/resume, 사슬형 도착 후 정지, α/β 각각 closure,
+β 진입, 키보드 slider, reset, mode exit, 분자 변경, 비교 모드 진입.
+브라우저 page error 0건. 390×844 모바일 에뮬레이션 가로 overflow 0px,
+reduced-motion에서 재생 비활성화와 수동 장면 이동 확인.
+
+jsdom/파서 테스트만으로 WebGL 표시를 증명하지 않는다. 별도 브라우저 화면을 확인했지만
+실제 태블릿 터치·GPU 드라이버·프로젝터 가독성·여러 각도의 라벨 겹침은 실기기 점검이
+남는다. 탄소 번호를 모두 켜면 일부 시점에서 라벨이 겹칠 수 있다.
+새 데이터의 출처·허용 오차·교육용 보간의 한계는
+[RING_CHAIN_INTERCONVERSION.md](RING_CHAIN_INTERCONVERSION.md)에 기록했다.
+
+오프라인 실브라우저 추가 검사: 일반 정적 HTTP 서버에서 배포본을 최초 캐시한 뒤
+브라우저 네트워크를 차단하고 새로고침했다. 앱 재시작, α glucose 로드 및 사슬형
+전환 모두 통과했으며 PubChem/RCSB 런타임 요청은 0건이었다.
+2026-09-09의 오프라인 미확인 기록은 당시 환경의 기록이며 이번 검증과 구분한다.
+
+환경별 차이: 기본 Vite preview에서는 `Vary: Origin` 응답 헤더가 있었고,
+18개 리소스가 CacheStorage에 있어도 연결 차단 후 JS/CSS 요청이 실패했다.
+동일한 dist를 Origin별 Vary가 없는 일반 정적 서버에서 제공하면 통과했다.
+기존 service worker와 생성 스크립트는 수정하지 않았다. 배포 서버의 헤더를 포함한
+실제 서비스 환경에서 설치·업데이트·연결 차단을 다시 확인하는 것이 좋다.

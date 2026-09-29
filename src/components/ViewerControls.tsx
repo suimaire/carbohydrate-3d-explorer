@@ -8,11 +8,13 @@ export function ViewerControls({
   onChange,
   onReset,
   capabilities,
+  interconversion = false,
 }: {
   options: ViewerOptions;
   onChange: (o: ViewerOptions) => void;
   onReset: () => void;
   capabilities: MoleculeCapabilities;
+  interconversion?: boolean;
 }) {
   const toggle = (key: BooleanOption) =>
     onChange({ ...options, [key]: !options[key] });
@@ -52,7 +54,9 @@ export function ViewerControls({
         ).map(([key, label]) => (
           <button
             key={key}
-            aria-pressed={options[key]}
+            disabled={interconversion && key !== "carbons"}
+            title={interconversion && key !== "carbons" ? "일반 구조 보기에서 사용할 수 있습니다." : undefined}
+            aria-pressed={interconversion && key !== "carbons" ? false : options[key]}
             onClick={() => toggle(key)}
           >
             {label}
@@ -66,6 +70,7 @@ export function ViewerControls({
           .map(([key, label]) => (
             <button
               key={key}
+              disabled={interconversion}
               aria-pressed={options[key]}
               onClick={() => toggle(key)}
             >

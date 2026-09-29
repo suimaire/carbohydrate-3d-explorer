@@ -9,6 +9,8 @@ import type {
 import { NO_FOCUS, structures } from "../data/carbohydrates";
 import { applyAnnotations } from "../lib/annotations";
 import { changeViewWithKey } from "../lib/keyboardView";
+import { RingChainControls } from "./RingChainControls";
+import { isGlucose } from "../lib/ringChain";
 /** Short shape tag: what kind of rings, or that this is only a fragment. */
 function formTag(molecule: Carbohydrate) {
   if (molecule.representationType === "fragment") return "대표 fragment";
@@ -24,13 +26,16 @@ export function MoleculeViewer({
   onReady,
   resetToken = 0,
   focus = NO_FOCUS,
+  interconversion = false,
 }: {
   molecule: Carbohydrate;
   options: ViewerOptions;
   onReady?: (viewer: GLViewer | null) => void;
   resetToken?: number;
   focus?: FocusState;
+  interconversion?: boolean;
 }) {
+  const inTransition = interconversion && isGlucose(molecule.id);
   const host = useRef<HTMLDivElement>(null);
   const viewer = useRef<GLViewer | null>(null);
   const initial = useRef<number[]>([]);
@@ -105,12 +110,12 @@ export function MoleculeViewer({
   }, [molecule.id, molecule.structureFile, attempt]);
   useEffect(() => {
     if (
-      status === "ready" &&
+      !inTransition && status === "ready" &&
       viewer.current &&
       loadedId.current === molecule.id
     )
       applyAnnotations(viewer.current, molecule, options, focus);
-  }, [status, molecule, options, focus]);
+  }, [status, molecule, options, focus, inTransition]);
   useEffect(() => {
     const v = viewer.current;
     if (status === "ready" && v) {
@@ -127,19 +132,19 @@ export function MoleculeViewer({
     };
   }, [status, options.spinning]);
   return (
-    <section className="molecule-stage" aria-label={`${molecule.name} 3D 구조`}>
+    <section className={`molecule-stage ${inTransition ? "ring-chain-stage" : ""}`} aria-label={`${molecule.name} 3D 구조`}>
       <div className="stage-heading">
         <div>
-          <h2>{molecule.name}</h2>
-          <p>{molecule.stereochemicalForm}</p>
+          <h2>{inTransition ? "D-glucose · 고리 ↔ 사슬" : molecule.name}</h2>
+          <p>{inTransition ? "검증된 양 끝 구조 사이의 교육용 전환" : molecule.stereochemicalForm}</p>
         </div>
-        <span className="form-tag">{formTag(molecule)}</span>
+        <span className="form-tag">{inTransition ? "교육용 3D 보간" : formTag(molecule)}</span>
       </div>
       <div
         ref={host}
         className="canvas-host"
         role="img"
-        aria-label={`${molecule.name}. 드래그로 회전, 휠로 확대. 상세 정보는 오른쪽 패널에서 읽을 수 있습니다.`}
+        aria-label={`${inTransition ? "D-glucose의 고리·사슬 전환" : molecule.name}. 드래그로 회전, 휠로 확대. 상세 정보는 오른쪽 패널에서 읽을 수 있습니다.`}
       />
       {status === "loading" && (
         <div className="viewer-message" role="status">
@@ -157,11 +162,11 @@ export function MoleculeViewer({
       )}
       <div className="stage-footer">
         <span>
-          ● C <i>●</i> O <b>●</b> H
+          ● C <i>●</i> O {!inTransition && <><b>●</b> H</>}
         </span>
         <button
           className="keyboard-view"
-          aria-label={`${molecule.name} 키보드 조작. 방향키 회전, 더하기 빼기 확대 축소, 0 초기화`}
+          aria-label={`${inTransition ? "D-glucose 전환" : molecule.name} 키보드 조작. 방향키 회전, 더하기 빼기 확대 축소, 0 초기화`}
           onKeyDown={(e) => {
             if (
               viewer.current &&
@@ -174,6 +179,14 @@ export function MoleculeViewer({
         </button>
         <span>드래그 회전 · 휠 확대</span>
       </div>
+      {inTransition && isGlucose(molecule.id) && status === "ready" &&
+        loadedId.current === molecule.id && viewer.current && (
+        <RingChainControls key={molecule.id} viewer={viewer.current} start={molecule.id}
+          options={options} onRestore={() => {
+            if (loadedId.current === molecule.id && viewer.current)
+              applyAnnotations(viewer.current, molecule, options, focus);
+          }} />
+      )}
     </section>
   );
 }
