@@ -50,6 +50,7 @@ beforeEach(()=>{
 afterEach(()=>{cleanup();vi.unstubAllGlobals();vi.restoreAllMocks();});
 for(const start of ["GLC","BGC"] as const) it(`${start}: play pauses at open, either closure is selectable, reset and scrub preserve camera`,async()=>{
   const renderer=await open(start);
+  expect(screen.queryByRole("region", { name: /2D 구조식$/ })).toBeNull();
   const v=mocks.create.mock.results[0].value;
   const viewChanges=v.setView.mock.calls.length, zooms=v.zoomTo.mock.calls.length;
   expect((button("H 표시") as HTMLButtonElement).disabled).toBe(true);
@@ -84,6 +85,7 @@ it("mode exit cancels RAF, ignores an already queued callback and restores annot
   fireEvent.click(button("재생"));tick(0);
   const stale=[...callbacks.values()][0];
   fireEvent.click(button("일반 구조 보기로"));
+  expect(screen.getByRole("region", { name: "β-D-glucose 2D 구조식" })).toBeTruthy();
   expect(renderer.dispose).toHaveBeenCalledTimes(1);expect(callbacks.size).toBe(0);
   const count=renderer.update.mock.calls.length;
   act(()=>stale(6000));expect(renderer.update).toHaveBeenCalledTimes(count);

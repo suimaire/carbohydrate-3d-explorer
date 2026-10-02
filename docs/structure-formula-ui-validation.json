@@ -1,0 +1,3415 @@
+{
+  "date": "2026-10-03",
+  "browser": "Codex in-app Chromium / WebGL",
+  "summary": {
+    "matrixCases": 50,
+    "issues": [],
+    "tests": 159,
+    "testFiles": 12,
+    "typecheck": "passed",
+    "build": "passed",
+    "productionOfflineVersion": "b660dbfce8706b0f"
+  },
+  "method": "Live browser actions, viewport screenshots, read-only DOM rectangle checks. Only saved states are measured; this is not a cumulative layout shift performance measurement. Native touch and pinch remain unverified.",
+  "records": [
+    {
+      "label": "1600-BGC",
+      "canvases": [
+        {
+          "bottom": 566.28125,
+          "height": 308,
+          "right": 1204.609375,
+          "touchAction": "none",
+          "width": 919.3125,
+          "x": 285.296875,
+          "y": 258.28125
+        }
+      ],
+      "loading": 0,
+      "overflow": false,
+      "references": [
+        {
+          "bottom": 890.28125,
+          "caption": {
+            "bottom": 801.546875,
+            "height": 68.53125,
+            "right": 933.296875,
+            "width": 320,
+            "x": 613.296875,
+            "y": 733.015625
+          },
+          "height": 282,
+          "name": "β-D-glucose 2D 구조식",
+          "right": 1204.609375,
+          "svg": {
+            "bottom": 877.28125,
+            "height": 220,
+            "right": 593.296875,
+            "width": 290,
+            "x": 303.296875,
+            "y": 657.28125
+          },
+          "width": 919.3125,
+          "x": 285.296875,
+          "y": 608.28125
+        }
+      ],
+      "viewport": {
+        "height": 1000,
+        "width": 1600
+      },
+      "checks": {
+        "label": "1600-BGC",
+        "overflow": false,
+        "loading": 0,
+        "refs": [
+          "β-D-glucose 2D 구조식"
+        ],
+        "overlap": false,
+        "captionOverlap": false,
+        "captionOverflow": false
+      },
+      "screenshot": "structure-formula-screenshots/after-1600-BGC.jpg"
+    },
+    {
+      "label": "1600-FRU",
+      "canvases": [
+        {
+          "bottom": 566.28125,
+          "height": 366,
+          "right": 1204.609375,
+          "touchAction": "none",
+          "width": 919.3125,
+          "x": 285.296875,
+          "y": 200.28125
+        }
+      ],
+      "loading": 0,
+      "overflow": false,
+      "references": [
+        {
+          "bottom": 890.28125,
+          "caption": {
+            "bottom": 801.546875,
+            "height": 68.53125,
+            "right": 933.296875,
+            "width": 320,
+            "x": 613.296875,
+            "y": 733.015625
+          },
+          "height": 282,
+          "name": "D-fructose 2D 구조식",
+          "right": 1204.609375,
+          "svg": {
+            "bottom": 877.28125,
+            "height": 220,
+            "right": 593.296875,
+            "width": 290,
+            "x": 303.296875,
+            "y": 657.28125
+          },
+          "width": 919.3125,
+          "x": 285.296875,
+          "y": 608.28125
+        }
+      ],
+      "viewport": {
+        "height": 1000,
+        "width": 1600
+      },
+      "checks": {
+        "label": "1600-FRU",
+        "overflow": false,
+        "loading": 0,
+        "refs": [
+          "D-fructose 2D 구조식"
+        ],
+        "overlap": false,
+        "captionOverlap": false,
+        "captionOverflow": false
+      },
+      "screenshot": "structure-formula-screenshots/after-1600-FRU.jpg"
+    },
+    {
+      "label": "1600-MAL",
+      "canvases": [
+        {
+          "bottom": 566.28125,
+          "height": 366,
+          "right": 1204.609375,
+          "touchAction": "none",
+          "width": 919.3125,
+          "x": 285.296875,
+          "y": 200.28125
+        }
+      ],
+      "loading": 0,
+      "overflow": false,
+      "references": [
+        {
+          "bottom": 890.28125,
+          "caption": {
+            "bottom": 877.28125,
+            "height": 40.78125,
+            "right": 1186.609375,
+            "width": 883.3125,
+            "x": 303.296875,
+            "y": 836.5
+          },
+          "height": 282,
+          "name": "Maltose 2D 구조식",
+          "right": 1204.609375,
+          "svg": {
+            "bottom": 833.5,
+            "height": 176.21875,
+            "right": 1186.609375,
+            "width": 883.3125,
+            "x": 303.296875,
+            "y": 657.28125
+          },
+          "width": 919.3125,
+          "x": 285.296875,
+          "y": 608.28125
+        }
+      ],
+      "viewport": {
+        "height": 1000,
+        "width": 1600
+      },
+      "checks": {
+        "label": "1600-MAL",
+        "overflow": false,
+        "loading": 0,
+        "refs": [
+          "Maltose 2D 구조식"
+        ],
+        "overlap": false,
+        "captionOverlap": false,
+        "captionOverflow": false
+      },
+      "screenshot": "structure-formula-screenshots/after-1600-MAL.jpg"
+    },
+    {
+      "label": "1600-SUC",
+      "canvases": [
+        {
+          "bottom": 566.28125,
+          "height": 366,
+          "right": 1204.609375,
+          "touchAction": "none",
+          "width": 919.3125,
+          "x": 285.296875,
+          "y": 200.28125
+        }
+      ],
+      "loading": 0,
+      "overflow": false,
+      "references": [
+        {
+          "bottom": 890.28125,
+          "caption": {
+            "bottom": 877.28125,
+            "height": 40.78125,
+            "right": 1186.609375,
+            "width": 883.3125,
+            "x": 303.296875,
+            "y": 836.5
+          },
+          "height": 282,
+          "name": "Sucrose 2D 구조식",
+          "right": 1204.609375,
+          "svg": {
+            "bottom": 833.5,
+            "height": 176.21875,
+            "right": 1186.609375,
+            "width": 883.3125,
+            "x": 303.296875,
+            "y": 657.28125
+          },
+          "width": 919.3125,
+          "x": 285.296875,
+          "y": 608.28125
+        }
+      ],
+      "viewport": {
+        "height": 1000,
+        "width": 1600
+      },
+      "checks": {
+        "label": "1600-SUC",
+        "overflow": false,
+        "loading": 0,
+        "refs": [
+          "Sucrose 2D 구조식"
+        ],
+        "overlap": false,
+        "captionOverlap": false,
+        "captionOverflow": false
+      },
+      "screenshot": "structure-formula-screenshots/after-1600-SUC.jpg"
+    },
+    {
+      "label": "1600-AMYLOPECTIN",
+      "canvases": [
+        {
+          "bottom": 566.28125,
+          "height": 366,
+          "right": 1204.609375,
+          "touchAction": "none",
+          "width": 919.3125,
+          "x": 285.296875,
+          "y": 200.28125
+        }
+      ],
+      "loading": 0,
+      "overflow": false,
+      "references": [
+        {
+          "bottom": 890.28125,
+          "caption": {
+            "bottom": 877.28125,
+            "height": 79.5625,
+            "right": 1186.609375,
+            "width": 883.3125,
+            "x": 303.296875,
+            "y": 797.71875
+          },
+          "height": 282,
+          "name": "Amylopectin 2D 구조식",
+          "right": 1204.609375,
+          "svg": {
+            "bottom": 794.71875,
+            "height": 137.4375,
+            "right": 1054.953125,
+            "width": 620,
+            "x": 434.953125,
+            "y": 657.28125
+          },
+          "width": 919.3125,
+          "x": 285.296875,
+          "y": 608.28125
+        }
+      ],
+      "viewport": {
+        "height": 1000,
+        "width": 1600
+      },
+      "checks": {
+        "label": "1600-AMYLOPECTIN",
+        "overflow": false,
+        "loading": 0,
+        "refs": [
+          "Amylopectin 2D 구조식"
+        ],
+        "overlap": false,
+        "captionOverlap": false,
+        "captionOverflow": false
+      },
+      "screenshot": "structure-formula-screenshots/after-1600-AMYLOPECTIN.jpg"
+    },
+    {
+      "label": "1600-CELLULOSE",
+      "canvases": [
+        {
+          "bottom": 566.28125,
+          "height": 366,
+          "right": 1204.609375,
+          "touchAction": "none",
+          "width": 919.3125,
+          "x": 285.296875,
+          "y": 200.28125
+        }
+      ],
+      "loading": 0,
+      "overflow": false,
+      "references": [
+        {
+          "bottom": 890.28125,
+          "caption": {
+            "bottom": 877.28125,
+            "height": 79.5625,
+            "right": 1186.609375,
+            "width": 883.3125,
+            "x": 303.296875,
+            "y": 797.71875
+          },
+          "height": 282,
+          "name": "Cellulose 2D 구조식",
+          "right": 1204.609375,
+          "svg": {
+            "bottom": 794.71875,
+            "height": 137.4375,
+            "right": 1054.953125,
+            "width": 620,
+            "x": 434.953125,
+            "y": 657.28125
+          },
+          "width": 919.3125,
+          "x": 285.296875,
+          "y": 608.28125
+        }
+      ],
+      "viewport": {
+        "height": 1000,
+        "width": 1600
+      },
+      "checks": {
+        "label": "1600-CELLULOSE",
+        "overflow": false,
+        "loading": 0,
+        "refs": [
+          "Cellulose 2D 구조식"
+        ],
+        "overlap": false,
+        "captionOverlap": false,
+        "captionOverflow": false
+      },
+      "screenshot": "structure-formula-screenshots/after-1600-CELLULOSE.jpg"
+    },
+    {
+      "label": "1600-compare-anomer",
+      "canvases": [
+        {
+          "bottom": 566.28125,
+          "height": 270,
+          "right": 752,
+          "touchAction": "none",
+          "width": 562,
+          "x": 190,
+          "y": 296.28125
+        },
+        {
+          "bottom": 566.28125,
+          "height": 270,
+          "right": 1315,
+          "touchAction": "none",
+          "width": 562,
+          "x": 753,
+          "y": 296.28125
+        }
+      ],
+      "loading": 0,
+      "overflow": false,
+      "references": [
+        {
+          "bottom": 890.28125,
+          "caption": {
+            "bottom": 877.28125,
+            "height": 21.390625,
+            "right": 734,
+            "width": 526,
+            "x": 208,
+            "y": 855.890625
+          },
+          "height": 282,
+          "name": "α-D-glucose 2D 구조식",
+          "right": 752,
+          "svg": {
+            "bottom": 852.890625,
+            "height": 195.609375,
+            "right": 734,
+            "width": 526,
+            "x": 208,
+            "y": 657.28125
+          },
+          "width": 562,
+          "x": 190,
+          "y": 608.28125
+        },
+        {
+          "bottom": 890.28125,
+          "caption": {
+            "bottom": 877.28125,
+            "height": 21.390625,
+            "right": 1297,
+            "width": 526,
+            "x": 771,
+            "y": 855.890625
+          },
+          "height": 282,
+          "name": "β-D-glucose 2D 구조식",
+          "right": 1315,
+          "svg": {
+            "bottom": 852.890625,
+            "height": 195.609375,
+            "right": 1297,
+            "width": 526,
+            "x": 771,
+            "y": 657.28125
+          },
+          "width": 562,
+          "x": 753,
+          "y": 608.28125
+        }
+      ],
+      "viewport": {
+        "height": 1000,
+        "width": 1600
+      },
+      "checks": {
+        "label": "1600-compare-anomer",
+        "overflow": false,
+        "loading": 0,
+        "refs": [
+          "α-D-glucose 2D 구조식",
+          "β-D-glucose 2D 구조식"
+        ],
+        "overlap": false,
+        "captionOverlap": false,
+        "captionOverflow": false
+      },
+      "screenshot": "structure-formula-screenshots/after-1600-compare-anomer.jpg"
+    },
+    {
+      "label": "1600-compare-linkage",
+      "canvases": [
+        {
+          "bottom": 566.28125,
+          "height": 270,
+          "right": 752,
+          "touchAction": "none",
+          "width": 562,
+          "x": 190,
+          "y": 296.28125
+        },
+        {
+          "bottom": 566.28125,
+          "height": 270,
+          "right": 1315,
+          "touchAction": "none",
+          "width": 562,
+          "x": 753,
+          "y": 296.28125
+        }
+      ],
+      "loading": 0,
+      "overflow": false,
+      "references": [
+        {
+          "bottom": 890.28125,
+          "caption": {
+            "bottom": 877.28125,
+            "height": 40.78125,
+            "right": 734,
+            "width": 526,
+            "x": 208,
+            "y": 836.5
+          },
+          "height": 282,
+          "name": "Maltose 2D 구조식",
+          "right": 752,
+          "svg": {
+            "bottom": 833.5,
+            "height": 176.21875,
+            "right": 734,
+            "width": 526,
+            "x": 208,
+            "y": 657.28125
+          },
+          "width": 562,
+          "x": 190,
+          "y": 608.28125
+        },
+        {
+          "bottom": 890.28125,
+          "caption": {
+            "bottom": 877.28125,
+            "height": 40.78125,
+            "right": 1297,
+            "width": 526,
+            "x": 771,
+            "y": 836.5
+          },
+          "height": 282,
+          "name": "Cellobiose 2D 구조식",
+          "right": 1315,
+          "svg": {
+            "bottom": 833.5,
+            "height": 176.21875,
+            "right": 1297,
+            "width": 526,
+            "x": 771,
+            "y": 657.28125
+          },
+          "width": 562,
+          "x": 753,
+          "y": 608.28125
+        }
+      ],
+      "viewport": {
+        "height": 1000,
+        "width": 1600
+      },
+      "checks": {
+        "label": "1600-compare-linkage",
+        "overflow": false,
+        "loading": 0,
+        "refs": [
+          "Maltose 2D 구조식",
+          "Cellobiose 2D 구조식"
+        ],
+        "overlap": false,
+        "captionOverlap": false,
+        "captionOverflow": false
+      },
+      "screenshot": "structure-formula-screenshots/after-1600-compare-linkage.jpg"
+    },
+    {
+      "label": "1600-compare-glucan",
+      "canvases": [
+        {
+          "bottom": 566.28125,
+          "height": 270,
+          "right": 752,
+          "touchAction": "none",
+          "width": 562,
+          "x": 190,
+          "y": 296.28125
+        },
+        {
+          "bottom": 566.28125,
+          "height": 270,
+          "right": 1315,
+          "touchAction": "none",
+          "width": 562,
+          "x": 753,
+          "y": 296.28125
+        }
+      ],
+      "loading": 0,
+      "overflow": false,
+      "references": [
+        {
+          "bottom": 890.28125,
+          "caption": {
+            "bottom": 877.28125,
+            "height": 79.5625,
+            "right": 734,
+            "width": 526,
+            "x": 208,
+            "y": 797.71875
+          },
+          "height": 282,
+          "name": "Amylose 2D 구조식",
+          "right": 752,
+          "svg": {
+            "bottom": 794.71875,
+            "height": 137.4375,
+            "right": 734,
+            "width": 526,
+            "x": 208,
+            "y": 657.28125
+          },
+          "width": 562,
+          "x": 190,
+          "y": 608.28125
+        },
+        {
+          "bottom": 890.28125,
+          "caption": {
+            "bottom": 877.28125,
+            "height": 79.5625,
+            "right": 1297,
+            "width": 526,
+            "x": 771,
+            "y": 797.71875
+          },
+          "height": 282,
+          "name": "Cellulose 2D 구조식",
+          "right": 1315,
+          "svg": {
+            "bottom": 794.71875,
+            "height": 137.4375,
+            "right": 1297,
+            "width": 526,
+            "x": 771,
+            "y": 657.28125
+          },
+          "width": 562,
+          "x": 753,
+          "y": 608.28125
+        }
+      ],
+      "viewport": {
+        "height": 1000,
+        "width": 1600
+      },
+      "checks": {
+        "label": "1600-compare-glucan",
+        "overflow": false,
+        "loading": 0,
+        "refs": [
+          "Amylose 2D 구조식",
+          "Cellulose 2D 구조식"
+        ],
+        "overlap": false,
+        "captionOverlap": false,
+        "captionOverflow": false
+      },
+      "screenshot": "structure-formula-screenshots/after-1600-compare-glucan.jpg"
+    },
+    {
+      "label": "1600-ring-chain",
+      "canvases": [
+        {
+          "bottom": 715.421875,
+          "height": 460,
+          "right": 1204.609375,
+          "touchAction": "none",
+          "width": 919.3125,
+          "x": 285.296875,
+          "y": 255.421875
+        }
+      ],
+      "loading": 0,
+      "overflow": false,
+      "references": [],
+      "viewport": {
+        "height": 1000,
+        "width": 1600
+      },
+      "checks": {
+        "label": "1600-ring-chain",
+        "overflow": false,
+        "loading": 0,
+        "refs": [],
+        "overlap": false,
+        "captionOverlap": false,
+        "captionOverflow": false
+      },
+      "screenshot": "structure-formula-screenshots/after-1600-ring-chain.jpg"
+    },
+    {
+      "label": "1366-BGC",
+      "canvases": [
+        {
+          "bottom": 398.28125,
+          "height": 220,
+          "right": 1026.765625,
+          "touchAction": "none",
+          "width": 783.59375,
+          "x": 243.171875,
+          "y": 178.28125
+        }
+      ],
+      "loading": 0,
+      "overflow": false,
+      "references": [
+        {
+          "bottom": 722.28125,
+          "caption": {
+            "bottom": 633.546875,
+            "height": 68.53125,
+            "right": 891.171875,
+            "width": 320,
+            "x": 571.171875,
+            "y": 565.015625
+          },
+          "height": 282,
+          "name": "β-D-glucose 2D 구조식",
+          "right": 1026.765625,
+          "svg": {
+            "bottom": 709.28125,
+            "height": 220,
+            "right": 551.171875,
+            "width": 290,
+            "x": 261.171875,
+            "y": 489.28125
+          },
+          "width": 783.59375,
+          "x": 243.171875,
+          "y": 440.28125
+        }
+      ],
+      "viewport": {
+        "height": 768,
+        "width": 1366
+      },
+      "checks": {
+        "overflow": false,
+        "loading": 0,
+        "refs": [
+          "β-D-glucose 2D 구조식"
+        ],
+        "overlap": false,
+        "captionOverlap": false,
+        "captionOverflow": false
+      },
+      "screenshot": "structure-formula-screenshots/after-1366-BGC.jpg"
+    },
+    {
+      "label": "1366-FRU",
+      "canvases": [
+        {
+          "bottom": 398.28125,
+          "height": 278,
+          "right": 1026.765625,
+          "touchAction": "none",
+          "width": 783.59375,
+          "x": 243.171875,
+          "y": 120.28125
+        }
+      ],
+      "loading": 0,
+      "overflow": false,
+      "references": [
+        {
+          "bottom": 722.28125,
+          "caption": {
+            "bottom": 633.546875,
+            "height": 68.53125,
+            "right": 891.171875,
+            "width": 320,
+            "x": 571.171875,
+            "y": 565.015625
+          },
+          "height": 282,
+          "name": "D-fructose 2D 구조식",
+          "right": 1026.765625,
+          "svg": {
+            "bottom": 709.28125,
+            "height": 220,
+            "right": 551.171875,
+            "width": 290,
+            "x": 261.171875,
+            "y": 489.28125
+          },
+          "width": 783.59375,
+          "x": 243.171875,
+          "y": 440.28125
+        }
+      ],
+      "viewport": {
+        "height": 768,
+        "width": 1366
+      },
+      "checks": {
+        "overflow": false,
+        "loading": 0,
+        "refs": [
+          "D-fructose 2D 구조식"
+        ],
+        "overlap": false,
+        "captionOverlap": false,
+        "captionOverflow": false
+      },
+      "screenshot": "structure-formula-screenshots/after-1366-FRU.jpg"
+    },
+    {
+      "label": "1366-MAL",
+      "canvases": [
+        {
+          "bottom": 398.28125,
+          "height": 278,
+          "right": 1026.765625,
+          "touchAction": "none",
+          "width": 783.59375,
+          "x": 243.171875,
+          "y": 120.28125
+        }
+      ],
+      "loading": 0,
+      "overflow": false,
+      "references": [
+        {
+          "bottom": 722.28125,
+          "caption": {
+            "bottom": 709.28125,
+            "height": 40.78125,
+            "right": 1008.765625,
+            "width": 747.59375,
+            "x": 261.171875,
+            "y": 668.5
+          },
+          "height": 282,
+          "name": "Maltose 2D 구조식",
+          "right": 1026.765625,
+          "svg": {
+            "bottom": 665.5,
+            "height": 176.21875,
+            "right": 1008.765625,
+            "width": 747.59375,
+            "x": 261.171875,
+            "y": 489.28125
+          },
+          "width": 783.59375,
+          "x": 243.171875,
+          "y": 440.28125
+        }
+      ],
+      "viewport": {
+        "height": 768,
+        "width": 1366
+      },
+      "checks": {
+        "overflow": false,
+        "loading": 0,
+        "refs": [
+          "Maltose 2D 구조식"
+        ],
+        "overlap": false,
+        "captionOverlap": false,
+        "captionOverflow": false
+      },
+      "screenshot": "structure-formula-screenshots/after-1366-MAL.jpg"
+    },
+    {
+      "label": "1366-SUC",
+      "canvases": [
+        {
+          "bottom": 398.28125,
+          "height": 278,
+          "right": 1026.765625,
+          "touchAction": "none",
+          "width": 783.59375,
+          "x": 243.171875,
+          "y": 120.28125
+        }
+      ],
+      "loading": 0,
+      "overflow": false,
+      "references": [
+        {
+          "bottom": 722.28125,
+          "caption": {
+            "bottom": 709.28125,
+            "height": 40.78125,
+            "right": 1008.765625,
+            "width": 747.59375,
+            "x": 261.171875,
+            "y": 668.5
+          },
+          "height": 282,
+          "name": "Sucrose 2D 구조식",
+          "right": 1026.765625,
+          "svg": {
+            "bottom": 665.5,
+            "height": 176.21875,
+            "right": 1008.765625,
+            "width": 747.59375,
+            "x": 261.171875,
+            "y": 489.28125
+          },
+          "width": 783.59375,
+          "x": 243.171875,
+          "y": 440.28125
+        }
+      ],
+      "viewport": {
+        "height": 768,
+        "width": 1366
+      },
+      "checks": {
+        "overflow": false,
+        "loading": 0,
+        "refs": [
+          "Sucrose 2D 구조식"
+        ],
+        "overlap": false,
+        "captionOverlap": false,
+        "captionOverflow": false
+      },
+      "screenshot": "structure-formula-screenshots/after-1366-SUC.jpg"
+    },
+    {
+      "label": "1366-AMYLOPECTIN",
+      "canvases": [
+        {
+          "bottom": 398.28125,
+          "height": 278,
+          "right": 1026.765625,
+          "touchAction": "none",
+          "width": 783.59375,
+          "x": 243.171875,
+          "y": 120.28125
+        }
+      ],
+      "loading": 0,
+      "overflow": false,
+      "references": [
+        {
+          "bottom": 722.28125,
+          "caption": {
+            "bottom": 709.28125,
+            "height": 79.5625,
+            "right": 1008.765625,
+            "width": 747.59375,
+            "x": 261.171875,
+            "y": 629.71875
+          },
+          "height": 282,
+          "name": "Amylopectin 2D 구조식",
+          "right": 1026.765625,
+          "svg": {
+            "bottom": 626.71875,
+            "height": 137.4375,
+            "right": 944.96875,
+            "width": 620,
+            "x": 324.96875,
+            "y": 489.28125
+          },
+          "width": 783.59375,
+          "x": 243.171875,
+          "y": 440.28125
+        }
+      ],
+      "viewport": {
+        "height": 768,
+        "width": 1366
+      },
+      "checks": {
+        "overflow": false,
+        "loading": 0,
+        "refs": [
+          "Amylopectin 2D 구조식"
+        ],
+        "overlap": false,
+        "captionOverlap": false,
+        "captionOverflow": false
+      },
+      "screenshot": "structure-formula-screenshots/after-1366-AMYLOPECTIN.jpg"
+    },
+    {
+      "label": "1366-CELLULOSE",
+      "canvases": [
+        {
+          "bottom": 398.28125,
+          "height": 278,
+          "right": 1026.765625,
+          "touchAction": "none",
+          "width": 783.59375,
+          "x": 243.171875,
+          "y": 120.28125
+        }
+      ],
+      "loading": 0,
+      "overflow": false,
+      "references": [
+        {
+          "bottom": 722.28125,
+          "caption": {
+            "bottom": 709.28125,
+            "height": 79.5625,
+            "right": 1008.765625,
+            "width": 747.59375,
+            "x": 261.171875,
+            "y": 629.71875
+          },
+          "height": 282,
+          "name": "Cellulose 2D 구조식",
+          "right": 1026.765625,
+          "svg": {
+            "bottom": 626.71875,
+            "height": 137.4375,
+            "right": 944.96875,
+            "width": 620,
+            "x": 324.96875,
+            "y": 489.28125
+          },
+          "width": 783.59375,
+          "x": 243.171875,
+          "y": 440.28125
+        }
+      ],
+      "viewport": {
+        "height": 768,
+        "width": 1366
+      },
+      "checks": {
+        "overflow": false,
+        "loading": 0,
+        "refs": [
+          "Cellulose 2D 구조식"
+        ],
+        "overlap": false,
+        "captionOverlap": false,
+        "captionOverflow": false
+      },
+      "screenshot": "structure-formula-screenshots/after-1366-CELLULOSE.jpg"
+    },
+    {
+      "label": "1366-compare-anomer",
+      "canvases": [
+        {
+          "bottom": 399.28125,
+          "height": 183,
+          "right": 635,
+          "touchAction": "none",
+          "width": 445,
+          "x": 190,
+          "y": 216.28125
+        },
+        {
+          "bottom": 399.28125,
+          "height": 183,
+          "right": 1081,
+          "touchAction": "none",
+          "width": 445,
+          "x": 636,
+          "y": 216.28125
+        }
+      ],
+      "loading": 0,
+      "overflow": false,
+      "references": [
+        {
+          "bottom": 723.28125,
+          "caption": {
+            "bottom": 710.28125,
+            "height": 38.78125,
+            "right": 617,
+            "width": 409,
+            "x": 208,
+            "y": 671.5
+          },
+          "height": 282,
+          "name": "α-D-glucose 2D 구조식",
+          "right": 635,
+          "svg": {
+            "bottom": 668.5,
+            "height": 178.21875,
+            "right": 617,
+            "width": 409,
+            "x": 208,
+            "y": 490.28125
+          },
+          "width": 445,
+          "x": 190,
+          "y": 441.28125
+        },
+        {
+          "bottom": 723.28125,
+          "caption": {
+            "bottom": 710.28125,
+            "height": 38.78125,
+            "right": 1063,
+            "width": 409,
+            "x": 654,
+            "y": 671.5
+          },
+          "height": 282,
+          "name": "β-D-glucose 2D 구조식",
+          "right": 1081,
+          "svg": {
+            "bottom": 668.5,
+            "height": 178.21875,
+            "right": 1063,
+            "width": 409,
+            "x": 654,
+            "y": 490.28125
+          },
+          "width": 445,
+          "x": 636,
+          "y": 441.28125
+        }
+      ],
+      "viewport": {
+        "height": 768,
+        "width": 1366
+      },
+      "checks": {
+        "overflow": false,
+        "loading": 0,
+        "refs": [
+          "α-D-glucose 2D 구조식",
+          "β-D-glucose 2D 구조식"
+        ],
+        "overlap": false,
+        "captionOverlap": false,
+        "captionOverflow": false
+      },
+      "screenshot": "structure-formula-screenshots/after-1366-compare-anomer.jpg"
+    },
+    {
+      "label": "1366-compare-linkage",
+      "canvases": [
+        {
+          "bottom": 399.28125,
+          "height": 183,
+          "right": 635,
+          "touchAction": "none",
+          "width": 445,
+          "x": 190,
+          "y": 216.28125
+        },
+        {
+          "bottom": 399.28125,
+          "height": 183,
+          "right": 1081,
+          "touchAction": "none",
+          "width": 445,
+          "x": 636,
+          "y": 216.28125
+        }
+      ],
+      "loading": 0,
+      "overflow": false,
+      "references": [
+        {
+          "bottom": 723.28125,
+          "caption": {
+            "bottom": 710.28125,
+            "height": 40.78125,
+            "right": 617,
+            "width": 409,
+            "x": 208,
+            "y": 669.5
+          },
+          "height": 282,
+          "name": "Maltose 2D 구조식",
+          "right": 635,
+          "svg": {
+            "bottom": 666.5,
+            "height": 176.21875,
+            "right": 617,
+            "width": 409,
+            "x": 208,
+            "y": 490.28125
+          },
+          "width": 445,
+          "x": 190,
+          "y": 441.28125
+        },
+        {
+          "bottom": 723.28125,
+          "caption": {
+            "bottom": 710.28125,
+            "height": 40.78125,
+            "right": 1063,
+            "width": 409,
+            "x": 654,
+            "y": 669.5
+          },
+          "height": 282,
+          "name": "Cellobiose 2D 구조식",
+          "right": 1081,
+          "svg": {
+            "bottom": 666.5,
+            "height": 176.21875,
+            "right": 1063,
+            "width": 409,
+            "x": 654,
+            "y": 490.28125
+          },
+          "width": 445,
+          "x": 636,
+          "y": 441.28125
+        }
+      ],
+      "viewport": {
+        "height": 768,
+        "width": 1366
+      },
+      "checks": {
+        "overflow": false,
+        "loading": 0,
+        "refs": [
+          "Maltose 2D 구조식",
+          "Cellobiose 2D 구조식"
+        ],
+        "overlap": false,
+        "captionOverlap": false,
+        "captionOverflow": false
+      },
+      "screenshot": "structure-formula-screenshots/after-1366-compare-linkage.jpg"
+    },
+    {
+      "label": "1366-compare-glucan",
+      "canvases": [
+        {
+          "bottom": 399.28125,
+          "height": 183,
+          "right": 635,
+          "touchAction": "none",
+          "width": 445,
+          "x": 190,
+          "y": 216.28125
+        },
+        {
+          "bottom": 399.28125,
+          "height": 183,
+          "right": 1081,
+          "touchAction": "none",
+          "width": 445,
+          "x": 636,
+          "y": 216.28125
+        }
+      ],
+      "loading": 0,
+      "overflow": false,
+      "references": [
+        {
+          "bottom": 723.28125,
+          "caption": {
+            "bottom": 710.28125,
+            "height": 96.953125,
+            "right": 617,
+            "width": 409,
+            "x": 208,
+            "y": 613.328125
+          },
+          "height": 282,
+          "name": "Amylose 2D 구조식",
+          "right": 635,
+          "svg": {
+            "bottom": 610.328125,
+            "height": 120.046875,
+            "right": 617,
+            "width": 409,
+            "x": 208,
+            "y": 490.28125
+          },
+          "width": 445,
+          "x": 190,
+          "y": 441.28125
+        },
+        {
+          "bottom": 723.28125,
+          "caption": {
+            "bottom": 710.28125,
+            "height": 96.953125,
+            "right": 1063,
+            "width": 409,
+            "x": 654,
+            "y": 613.328125
+          },
+          "height": 282,
+          "name": "Cellulose 2D 구조식",
+          "right": 1081,
+          "svg": {
+            "bottom": 610.328125,
+            "height": 120.046875,
+            "right": 1063,
+            "width": 409,
+            "x": 654,
+            "y": 490.28125
+          },
+          "width": 445,
+          "x": 636,
+          "y": 441.28125
+        }
+      ],
+      "viewport": {
+        "height": 768,
+        "width": 1366
+      },
+      "checks": {
+        "overflow": false,
+        "loading": 0,
+        "refs": [
+          "Amylose 2D 구조식",
+          "Cellulose 2D 구조식"
+        ],
+        "overlap": false,
+        "captionOverlap": false,
+        "captionOverflow": false
+      },
+      "screenshot": "structure-formula-screenshots/after-1366-compare-glucan.jpg"
+    },
+    {
+      "label": "1366-ring-chain",
+      "canvases": [
+        {
+          "bottom": 528.6875,
+          "height": 353.265625,
+          "right": 1026.765625,
+          "touchAction": "none",
+          "width": 783.59375,
+          "x": 243.171875,
+          "y": 175.421875
+        }
+      ],
+      "loading": 0,
+      "overflow": false,
+      "references": [],
+      "viewport": {
+        "height": 768,
+        "width": 1366
+      },
+      "checks": {
+        "overflow": false,
+        "loading": 0,
+        "refs": [],
+        "overlap": false,
+        "captionOverlap": false,
+        "captionOverflow": false
+      },
+      "screenshot": "structure-formula-screenshots/after-1366-ring-chain.jpg"
+    },
+    {
+      "label": "1024-BGC",
+      "canvases": [
+        {
+          "bottom": 548.28125,
+          "height": 330,
+          "right": 1009,
+          "touchAction": "none",
+          "width": 819,
+          "x": 190,
+          "y": 218.28125
+        }
+      ],
+      "loading": 0,
+      "overflow": false,
+      "references": [
+        {
+          "bottom": 872.28125,
+          "caption": {
+            "bottom": 783.546875,
+            "height": 68.53125,
+            "right": 838,
+            "width": 320,
+            "x": 518,
+            "y": 715.015625
+          },
+          "height": 282,
+          "name": "β-D-glucose 2D 구조식",
+          "right": 1009,
+          "svg": {
+            "bottom": 859.28125,
+            "height": 220,
+            "right": 498,
+            "width": 290,
+            "x": 208,
+            "y": 639.28125
+          },
+          "width": 819,
+          "x": 190,
+          "y": 590.28125
+        }
+      ],
+      "viewport": {
+        "height": 900,
+        "width": 1024
+      },
+      "checks": {
+        "overflow": false,
+        "loading": 0,
+        "refs": [
+          "β-D-glucose 2D 구조식"
+        ],
+        "overlap": false,
+        "captionOverlap": false,
+        "captionOverflow": false
+      },
+      "screenshot": "structure-formula-screenshots/after-1024-BGC.jpg"
+    },
+    {
+      "label": "1024-FRU",
+      "canvases": [
+        {
+          "bottom": 548.28125,
+          "height": 388,
+          "right": 1009,
+          "touchAction": "none",
+          "width": 819,
+          "x": 190,
+          "y": 160.28125
+        }
+      ],
+      "loading": 0,
+      "overflow": false,
+      "references": [
+        {
+          "bottom": 872.28125,
+          "caption": {
+            "bottom": 783.546875,
+            "height": 68.53125,
+            "right": 838,
+            "width": 320,
+            "x": 518,
+            "y": 715.015625
+          },
+          "height": 282,
+          "name": "D-fructose 2D 구조식",
+          "right": 1009,
+          "svg": {
+            "bottom": 859.28125,
+            "height": 220,
+            "right": 498,
+            "width": 290,
+            "x": 208,
+            "y": 639.28125
+          },
+          "width": 819,
+          "x": 190,
+          "y": 590.28125
+        }
+      ],
+      "viewport": {
+        "height": 900,
+        "width": 1024
+      },
+      "checks": {
+        "overflow": false,
+        "loading": 0,
+        "refs": [
+          "D-fructose 2D 구조식"
+        ],
+        "overlap": false,
+        "captionOverlap": false,
+        "captionOverflow": false
+      },
+      "screenshot": "structure-formula-screenshots/after-1024-FRU.jpg"
+    },
+    {
+      "label": "1024-MAL",
+      "canvases": [
+        {
+          "bottom": 548.28125,
+          "height": 388,
+          "right": 1009,
+          "touchAction": "none",
+          "width": 819,
+          "x": 190,
+          "y": 160.28125
+        }
+      ],
+      "loading": 0,
+      "overflow": false,
+      "references": [
+        {
+          "bottom": 872.28125,
+          "caption": {
+            "bottom": 859.28125,
+            "height": 40.78125,
+            "right": 991,
+            "width": 783,
+            "x": 208,
+            "y": 818.5
+          },
+          "height": 282,
+          "name": "Maltose 2D 구조식",
+          "right": 1009,
+          "svg": {
+            "bottom": 815.5,
+            "height": 176.21875,
+            "right": 991,
+            "width": 783,
+            "x": 208,
+            "y": 639.28125
+          },
+          "width": 819,
+          "x": 190,
+          "y": 590.28125
+        }
+      ],
+      "viewport": {
+        "height": 900,
+        "width": 1024
+      },
+      "checks": {
+        "overflow": false,
+        "loading": 0,
+        "refs": [
+          "Maltose 2D 구조식"
+        ],
+        "overlap": false,
+        "captionOverlap": false,
+        "captionOverflow": false
+      },
+      "screenshot": "structure-formula-screenshots/after-1024-MAL.jpg"
+    },
+    {
+      "label": "1024-SUC",
+      "canvases": [
+        {
+          "bottom": 548.28125,
+          "height": 388,
+          "right": 1009,
+          "touchAction": "none",
+          "width": 819,
+          "x": 190,
+          "y": 160.28125
+        }
+      ],
+      "loading": 0,
+      "overflow": false,
+      "references": [
+        {
+          "bottom": 872.28125,
+          "caption": {
+            "bottom": 859.28125,
+            "height": 40.78125,
+            "right": 991,
+            "width": 783,
+            "x": 208,
+            "y": 818.5
+          },
+          "height": 282,
+          "name": "Sucrose 2D 구조식",
+          "right": 1009,
+          "svg": {
+            "bottom": 815.5,
+            "height": 176.21875,
+            "right": 991,
+            "width": 783,
+            "x": 208,
+            "y": 639.28125
+          },
+          "width": 819,
+          "x": 190,
+          "y": 590.28125
+        }
+      ],
+      "viewport": {
+        "height": 900,
+        "width": 1024
+      },
+      "checks": {
+        "overflow": false,
+        "loading": 0,
+        "refs": [
+          "Sucrose 2D 구조식"
+        ],
+        "overlap": false,
+        "captionOverlap": false,
+        "captionOverflow": false
+      },
+      "screenshot": "structure-formula-screenshots/after-1024-SUC.jpg"
+    },
+    {
+      "label": "1024-AMYLOPECTIN",
+      "canvases": [
+        {
+          "bottom": 548.28125,
+          "height": 388,
+          "right": 1009,
+          "touchAction": "none",
+          "width": 819,
+          "x": 190,
+          "y": 160.28125
+        }
+      ],
+      "loading": 0,
+      "overflow": false,
+      "references": [
+        {
+          "bottom": 872.28125,
+          "caption": {
+            "bottom": 859.28125,
+            "height": 79.5625,
+            "right": 991,
+            "width": 783,
+            "x": 208,
+            "y": 779.71875
+          },
+          "height": 282,
+          "name": "Amylopectin 2D 구조식",
+          "right": 1009,
+          "svg": {
+            "bottom": 776.71875,
+            "height": 137.4375,
+            "right": 909.5,
+            "width": 620,
+            "x": 289.5,
+            "y": 639.28125
+          },
+          "width": 819,
+          "x": 190,
+          "y": 590.28125
+        }
+      ],
+      "viewport": {
+        "height": 900,
+        "width": 1024
+      },
+      "checks": {
+        "overflow": false,
+        "loading": 0,
+        "refs": [
+          "Amylopectin 2D 구조식"
+        ],
+        "overlap": false,
+        "captionOverlap": false,
+        "captionOverflow": false
+      },
+      "screenshot": "structure-formula-screenshots/after-1024-AMYLOPECTIN.jpg"
+    },
+    {
+      "label": "1024-CELLULOSE",
+      "canvases": [
+        {
+          "bottom": 548.28125,
+          "height": 388,
+          "right": 1009,
+          "touchAction": "none",
+          "width": 819,
+          "x": 190,
+          "y": 160.28125
+        }
+      ],
+      "loading": 0,
+      "overflow": false,
+      "references": [
+        {
+          "bottom": 872.28125,
+          "caption": {
+            "bottom": 859.28125,
+            "height": 79.5625,
+            "right": 991,
+            "width": 783,
+            "x": 208,
+            "y": 779.71875
+          },
+          "height": 282,
+          "name": "Cellulose 2D 구조식",
+          "right": 1009,
+          "svg": {
+            "bottom": 776.71875,
+            "height": 137.4375,
+            "right": 909.5,
+            "width": 620,
+            "x": 289.5,
+            "y": 639.28125
+          },
+          "width": 819,
+          "x": 190,
+          "y": 590.28125
+        }
+      ],
+      "viewport": {
+        "height": 900,
+        "width": 1024
+      },
+      "checks": {
+        "overflow": false,
+        "loading": 0,
+        "refs": [
+          "Cellulose 2D 구조식"
+        ],
+        "overlap": false,
+        "captionOverlap": false,
+        "captionOverflow": false
+      },
+      "screenshot": "structure-formula-screenshots/after-1024-CELLULOSE.jpg"
+    },
+    {
+      "label": "1024-compare-anomer",
+      "canvases": [
+        {
+          "bottom": 548.28125,
+          "height": 292,
+          "right": 591.5,
+          "touchAction": "none",
+          "width": 416.5,
+          "x": 175,
+          "y": 256.28125
+        },
+        {
+          "bottom": 548.28125,
+          "height": 292,
+          "right": 1009,
+          "touchAction": "none",
+          "width": 416.5,
+          "x": 592.5,
+          "y": 256.28125
+        }
+      ],
+      "loading": 0,
+      "overflow": false,
+      "references": [
+        {
+          "bottom": 872.28125,
+          "caption": {
+            "bottom": 859.28125,
+            "height": 38.78125,
+            "right": 573.5,
+            "width": 380.5,
+            "x": 193,
+            "y": 820.5
+          },
+          "height": 282,
+          "name": "α-D-glucose 2D 구조식",
+          "right": 591.5,
+          "svg": {
+            "bottom": 817.5,
+            "height": 178.21875,
+            "right": 573.5,
+            "width": 380.5,
+            "x": 193,
+            "y": 639.28125
+          },
+          "width": 416.5,
+          "x": 175,
+          "y": 590.28125
+        },
+        {
+          "bottom": 872.28125,
+          "caption": {
+            "bottom": 859.28125,
+            "height": 38.78125,
+            "right": 991,
+            "width": 380.5,
+            "x": 610.5,
+            "y": 820.5
+          },
+          "height": 282,
+          "name": "β-D-glucose 2D 구조식",
+          "right": 1009,
+          "svg": {
+            "bottom": 817.5,
+            "height": 178.21875,
+            "right": 991,
+            "width": 380.5,
+            "x": 610.5,
+            "y": 639.28125
+          },
+          "width": 416.5,
+          "x": 592.5,
+          "y": 590.28125
+        }
+      ],
+      "viewport": {
+        "height": 900,
+        "width": 1024
+      },
+      "checks": {
+        "overflow": false,
+        "loading": 0,
+        "refs": [
+          "α-D-glucose 2D 구조식",
+          "β-D-glucose 2D 구조식"
+        ],
+        "overlap": false,
+        "captionOverlap": false,
+        "captionOverflow": false
+      },
+      "screenshot": "structure-formula-screenshots/after-1024-compare-anomer.jpg"
+    },
+    {
+      "label": "1024-compare-linkage",
+      "canvases": [
+        {
+          "bottom": 548.28125,
+          "height": 292,
+          "right": 591.5,
+          "touchAction": "none",
+          "width": 416.5,
+          "x": 175,
+          "y": 256.28125
+        },
+        {
+          "bottom": 548.28125,
+          "height": 292,
+          "right": 1009,
+          "touchAction": "none",
+          "width": 416.5,
+          "x": 592.5,
+          "y": 256.28125
+        }
+      ],
+      "loading": 0,
+      "overflow": false,
+      "references": [
+        {
+          "bottom": 872.28125,
+          "caption": {
+            "bottom": 859.28125,
+            "height": 40.78125,
+            "right": 573.5,
+            "width": 380.5,
+            "x": 193,
+            "y": 818.5
+          },
+          "height": 282,
+          "name": "Maltose 2D 구조식",
+          "right": 591.5,
+          "svg": {
+            "bottom": 815.5,
+            "height": 176.21875,
+            "right": 573.5,
+            "width": 380.5,
+            "x": 193,
+            "y": 639.28125
+          },
+          "width": 416.5,
+          "x": 175,
+          "y": 590.28125
+        },
+        {
+          "bottom": 872.28125,
+          "caption": {
+            "bottom": 859.28125,
+            "height": 40.78125,
+            "right": 991,
+            "width": 380.5,
+            "x": 610.5,
+            "y": 818.5
+          },
+          "height": 282,
+          "name": "Cellobiose 2D 구조식",
+          "right": 1009,
+          "svg": {
+            "bottom": 815.5,
+            "height": 176.21875,
+            "right": 991,
+            "width": 380.5,
+            "x": 610.5,
+            "y": 639.28125
+          },
+          "width": 416.5,
+          "x": 592.5,
+          "y": 590.28125
+        }
+      ],
+      "viewport": {
+        "height": 900,
+        "width": 1024
+      },
+      "checks": {
+        "overflow": false,
+        "loading": 0,
+        "refs": [
+          "Maltose 2D 구조식",
+          "Cellobiose 2D 구조식"
+        ],
+        "overlap": false,
+        "captionOverlap": false,
+        "captionOverflow": false
+      },
+      "screenshot": "structure-formula-screenshots/after-1024-compare-linkage.jpg"
+    },
+    {
+      "label": "1024-compare-glucan",
+      "canvases": [
+        {
+          "bottom": 548.28125,
+          "height": 292,
+          "right": 591.5,
+          "touchAction": "none",
+          "width": 416.5,
+          "x": 175,
+          "y": 256.28125
+        },
+        {
+          "bottom": 548.28125,
+          "height": 292,
+          "right": 1009,
+          "touchAction": "none",
+          "width": 416.5,
+          "x": 592.5,
+          "y": 256.28125
+        }
+      ],
+      "loading": 0,
+      "overflow": false,
+      "references": [
+        {
+          "bottom": 872.28125,
+          "caption": {
+            "bottom": 859.28125,
+            "height": 114.34375,
+            "right": 573.5,
+            "width": 380.5,
+            "x": 193,
+            "y": 744.9375
+          },
+          "height": 282,
+          "name": "Amylose 2D 구조식",
+          "right": 591.5,
+          "svg": {
+            "bottom": 741.9375,
+            "height": 102.65625,
+            "right": 573.5,
+            "width": 380.5,
+            "x": 193,
+            "y": 639.28125
+          },
+          "width": 416.5,
+          "x": 175,
+          "y": 590.28125
+        },
+        {
+          "bottom": 872.28125,
+          "caption": {
+            "bottom": 859.28125,
+            "height": 114.34375,
+            "right": 991,
+            "width": 380.5,
+            "x": 610.5,
+            "y": 744.9375
+          },
+          "height": 282,
+          "name": "Cellulose 2D 구조식",
+          "right": 1009,
+          "svg": {
+            "bottom": 741.9375,
+            "height": 102.65625,
+            "right": 991,
+            "width": 380.5,
+            "x": 610.5,
+            "y": 639.28125
+          },
+          "width": 416.5,
+          "x": 592.5,
+          "y": 590.28125
+        }
+      ],
+      "viewport": {
+        "height": 900,
+        "width": 1024
+      },
+      "checks": {
+        "overflow": false,
+        "loading": 0,
+        "refs": [
+          "Amylose 2D 구조식",
+          "Cellulose 2D 구조식"
+        ],
+        "overlap": false,
+        "captionOverlap": false,
+        "captionOverflow": false
+      },
+      "screenshot": "structure-formula-screenshots/after-1024-compare-glucan.jpg"
+    },
+    {
+      "label": "1024-ring-chain",
+      "canvases": [
+        {
+          "bottom": 629.421875,
+          "height": 414,
+          "right": 1009,
+          "touchAction": "none",
+          "width": 819,
+          "x": 190,
+          "y": 215.421875
+        }
+      ],
+      "loading": 0,
+      "overflow": false,
+      "references": [],
+      "viewport": {
+        "height": 900,
+        "width": 1024
+      },
+      "checks": {
+        "overflow": false,
+        "loading": 0,
+        "refs": [],
+        "overlap": false,
+        "captionOverlap": false,
+        "captionOverflow": false
+      },
+      "screenshot": "structure-formula-screenshots/after-1024-ring-chain.jpg"
+    },
+    {
+      "label": "768-BGC",
+      "canvases": [
+        {
+          "bottom": 696.671875,
+          "height": 330,
+          "right": 753,
+          "touchAction": "none",
+          "width": 753,
+          "x": 0,
+          "y": 366.671875
+        }
+      ],
+      "loading": 0,
+      "overflow": false,
+      "references": [
+        {
+          "bottom": 1020.671875,
+          "caption": {
+            "bottom": 931.9375,
+            "height": 68.53125,
+            "right": 648,
+            "width": 320,
+            "x": 328,
+            "y": 863.40625
+          },
+          "height": 282,
+          "name": "β-D-glucose 2D 구조식",
+          "right": 753,
+          "svg": {
+            "bottom": 1007.671875,
+            "height": 220,
+            "right": 308,
+            "width": 290,
+            "x": 18,
+            "y": 787.671875
+          },
+          "width": 753,
+          "x": 0,
+          "y": 738.671875
+        }
+      ],
+      "viewport": {
+        "height": 1024,
+        "width": 768
+      },
+      "checks": {
+        "overflow": false,
+        "loading": 0,
+        "refs": [
+          "β-D-glucose 2D 구조식"
+        ],
+        "overlap": false,
+        "captionOverlap": false,
+        "captionOverflow": false
+      },
+      "screenshot": "structure-formula-screenshots/after-768-BGC.jpg"
+    },
+    {
+      "label": "768-FRU",
+      "canvases": [
+        {
+          "bottom": 696.671875,
+          "height": 388,
+          "right": 753,
+          "touchAction": "none",
+          "width": 753,
+          "x": 0,
+          "y": 308.671875
+        }
+      ],
+      "loading": 0,
+      "overflow": false,
+      "references": [
+        {
+          "bottom": 1020.671875,
+          "caption": {
+            "bottom": 931.9375,
+            "height": 68.53125,
+            "right": 648,
+            "width": 320,
+            "x": 328,
+            "y": 863.40625
+          },
+          "height": 282,
+          "name": "D-fructose 2D 구조식",
+          "right": 753,
+          "svg": {
+            "bottom": 1007.671875,
+            "height": 220,
+            "right": 308,
+            "width": 290,
+            "x": 18,
+            "y": 787.671875
+          },
+          "width": 753,
+          "x": 0,
+          "y": 738.671875
+        }
+      ],
+      "viewport": {
+        "height": 1024,
+        "width": 768
+      },
+      "checks": {
+        "overflow": false,
+        "loading": 0,
+        "refs": [
+          "D-fructose 2D 구조식"
+        ],
+        "overlap": false,
+        "captionOverlap": false,
+        "captionOverflow": false
+      },
+      "screenshot": "structure-formula-screenshots/after-768-FRU.jpg"
+    },
+    {
+      "label": "768-MAL",
+      "canvases": [
+        {
+          "bottom": 696.671875,
+          "height": 388,
+          "right": 753,
+          "touchAction": "none",
+          "width": 753,
+          "x": 0,
+          "y": 308.671875
+        }
+      ],
+      "loading": 0,
+      "overflow": false,
+      "references": [
+        {
+          "bottom": 1020.671875,
+          "caption": {
+            "bottom": 1007.671875,
+            "height": 40.78125,
+            "right": 735,
+            "width": 717,
+            "x": 18,
+            "y": 966.890625
+          },
+          "height": 282,
+          "name": "Maltose 2D 구조식",
+          "right": 753,
+          "svg": {
+            "bottom": 963.890625,
+            "height": 176.21875,
+            "right": 735,
+            "width": 717,
+            "x": 18,
+            "y": 787.671875
+          },
+          "width": 753,
+          "x": 0,
+          "y": 738.671875
+        }
+      ],
+      "viewport": {
+        "height": 1024,
+        "width": 768
+      },
+      "checks": {
+        "overflow": false,
+        "loading": 0,
+        "refs": [
+          "Maltose 2D 구조식"
+        ],
+        "overlap": false,
+        "captionOverlap": false,
+        "captionOverflow": false
+      },
+      "screenshot": "structure-formula-screenshots/after-768-MAL.jpg"
+    },
+    {
+      "label": "768-SUC",
+      "canvases": [
+        {
+          "bottom": 696.671875,
+          "height": 388,
+          "right": 753,
+          "touchAction": "none",
+          "width": 753,
+          "x": 0,
+          "y": 308.671875
+        }
+      ],
+      "loading": 0,
+      "overflow": false,
+      "references": [
+        {
+          "bottom": 1020.671875,
+          "caption": {
+            "bottom": 1007.671875,
+            "height": 40.78125,
+            "right": 735,
+            "width": 717,
+            "x": 18,
+            "y": 966.890625
+          },
+          "height": 282,
+          "name": "Sucrose 2D 구조식",
+          "right": 753,
+          "svg": {
+            "bottom": 963.890625,
+            "height": 176.21875,
+            "right": 735,
+            "width": 717,
+            "x": 18,
+            "y": 787.671875
+          },
+          "width": 753,
+          "x": 0,
+          "y": 738.671875
+        }
+      ],
+      "viewport": {
+        "height": 1024,
+        "width": 768
+      },
+      "checks": {
+        "overflow": false,
+        "loading": 0,
+        "refs": [
+          "Sucrose 2D 구조식"
+        ],
+        "overlap": false,
+        "captionOverlap": false,
+        "captionOverflow": false
+      },
+      "screenshot": "structure-formula-screenshots/after-768-SUC.jpg"
+    },
+    {
+      "label": "768-AMYLOPECTIN",
+      "canvases": [
+        {
+          "bottom": 696.671875,
+          "height": 388,
+          "right": 753,
+          "touchAction": "none",
+          "width": 753,
+          "x": 0,
+          "y": 308.671875
+        }
+      ],
+      "loading": 0,
+      "overflow": false,
+      "references": [
+        {
+          "bottom": 1020.671875,
+          "caption": {
+            "bottom": 1007.671875,
+            "height": 79.5625,
+            "right": 735,
+            "width": 717,
+            "x": 18,
+            "y": 928.109375
+          },
+          "height": 282,
+          "name": "Amylopectin 2D 구조식",
+          "right": 753,
+          "svg": {
+            "bottom": 925.109375,
+            "height": 137.4375,
+            "right": 686.5,
+            "width": 620,
+            "x": 66.5,
+            "y": 787.671875
+          },
+          "width": 753,
+          "x": 0,
+          "y": 738.671875
+        }
+      ],
+      "viewport": {
+        "height": 1024,
+        "width": 768
+      },
+      "checks": {
+        "overflow": false,
+        "loading": 0,
+        "refs": [
+          "Amylopectin 2D 구조식"
+        ],
+        "overlap": false,
+        "captionOverlap": false,
+        "captionOverflow": false
+      },
+      "screenshot": "structure-formula-screenshots/after-768-AMYLOPECTIN.jpg"
+    },
+    {
+      "label": "768-CELLULOSE",
+      "canvases": [
+        {
+          "bottom": 696.671875,
+          "height": 388,
+          "right": 753,
+          "touchAction": "none",
+          "width": 753,
+          "x": 0,
+          "y": 308.671875
+        }
+      ],
+      "loading": 0,
+      "overflow": false,
+      "references": [
+        {
+          "bottom": 1020.671875,
+          "caption": {
+            "bottom": 1007.671875,
+            "height": 79.5625,
+            "right": 735,
+            "width": 717,
+            "x": 18,
+            "y": 928.109375
+          },
+          "height": 282,
+          "name": "Cellulose 2D 구조식",
+          "right": 753,
+          "svg": {
+            "bottom": 925.109375,
+            "height": 137.4375,
+            "right": 686.5,
+            "width": 620,
+            "x": 66.5,
+            "y": 787.671875
+          },
+          "width": 753,
+          "x": 0,
+          "y": 738.671875
+        }
+      ],
+      "viewport": {
+        "height": 1024,
+        "width": 768
+      },
+      "checks": {
+        "overflow": false,
+        "loading": 0,
+        "refs": [
+          "Cellulose 2D 구조식"
+        ],
+        "overlap": false,
+        "captionOverlap": false,
+        "captionOverflow": false
+      },
+      "screenshot": "structure-formula-screenshots/after-768-CELLULOSE.jpg"
+    },
+    {
+      "label": "768-compare-anomer",
+      "canvases": [
+        {
+          "bottom": 696.671875,
+          "height": 292,
+          "right": 376,
+          "touchAction": "none",
+          "width": 376,
+          "x": 0,
+          "y": 404.671875
+        },
+        {
+          "bottom": 696.671875,
+          "height": 292,
+          "right": 753,
+          "touchAction": "none",
+          "width": 376,
+          "x": 377,
+          "y": 404.671875
+        }
+      ],
+      "loading": 0,
+      "overflow": false,
+      "references": [
+        {
+          "bottom": 1020.671875,
+          "caption": {
+            "bottom": 1007.671875,
+            "height": 38.78125,
+            "right": 358,
+            "width": 340,
+            "x": 18,
+            "y": 968.890625
+          },
+          "height": 282,
+          "name": "α-D-glucose 2D 구조식",
+          "right": 376,
+          "svg": {
+            "bottom": 965.890625,
+            "height": 178.21875,
+            "right": 358,
+            "width": 340,
+            "x": 18,
+            "y": 787.671875
+          },
+          "width": 376,
+          "x": 0,
+          "y": 738.671875
+        },
+        {
+          "bottom": 1020.671875,
+          "caption": {
+            "bottom": 1007.671875,
+            "height": 38.78125,
+            "right": 735,
+            "width": 340,
+            "x": 395,
+            "y": 968.890625
+          },
+          "height": 282,
+          "name": "β-D-glucose 2D 구조식",
+          "right": 753,
+          "svg": {
+            "bottom": 965.890625,
+            "height": 178.21875,
+            "right": 735,
+            "width": 340,
+            "x": 395,
+            "y": 787.671875
+          },
+          "width": 376,
+          "x": 377,
+          "y": 738.671875
+        }
+      ],
+      "viewport": {
+        "height": 1024,
+        "width": 768
+      },
+      "checks": {
+        "overflow": false,
+        "loading": 0,
+        "refs": [
+          "α-D-glucose 2D 구조식",
+          "β-D-glucose 2D 구조식"
+        ],
+        "overlap": false,
+        "captionOverlap": false,
+        "captionOverflow": false
+      },
+      "screenshot": "structure-formula-screenshots/after-768-compare-anomer.jpg"
+    },
+    {
+      "label": "768-compare-linkage",
+      "canvases": [
+        {
+          "bottom": 696.671875,
+          "height": 292,
+          "right": 376,
+          "touchAction": "none",
+          "width": 376,
+          "x": 0,
+          "y": 404.671875
+        },
+        {
+          "bottom": 696.671875,
+          "height": 292,
+          "right": 753,
+          "touchAction": "none",
+          "width": 376,
+          "x": 377,
+          "y": 404.671875
+        }
+      ],
+      "loading": 0,
+      "overflow": false,
+      "references": [
+        {
+          "bottom": 1020.671875,
+          "caption": {
+            "bottom": 1007.671875,
+            "height": 40.78125,
+            "right": 358,
+            "width": 340,
+            "x": 18,
+            "y": 966.890625
+          },
+          "height": 282,
+          "name": "Maltose 2D 구조식",
+          "right": 376,
+          "svg": {
+            "bottom": 963.890625,
+            "height": 176.21875,
+            "right": 358,
+            "width": 340,
+            "x": 18,
+            "y": 787.671875
+          },
+          "width": 376,
+          "x": 0,
+          "y": 738.671875
+        },
+        {
+          "bottom": 1020.671875,
+          "caption": {
+            "bottom": 1007.671875,
+            "height": 40.78125,
+            "right": 735,
+            "width": 340,
+            "x": 395,
+            "y": 966.890625
+          },
+          "height": 282,
+          "name": "Cellobiose 2D 구조식",
+          "right": 753,
+          "svg": {
+            "bottom": 963.890625,
+            "height": 176.21875,
+            "right": 735,
+            "width": 340,
+            "x": 395,
+            "y": 787.671875
+          },
+          "width": 376,
+          "x": 377,
+          "y": 738.671875
+        }
+      ],
+      "viewport": {
+        "height": 1024,
+        "width": 768
+      },
+      "checks": {
+        "overflow": false,
+        "loading": 0,
+        "refs": [
+          "Maltose 2D 구조식",
+          "Cellobiose 2D 구조식"
+        ],
+        "overlap": false,
+        "captionOverlap": false,
+        "captionOverflow": false
+      },
+      "screenshot": "structure-formula-screenshots/after-768-compare-linkage.jpg"
+    },
+    {
+      "label": "768-compare-glucan",
+      "canvases": [
+        {
+          "bottom": 696.671875,
+          "height": 292,
+          "right": 376,
+          "touchAction": "none",
+          "width": 376,
+          "x": 0,
+          "y": 404.671875
+        },
+        {
+          "bottom": 696.671875,
+          "height": 292,
+          "right": 753,
+          "touchAction": "none",
+          "width": 376,
+          "x": 377,
+          "y": 404.671875
+        }
+      ],
+      "loading": 0,
+      "overflow": false,
+      "references": [
+        {
+          "bottom": 1020.671875,
+          "caption": {
+            "bottom": 1007.671875,
+            "height": 114.34375,
+            "right": 358,
+            "width": 340,
+            "x": 18,
+            "y": 893.328125
+          },
+          "height": 282,
+          "name": "Amylose 2D 구조식",
+          "right": 376,
+          "svg": {
+            "bottom": 890.328125,
+            "height": 102.65625,
+            "right": 358,
+            "width": 340,
+            "x": 18,
+            "y": 787.671875
+          },
+          "width": 376,
+          "x": 0,
+          "y": 738.671875
+        },
+        {
+          "bottom": 1020.671875,
+          "caption": {
+            "bottom": 1007.671875,
+            "height": 114.34375,
+            "right": 735,
+            "width": 340,
+            "x": 395,
+            "y": 893.328125
+          },
+          "height": 282,
+          "name": "Cellulose 2D 구조식",
+          "right": 753,
+          "svg": {
+            "bottom": 890.328125,
+            "height": 102.65625,
+            "right": 735,
+            "width": 340,
+            "x": 395,
+            "y": 787.671875
+          },
+          "width": 376,
+          "x": 377,
+          "y": 738.671875
+        }
+      ],
+      "viewport": {
+        "height": 1024,
+        "width": 768
+      },
+      "checks": {
+        "overflow": false,
+        "loading": 0,
+        "refs": [
+          "Amylose 2D 구조식",
+          "Cellulose 2D 구조식"
+        ],
+        "overlap": false,
+        "captionOverlap": false,
+        "captionOverflow": false
+      },
+      "screenshot": "structure-formula-screenshots/after-768-compare-glucan.jpg"
+    },
+    {
+      "label": "768-ring-chain",
+      "canvases": [
+        {
+          "bottom": 827.140625,
+          "height": 471.03125,
+          "right": 753,
+          "touchAction": "none",
+          "width": 753,
+          "x": 0,
+          "y": 356.109375
+        }
+      ],
+      "loading": 0,
+      "overflow": false,
+      "references": [],
+      "viewport": {
+        "height": 1024,
+        "width": 768
+      },
+      "checks": {
+        "overflow": false,
+        "loading": 0,
+        "refs": [],
+        "overlap": false,
+        "captionOverlap": false,
+        "captionOverflow": false
+      },
+      "screenshot": "structure-formula-screenshots/after-768-ring-chain.jpg"
+    },
+    {
+      "label": "390-BGC",
+      "canvases": [
+        {
+          "bottom": 474.859375,
+          "height": 270,
+          "right": 375,
+          "touchAction": "none",
+          "width": 375,
+          "x": 0,
+          "y": 204.859375
+        }
+      ],
+      "loading": 0,
+      "overflow": false,
+      "references": [
+        {
+          "bottom": 803.859375,
+          "caption": {
+            "bottom": 789.859375,
+            "height": 38.78125,
+            "right": 363,
+            "width": 351,
+            "x": 12,
+            "y": 751.078125
+          },
+          "height": 287,
+          "name": "β-D-glucose 2D 구조식",
+          "right": 375,
+          "svg": {
+            "bottom": 748.078125,
+            "height": 172.21875,
+            "right": 363,
+            "width": 351,
+            "x": 12,
+            "y": 575.859375
+          },
+          "width": 375,
+          "x": 0,
+          "y": 516.859375
+        }
+      ],
+      "viewport": {
+        "height": 844,
+        "width": 390
+      },
+      "checks": {
+        "overflow": false,
+        "loading": 0,
+        "refs": [
+          "β-D-glucose 2D 구조식"
+        ],
+        "overlap": false,
+        "captionOverlap": false,
+        "captionOverflow": false
+      },
+      "screenshot": "structure-formula-screenshots/after-390-BGC.jpg"
+    },
+    {
+      "label": "390-FRU",
+      "canvases": [
+        {
+          "bottom": 418.859375,
+          "height": 270,
+          "right": 375,
+          "touchAction": "none",
+          "width": 375,
+          "x": 0,
+          "y": 148.859375
+        }
+      ],
+      "loading": 0,
+      "overflow": false,
+      "references": [
+        {
+          "bottom": 747.859375,
+          "caption": {
+            "bottom": 733.859375,
+            "height": 38.78125,
+            "right": 363,
+            "width": 351,
+            "x": 12,
+            "y": 695.078125
+          },
+          "height": 287,
+          "name": "D-fructose 2D 구조식",
+          "right": 375,
+          "svg": {
+            "bottom": 692.078125,
+            "height": 172.21875,
+            "right": 363,
+            "width": 351,
+            "x": 12,
+            "y": 519.859375
+          },
+          "width": 375,
+          "x": 0,
+          "y": 460.859375
+        }
+      ],
+      "viewport": {
+        "height": 844,
+        "width": 390
+      },
+      "checks": {
+        "overflow": false,
+        "loading": 0,
+        "refs": [
+          "D-fructose 2D 구조식"
+        ],
+        "overlap": false,
+        "captionOverlap": false,
+        "captionOverflow": false
+      },
+      "screenshot": "structure-formula-screenshots/after-390-FRU.jpg"
+    },
+    {
+      "label": "390-MAL",
+      "canvases": [
+        {
+          "bottom": 418.859375,
+          "height": 270,
+          "right": 375,
+          "touchAction": "none",
+          "width": 375,
+          "x": 0,
+          "y": 148.859375
+        }
+      ],
+      "loading": 0,
+      "overflow": false,
+      "references": [
+        {
+          "bottom": 747.859375,
+          "caption": {
+            "bottom": 733.859375,
+            "height": 40.78125,
+            "right": 363,
+            "width": 351,
+            "x": 12,
+            "y": 693.078125
+          },
+          "height": 287,
+          "name": "Maltose 2D 구조식",
+          "right": 375,
+          "svg": {
+            "bottom": 690.078125,
+            "height": 170.21875,
+            "right": 363,
+            "width": 351,
+            "x": 12,
+            "y": 519.859375
+          },
+          "width": 375,
+          "x": 0,
+          "y": 460.859375
+        }
+      ],
+      "viewport": {
+        "height": 844,
+        "width": 390
+      },
+      "checks": {
+        "overflow": false,
+        "loading": 0,
+        "refs": [
+          "Maltose 2D 구조식"
+        ],
+        "overlap": false,
+        "captionOverlap": false,
+        "captionOverflow": false
+      },
+      "screenshot": "structure-formula-screenshots/after-390-MAL.jpg"
+    },
+    {
+      "label": "390-SUC",
+      "canvases": [
+        {
+          "bottom": 418.859375,
+          "height": 270,
+          "right": 375,
+          "touchAction": "none",
+          "width": 375,
+          "x": 0,
+          "y": 148.859375
+        }
+      ],
+      "loading": 0,
+      "overflow": false,
+      "references": [
+        {
+          "bottom": 747.859375,
+          "caption": {
+            "bottom": 733.859375,
+            "height": 40.78125,
+            "right": 363,
+            "width": 351,
+            "x": 12,
+            "y": 693.078125
+          },
+          "height": 287,
+          "name": "Sucrose 2D 구조식",
+          "right": 375,
+          "svg": {
+            "bottom": 690.078125,
+            "height": 170.21875,
+            "right": 363,
+            "width": 351,
+            "x": 12,
+            "y": 519.859375
+          },
+          "width": 375,
+          "x": 0,
+          "y": 460.859375
+        }
+      ],
+      "viewport": {
+        "height": 844,
+        "width": 390
+      },
+      "checks": {
+        "overflow": false,
+        "loading": 0,
+        "refs": [
+          "Sucrose 2D 구조식"
+        ],
+        "overlap": false,
+        "captionOverlap": false,
+        "captionOverflow": false
+      },
+      "screenshot": "structure-formula-screenshots/after-390-SUC.jpg"
+    },
+    {
+      "label": "390-AMYLOPECTIN",
+      "canvases": [
+        {
+          "bottom": 418.859375,
+          "height": 270,
+          "right": 375,
+          "touchAction": "none",
+          "width": 375,
+          "x": 0,
+          "y": 148.859375
+        }
+      ],
+      "loading": 0,
+      "overflow": false,
+      "references": [
+        {
+          "bottom": 747.859375,
+          "caption": {
+            "bottom": 733.859375,
+            "height": 114.34375,
+            "right": 363,
+            "width": 351,
+            "x": 12,
+            "y": 619.515625
+          },
+          "height": 287,
+          "name": "Amylopectin 2D 구조식",
+          "right": 375,
+          "svg": {
+            "bottom": 616.515625,
+            "height": 96.65625,
+            "right": 363,
+            "width": 351,
+            "x": 12,
+            "y": 519.859375
+          },
+          "width": 375,
+          "x": 0,
+          "y": 460.859375
+        }
+      ],
+      "viewport": {
+        "height": 844,
+        "width": 390
+      },
+      "checks": {
+        "overflow": false,
+        "loading": 0,
+        "refs": [
+          "Amylopectin 2D 구조식"
+        ],
+        "overlap": false,
+        "captionOverlap": false,
+        "captionOverflow": false
+      },
+      "screenshot": "structure-formula-screenshots/after-390-AMYLOPECTIN.jpg"
+    },
+    {
+      "label": "390-CELLULOSE",
+      "canvases": [
+        {
+          "bottom": 418.859375,
+          "height": 270,
+          "right": 375,
+          "touchAction": "none",
+          "width": 375,
+          "x": 0,
+          "y": 148.859375
+        }
+      ],
+      "loading": 0,
+      "overflow": false,
+      "references": [
+        {
+          "bottom": 747.859375,
+          "caption": {
+            "bottom": 733.859375,
+            "height": 114.34375,
+            "right": 363,
+            "width": 351,
+            "x": 12,
+            "y": 619.515625
+          },
+          "height": 287,
+          "name": "Cellulose 2D 구조식",
+          "right": 375,
+          "svg": {
+            "bottom": 616.515625,
+            "height": 96.65625,
+            "right": 363,
+            "width": 351,
+            "x": 12,
+            "y": 519.859375
+          },
+          "width": 375,
+          "x": 0,
+          "y": 460.859375
+        }
+      ],
+      "viewport": {
+        "height": 844,
+        "width": 390
+      },
+      "checks": {
+        "overflow": false,
+        "loading": 0,
+        "refs": [
+          "Cellulose 2D 구조식"
+        ],
+        "overlap": false,
+        "captionOverlap": false,
+        "captionOverflow": false
+      },
+      "screenshot": "structure-formula-screenshots/after-390-CELLULOSE.jpg"
+    },
+    {
+      "label": "390-compare-anomer",
+      "canvases": [
+        {
+          "bottom": 537.859375,
+          "height": 243,
+          "right": 375,
+          "touchAction": "none",
+          "width": 375,
+          "x": 0,
+          "y": 294.859375
+        },
+        {
+          "bottom": 1225.859375,
+          "height": 243,
+          "right": 375,
+          "touchAction": "none",
+          "width": 375,
+          "x": 0,
+          "y": 982.859375
+        }
+      ],
+      "loading": 0,
+      "overflow": false,
+      "references": [
+        {
+          "bottom": 866.859375,
+          "caption": {
+            "bottom": 852.859375,
+            "height": 38.78125,
+            "right": 363,
+            "width": 351,
+            "x": 12,
+            "y": 814.078125
+          },
+          "height": 287,
+          "name": "α-D-glucose 2D 구조식",
+          "right": 375,
+          "svg": {
+            "bottom": 811.078125,
+            "height": 172.21875,
+            "right": 363,
+            "width": 351,
+            "x": 12,
+            "y": 638.859375
+          },
+          "width": 375,
+          "x": 0,
+          "y": 579.859375
+        },
+        {
+          "bottom": 1554.859375,
+          "caption": {
+            "bottom": 1540.859375,
+            "height": 38.78125,
+            "right": 363,
+            "width": 351,
+            "x": 12,
+            "y": 1502.078125
+          },
+          "height": 287,
+          "name": "β-D-glucose 2D 구조식",
+          "right": 375,
+          "svg": {
+            "bottom": 1499.078125,
+            "height": 172.21875,
+            "right": 363,
+            "width": 351,
+            "x": 12,
+            "y": 1326.859375
+          },
+          "width": 375,
+          "x": 0,
+          "y": 1267.859375
+        }
+      ],
+      "viewport": {
+        "height": 844,
+        "width": 390
+      },
+      "checks": {
+        "overflow": false,
+        "loading": 0,
+        "refs": [
+          "α-D-glucose 2D 구조식",
+          "β-D-glucose 2D 구조식"
+        ],
+        "overlap": false,
+        "captionOverlap": false,
+        "captionOverflow": false
+      },
+      "screenshot": "structure-formula-screenshots/after-390-compare-anomer.jpg"
+    },
+    {
+      "label": "390-compare-linkage",
+      "canvases": [
+        {
+          "bottom": 537.859375,
+          "height": 243,
+          "right": 375,
+          "touchAction": "none",
+          "width": 375,
+          "x": 0,
+          "y": 294.859375
+        },
+        {
+          "bottom": 1225.859375,
+          "height": 243,
+          "right": 375,
+          "touchAction": "none",
+          "width": 375,
+          "x": 0,
+          "y": 982.859375
+        }
+      ],
+      "loading": 0,
+      "overflow": false,
+      "references": [
+        {
+          "bottom": 866.859375,
+          "caption": {
+            "bottom": 852.859375,
+            "height": 40.78125,
+            "right": 363,
+            "width": 351,
+            "x": 12,
+            "y": 812.078125
+          },
+          "height": 287,
+          "name": "Maltose 2D 구조식",
+          "right": 375,
+          "svg": {
+            "bottom": 809.078125,
+            "height": 170.21875,
+            "right": 363,
+            "width": 351,
+            "x": 12,
+            "y": 638.859375
+          },
+          "width": 375,
+          "x": 0,
+          "y": 579.859375
+        },
+        {
+          "bottom": 1554.859375,
+          "caption": {
+            "bottom": 1540.859375,
+            "height": 40.78125,
+            "right": 363,
+            "width": 351,
+            "x": 12,
+            "y": 1500.078125
+          },
+          "height": 287,
+          "name": "Cellobiose 2D 구조식",
+          "right": 375,
+          "svg": {
+            "bottom": 1497.078125,
+            "height": 170.21875,
+            "right": 363,
+            "width": 351,
+            "x": 12,
+            "y": 1326.859375
+          },
+          "width": 375,
+          "x": 0,
+          "y": 1267.859375
+        }
+      ],
+      "viewport": {
+        "height": 844,
+        "width": 390
+      },
+      "checks": {
+        "overflow": false,
+        "loading": 0,
+        "refs": [
+          "Maltose 2D 구조식",
+          "Cellobiose 2D 구조식"
+        ],
+        "overlap": false,
+        "captionOverlap": false,
+        "captionOverflow": false
+      },
+      "screenshot": "structure-formula-screenshots/after-390-compare-linkage.jpg"
+    },
+    {
+      "label": "390-compare-glucan",
+      "canvases": [
+        {
+          "bottom": 537.859375,
+          "height": 243,
+          "right": 375,
+          "touchAction": "none",
+          "width": 375,
+          "x": 0,
+          "y": 294.859375
+        },
+        {
+          "bottom": 1225.859375,
+          "height": 243,
+          "right": 375,
+          "touchAction": "none",
+          "width": 375,
+          "x": 0,
+          "y": 982.859375
+        }
+      ],
+      "loading": 0,
+      "overflow": false,
+      "references": [
+        {
+          "bottom": 866.859375,
+          "caption": {
+            "bottom": 852.859375,
+            "height": 114.34375,
+            "right": 363,
+            "width": 351,
+            "x": 12,
+            "y": 738.515625
+          },
+          "height": 287,
+          "name": "Amylose 2D 구조식",
+          "right": 375,
+          "svg": {
+            "bottom": 735.515625,
+            "height": 96.65625,
+            "right": 363,
+            "width": 351,
+            "x": 12,
+            "y": 638.859375
+          },
+          "width": 375,
+          "x": 0,
+          "y": 579.859375
+        },
+        {
+          "bottom": 1554.859375,
+          "caption": {
+            "bottom": 1540.859375,
+            "height": 114.34375,
+            "right": 363,
+            "width": 351,
+            "x": 12,
+            "y": 1426.515625
+          },
+          "height": 287,
+          "name": "Cellulose 2D 구조식",
+          "right": 375,
+          "svg": {
+            "bottom": 1423.515625,
+            "height": 96.65625,
+            "right": 363,
+            "width": 351,
+            "x": 12,
+            "y": 1326.859375
+          },
+          "width": 375,
+          "x": 0,
+          "y": 1267.859375
+        }
+      ],
+      "viewport": {
+        "height": 844,
+        "width": 390
+      },
+      "checks": {
+        "overflow": false,
+        "loading": 0,
+        "refs": [
+          "Amylose 2D 구조식",
+          "Cellulose 2D 구조식"
+        ],
+        "overlap": false,
+        "captionOverlap": false,
+        "captionOverflow": false
+      },
+      "screenshot": "structure-formula-screenshots/after-390-compare-glucan.jpg"
+    },
+    {
+      "label": "390-ring-chain",
+      "canvases": [
+        {
+          "bottom": 534.296875,
+          "height": 340,
+          "right": 375,
+          "touchAction": "none",
+          "width": 375,
+          "x": 0,
+          "y": 194.296875
+        }
+      ],
+      "loading": 0,
+      "overflow": false,
+      "references": [],
+      "viewport": {
+        "height": 844,
+        "width": 390
+      },
+      "checks": {
+        "overflow": false,
+        "loading": 0,
+        "refs": [],
+        "overlap": false,
+        "captionOverlap": false,
+        "captionOverflow": false
+      },
+      "screenshot": "structure-formula-screenshots/after-390-ring-chain.jpg"
+    }
+  ],
+  "offline": {
+    "method": "Cached production build, stopped its local HTTP server, independently confirmed HTTP requests failed, then reloaded and selected molecules.",
+    "allMolecules": [
+      {
+        "canvas": 1,
+        "errors": [],
+        "name": "α-D-glucose 2D 구조식",
+        "status": "인터넷이 끊겨도 사용할 수 있습니다"
+      },
+      {
+        "canvas": 1,
+        "errors": [],
+        "name": "β-D-glucose 2D 구조식",
+        "status": "인터넷이 끊겨도 사용할 수 있습니다"
+      },
+      {
+        "canvas": 1,
+        "errors": [],
+        "name": "D-galactose 2D 구조식",
+        "status": "인터넷이 끊겨도 사용할 수 있습니다"
+      },
+      {
+        "canvas": 1,
+        "errors": [],
+        "name": "D-fructose 2D 구조식",
+        "status": "인터넷이 끊겨도 사용할 수 있습니다"
+      },
+      {
+        "canvas": 1,
+        "errors": [],
+        "name": "D-ribose 2D 구조식",
+        "status": "인터넷이 끊겨도 사용할 수 있습니다"
+      },
+      {
+        "canvas": 1,
+        "errors": [],
+        "name": "2-deoxy-D-ribose 2D 구조식",
+        "status": "인터넷이 끊겨도 사용할 수 있습니다"
+      },
+      {
+        "canvas": 1,
+        "errors": [],
+        "name": "Maltose 2D 구조식",
+        "status": "인터넷이 끊겨도 사용할 수 있습니다"
+      },
+      {
+        "canvas": 1,
+        "errors": [],
+        "name": "Cellobiose 2D 구조식",
+        "status": "인터넷이 끊겨도 사용할 수 있습니다"
+      },
+      {
+        "canvas": 1,
+        "errors": [],
+        "name": "Lactose 2D 구조식",
+        "status": "인터넷이 끊겨도 사용할 수 있습니다"
+      },
+      {
+        "canvas": 1,
+        "errors": [],
+        "name": "Sucrose 2D 구조식",
+        "status": "인터넷이 끊겨도 사용할 수 있습니다"
+      },
+      {
+        "canvas": 1,
+        "errors": [],
+        "name": "Amylose 2D 구조식",
+        "status": "인터넷이 끊겨도 사용할 수 있습니다"
+      },
+      {
+        "canvas": 1,
+        "errors": [],
+        "name": "Amylopectin 2D 구조식",
+        "status": "인터넷이 끊겨도 사용할 수 있습니다"
+      },
+      {
+        "canvas": 1,
+        "errors": [],
+        "name": "Glycogen 2D 구조식",
+        "status": "인터넷이 끊겨도 사용할 수 있습니다"
+      },
+      {
+        "canvas": 1,
+        "errors": [],
+        "name": "Cellulose 2D 구조식",
+        "status": "인터넷이 끊겨도 사용할 수 있습니다"
+      }
+    ],
+    "finalBuild": {
+      "script": "index-CaGSceYB.js",
+      "reload": "passed",
+      "molecules": [
+        "SUC",
+        "AMYLOPECTIN",
+        "BGC"
+      ],
+      "ringChain": "open chain rendered"
+    }
+  },
+  "limits": [
+    "Physical touch/pinch and projector not tested",
+    "Some 3D labels overlap at certain views when multiple options are enabled",
+    "Small-screen disaccharide details use the enlargement dialog"
+  ]
+}

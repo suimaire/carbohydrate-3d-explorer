@@ -6,6 +6,7 @@ import {
   cleanup,
   fireEvent,
   waitFor,
+  within,
 } from "@testing-library/react";
 import App from "../src/App";
 import { moleculeIds, structures } from "../src/data/carbohydrates";
@@ -71,6 +72,42 @@ beforeEach(() => {
   );
   mocks.create.mockReset().mockImplementation(viewerMock);
   mocks.annotate.mockReset();
+});
+
+it("the reference focuses the correct residue carbon in 3D and clears it on molecule changes", async () => {
+  render(<App />);
+  await pick(/Maltose/);
+  await waitFor(() => expect(lastMolecule()).toBe("MAL"));
+  const reference = screen.getByRole("region", { name: "Maltose 2D 구조식" });
+  fireEvent.click(within(reference).getByRole("button", { name: "B · C1 강조" }));
+  expect(lastCall()[3]).toEqual({ carbon: "C1", residue: "B", bond: null });
+  fireEvent.click(within(reference).getByRole("button", { name: /A:C1–O–B:C4/ }));
+  expect(lastCall()[3]).toEqual({ carbon: null, residue: null, bond: "L1" });
+  expect(lastOptions().glycosidic).toBe(true);
+  await pick(/Sucrose/);
+  await waitFor(() => expect(lastMolecule()).toBe("SUC"));
+  expect(lastCall()[3]).toEqual({ carbon: null, residue: null, bond: null });
+  expect(screen.queryByRole("region", { name: "Maltose 2D 구조식" })).toBeNull();
+  expect(screen.getByRole("region", { name: "Sucrose 2D 구조식" })).toBeTruthy();
+});
+
+it("comparison references stay attached to their molecules and never leak a focus to the other pane", async () => {
+  render(<App />);
+  await waitFor(() => expect(mocks.annotate).toHaveBeenCalled());
+  fireEvent.click(screen.getByRole("button", { name: "비교 모드" }));
+  await waitFor(() => expect(mocks.annotate.mock.calls.some(c => c[1].id === "GLC")).toBe(true));
+  const left = screen.getByRole("region", { name: "α-D-glucose 2D 구조식" });
+  fireEvent.click(within(left).getByRole("button", { name: "C1 강조" }));
+  expect(mocks.annotate.mock.calls.filter(c => c[1].id === "GLC").at(-1)![3].carbon).toBe("C1");
+  expect(mocks.annotate.mock.calls.filter(c => c[1].id === "BGC").at(-1)![3].carbon).toBeNull();
+  fireEvent.change(screen.getByRole("combobox"), { target: { value: "linkage" } });
+  await waitFor(() => expect(lastMolecule()).toBe("CBI"));
+  expect(screen.queryByRole("region", { name: "α-D-glucose 2D 구조식" })).toBeNull();
+  expect(screen.getByRole("region", { name: "Maltose 2D 구조식" })).toBeTruthy();
+  expect(screen.getByRole("region", { name: "Cellobiose 2D 구조식" })).toBeTruthy();
+  fireEvent.click(screen.getByRole("button", { name: "비교 모드 끝내기" }));
+  expect(screen.queryByRole("region", { name: "Cellobiose 2D 구조식" })).toBeNull();
+  expect(screen.getByRole("region", { name: "β-D-glucose 2D 구조식" })).toBeTruthy();
 });
 afterEach(() => {
   cleanup();

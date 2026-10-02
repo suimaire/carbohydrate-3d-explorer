@@ -301,7 +301,7 @@ h2 {
     min-height: 580px;
   }
 }
-@media (max-width: 700px) {
+@media (max-width: 900px) {
   header {
     padding: 18px;
     gap: 10px;
@@ -794,7 +794,7 @@ dialog h3 {
   margin: 4px 0 2px;
 }
 .schematic-node,
-.schematic-link line[role="button"] {
+.schematic-link rect[role="button"] {
   cursor: pointer;
 }
 .schematic-node:hover circle {
@@ -985,4 +985,93 @@ header .breadcrumb a:hover {
   .header-actions {
     padding-left: 0;
   }
+}
+
+/* A reference shelf belongs to its 3D pane, outside the canvas hit area. */
+.viewer-pane {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  min-width: 0;
+  min-height: 0;
+}
+.viewer-pane > .molecule-stage { min-height: 340px; }
+.structure-reference {
+  flex: 0 0 282px;
+  min-width: 0;
+  padding: 10px 18px 12px;
+  border-top: 1px solid var(--line);
+  background: #f8fbfa;
+  container-type: inline-size;
+}
+.reference-heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 4px;
+}
+.reference-heading h3 { display: flex; align-items: baseline; gap: 10px; font-size: 12px; font-weight: 400; color: #5b696f; margin: 0; }
+.reference-heading button { font-size: 12px; min-height: 34px; padding: 4px 9px; background: #fff; }
+.reference-body { height: 220px; display: grid; grid-template-rows: minmax(0, 1fr) auto; align-items: center; gap: 3px; }
+.reference-drawing { min-width: 0; min-height: 0; height: 100%; display: flex; align-items: center; justify-content: center; }
+.haworth-formula { display: block; width: 100%; height: 100%; max-height: 100%; min-height: 0; font-family: Arial, "Malgun Gothic", sans-serif; }
+.reference-caption { color: #52635e; font-size: 12px; line-height: 1.45; }
+.reference-caption p { margin: 2px 0; }
+.reference-caption .reference-convention { display: none; }
+.reference-reducing { color: #326249; }
+.reference-linkages { display: flex; gap: 4px 14px; flex-wrap: wrap; }
+.reference-linkages span { color: #69318b; }
+.reference-drawing .schematic { border: 0; margin: 0; width: 100%; height: 100%; max-width: 620px; display: flex; align-items: center; }
+.reference-drawing .schematic svg { display: block; margin: 0; height: 100%; max-height: 100%; }
+.haworth-carbon:hover rect, .haworth-carbon:focus-visible rect { stroke: var(--accent); stroke-width: 2.5; }
+.haworth-carbon.is-selected rect { stroke-width: 2.5; }
+.formula-bond { cursor: pointer; }
+.formula-bond:hover path:nth-of-type(2), .formula-bond:focus-visible path:nth-of-type(2) { stroke-width: 4; }
+.formula-dialog { max-width: 940px; max-height: calc(100dvh - 32px); overflow: auto; }
+.formula-dialog h2 { font-size: 20px; }
+.formula-dialog p { font-size: 14px; color: #52635e; }
+.formula-enlarged { overflow-x: auto; overscroll-behavior-x: contain; padding: 12px 2px; }
+.formula-enlarged > .haworth-formula { height: auto; max-height: none; width: 480px; max-width: 100%; margin: 0 auto; }
+.formula-enlarged > .two-residues { width: 820px; min-width: 640px; }
+.formula-enlarged .schematic { border: 0; margin: 0; min-width: 620px; }
+.formula-enlarged .schematic svg { max-height: none; }
+.formula-enlarged .haworth-carbon, .formula-enlarged .formula-bond, .formula-enlarged .schematic-node { cursor: default; }
+@container (min-width: 580px) {
+  .reference-monosaccharide .reference-body { grid-template-columns: 290px minmax(0, 1fr); grid-template-rows: 1fr; gap: 20px; }
+  .reference-monosaccharide .reference-caption { max-width: 320px; font-size: 13px; }
+  .reference-monosaccharide .reference-caption .reference-convention { display: block; margin-top: 8px; }
+}
+@container (max-width: 500px) {
+  .two-residues text { font-size: 22px; }
+  .two-residues .haworth-carbon text { font-size: 20px; }
+  .two-residues .haworth-carbon text:last-child:not(:first-of-type) { font-size: 17px; }
+}
+@media (min-width: 1101px) {
+  .workspace { min-height: 750px; }
+  .ring-chain-layout { min-height: 590px; }
+}
+@media (min-width: 1101px) and (max-height: 820px) {
+  .workspace:not(.ring-chain-layout) { min-height: 690px; }
+}
+@media (min-width: 701px) and (max-width: 1100px) {
+  /* A long library must not stretch the canvas and push its reference away. */
+  .workspace { grid-template-rows: auto auto; }
+  .sidebar { max-height: 800px; overflow-y: auto; }
+  .viewer-area { min-height: 0; }
+  .viewer-pair { min-height: 0; }
+  .viewer-pair .molecule-stage { min-height: 440px; }
+  .viewer-pane { min-height: 0; }
+  .workspace:not(.ring-chain-layout) .viewer-area { height: 800px; }
+}
+@media (max-width: 700px) {
+  .viewer-pair .molecule-stage { min-height: 400px; }
+  .structure-reference { flex-basis: auto; min-height: 282px; padding: 10px 12px 14px; }
+  .reference-body { height: 214px; }
+  .reference-heading button { min-height: 44px; }
+  .reference-caption { font-size: 12px; }
+  .formula-dialog { padding: 18px; }
+  .formula-dialog .dialog-heading { gap: 8px; }
+  .formula-dialog h2 { font-size: 17px; }
+  .formula-dialog .dialog-heading button { flex-shrink: 0; }
 }

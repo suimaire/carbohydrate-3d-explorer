@@ -94,6 +94,14 @@ describe("teaching annotations sent to 3Dmol", () => {
   });
 });
 describe("multi-residue annotations", () => {
+  it("a reference carbon selection uses residue B, including sucrose's fructose C2", () => {
+    const { v, labels } = run("SUC", {}, { carbon: "C2", residue: "B", bond: null });
+    expect(labels).toEqual(["Fru B · C2"]);
+    expect(v.setStyle).toHaveBeenCalledWith(
+      { index: structures.SUC.residues[1].carbons.C2 },
+      expect.objectContaining({ sphere: expect.objectContaining({ color: "#087d91" }) }),
+    );
+  });
   it("carbon numbers are qualified by residue once there is more than one", () => {
     const { labels } = run("MAL", { carbons: true });
     expect(labels).toEqual(

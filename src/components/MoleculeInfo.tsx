@@ -1,20 +1,16 @@
 import type { Carbohydrate, FocusState } from "../types/carbohydrate";
 import { residueLabel, structures } from "../data/carbohydrates";
 import { ObservationQuestions } from "./ObservationQuestions";
-import { HaworthPreview } from "./HaworthPreview";
-import { PolymerSchematic } from "./PolymerSchematic";
 export function MoleculeInfo({
   molecule: m,
   anomeric,
   focus,
-  onFocusCarbon,
   onFocusResidue,
   onFocusBond,
 }: {
   molecule: Carbohydrate;
   anomeric: boolean;
   focus: FocusState;
-  onFocusCarbon: (n: string) => void;
   onFocusResidue: (id: string) => void;
   onFocusBond: (id: string) => void;
 }) {
@@ -119,20 +115,6 @@ export function MoleculeInfo({
         key={m.id}
         questions={m.observationQuestions}
         answer={m.answer}
-      />
-      {m.category === "polysaccharide" && (
-        <PolymerSchematic
-          data={data}
-          selectedResidue={focus.residue}
-          onSelectResidue={onFocusResidue}
-          selectedBond={focus.bond}
-          onSelectBond={onFocusBond}
-        />
-      )}
-      <HaworthPreview
-        id={m.id}
-        selected={focus.carbon}
-        onSelect={onFocusCarbon}
       />
       <details className="provenance">
         <summary>구조 출처와 읽는 법</summary>

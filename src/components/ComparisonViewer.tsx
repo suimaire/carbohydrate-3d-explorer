@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { MoleculeViewer } from "./MoleculeViewer";
-import { capabilitiesOf, moleculeById } from "../data/carbohydrates";
+import { capabilitiesOf, moleculeById, NO_FOCUS } from "../data/carbohydrates";
+import { StructureFormulaPreview } from "./StructureFormulaPreview";
 import { synchronizeViewers } from "../lib/viewSync";
 import type { GLViewer } from "../lib/molecularViewer";
 import type {
@@ -59,7 +60,7 @@ export const comparisons: Record<ComparisonKind, ComparisonPair> = {
     right: "CBI",
     label: "맥아당 / 셀로비오스 · α / β(1→4)",
     intro:
-      "포도당 두 개가 같은 1→4 자리에서 이어진 두 이당류입니다. 다른 것은 결합에 참여한 아노머 탄소의 배치 하나뿐입니다. 두 화면 모두 환원 말단 쪽 고리를 같은 자리에 맞춰 두었습니다.",
+      "포도당 두 개가 같은 1→4 자리에서 이어진 두 이당류입니다. 결합을 만드는 C1의 α/β를 비교하세요. 이 대표 구조에서는 자유 환원 말단도 맥아당은 α, 셀로비오스는 β입니다. 두 화면 모두 환원 말단 쪽 고리를 같은 자리에 맞춰 두었습니다.",
     question:
       "같은 두 glucose가 같은 1→4 위치로 연결되었는데, α와 β의 차이는 두 고리의 상대적 방향을 어떻게 바꾸나요?",
     answer:
@@ -108,6 +109,8 @@ export function ComparisonViewer({
   options,
   resetToken,
   focus,
+  focusMolecule = null,
+  onFormulaFocus = () => {},
   interconversion = false,
 }: {
   selected: MoleculeId;
@@ -117,6 +120,8 @@ export function ComparisonViewer({
   options: ViewerOptions;
   resetToken: number;
   focus: FocusState;
+  focusMolecule?: MoleculeId | null;
+  onFormulaFocus?: (id: MoleculeId, focus: FocusState) => void;
   interconversion?: boolean;
 }) {
   const [left, setLeft] = useState<GLViewer | null>(null);
@@ -138,25 +143,34 @@ export function ComparisonViewer({
     ...options,
     spinning: compare && options.spinning && !sync,
   };
+  const leftId = compare ? pair.left : selected;
+  const leftFocus = !compare || focusMolecule === leftId ? focus : NO_FOCUS;
+  const rightFocus = focusMolecule === pair.right ? focus : NO_FOCUS;
   return (
     <div className={`viewer-pair ${compare ? "comparing" : ""}`}>
+      <div className="viewer-pane">
       <MoleculeViewer
-        molecule={moleculeById(compare ? pair.left : selected)}
+        molecule={moleculeById(leftId)}
         options={options}
         resetToken={resetToken}
-        focus={focus}
+        focus={leftFocus}
         onReady={setLeft}
         interconversion={!compare && interconversion}
       />
+      {!interconversion && <StructureFormulaPreview key={leftId} molecule={moleculeById(leftId)}
+        focus={leftFocus} onFocus={next => onFormulaFocus(leftId, next)} />}
+      </div>
       {(wasCompared || compare) && (
-        <div className="comparison-right" hidden={!compare}>
+        <div className="comparison-right viewer-pane" hidden={!compare}>
           <MoleculeViewer
             molecule={moleculeById(pair.right)}
             options={rightOptions}
             resetToken={resetToken}
-            focus={focus}
+            focus={rightFocus}
             onReady={setRight}
           />
+          {compare && <StructureFormulaPreview key={pair.right} molecule={moleculeById(pair.right)}
+            focus={rightFocus} onFocus={next => onFormulaFocus(pair.right, next)} />}
         </div>
       )}
     </div>

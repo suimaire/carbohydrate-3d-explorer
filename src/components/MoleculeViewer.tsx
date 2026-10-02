@@ -76,7 +76,9 @@ export function MoleculeViewer({
           throw Error("구조의 원자 수가 일치하지 않습니다.");
         v.setStyle({}, { stick: { radius: 0.13 }, sphere: { scale: 0.27 } });
         v.zoomTo();
-        v.zoom(0.88);
+        // Leave padding for atom labels while keeping the model legible above
+        // the reference shelf, including the shorter comparison canvases.
+        v.zoom(1.05);
         initial.current = [...v.getView()];
         v.render();
         viewer.current = v;

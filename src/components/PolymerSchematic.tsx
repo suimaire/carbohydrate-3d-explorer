@@ -56,12 +56,16 @@ export function PolymerSchematic({
   onSelectResidue,
   selectedBond,
   onSelectBond,
+  compact = false,
+  interactive = true,
 }: {
   data: StructureData;
   selectedResidue: string | null;
   onSelectResidue: (id: string) => void;
   selectedBond: string | null;
   onSelectBond: (id: string) => void;
+  compact?: boolean;
+  interactive?: boolean;
 }) {
   if (data.residues.length < 3) return null;
   const { nodes, rows, width } = layout(data);
@@ -72,12 +76,12 @@ export function PolymerSchematic({
   const branchNotation = data.glycosidicBonds.find((b) => b.branch)?.notation;
   return (
     <section className="schematic">
-      <h3>
+      {!compact && <h3>
         결합 구조 한눈에 보기 <span>{data.residues.length} residue</span>
-      </h3>
+      </h3>}
       <svg
         viewBox={`0 0 ${w} ${h}`}
-        role="group"
+        role={interactive ? "group" : "img"}
         aria-label={`대표 fragment의 결합 구조 개념도. 포도당 단위 ${data.residues.length}개, ${chainNotation} 사슬${branchNotation ? `, ${branchNotation} 가지 ${data.branchPoints.length}곳` : ""}.`}
       >
         {data.glycosidicBonds.map((bond) => {
@@ -98,20 +102,20 @@ export function PolymerSchematic({
                 strokeWidth={active ? 4 : 2.4}
                 strokeDasharray={bond.branch ? "5 4" : undefined}
               />
-              <line
-                x1={cx(a)}
-                y1={cy(a, rows)}
-                x2={cx(b)}
-                y2={cy(b, rows)}
-                stroke="transparent"
-                strokeWidth="14"
-                role="button"
-                tabIndex={0}
+              <rect
+                x={Math.min(cx(a), cx(b)) - 7}
+                y={Math.min(cy(a, rows), cy(b, rows)) - 7}
+                width={Math.abs(cx(b) - cx(a)) + 14}
+                height={Math.abs(cy(b, rows) - cy(a, rows)) + 14}
+                rx="5"
+                fill="transparent"
+                role={interactive ? "button" : undefined}
+                tabIndex={interactive ? 0 : undefined}
                 aria-label={`${bond.donorResidue}에서 ${bond.acceptorResidue}로 가는 ${bond.notation} 결합 강조`}
                 aria-pressed={active}
-                onClick={() => onSelectBond(bond.id)}
+                onClick={interactive ? () => onSelectBond(bond.id) : undefined}
                 onKeyDown={(e) => {
-                  if (e.key === "Enter" || e.key === " ") {
+                  if (interactive && (e.key === "Enter" || e.key === " ")) {
                     e.preventDefault();
                     onSelectBond(bond.id);
                   }
@@ -132,13 +136,13 @@ export function PolymerSchematic({
             <g
               key={residue.id}
               className="schematic-node"
-              role="button"
-              tabIndex={0}
+              role={interactive ? "button" : undefined}
+              tabIndex={interactive ? 0 : undefined}
               aria-label={`${residue.sugarLabel} ${residue.id} 강조`}
               aria-pressed={active}
-              onClick={() => onSelectResidue(residue.id)}
+              onClick={interactive ? () => onSelectResidue(residue.id) : undefined}
               onKeyDown={(e) => {
-                if (e.key === "Enter" || e.key === " ") {
+                if (interactive && (e.key === "Enter" || e.key === " ")) {
                   e.preventDefault();
                   onSelectResidue(residue.id);
                 }
@@ -178,7 +182,7 @@ export function PolymerSchematic({
           );
         })}
       </svg>
-      <ul className="schematic-legend">
+      {!compact && <><ul className="schematic-legend">
         <li>
           <i className="chain" /> {chainNotation} 사슬
         </li>
@@ -197,7 +201,7 @@ export function PolymerSchematic({
         전체 분자의 정확한 크기나 실제 가지 빈도를 나타내는 것이 아닙니다. 원을
         누르면 3D에서 해당 residue가, 선을 누르면 해당 글리코시드 결합이
         강조됩니다.
-      </p>
+      </p></>}
     </section>
   );
 }

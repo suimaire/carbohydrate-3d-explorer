@@ -8,7 +8,6 @@ import {
 } from "./components/ComparisonViewer";
 import type { ComparisonKind } from "./components/ComparisonViewer";
 import { ObservationQuestions } from "./components/ObservationQuestions";
-import { PolymerSchematic } from "./components/PolymerSchematic";
 import { HelpDialog } from "./components/HelpDialog";
 import { registerExplorerTool } from "./lib/webmcp";
 import { OfflineStatus } from "./components/OfflineStatus";
@@ -18,7 +17,6 @@ import {
   defaultOptions,
   moleculeById,
   NO_FOCUS,
-  structures,
 } from "./data/carbohydrates";
 import type { FocusState, MoleculeId } from "./types/carbohydrate";
 import { isGlucose } from "./lib/ringChain";
@@ -32,6 +30,7 @@ export default function App() {
   const [sync, setSync] = useState(true);
   const [help, setHelp] = useState(false);
   const [focus, setFocus] = useState<FocusState>(NO_FOCUS);
+  const [focusMolecule, setFocusMolecule] = useState<MoleculeId | null>(null);
   const m = moleculeById(id);
   const capabilities = useMemo(
     () => (compare ? comparisonCapabilities(kind) : capabilitiesOf(id)),
@@ -79,24 +78,27 @@ export default function App() {
     setFocus(NO_FOCUS);
     setReset((r) => r + 1);
   };
-  const focusCarbon = (name: string) =>
-    setFocus((f) => ({ ...f, carbon: f.carbon === name ? null : name }));
-  const focusResidue = (residue: string) =>
+  const focusResidue = (residue: string) => {
+    setFocusMolecule(id);
     setFocus((f) =>
       f.residue === residue
         ? NO_FOCUS
         : { carbon: null, residue, bond: null },
     );
+  };
   const focusBond = (bond: string) => {
+    setFocusMolecule(id);
     setFocus((f) =>
       f.bond === bond ? NO_FOCUS : { carbon: null, residue: null, bond },
     );
     setOptions((o) => ({ ...o, glycosidic: true }));
   };
+  const focusFormula = (moleculeId: MoleculeId, next: FocusState) => {
+    setFocusMolecule(moleculeId);
+    setFocus(next);
+    if (next.bond) setOptions(o => ({ ...o, glycosidic: true }));
+  };
   const pair = comparisons[kind];
-  const comparingPolymers =
-    moleculeById(pair.left).category === "polysaccharide" &&
-    moleculeById(pair.right).category === "polysaccharide";
   return (
     <>
       <a className="skip-link" href="#viewer-controls">
@@ -177,6 +179,8 @@ export default function App() {
             options={options}
             resetToken={reset}
             focus={focus}
+            focusMolecule={focusMolecule}
+            onFormulaFocus={focusFormula}
           />
           {!interconversion && options.axial && capabilities.axial && (
             <div className="axis-note">
@@ -215,22 +219,6 @@ export default function App() {
               questions={[pair.question]}
               answer={pair.answer}
             />
-            {comparingPolymers && (
-              <div className="schematic-pair">
-                {[pair.left, pair.right].map((side) => (
-                  <div key={side}>
-                    <h4>{moleculeById(side).koreanName}</h4>
-                    <PolymerSchematic
-                      data={structures[side]}
-                      selectedResidue={focus.residue}
-                      onSelectResidue={focusResidue}
-                      selectedBond={focus.bond}
-                      onSelectBond={focusBond}
-                    />
-                  </div>
-                ))}
-              </div>
-            )}
             <div className="concept-note">
               <strong>비교할 때 기억하세요</strong>
               <p>
@@ -258,7 +246,6 @@ export default function App() {
             molecule={m}
             anomeric={options.anomeric}
             focus={focus}
-            onFocusCarbon={focusCarbon}
             onFocusResidue={focusResidue}
             onFocusBond={focusBond}
           />
