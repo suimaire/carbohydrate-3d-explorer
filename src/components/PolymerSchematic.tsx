@@ -80,7 +80,7 @@ export function PolymerSchematic({
         결합 구조 한눈에 보기 <span>{data.residues.length} residue</span>
       </h3>}
       <svg
-        viewBox={`0 0 ${w} ${h}`}
+        viewBox={compact ? `14 14 ${w - 28} ${h - 17}` : `0 0 ${w} ${h}`}
         role={interactive ? "group" : "img"}
         aria-label={`대표 fragment의 결합 구조 개념도. 포도당 단위 ${data.residues.length}개, ${chainNotation} 사슬${branchNotation ? `, ${branchNotation} 가지 ${data.branchPoints.length}곳` : ""}.`}
       >
@@ -90,7 +90,7 @@ export function PolymerSchematic({
           if (!a || !b) return null;
           const active = selectedBond === bond.id;
           return (
-            <g key={bond.id} className="schematic-link">
+            <g key={bond.id} className={`schematic-link ${active ? "is-selected" : ""}`}>
               <line
                 x1={cx(a)}
                 y1={cy(a, rows)}
@@ -102,11 +102,14 @@ export function PolymerSchematic({
                 strokeWidth={active ? 4 : 2.4}
                 strokeDasharray={bond.branch ? "5 4" : undefined}
               />
+              {active && <circle className="formula-selection-marker" aria-hidden="true"
+                cx={(cx(a) + cx(b)) / 2} cy={(cy(a, rows) + cy(b, rows)) / 2} r="5" fill="#f8fbfa" />}
               <rect
-                x={Math.min(cx(a), cx(b)) - 7}
-                y={Math.min(cy(a, rows), cy(b, rows)) - 7}
-                width={Math.abs(cx(b) - cx(a)) + 14}
-                height={Math.abs(cy(b, rows) - cy(a, rows)) + 14}
+                className="schematic-link-target"
+                x={Math.min(cx(a), cx(b)) - 16}
+                y={Math.min(cy(a, rows), cy(b, rows)) - 16}
+                width={Math.abs(cx(b) - cx(a)) + 32}
+                height={Math.abs(cy(b, rows) - cy(a, rows)) + 32}
                 rx="5"
                 fill="transparent"
                 role={interactive ? "button" : undefined}
@@ -135,7 +138,7 @@ export function PolymerSchematic({
           return (
             <g
               key={residue.id}
-              className="schematic-node"
+              className={`schematic-node ${active ? "is-selected" : ""}`}
               role={interactive ? "button" : undefined}
               tabIndex={interactive ? 0 : undefined}
               aria-label={`${residue.sugarLabel} ${residue.id} 강조`}
@@ -148,22 +151,26 @@ export function PolymerSchematic({
                 }
               }}
             >
+              {interactive && <circle className="formula-hit-target" cx={cx(node)} cy={cy(node, rows)} r={R + 8} fill="transparent" />}
               <circle
+                className="residue-label"
                 cx={cx(node)}
                 cy={cy(node, rows)}
                 r={R}
-                fill={active ? "#126354" : branchPoint ? "#efe7f6" : "#fff"}
+                fill={active ? "#e4f1ec" : branchPoint ? "#efe7f6" : "#fff"}
                 stroke={
                   active ? "#126354" : branchPoint ? "#7b3f9d" : "#b2c2c9"
                 }
                 strokeWidth={branchPoint ? 2.2 : 1.4}
               />
+              {active && <circle className="formula-selection-marker" aria-hidden="true" cx={cx(node)} cy={cy(node, rows)} r={R + 3} />}
+              {interactive && <circle className="formula-keyboard-marker" aria-hidden="true" cx={cx(node)} cy={cy(node, rows)} r={R + 7} />}
               <text
                 x={cx(node)}
                 y={cy(node, rows) + 4}
                 textAnchor="middle"
                 fontSize="12"
-                fill={active ? "#fff" : "#264a5c"}
+                fill="#264a5c"
               >
                 {residue.id}
               </text>

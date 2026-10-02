@@ -1,0 +1,3757 @@
+{
+  "date": "2026-10-03",
+  "method": "Python standard-library independent raw CIF/SDF parsers; source atom/number/bond maps; all-pairs source-to-SDF distance invariance and chiral handedness; residue graph restoration and raw CCD comparison; actual projection-model heavy graph and tetrahedral handedness versus raw CCD in normal/turned orientations; reducing/branch endpoints derived from actual SDF neighbors.",
+  "runtimeNetworkRequests": 0,
+  "scope": "Shipped configurations and fragment topology; not solution populations, energies or full biological architecture.",
+  "freshCipRecalculation": {
+    "status": "UNCERTAIN",
+    "reason": "Existing .pydeps RDKit/numpy are Python 3.13 binaries; available system and bundled Python are 3.12. No package/runtime installed. Source CIP names are associated through independently verified atom graphs and handedness, not freshly assigned by RDKit."
+  },
+  "auditedFileSHA256": {
+    "src/data/structure-metadata.json": "f524dc17edcb140738388c7fc86f4cc5ccf0c4cd06097b973b10a16a4507c305",
+    "src/lib/structureFormula.ts": "69ccb3d864ed4e1a8e9d1a80089e0c432b1cce8b6be088ec50dd9710da8716f9",
+    "src/components/HaworthPreview.tsx": "8f5640092d2b452c69d6fd9195d95b02b9fc8ce20a53cfd857b7cc7ed2c4276e",
+    "src/components/PolymerSchematic.tsx": "700626331490e40bddfbbfbaea1471e9c0e49ab31af788ce10757821f890d22e"
+  },
+  "records": [
+    {
+      "id": "GLC",
+      "structureStatus": "VERIFIED",
+      "atomCount": 24,
+      "elementCountsFromGraph": {
+        "C": 6,
+        "O": 6,
+        "H": 12
+      },
+      "ringSizesCheckedAgainstGraph": [
+        6
+      ],
+      "residues": [
+        {
+          "residue": "A",
+          "identityFromGraphAndHandedness": "alpha-D-glucopyranose",
+          "sourceMonomer": "GLC",
+          "centersChecked": {
+            "C1": {
+              "sourceCIP": "S",
+              "sourceVolume": -2.405928,
+              "actualVolume": -2.40572
+            },
+            "C2": {
+              "sourceCIP": "R",
+              "sourceVolume": -2.586024,
+              "actualVolume": -2.586324
+            },
+            "C3": {
+              "sourceCIP": "S",
+              "sourceVolume": 2.590921,
+              "actualVolume": 2.590932
+            },
+            "C4": {
+              "sourceCIP": "S",
+              "sourceVolume": -2.583206,
+              "actualVolume": -2.582955
+            },
+            "C5": {
+              "sourceCIP": "R",
+              "sourceVolume": -2.57299,
+              "actualVolume": -2.572895
+            }
+          },
+          "projectionNormalAndTurnedMatch": true,
+          "anomericCarbon": "C1",
+          "freeAnomericHydroxyl": true,
+          "projectionSides": {
+            "O1": "down",
+            "O2": "down",
+            "O3": "up",
+            "O4": "down",
+            "C6": "up"
+          }
+        }
+      ],
+      "independentAxialNormalCosines": {
+        "C1": 0.999641,
+        "C2": 0.363905,
+        "C3": 0.352483,
+        "C4": 0.363738,
+        "C5": 0.355923
+      },
+      "ccd": {
+        "name": "alpha-D-glucopyranose",
+        "status": "REL",
+        "publishedInChiKey": "WQZGKKKJIJFFOK-DVKNGEFBSA-N",
+        "sourceHashMatches": true,
+        "numberingAndGraphMatch": true,
+        "maxAllPairDistanceDeviationAngstrom": 0.00011421890009710722,
+        "chiralCentersAgreeWithSource": {
+          "C1": {
+            "sourceCIP": "S",
+            "sourceVolume": -2.405928,
+            "actualVolume": -2.40572
+          },
+          "C2": {
+            "sourceCIP": "R",
+            "sourceVolume": -2.586024,
+            "actualVolume": -2.586324
+          },
+          "C3": {
+            "sourceCIP": "S",
+            "sourceVolume": 2.590921,
+            "actualVolume": 2.590932
+          },
+          "C4": {
+            "sourceCIP": "S",
+            "sourceVolume": -2.583206,
+            "actualVolume": -2.582955
+          },
+          "C5": {
+            "sourceCIP": "R",
+            "sourceVolume": -2.57299,
+            "actualVolume": -2.572895
+          }
+        }
+      },
+      "reducingEndsFromGraph": [
+        "A"
+      ],
+      "linksFromGraph": [],
+      "branchPointsFromGraph": [],
+      "overallStatus": "VERIFIED"
+    },
+    {
+      "id": "BGC",
+      "structureStatus": "VERIFIED",
+      "atomCount": 24,
+      "elementCountsFromGraph": {
+        "C": 6,
+        "O": 6,
+        "H": 12
+      },
+      "ringSizesCheckedAgainstGraph": [
+        6
+      ],
+      "residues": [
+        {
+          "residue": "A",
+          "identityFromGraphAndHandedness": "beta-D-glucopyranose",
+          "sourceMonomer": "BGC",
+          "centersChecked": {
+            "C2": {
+              "sourceCIP": "R",
+              "sourceVolume": -2.589266,
+              "actualVolume": -2.589259
+            },
+            "C3": {
+              "sourceCIP": "S",
+              "sourceVolume": 2.59056,
+              "actualVolume": 2.590791
+            },
+            "C4": {
+              "sourceCIP": "S",
+              "sourceVolume": -2.585197,
+              "actualVolume": -2.585214
+            },
+            "C5": {
+              "sourceCIP": "R",
+              "sourceVolume": -2.576236,
+              "actualVolume": -2.576249
+            },
+            "C1": {
+              "sourceCIP": "R",
+              "sourceVolume": 2.409836,
+              "actualVolume": 2.409693
+            }
+          },
+          "projectionNormalAndTurnedMatch": true,
+          "anomericCarbon": "C1",
+          "freeAnomericHydroxyl": true,
+          "projectionSides": {
+            "O1": "up",
+            "O2": "down",
+            "O3": "up",
+            "O4": "down",
+            "C6": "up"
+          }
+        }
+      ],
+      "independentAxialNormalCosines": {
+        "C1": 0.356538,
+        "C2": 0.364102,
+        "C3": 0.351995,
+        "C4": 0.363895,
+        "C5": 0.356357
+      },
+      "ccd": {
+        "name": "beta-D-glucopyranose",
+        "status": "REL",
+        "publishedInChiKey": "WQZGKKKJIJFFOK-VFUOTHLCSA-N",
+        "sourceHashMatches": true,
+        "numberingAndGraphMatch": true,
+        "maxAllPairDistanceDeviationAngstrom": 0.00010302553407592896,
+        "chiralCentersAgreeWithSource": {
+          "C2": {
+            "sourceCIP": "R",
+            "sourceVolume": -2.589266,
+            "actualVolume": -2.589259
+          },
+          "C3": {
+            "sourceCIP": "S",
+            "sourceVolume": 2.59056,
+            "actualVolume": 2.590791
+          },
+          "C4": {
+            "sourceCIP": "S",
+            "sourceVolume": -2.585197,
+            "actualVolume": -2.585214
+          },
+          "C5": {
+            "sourceCIP": "R",
+            "sourceVolume": -2.576236,
+            "actualVolume": -2.576249
+          },
+          "C1": {
+            "sourceCIP": "R",
+            "sourceVolume": 2.409836,
+            "actualVolume": 2.409693
+          }
+        }
+      },
+      "reducingEndsFromGraph": [
+        "A"
+      ],
+      "linksFromGraph": [],
+      "branchPointsFromGraph": [],
+      "overallStatus": "VERIFIED"
+    },
+    {
+      "id": "GAL",
+      "structureStatus": "VERIFIED",
+      "atomCount": 24,
+      "elementCountsFromGraph": {
+        "C": 6,
+        "O": 6,
+        "H": 12
+      },
+      "ringSizesCheckedAgainstGraph": [
+        6
+      ],
+      "residues": [
+        {
+          "residue": "A",
+          "identityFromGraphAndHandedness": "beta-D-galactopyranose",
+          "sourceMonomer": "GAL",
+          "centersChecked": {
+            "C1": {
+              "sourceCIP": "R",
+              "sourceVolume": 2.408528,
+              "actualVolume": 2.408421
+            },
+            "C2": {
+              "sourceCIP": "R",
+              "sourceVolume": -2.58478,
+              "actualVolume": -2.584981
+            },
+            "C3": {
+              "sourceCIP": "S",
+              "sourceVolume": 2.590012,
+              "actualVolume": 2.590283
+            },
+            "C4": {
+              "sourceCIP": "R",
+              "sourceVolume": 2.58399,
+              "actualVolume": 2.584126
+            },
+            "C5": {
+              "sourceCIP": "R",
+              "sourceVolume": -2.577056,
+              "actualVolume": -2.577182
+            }
+          },
+          "projectionNormalAndTurnedMatch": true,
+          "anomericCarbon": "C1",
+          "freeAnomericHydroxyl": true,
+          "projectionSides": {
+            "O1": "up",
+            "O2": "down",
+            "O3": "up",
+            "O4": "up",
+            "C6": "up"
+          }
+        }
+      ],
+      "independentAxialNormalCosines": {
+        "C1": 0.356812,
+        "C2": 0.363547,
+        "C3": 0.351951,
+        "C4": 0.999478,
+        "C5": 0.356466
+      },
+      "ccd": {
+        "name": "beta-D-galactopyranose",
+        "status": "REL",
+        "publishedInChiKey": "WQZGKKKJIJFFOK-FPRJBGLDSA-N",
+        "sourceHashMatches": true,
+        "numberingAndGraphMatch": true,
+        "maxAllPairDistanceDeviationAngstrom": 0.00010217580596982856,
+        "chiralCentersAgreeWithSource": {
+          "C1": {
+            "sourceCIP": "R",
+            "sourceVolume": 2.408528,
+            "actualVolume": 2.408421
+          },
+          "C2": {
+            "sourceCIP": "R",
+            "sourceVolume": -2.58478,
+            "actualVolume": -2.584981
+          },
+          "C3": {
+            "sourceCIP": "S",
+            "sourceVolume": 2.590012,
+            "actualVolume": 2.590283
+          },
+          "C4": {
+            "sourceCIP": "R",
+            "sourceVolume": 2.58399,
+            "actualVolume": 2.584126
+          },
+          "C5": {
+            "sourceCIP": "R",
+            "sourceVolume": -2.577056,
+            "actualVolume": -2.577182
+          }
+        }
+      },
+      "reducingEndsFromGraph": [
+        "A"
+      ],
+      "linksFromGraph": [],
+      "branchPointsFromGraph": [],
+      "overallStatus": "VERIFIED"
+    },
+    {
+      "id": "FRU",
+      "structureStatus": "VERIFIED",
+      "atomCount": 24,
+      "elementCountsFromGraph": {
+        "C": 6,
+        "O": 6,
+        "H": 12
+      },
+      "ringSizesCheckedAgainstGraph": [
+        5
+      ],
+      "residues": [
+        {
+          "residue": "A",
+          "identityFromGraphAndHandedness": "beta-D-fructofuranose",
+          "sourceMonomer": "FRU",
+          "centersChecked": {
+            "C2": {
+              "sourceCIP": "R",
+              "sourceVolume": -10.038107,
+              "actualVolume": -10.038088
+            },
+            "C3": {
+              "sourceCIP": "S",
+              "sourceVolume": 2.706083,
+              "actualVolume": 2.706003
+            },
+            "C4": {
+              "sourceCIP": "S",
+              "sourceVolume": -2.755438,
+              "actualVolume": -2.75569
+            },
+            "C5": {
+              "sourceCIP": "R",
+              "sourceVolume": -2.728922,
+              "actualVolume": -2.729065
+            }
+          },
+          "projectionNormalAndTurnedMatch": true,
+          "anomericCarbon": "C2",
+          "freeAnomericHydroxyl": true,
+          "projectionSides": {
+            "O2": "up",
+            "C1": "down",
+            "O3": "up",
+            "O4": "down",
+            "C6": "up"
+          }
+        }
+      ],
+      "ccd": {
+        "name": "beta-D-fructofuranose",
+        "status": "REL",
+        "publishedInChiKey": "RFSUNEUAIZKAJO-ARQDHWQXSA-N",
+        "sourceHashMatches": true,
+        "numberingAndGraphMatch": true,
+        "maxAllPairDistanceDeviationAngstrom": 0.00012747082410990984,
+        "chiralCentersAgreeWithSource": {
+          "C2": {
+            "sourceCIP": "R",
+            "sourceVolume": -10.038107,
+            "actualVolume": -10.038088
+          },
+          "C3": {
+            "sourceCIP": "S",
+            "sourceVolume": 2.706083,
+            "actualVolume": 2.706003
+          },
+          "C4": {
+            "sourceCIP": "S",
+            "sourceVolume": -2.755438,
+            "actualVolume": -2.75569
+          },
+          "C5": {
+            "sourceCIP": "R",
+            "sourceVolume": -2.728922,
+            "actualVolume": -2.729065
+          }
+        }
+      },
+      "reducingEndsFromGraph": [
+        "A"
+      ],
+      "linksFromGraph": [],
+      "branchPointsFromGraph": [],
+      "overallStatus": "VERIFIED"
+    },
+    {
+      "id": "BDR",
+      "structureStatus": "VERIFIED",
+      "atomCount": 20,
+      "elementCountsFromGraph": {
+        "C": 5,
+        "O": 5,
+        "H": 10
+      },
+      "ringSizesCheckedAgainstGraph": [
+        5
+      ],
+      "residues": [
+        {
+          "residue": "A",
+          "identityFromGraphAndHandedness": "beta-D-ribofuranose",
+          "sourceMonomer": "BDR",
+          "centersChecked": {
+            "C4": {
+              "sourceCIP": "R",
+              "sourceVolume": -2.641163,
+              "actualVolume": -2.641083
+            },
+            "C1": {
+              "sourceCIP": "R",
+              "sourceVolume": 2.548473,
+              "actualVolume": 2.548491
+            },
+            "C2": {
+              "sourceCIP": "R",
+              "sourceVolume": -2.764878,
+              "actualVolume": -2.764911
+            },
+            "C3": {
+              "sourceCIP": "S",
+              "sourceVolume": -2.713723,
+              "actualVolume": -2.713537
+            }
+          },
+          "projectionNormalAndTurnedMatch": true,
+          "anomericCarbon": "C1",
+          "freeAnomericHydroxyl": true,
+          "projectionSides": {
+            "O1": "up",
+            "O2": "down",
+            "O3": "down",
+            "C5": "up"
+          }
+        }
+      ],
+      "ccd": {
+        "name": "beta-D-ribofuranose",
+        "status": "REL",
+        "publishedInChiKey": "HMFHBZSHGGEWLO-TXICZTDVSA-N",
+        "sourceHashMatches": true,
+        "numberingAndGraphMatch": true,
+        "maxAllPairDistanceDeviationAngstrom": 8.914469889775845e-05,
+        "chiralCentersAgreeWithSource": {
+          "C4": {
+            "sourceCIP": "R",
+            "sourceVolume": -2.641163,
+            "actualVolume": -2.641083
+          },
+          "C1": {
+            "sourceCIP": "R",
+            "sourceVolume": 2.548473,
+            "actualVolume": 2.548491
+          },
+          "C2": {
+            "sourceCIP": "R",
+            "sourceVolume": -2.764878,
+            "actualVolume": -2.764911
+          },
+          "C3": {
+            "sourceCIP": "S",
+            "sourceVolume": -2.713723,
+            "actualVolume": -2.713537
+          }
+        }
+      },
+      "reducingEndsFromGraph": [
+        "A"
+      ],
+      "linksFromGraph": [],
+      "branchPointsFromGraph": [],
+      "overallStatus": "VERIFIED"
+    },
+    {
+      "id": "2DR",
+      "structureStatus": "VERIFIED",
+      "atomCount": 19,
+      "elementCountsFromGraph": {
+        "C": 5,
+        "O": 4,
+        "H": 10
+      },
+      "ringSizesCheckedAgainstGraph": [
+        5
+      ],
+      "residues": [
+        {
+          "residue": "A",
+          "identityFromGraphAndHandedness": "2-deoxy-beta-D-erythro-pentofuranose",
+          "sourceMonomer": "2DR",
+          "centersChecked": {
+            "C3": {
+              "sourceCIP": "S",
+              "sourceVolume": -2.715762,
+              "actualVolume": -2.715609
+            },
+            "C4": {
+              "sourceCIP": "R",
+              "sourceVolume": -2.650834,
+              "actualVolume": -2.650823
+            },
+            "C1": {
+              "sourceCIP": "R",
+              "sourceVolume": 2.559433,
+              "actualVolume": 2.559784
+            }
+          },
+          "projectionNormalAndTurnedMatch": true,
+          "anomericCarbon": "C1",
+          "freeAnomericHydroxyl": true,
+          "projectionSides": {
+            "O1": "up",
+            "H2": "down",
+            "H22C": "up",
+            "O3": "down",
+            "C5": "up"
+          }
+        }
+      ],
+      "ccd": {
+        "name": "2-deoxy-beta-D-erythro-pentofuranose",
+        "status": "REL",
+        "publishedInChiKey": "PDWIQYODPROSQH-VPENINKCSA-N",
+        "sourceHashMatches": true,
+        "numberingAndGraphMatch": true,
+        "maxAllPairDistanceDeviationAngstrom": 9.635884990499832e-05,
+        "chiralCentersAgreeWithSource": {
+          "C3": {
+            "sourceCIP": "S",
+            "sourceVolume": -2.715762,
+            "actualVolume": -2.715609
+          },
+          "C4": {
+            "sourceCIP": "R",
+            "sourceVolume": -2.650834,
+            "actualVolume": -2.650823
+          },
+          "C1": {
+            "sourceCIP": "R",
+            "sourceVolume": 2.559433,
+            "actualVolume": 2.559784
+          }
+        }
+      },
+      "reducingEndsFromGraph": [
+        "A"
+      ],
+      "linksFromGraph": [],
+      "branchPointsFromGraph": [],
+      "overallStatus": "VERIFIED"
+    },
+    {
+      "id": "MAL",
+      "structureStatus": "VERIFIED",
+      "atomCount": 45,
+      "elementCountsFromGraph": {
+        "C": 12,
+        "O": 11,
+        "H": 22
+      },
+      "ringSizesCheckedAgainstGraph": [
+        6,
+        6
+      ],
+      "residues": [
+        {
+          "residue": "A",
+          "identityFromGraphAndHandedness": "alpha-D-glucopyranose",
+          "sourceMonomer": "GLC",
+          "centersChecked": {
+            "C1": {
+              "sourceCIP": "S",
+              "sourceVolume": -2.405928,
+              "actualVolume": -2.407622
+            },
+            "C2": {
+              "sourceCIP": "R",
+              "sourceVolume": -2.586024,
+              "actualVolume": -2.582819
+            },
+            "C3": {
+              "sourceCIP": "S",
+              "sourceVolume": 2.590921,
+              "actualVolume": 2.588621
+            },
+            "C4": {
+              "sourceCIP": "S",
+              "sourceVolume": -2.583206,
+              "actualVolume": -2.58738
+            },
+            "C5": {
+              "sourceCIP": "R",
+              "sourceVolume": -2.57299,
+              "actualVolume": -2.57683
+            }
+          },
+          "projectionNormalAndTurnedMatch": true,
+          "anomericCarbon": "C1",
+          "freeAnomericHydroxyl": false,
+          "projectionSides": {
+            "O1": "down",
+            "O2": "down",
+            "O3": "up",
+            "O4": "down",
+            "C6": "up"
+          }
+        },
+        {
+          "residue": "B",
+          "identityFromGraphAndHandedness": "alpha-D-glucopyranose",
+          "sourceMonomer": "GLC",
+          "centersChecked": {
+            "C1": {
+              "sourceCIP": "S",
+              "sourceVolume": -2.405928,
+              "actualVolume": -2.404791
+            },
+            "C2": {
+              "sourceCIP": "R",
+              "sourceVolume": -2.586024,
+              "actualVolume": -2.584869
+            },
+            "C3": {
+              "sourceCIP": "S",
+              "sourceVolume": 2.590921,
+              "actualVolume": 2.588106
+            },
+            "C4": {
+              "sourceCIP": "S",
+              "sourceVolume": -2.583206,
+              "actualVolume": -2.587791
+            },
+            "C5": {
+              "sourceCIP": "R",
+              "sourceVolume": -2.57299,
+              "actualVolume": -2.579235
+            }
+          },
+          "projectionNormalAndTurnedMatch": true,
+          "anomericCarbon": "C1",
+          "freeAnomericHydroxyl": true,
+          "projectionSides": {
+            "O1": "down",
+            "O2": "down",
+            "O3": "up",
+            "O4": "down",
+            "C6": "up"
+          }
+        }
+      ],
+      "ccd": {
+        "name": "MALTOSE",
+        "status": "OBS",
+        "publishedInChiKey": "GUBGYTABKSRVRQ-ASMJPISFSA-N",
+        "sourceHashMatches": true,
+        "numberingAndGraphMatch": true,
+        "maxAllPairDistanceDeviationAngstrom": 0.00010599112610876205,
+        "chiralCentersAgreeWithSource": {
+          "C1'": {
+            "sourceCIP": "S",
+            "sourceVolume": -2.404729,
+            "actualVolume": -2.404791
+          },
+          "C2'": {
+            "sourceCIP": "R",
+            "sourceVolume": -2.585063,
+            "actualVolume": -2.584869
+          },
+          "C3'": {
+            "sourceCIP": "R",
+            "sourceVolume": 2.588336,
+            "actualVolume": 2.588106
+          },
+          "C4'": {
+            "sourceCIP": "S",
+            "sourceVolume": -2.587844,
+            "actualVolume": -2.587791
+          },
+          "C5'": {
+            "sourceCIP": "R",
+            "sourceVolume": -2.579047,
+            "actualVolume": -2.579235
+          },
+          "C1": {
+            "sourceCIP": "R",
+            "sourceVolume": -2.407709,
+            "actualVolume": -2.407622
+          },
+          "C2": {
+            "sourceCIP": "R",
+            "sourceVolume": -2.58299,
+            "actualVolume": -2.582819
+          },
+          "C3": {
+            "sourceCIP": "S",
+            "sourceVolume": 2.588573,
+            "actualVolume": 2.588621
+          },
+          "C4": {
+            "sourceCIP": "S",
+            "sourceVolume": -2.587174,
+            "actualVolume": -2.58738
+          },
+          "C5": {
+            "sourceCIP": "R",
+            "sourceVolume": -2.576689,
+            "actualVolume": -2.57683
+          }
+        }
+      },
+      "reducingEndsFromGraph": [
+        "B"
+      ],
+      "linksFromGraph": [
+        {
+          "id": "L1",
+          "donor": "A:C1",
+          "oxygenIndex": 9,
+          "acceptor": "B:C4",
+          "notation": "α(1→4)"
+        }
+      ],
+      "branchPointsFromGraph": [],
+      "overallStatus": "CORRECTED",
+      "wordingCorrection": "Comparison explanation now distinguishes donor C1 configuration from the free reducing-end configuration; represented maltose is alpha at both."
+    },
+    {
+      "id": "CBI",
+      "structureStatus": "VERIFIED",
+      "atomCount": 45,
+      "elementCountsFromGraph": {
+        "C": 12,
+        "O": 11,
+        "H": 22
+      },
+      "ringSizesCheckedAgainstGraph": [
+        6,
+        6
+      ],
+      "residues": [
+        {
+          "residue": "A",
+          "identityFromGraphAndHandedness": "beta-D-glucopyranose",
+          "sourceMonomer": "BGC",
+          "centersChecked": {
+            "C2": {
+              "sourceCIP": "R",
+              "sourceVolume": -2.589266,
+              "actualVolume": -2.585022
+            },
+            "C3": {
+              "sourceCIP": "S",
+              "sourceVolume": 2.59056,
+              "actualVolume": 2.590171
+            },
+            "C4": {
+              "sourceCIP": "S",
+              "sourceVolume": -2.585197,
+              "actualVolume": -2.586262
+            },
+            "C5": {
+              "sourceCIP": "R",
+              "sourceVolume": -2.576236,
+              "actualVolume": -2.579228
+            },
+            "C1": {
+              "sourceCIP": "R",
+              "sourceVolume": 2.409836,
+              "actualVolume": 2.408315
+            }
+          },
+          "projectionNormalAndTurnedMatch": true,
+          "anomericCarbon": "C1",
+          "freeAnomericHydroxyl": false,
+          "projectionSides": {
+            "O1": "up",
+            "O2": "down",
+            "O3": "up",
+            "O4": "down",
+            "C6": "up"
+          }
+        },
+        {
+          "residue": "B",
+          "identityFromGraphAndHandedness": "beta-D-glucopyranose",
+          "sourceMonomer": "BGC",
+          "centersChecked": {
+            "C2": {
+              "sourceCIP": "R",
+              "sourceVolume": -2.589266,
+              "actualVolume": -2.585373
+            },
+            "C3": {
+              "sourceCIP": "S",
+              "sourceVolume": 2.59056,
+              "actualVolume": 2.588868
+            },
+            "C4": {
+              "sourceCIP": "S",
+              "sourceVolume": -2.585197,
+              "actualVolume": -2.582599
+            },
+            "C5": {
+              "sourceCIP": "R",
+              "sourceVolume": -2.576236,
+              "actualVolume": -2.574226
+            },
+            "C1": {
+              "sourceCIP": "R",
+              "sourceVolume": 2.409836,
+              "actualVolume": 2.407704
+            }
+          },
+          "projectionNormalAndTurnedMatch": true,
+          "anomericCarbon": "C1",
+          "freeAnomericHydroxyl": true,
+          "projectionSides": {
+            "O1": "up",
+            "O2": "down",
+            "O3": "up",
+            "O4": "down",
+            "C6": "up"
+          }
+        }
+      ],
+      "sourceConformerContact": {
+        "atoms": "A:O5...B:O3",
+        "distanceAngstrom": 2.132841152078607,
+        "graphDistanceBonds": 5,
+        "sourceCoordinatesRetained": true
+      },
+      "ccd": {
+        "name": "CELLOBIOSE",
+        "status": "OBS",
+        "publishedInChiKey": "GUBGYTABKSRVRQ-QRZGKKJRSA-N",
+        "sourceHashMatches": true,
+        "numberingAndGraphMatch": true,
+        "maxAllPairDistanceDeviationAngstrom": 0.00012206835908923352,
+        "chiralCentersAgreeWithSource": {
+          "C2'": {
+            "sourceCIP": "R",
+            "sourceVolume": -2.585398,
+            "actualVolume": -2.585373
+          },
+          "C3'": {
+            "sourceCIP": "R",
+            "sourceVolume": 2.588899,
+            "actualVolume": 2.588868
+          },
+          "C4'": {
+            "sourceCIP": "S",
+            "sourceVolume": -2.582698,
+            "actualVolume": -2.582599
+          },
+          "C5'": {
+            "sourceCIP": "R",
+            "sourceVolume": -2.574279,
+            "actualVolume": -2.574226
+          },
+          "C1'": {
+            "sourceCIP": "R",
+            "sourceVolume": 2.407782,
+            "actualVolume": 2.407704
+          },
+          "C2": {
+            "sourceCIP": "R",
+            "sourceVolume": -2.585134,
+            "actualVolume": -2.585022
+          },
+          "C3": {
+            "sourceCIP": "S",
+            "sourceVolume": 2.590067,
+            "actualVolume": 2.590171
+          },
+          "C4": {
+            "sourceCIP": "S",
+            "sourceVolume": -2.586195,
+            "actualVolume": -2.586262
+          },
+          "C5": {
+            "sourceCIP": "R",
+            "sourceVolume": -2.579085,
+            "actualVolume": -2.579228
+          },
+          "C1": {
+            "sourceCIP": "S",
+            "sourceVolume": 2.408147,
+            "actualVolume": 2.408315
+          }
+        }
+      },
+      "reducingEndsFromGraph": [
+        "B"
+      ],
+      "linksFromGraph": [
+        {
+          "id": "L1",
+          "donor": "A:C1",
+          "oxygenIndex": 9,
+          "acceptor": "B:C4",
+          "notation": "β(1→4)"
+        }
+      ],
+      "branchPointsFromGraph": [],
+      "overallStatus": "CORRECTED",
+      "wordingCorrection": "Comparison explanation no longer implies the shipped maltose/cellobiose pair differs only at one atom; their free reducing ends are alpha versus beta too."
+    },
+    {
+      "id": "LAT",
+      "structureStatus": "VERIFIED",
+      "atomCount": 45,
+      "elementCountsFromGraph": {
+        "C": 12,
+        "O": 11,
+        "H": 22
+      },
+      "ringSizesCheckedAgainstGraph": [
+        6,
+        6
+      ],
+      "residues": [
+        {
+          "residue": "A",
+          "identityFromGraphAndHandedness": "beta-D-galactopyranose",
+          "sourceMonomer": "GAL",
+          "centersChecked": {
+            "C1": {
+              "sourceCIP": "R",
+              "sourceVolume": 2.408528,
+              "actualVolume": 2.403968
+            },
+            "C2": {
+              "sourceCIP": "R",
+              "sourceVolume": -2.58478,
+              "actualVolume": -2.584869
+            },
+            "C3": {
+              "sourceCIP": "S",
+              "sourceVolume": 2.590012,
+              "actualVolume": 2.588172
+            },
+            "C4": {
+              "sourceCIP": "R",
+              "sourceVolume": 2.58399,
+              "actualVolume": 2.587787
+            },
+            "C5": {
+              "sourceCIP": "R",
+              "sourceVolume": -2.577056,
+              "actualVolume": -2.578654
+            }
+          },
+          "projectionNormalAndTurnedMatch": true,
+          "anomericCarbon": "C1",
+          "freeAnomericHydroxyl": false,
+          "projectionSides": {
+            "O1": "up",
+            "O2": "down",
+            "O3": "up",
+            "O4": "up",
+            "C6": "up"
+          }
+        },
+        {
+          "residue": "B",
+          "identityFromGraphAndHandedness": "beta-D-glucopyranose",
+          "sourceMonomer": "BGC",
+          "centersChecked": {
+            "C2": {
+              "sourceCIP": "R",
+              "sourceVolume": -2.589266,
+              "actualVolume": -2.588638
+            },
+            "C3": {
+              "sourceCIP": "S",
+              "sourceVolume": 2.59056,
+              "actualVolume": 2.590405
+            },
+            "C4": {
+              "sourceCIP": "S",
+              "sourceVolume": -2.585197,
+              "actualVolume": -2.584273
+            },
+            "C5": {
+              "sourceCIP": "R",
+              "sourceVolume": -2.576236,
+              "actualVolume": -2.576398
+            },
+            "C1": {
+              "sourceCIP": "R",
+              "sourceVolume": 2.409836,
+              "actualVolume": 2.407672
+            }
+          },
+          "projectionNormalAndTurnedMatch": true,
+          "anomericCarbon": "C1",
+          "freeAnomericHydroxyl": true,
+          "projectionSides": {
+            "O1": "up",
+            "O2": "down",
+            "O3": "up",
+            "O4": "down",
+            "C6": "up"
+          }
+        }
+      ],
+      "sourceConformerContact": {
+        "atoms": "A:O5...B:O3",
+        "distanceAngstrom": 2.131526464766506,
+        "graphDistanceBonds": 5,
+        "sourceCoordinatesRetained": true
+      },
+      "ccd": {
+        "name": "BETA-LACTOSE",
+        "status": "OBS",
+        "publishedInChiKey": "GUBGYTABKSRVRQ-DCSYEGIMSA-N",
+        "sourceHashMatches": true,
+        "numberingAndGraphMatch": true,
+        "maxAllPairDistanceDeviationAngstrom": 0.00011991397525568104,
+        "chiralCentersAgreeWithSource": {
+          "C2'": {
+            "sourceCIP": "R",
+            "sourceVolume": -2.588863,
+            "actualVolume": -2.588638
+          },
+          "C3'": {
+            "sourceCIP": "R",
+            "sourceVolume": 2.590084,
+            "actualVolume": 2.590405
+          },
+          "C4'": {
+            "sourceCIP": "S",
+            "sourceVolume": -2.584314,
+            "actualVolume": -2.584273
+          },
+          "C5'": {
+            "sourceCIP": "R",
+            "sourceVolume": -2.576656,
+            "actualVolume": -2.576398
+          },
+          "C1'": {
+            "sourceCIP": "R",
+            "sourceVolume": 2.407782,
+            "actualVolume": 2.407672
+          },
+          "C1": {
+            "sourceCIP": "S",
+            "sourceVolume": 2.404071,
+            "actualVolume": 2.403968
+          },
+          "C2": {
+            "sourceCIP": "R",
+            "sourceVolume": -2.585018,
+            "actualVolume": -2.584869
+          },
+          "C3": {
+            "sourceCIP": "S",
+            "sourceVolume": 2.587933,
+            "actualVolume": 2.588172
+          },
+          "C4": {
+            "sourceCIP": "R",
+            "sourceVolume": 2.587641,
+            "actualVolume": 2.587787
+          },
+          "C5": {
+            "sourceCIP": "R",
+            "sourceVolume": -2.578547,
+            "actualVolume": -2.578654
+          }
+        }
+      },
+      "reducingEndsFromGraph": [
+        "B"
+      ],
+      "linksFromGraph": [
+        {
+          "id": "L1",
+          "donor": "A:C1",
+          "oxygenIndex": 9,
+          "acceptor": "B:C4",
+          "notation": "β(1→4)"
+        }
+      ],
+      "branchPointsFromGraph": [],
+      "overallStatus": "CORRECTED",
+      "wordingCorrection": "Explanation uses C4 substituent rather than incorrectly calling the glucose acceptor's glycosidic C4 oxygen a free OH."
+    },
+    {
+      "id": "SUC",
+      "structureStatus": "VERIFIED",
+      "atomCount": 45,
+      "elementCountsFromGraph": {
+        "C": 12,
+        "O": 11,
+        "H": 22
+      },
+      "ringSizesCheckedAgainstGraph": [
+        6,
+        5
+      ],
+      "residues": [
+        {
+          "residue": "A",
+          "identityFromGraphAndHandedness": "alpha-D-glucopyranose",
+          "sourceMonomer": "GLC",
+          "centersChecked": {
+            "C1": {
+              "sourceCIP": "S",
+              "sourceVolume": -2.405928,
+              "actualVolume": -2.406225
+            },
+            "C2": {
+              "sourceCIP": "R",
+              "sourceVolume": -2.586024,
+              "actualVolume": -2.583015
+            },
+            "C3": {
+              "sourceCIP": "S",
+              "sourceVolume": 2.590921,
+              "actualVolume": 2.591163
+            },
+            "C4": {
+              "sourceCIP": "S",
+              "sourceVolume": -2.583206,
+              "actualVolume": -2.589324
+            },
+            "C5": {
+              "sourceCIP": "R",
+              "sourceVolume": -2.57299,
+              "actualVolume": -2.580026
+            }
+          },
+          "projectionNormalAndTurnedMatch": true,
+          "anomericCarbon": "C1",
+          "freeAnomericHydroxyl": false,
+          "projectionSides": {
+            "O1": "down",
+            "O2": "down",
+            "O3": "up",
+            "O4": "down",
+            "C6": "up"
+          }
+        },
+        {
+          "residue": "B",
+          "identityFromGraphAndHandedness": "beta-D-fructofuranose",
+          "sourceMonomer": "FRU",
+          "centersChecked": {
+            "C2": {
+              "sourceCIP": "R",
+              "sourceVolume": -10.038107,
+              "actualVolume": -10.057842
+            },
+            "C3": {
+              "sourceCIP": "S",
+              "sourceVolume": 2.706083,
+              "actualVolume": 2.716253
+            },
+            "C4": {
+              "sourceCIP": "S",
+              "sourceVolume": -2.755438,
+              "actualVolume": -2.760324
+            },
+            "C5": {
+              "sourceCIP": "R",
+              "sourceVolume": -2.728922,
+              "actualVolume": -2.741501
+            }
+          },
+          "projectionNormalAndTurnedMatch": true,
+          "anomericCarbon": "C2",
+          "freeAnomericHydroxyl": false,
+          "projectionSides": {
+            "O2": "up",
+            "C1": "down",
+            "O3": "up",
+            "O4": "down",
+            "C6": "up"
+          }
+        }
+      ],
+      "ccd": {
+        "name": "SUCROSE",
+        "status": "OBS",
+        "publishedInChiKey": "CZMRCDWAGMRECN-UGDNZRGBSA-N",
+        "sourceHashMatches": true,
+        "numberingAndGraphMatch": true,
+        "maxAllPairDistanceDeviationAngstrom": 0.00012069325358066152,
+        "chiralCentersAgreeWithSource": {
+          "C1": {
+            "sourceCIP": "R",
+            "sourceVolume": -2.406169,
+            "actualVolume": -2.406225
+          },
+          "C2": {
+            "sourceCIP": "R",
+            "sourceVolume": -2.583129,
+            "actualVolume": -2.583015
+          },
+          "C3": {
+            "sourceCIP": "S",
+            "sourceVolume": 2.591104,
+            "actualVolume": 2.591163
+          },
+          "C4": {
+            "sourceCIP": "S",
+            "sourceVolume": -2.589575,
+            "actualVolume": -2.589324
+          },
+          "C5": {
+            "sourceCIP": "R",
+            "sourceVolume": -2.580098,
+            "actualVolume": -2.580026
+          },
+          "C2'": {
+            "sourceCIP": "S",
+            "sourceVolume": -10.057799,
+            "actualVolume": -10.057842
+          },
+          "C3'": {
+            "sourceCIP": "S",
+            "sourceVolume": 2.716438,
+            "actualVolume": 2.716253
+          },
+          "C4'": {
+            "sourceCIP": "S",
+            "sourceVolume": -2.760234,
+            "actualVolume": -2.760324
+          },
+          "C5'": {
+            "sourceCIP": "R",
+            "sourceVolume": -2.741271,
+            "actualVolume": -2.741501
+          }
+        }
+      },
+      "reducingEndsFromGraph": [],
+      "linksFromGraph": [
+        {
+          "id": "L1",
+          "donor": "A:C1",
+          "oxygenIndex": 18,
+          "acceptor": "B:C2",
+          "notation": "α(1→2)β"
+        }
+      ],
+      "branchPointsFromGraph": [],
+      "overallStatus": "CORRECTED",
+      "wordingCorrection": "Accessible Haworth description states canonical standard-orientation sides and explains the fructose ring's proper half-turn, avoiding display-y versus canonical-side ambiguity."
+    },
+    {
+      "id": "AMYLOSE",
+      "structureStatus": "VERIFIED",
+      "atomCount": 213,
+      "elementCountsFromGraph": {
+        "C": 60,
+        "O": 51,
+        "H": 102
+      },
+      "ringSizesCheckedAgainstGraph": [
+        6,
+        6,
+        6,
+        6,
+        6,
+        6,
+        6,
+        6,
+        6,
+        6
+      ],
+      "residues": [
+        {
+          "residue": "A",
+          "identityFromGraphAndHandedness": "alpha-D-glucopyranose",
+          "sourceMonomer": "GLC",
+          "centersChecked": {
+            "C1": {
+              "sourceCIP": "S",
+              "sourceVolume": -2.405928,
+              "actualVolume": -2.161246
+            },
+            "C2": {
+              "sourceCIP": "R",
+              "sourceVolume": -2.586024,
+              "actualVolume": -2.584876
+            },
+            "C3": {
+              "sourceCIP": "S",
+              "sourceVolume": 2.590921,
+              "actualVolume": 2.590646
+            },
+            "C4": {
+              "sourceCIP": "S",
+              "sourceVolume": -2.583206,
+              "actualVolume": -2.582255
+            },
+            "C5": {
+              "sourceCIP": "R",
+              "sourceVolume": -2.57299,
+              "actualVolume": -2.572619
+            }
+          },
+          "projectionNormalAndTurnedMatch": true,
+          "anomericCarbon": "C1",
+          "freeAnomericHydroxyl": false,
+          "projectionSides": {
+            "O1": "down",
+            "O2": "down",
+            "O3": "up",
+            "O4": "down",
+            "C6": "up"
+          }
+        },
+        {
+          "residue": "B",
+          "identityFromGraphAndHandedness": "alpha-D-glucopyranose",
+          "sourceMonomer": "GLC",
+          "centersChecked": {
+            "C1": {
+              "sourceCIP": "S",
+              "sourceVolume": -2.405928,
+              "actualVolume": -2.161382
+            },
+            "C2": {
+              "sourceCIP": "R",
+              "sourceVolume": -2.586024,
+              "actualVolume": -2.584912
+            },
+            "C3": {
+              "sourceCIP": "S",
+              "sourceVolume": 2.590921,
+              "actualVolume": 2.590513
+            },
+            "C4": {
+              "sourceCIP": "S",
+              "sourceVolume": -2.583206,
+              "actualVolume": -2.582828
+            },
+            "C5": {
+              "sourceCIP": "R",
+              "sourceVolume": -2.57299,
+              "actualVolume": -2.57263
+            }
+          },
+          "projectionNormalAndTurnedMatch": true,
+          "anomericCarbon": "C1",
+          "freeAnomericHydroxyl": false,
+          "projectionSides": {
+            "O1": "down",
+            "O2": "down",
+            "O3": "up",
+            "O4": "down",
+            "C6": "up"
+          }
+        },
+        {
+          "residue": "C",
+          "identityFromGraphAndHandedness": "alpha-D-glucopyranose",
+          "sourceMonomer": "GLC",
+          "centersChecked": {
+            "C1": {
+              "sourceCIP": "S",
+              "sourceVolume": -2.405928,
+              "actualVolume": -2.161217
+            },
+            "C2": {
+              "sourceCIP": "R",
+              "sourceVolume": -2.586024,
+              "actualVolume": -2.584785
+            },
+            "C3": {
+              "sourceCIP": "S",
+              "sourceVolume": 2.590921,
+              "actualVolume": 2.59061
+            },
+            "C4": {
+              "sourceCIP": "S",
+              "sourceVolume": -2.583206,
+              "actualVolume": -2.583562
+            },
+            "C5": {
+              "sourceCIP": "R",
+              "sourceVolume": -2.57299,
+              "actualVolume": -2.573413
+            }
+          },
+          "projectionNormalAndTurnedMatch": true,
+          "anomericCarbon": "C1",
+          "freeAnomericHydroxyl": false,
+          "projectionSides": {
+            "O1": "down",
+            "O2": "down",
+            "O3": "up",
+            "O4": "down",
+            "C6": "up"
+          }
+        },
+        {
+          "residue": "D",
+          "identityFromGraphAndHandedness": "alpha-D-glucopyranose",
+          "sourceMonomer": "GLC",
+          "centersChecked": {
+            "C1": {
+              "sourceCIP": "S",
+              "sourceVolume": -2.405928,
+              "actualVolume": -2.161341
+            },
+            "C2": {
+              "sourceCIP": "R",
+              "sourceVolume": -2.586024,
+              "actualVolume": -2.584868
+            },
+            "C3": {
+              "sourceCIP": "S",
+              "sourceVolume": 2.590921,
+              "actualVolume": 2.590383
+            },
+            "C4": {
+              "sourceCIP": "S",
+              "sourceVolume": -2.583206,
+              "actualVolume": -2.583038
+            },
+            "C5": {
+              "sourceCIP": "R",
+              "sourceVolume": -2.57299,
+              "actualVolume": -2.573057
+            }
+          },
+          "projectionNormalAndTurnedMatch": true,
+          "anomericCarbon": "C1",
+          "freeAnomericHydroxyl": false,
+          "projectionSides": {
+            "O1": "down",
+            "O2": "down",
+            "O3": "up",
+            "O4": "down",
+            "C6": "up"
+          }
+        },
+        {
+          "residue": "E",
+          "identityFromGraphAndHandedness": "alpha-D-glucopyranose",
+          "sourceMonomer": "GLC",
+          "centersChecked": {
+            "C1": {
+              "sourceCIP": "S",
+              "sourceVolume": -2.405928,
+              "actualVolume": -2.161306
+            },
+            "C2": {
+              "sourceCIP": "R",
+              "sourceVolume": -2.586024,
+              "actualVolume": -2.585009
+            },
+            "C3": {
+              "sourceCIP": "S",
+              "sourceVolume": 2.590921,
+              "actualVolume": 2.590778
+            },
+            "C4": {
+              "sourceCIP": "S",
+              "sourceVolume": -2.583206,
+              "actualVolume": -2.583098
+            },
+            "C5": {
+              "sourceCIP": "R",
+              "sourceVolume": -2.57299,
+              "actualVolume": -2.572874
+            }
+          },
+          "projectionNormalAndTurnedMatch": true,
+          "anomericCarbon": "C1",
+          "freeAnomericHydroxyl": false,
+          "projectionSides": {
+            "O1": "down",
+            "O2": "down",
+            "O3": "up",
+            "O4": "down",
+            "C6": "up"
+          }
+        },
+        {
+          "residue": "F",
+          "identityFromGraphAndHandedness": "alpha-D-glucopyranose",
+          "sourceMonomer": "GLC",
+          "centersChecked": {
+            "C1": {
+              "sourceCIP": "S",
+              "sourceVolume": -2.405928,
+              "actualVolume": -2.16159
+            },
+            "C2": {
+              "sourceCIP": "R",
+              "sourceVolume": -2.586024,
+              "actualVolume": -2.585125
+            },
+            "C3": {
+              "sourceCIP": "S",
+              "sourceVolume": 2.590921,
+              "actualVolume": 2.590564
+            },
+            "C4": {
+              "sourceCIP": "S",
+              "sourceVolume": -2.583206,
+              "actualVolume": -2.583163
+            },
+            "C5": {
+              "sourceCIP": "R",
+              "sourceVolume": -2.57299,
+              "actualVolume": -2.573106
+            }
+          },
+          "projectionNormalAndTurnedMatch": true,
+          "anomericCarbon": "C1",
+          "freeAnomericHydroxyl": false,
+          "projectionSides": {
+            "O1": "down",
+            "O2": "down",
+            "O3": "up",
+            "O4": "down",
+            "C6": "up"
+          }
+        },
+        {
+          "residue": "G",
+          "identityFromGraphAndHandedness": "alpha-D-glucopyranose",
+          "sourceMonomer": "GLC",
+          "centersChecked": {
+            "C1": {
+              "sourceCIP": "S",
+              "sourceVolume": -2.405928,
+              "actualVolume": -2.161031
+            },
+            "C2": {
+              "sourceCIP": "R",
+              "sourceVolume": -2.586024,
+              "actualVolume": -2.584802
+            },
+            "C3": {
+              "sourceCIP": "S",
+              "sourceVolume": 2.590921,
+              "actualVolume": 2.590443
+            },
+            "C4": {
+              "sourceCIP": "S",
+              "sourceVolume": -2.583206,
+              "actualVolume": -2.582996
+            },
+            "C5": {
+              "sourceCIP": "R",
+              "sourceVolume": -2.57299,
+              "actualVolume": -2.573223
+            }
+          },
+          "projectionNormalAndTurnedMatch": true,
+          "anomericCarbon": "C1",
+          "freeAnomericHydroxyl": false,
+          "projectionSides": {
+            "O1": "down",
+            "O2": "down",
+            "O3": "up",
+            "O4": "down",
+            "C6": "up"
+          }
+        },
+        {
+          "residue": "H",
+          "identityFromGraphAndHandedness": "alpha-D-glucopyranose",
+          "sourceMonomer": "GLC",
+          "centersChecked": {
+            "C1": {
+              "sourceCIP": "S",
+              "sourceVolume": -2.405928,
+              "actualVolume": -2.160962
+            },
+            "C2": {
+              "sourceCIP": "R",
+              "sourceVolume": -2.586024,
+              "actualVolume": -2.584574
+            },
+            "C3": {
+              "sourceCIP": "S",
+              "sourceVolume": 2.590921,
+              "actualVolume": 2.590557
+            },
+            "C4": {
+              "sourceCIP": "S",
+              "sourceVolume": -2.583206,
+              "actualVolume": -2.583045
+            },
+            "C5": {
+              "sourceCIP": "R",
+              "sourceVolume": -2.57299,
+              "actualVolume": -2.573222
+            }
+          },
+          "projectionNormalAndTurnedMatch": true,
+          "anomericCarbon": "C1",
+          "freeAnomericHydroxyl": false,
+          "projectionSides": {
+            "O1": "down",
+            "O2": "down",
+            "O3": "up",
+            "O4": "down",
+            "C6": "up"
+          }
+        },
+        {
+          "residue": "I",
+          "identityFromGraphAndHandedness": "alpha-D-glucopyranose",
+          "sourceMonomer": "GLC",
+          "centersChecked": {
+            "C1": {
+              "sourceCIP": "S",
+              "sourceVolume": -2.405928,
+              "actualVolume": -2.161352
+            },
+            "C2": {
+              "sourceCIP": "R",
+              "sourceVolume": -2.586024,
+              "actualVolume": -2.58502
+            },
+            "C3": {
+              "sourceCIP": "S",
+              "sourceVolume": 2.590921,
+              "actualVolume": 2.590684
+            },
+            "C4": {
+              "sourceCIP": "S",
+              "sourceVolume": -2.583206,
+              "actualVolume": -2.582891
+            },
+            "C5": {
+              "sourceCIP": "R",
+              "sourceVolume": -2.57299,
+              "actualVolume": -2.572693
+            }
+          },
+          "projectionNormalAndTurnedMatch": true,
+          "anomericCarbon": "C1",
+          "freeAnomericHydroxyl": false,
+          "projectionSides": {
+            "O1": "down",
+            "O2": "down",
+            "O3": "up",
+            "O4": "down",
+            "C6": "up"
+          }
+        },
+        {
+          "residue": "J",
+          "identityFromGraphAndHandedness": "alpha-D-glucopyranose",
+          "sourceMonomer": "GLC",
+          "centersChecked": {
+            "C1": {
+              "sourceCIP": "S",
+              "sourceVolume": -2.405928,
+              "actualVolume": -2.404768
+            },
+            "C2": {
+              "sourceCIP": "R",
+              "sourceVolume": -2.586024,
+              "actualVolume": -2.585291
+            },
+            "C3": {
+              "sourceCIP": "S",
+              "sourceVolume": 2.590921,
+              "actualVolume": 2.590366
+            },
+            "C4": {
+              "sourceCIP": "S",
+              "sourceVolume": -2.583206,
+              "actualVolume": -2.582922
+            },
+            "C5": {
+              "sourceCIP": "R",
+              "sourceVolume": -2.57299,
+              "actualVolume": -2.573522
+            }
+          },
+          "projectionNormalAndTurnedMatch": true,
+          "anomericCarbon": "C1",
+          "freeAnomericHydroxyl": true,
+          "projectionSides": {
+            "O1": "down",
+            "O2": "down",
+            "O3": "up",
+            "O4": "down",
+            "C6": "up"
+          }
+        }
+      ],
+      "reducingEndsFromGraph": [
+        "J"
+      ],
+      "linksFromGraph": [
+        {
+          "id": "L1",
+          "donor": "A:C1",
+          "oxygenIndex": 30,
+          "acceptor": "B:C4",
+          "notation": "α(1→4)"
+        },
+        {
+          "id": "L2",
+          "donor": "B:C1",
+          "oxygenIndex": 51,
+          "acceptor": "C:C4",
+          "notation": "α(1→4)"
+        },
+        {
+          "id": "L3",
+          "donor": "C:C1",
+          "oxygenIndex": 72,
+          "acceptor": "D:C4",
+          "notation": "α(1→4)"
+        },
+        {
+          "id": "L4",
+          "donor": "D:C1",
+          "oxygenIndex": 93,
+          "acceptor": "E:C4",
+          "notation": "α(1→4)"
+        },
+        {
+          "id": "L5",
+          "donor": "E:C1",
+          "oxygenIndex": 114,
+          "acceptor": "F:C4",
+          "notation": "α(1→4)"
+        },
+        {
+          "id": "L6",
+          "donor": "F:C1",
+          "oxygenIndex": 135,
+          "acceptor": "G:C4",
+          "notation": "α(1→4)"
+        },
+        {
+          "id": "L7",
+          "donor": "G:C1",
+          "oxygenIndex": 156,
+          "acceptor": "H:C4",
+          "notation": "α(1→4)"
+        },
+        {
+          "id": "L8",
+          "donor": "H:C1",
+          "oxygenIndex": 177,
+          "acceptor": "I:C4",
+          "notation": "α(1→4)"
+        },
+        {
+          "id": "L9",
+          "donor": "I:C1",
+          "oxygenIndex": 199,
+          "acceptor": "J:C4",
+          "notation": "α(1→4)"
+        }
+      ],
+      "branchPointsFromGraph": [],
+      "fragmentLinkCounts": {
+        "alpha1-4": 9
+      },
+      "nonReducingEndsFromGraph": [
+        "A"
+      ],
+      "branchDepthFromGraph": {
+        "A": 0,
+        "B": 0,
+        "C": 0,
+        "D": 0,
+        "E": 0,
+        "F": 0,
+        "G": 0,
+        "H": 0,
+        "I": 0,
+        "J": 0
+      },
+      "biologicalArchitectureStatus": "UNCERTAIN: representative fragment; no unique full biological polymer/conformer established",
+      "overallStatus": "VERIFIED"
+    },
+    {
+      "id": "AMYLOPECTIN",
+      "structureStatus": "VERIFIED",
+      "atomCount": 255,
+      "elementCountsFromGraph": {
+        "C": 72,
+        "O": 61,
+        "H": 122
+      },
+      "ringSizesCheckedAgainstGraph": [
+        6,
+        6,
+        6,
+        6,
+        6,
+        6,
+        6,
+        6,
+        6,
+        6,
+        6,
+        6
+      ],
+      "residues": [
+        {
+          "residue": "A",
+          "identityFromGraphAndHandedness": "alpha-D-glucopyranose",
+          "sourceMonomer": "GLC",
+          "centersChecked": {
+            "C1": {
+              "sourceCIP": "S",
+              "sourceVolume": -2.405928,
+              "actualVolume": -2.160953
+            },
+            "C2": {
+              "sourceCIP": "R",
+              "sourceVolume": -2.586024,
+              "actualVolume": -2.58525
+            },
+            "C3": {
+              "sourceCIP": "S",
+              "sourceVolume": 2.590921,
+              "actualVolume": 2.590693
+            },
+            "C4": {
+              "sourceCIP": "S",
+              "sourceVolume": -2.583206,
+              "actualVolume": -2.582808
+            },
+            "C5": {
+              "sourceCIP": "R",
+              "sourceVolume": -2.57299,
+              "actualVolume": -2.572563
+            }
+          },
+          "projectionNormalAndTurnedMatch": true,
+          "anomericCarbon": "C1",
+          "freeAnomericHydroxyl": false,
+          "projectionSides": {
+            "O1": "down",
+            "O2": "down",
+            "O3": "up",
+            "O4": "down",
+            "C6": "up"
+          }
+        },
+        {
+          "residue": "B",
+          "identityFromGraphAndHandedness": "alpha-D-glucopyranose",
+          "sourceMonomer": "GLC",
+          "centersChecked": {
+            "C1": {
+              "sourceCIP": "S",
+              "sourceVolume": -2.405928,
+              "actualVolume": -2.161173
+            },
+            "C2": {
+              "sourceCIP": "R",
+              "sourceVolume": -2.586024,
+              "actualVolume": -2.585166
+            },
+            "C3": {
+              "sourceCIP": "S",
+              "sourceVolume": 2.590921,
+              "actualVolume": 2.590603
+            },
+            "C4": {
+              "sourceCIP": "S",
+              "sourceVolume": -2.583206,
+              "actualVolume": -2.583002
+            },
+            "C5": {
+              "sourceCIP": "R",
+              "sourceVolume": -2.57299,
+              "actualVolume": -2.573159
+            }
+          },
+          "projectionNormalAndTurnedMatch": true,
+          "anomericCarbon": "C1",
+          "freeAnomericHydroxyl": false,
+          "projectionSides": {
+            "O1": "down",
+            "O2": "down",
+            "O3": "up",
+            "O4": "down",
+            "C6": "up"
+          }
+        },
+        {
+          "residue": "C",
+          "identityFromGraphAndHandedness": "alpha-D-glucopyranose",
+          "sourceMonomer": "GLC",
+          "centersChecked": {
+            "C1": {
+              "sourceCIP": "S",
+              "sourceVolume": -2.405928,
+              "actualVolume": -2.161338
+            },
+            "C2": {
+              "sourceCIP": "R",
+              "sourceVolume": -2.586024,
+              "actualVolume": -2.585081
+            },
+            "C3": {
+              "sourceCIP": "S",
+              "sourceVolume": 2.590921,
+              "actualVolume": 2.590541
+            },
+            "C4": {
+              "sourceCIP": "S",
+              "sourceVolume": -2.583206,
+              "actualVolume": -2.583025
+            },
+            "C5": {
+              "sourceCIP": "R",
+              "sourceVolume": -2.57299,
+              "actualVolume": -2.572838
+            }
+          },
+          "projectionNormalAndTurnedMatch": true,
+          "anomericCarbon": "C1",
+          "freeAnomericHydroxyl": false,
+          "projectionSides": {
+            "O1": "down",
+            "O2": "down",
+            "O3": "up",
+            "O4": "down",
+            "C6": "up"
+          }
+        },
+        {
+          "residue": "D",
+          "identityFromGraphAndHandedness": "alpha-D-glucopyranose",
+          "sourceMonomer": "GLC",
+          "centersChecked": {
+            "C1": {
+              "sourceCIP": "S",
+              "sourceVolume": -2.405928,
+              "actualVolume": -2.1613
+            },
+            "C2": {
+              "sourceCIP": "R",
+              "sourceVolume": -2.586024,
+              "actualVolume": -2.584973
+            },
+            "C3": {
+              "sourceCIP": "S",
+              "sourceVolume": 2.590921,
+              "actualVolume": 2.590589
+            },
+            "C4": {
+              "sourceCIP": "S",
+              "sourceVolume": -2.583206,
+              "actualVolume": -2.583418
+            },
+            "C5": {
+              "sourceCIP": "R",
+              "sourceVolume": -2.57299,
+              "actualVolume": -2.573233
+            }
+          },
+          "projectionNormalAndTurnedMatch": true,
+          "anomericCarbon": "C1",
+          "freeAnomericHydroxyl": false,
+          "projectionSides": {
+            "O1": "down",
+            "O2": "down",
+            "O3": "up",
+            "O4": "down",
+            "C6": "up"
+          }
+        },
+        {
+          "residue": "E",
+          "identityFromGraphAndHandedness": "alpha-D-glucopyranose",
+          "sourceMonomer": "GLC",
+          "centersChecked": {
+            "C1": {
+              "sourceCIP": "S",
+              "sourceVolume": -2.405928,
+              "actualVolume": -2.161218
+            },
+            "C2": {
+              "sourceCIP": "R",
+              "sourceVolume": -2.586024,
+              "actualVolume": -2.58488
+            },
+            "C3": {
+              "sourceCIP": "S",
+              "sourceVolume": 2.590921,
+              "actualVolume": 2.590966
+            },
+            "C4": {
+              "sourceCIP": "S",
+              "sourceVolume": -2.583206,
+              "actualVolume": -2.583374
+            },
+            "C5": {
+              "sourceCIP": "R",
+              "sourceVolume": -2.57299,
+              "actualVolume": -2.57292
+            }
+          },
+          "projectionNormalAndTurnedMatch": true,
+          "anomericCarbon": "C1",
+          "freeAnomericHydroxyl": false,
+          "projectionSides": {
+            "O1": "down",
+            "O2": "down",
+            "O3": "up",
+            "O4": "down",
+            "C6": "up"
+          }
+        },
+        {
+          "residue": "F",
+          "identityFromGraphAndHandedness": "alpha-D-glucopyranose",
+          "sourceMonomer": "GLC",
+          "centersChecked": {
+            "C1": {
+              "sourceCIP": "S",
+              "sourceVolume": -2.405928,
+              "actualVolume": -2.161223
+            },
+            "C2": {
+              "sourceCIP": "R",
+              "sourceVolume": -2.586024,
+              "actualVolume": -2.585138
+            },
+            "C3": {
+              "sourceCIP": "S",
+              "sourceVolume": 2.590921,
+              "actualVolume": 2.590746
+            },
+            "C4": {
+              "sourceCIP": "S",
+              "sourceVolume": -2.583206,
+              "actualVolume": -2.582981
+            },
+            "C5": {
+              "sourceCIP": "R",
+              "sourceVolume": -2.57299,
+              "actualVolume": -2.572784
+            }
+          },
+          "projectionNormalAndTurnedMatch": true,
+          "anomericCarbon": "C1",
+          "freeAnomericHydroxyl": false,
+          "projectionSides": {
+            "O1": "down",
+            "O2": "down",
+            "O3": "up",
+            "O4": "down",
+            "C6": "up"
+          }
+        },
+        {
+          "residue": "G",
+          "identityFromGraphAndHandedness": "alpha-D-glucopyranose",
+          "sourceMonomer": "GLC",
+          "centersChecked": {
+            "C1": {
+              "sourceCIP": "S",
+              "sourceVolume": -2.405928,
+              "actualVolume": -2.161434
+            },
+            "C2": {
+              "sourceCIP": "R",
+              "sourceVolume": -2.586024,
+              "actualVolume": -2.584581
+            },
+            "C3": {
+              "sourceCIP": "S",
+              "sourceVolume": 2.590921,
+              "actualVolume": 2.59067
+            },
+            "C4": {
+              "sourceCIP": "S",
+              "sourceVolume": -2.583206,
+              "actualVolume": -2.583374
+            },
+            "C5": {
+              "sourceCIP": "R",
+              "sourceVolume": -2.57299,
+              "actualVolume": -2.573302
+            }
+          },
+          "projectionNormalAndTurnedMatch": true,
+          "anomericCarbon": "C1",
+          "freeAnomericHydroxyl": false,
+          "projectionSides": {
+            "O1": "down",
+            "O2": "down",
+            "O3": "up",
+            "O4": "down",
+            "C6": "up"
+          }
+        },
+        {
+          "residue": "H",
+          "identityFromGraphAndHandedness": "alpha-D-glucopyranose",
+          "sourceMonomer": "GLC",
+          "centersChecked": {
+            "C1": {
+              "sourceCIP": "S",
+              "sourceVolume": -2.405928,
+              "actualVolume": -2.405107
+            },
+            "C2": {
+              "sourceCIP": "R",
+              "sourceVolume": -2.586024,
+              "actualVolume": -2.585705
+            },
+            "C3": {
+              "sourceCIP": "S",
+              "sourceVolume": 2.590921,
+              "actualVolume": 2.591029
+            },
+            "C4": {
+              "sourceCIP": "S",
+              "sourceVolume": -2.583206,
+              "actualVolume": -2.583452
+            },
+            "C5": {
+              "sourceCIP": "R",
+              "sourceVolume": -2.57299,
+              "actualVolume": -2.57352
+            }
+          },
+          "projectionNormalAndTurnedMatch": true,
+          "anomericCarbon": "C1",
+          "freeAnomericHydroxyl": true,
+          "projectionSides": {
+            "O1": "down",
+            "O2": "down",
+            "O3": "up",
+            "O4": "down",
+            "C6": "up"
+          }
+        },
+        {
+          "residue": "I",
+          "identityFromGraphAndHandedness": "alpha-D-glucopyranose",
+          "sourceMonomer": "GLC",
+          "centersChecked": {
+            "C1": {
+              "sourceCIP": "S",
+              "sourceVolume": -2.405928,
+              "actualVolume": -2.161234
+            },
+            "C2": {
+              "sourceCIP": "R",
+              "sourceVolume": -2.586024,
+              "actualVolume": -2.584892
+            },
+            "C3": {
+              "sourceCIP": "S",
+              "sourceVolume": 2.590921,
+              "actualVolume": 2.590629
+            },
+            "C4": {
+              "sourceCIP": "S",
+              "sourceVolume": -2.583206,
+              "actualVolume": -2.582646
+            },
+            "C5": {
+              "sourceCIP": "R",
+              "sourceVolume": -2.57299,
+              "actualVolume": -2.572507
+            }
+          },
+          "projectionNormalAndTurnedMatch": true,
+          "anomericCarbon": "C1",
+          "freeAnomericHydroxyl": false,
+          "projectionSides": {
+            "O1": "down",
+            "O2": "down",
+            "O3": "up",
+            "O4": "down",
+            "C6": "up"
+          }
+        },
+        {
+          "residue": "J",
+          "identityFromGraphAndHandedness": "alpha-D-glucopyranose",
+          "sourceMonomer": "GLC",
+          "centersChecked": {
+            "C1": {
+              "sourceCIP": "S",
+              "sourceVolume": -2.405928,
+              "actualVolume": -2.16133
+            },
+            "C2": {
+              "sourceCIP": "R",
+              "sourceVolume": -2.586024,
+              "actualVolume": -2.584795
+            },
+            "C3": {
+              "sourceCIP": "S",
+              "sourceVolume": 2.590921,
+              "actualVolume": 2.59079
+            },
+            "C4": {
+              "sourceCIP": "S",
+              "sourceVolume": -2.583206,
+              "actualVolume": -2.583381
+            },
+            "C5": {
+              "sourceCIP": "R",
+              "sourceVolume": -2.57299,
+              "actualVolume": -2.572875
+            }
+          },
+          "projectionNormalAndTurnedMatch": true,
+          "anomericCarbon": "C1",
+          "freeAnomericHydroxyl": false,
+          "projectionSides": {
+            "O1": "down",
+            "O2": "down",
+            "O3": "up",
+            "O4": "down",
+            "C6": "up"
+          }
+        },
+        {
+          "residue": "K",
+          "identityFromGraphAndHandedness": "alpha-D-glucopyranose",
+          "sourceMonomer": "GLC",
+          "centersChecked": {
+            "C1": {
+              "sourceCIP": "S",
+              "sourceVolume": -2.405928,
+              "actualVolume": -2.161268
+            },
+            "C2": {
+              "sourceCIP": "R",
+              "sourceVolume": -2.586024,
+              "actualVolume": -2.584992
+            },
+            "C3": {
+              "sourceCIP": "S",
+              "sourceVolume": 2.590921,
+              "actualVolume": 2.590638
+            },
+            "C4": {
+              "sourceCIP": "S",
+              "sourceVolume": -2.583206,
+              "actualVolume": -2.58328
+            },
+            "C5": {
+              "sourceCIP": "R",
+              "sourceVolume": -2.57299,
+              "actualVolume": -2.573101
+            }
+          },
+          "projectionNormalAndTurnedMatch": true,
+          "anomericCarbon": "C1",
+          "freeAnomericHydroxyl": false,
+          "projectionSides": {
+            "O1": "down",
+            "O2": "down",
+            "O3": "up",
+            "O4": "down",
+            "C6": "up"
+          }
+        },
+        {
+          "residue": "L",
+          "identityFromGraphAndHandedness": "alpha-D-glucopyranose",
+          "sourceMonomer": "GLC",
+          "centersChecked": {
+            "C1": {
+              "sourceCIP": "S",
+              "sourceVolume": -2.405928,
+              "actualVolume": -2.161749
+            },
+            "C2": {
+              "sourceCIP": "R",
+              "sourceVolume": -2.586024,
+              "actualVolume": -2.585438
+            },
+            "C3": {
+              "sourceCIP": "S",
+              "sourceVolume": 2.590921,
+              "actualVolume": 2.590715
+            },
+            "C4": {
+              "sourceCIP": "S",
+              "sourceVolume": -2.583206,
+              "actualVolume": -2.583234
+            },
+            "C5": {
+              "sourceCIP": "R",
+              "sourceVolume": -2.57299,
+              "actualVolume": -2.573343
+            }
+          },
+          "projectionNormalAndTurnedMatch": true,
+          "anomericCarbon": "C1",
+          "freeAnomericHydroxyl": false,
+          "projectionSides": {
+            "O1": "down",
+            "O2": "down",
+            "O3": "up",
+            "O4": "down",
+            "C6": "up"
+          }
+        }
+      ],
+      "reducingEndsFromGraph": [
+        "H"
+      ],
+      "linksFromGraph": [
+        {
+          "id": "L1",
+          "donor": "A:C1",
+          "oxygenIndex": 30,
+          "acceptor": "B:C4",
+          "notation": "α(1→4)"
+        },
+        {
+          "id": "L2",
+          "donor": "B:C1",
+          "oxygenIndex": 51,
+          "acceptor": "C:C4",
+          "notation": "α(1→4)"
+        },
+        {
+          "id": "L3",
+          "donor": "C:C1",
+          "oxygenIndex": 72,
+          "acceptor": "D:C4",
+          "notation": "α(1→4)"
+        },
+        {
+          "id": "L4",
+          "donor": "D:C1",
+          "oxygenIndex": 92,
+          "acceptor": "E:C4",
+          "notation": "α(1→4)"
+        },
+        {
+          "id": "L5",
+          "donor": "E:C1",
+          "oxygenIndex": 113,
+          "acceptor": "F:C4",
+          "notation": "α(1→4)"
+        },
+        {
+          "id": "L6",
+          "donor": "F:C1",
+          "oxygenIndex": 134,
+          "acceptor": "G:C4",
+          "notation": "α(1→4)"
+        },
+        {
+          "id": "L7",
+          "donor": "G:C1",
+          "oxygenIndex": 156,
+          "acceptor": "H:C4",
+          "notation": "α(1→4)"
+        },
+        {
+          "id": "L8",
+          "donor": "I:C1",
+          "oxygenIndex": 200,
+          "acceptor": "J:C4",
+          "notation": "α(1→4)"
+        },
+        {
+          "id": "L9",
+          "donor": "J:C1",
+          "oxygenIndex": 221,
+          "acceptor": "K:C4",
+          "notation": "α(1→4)"
+        },
+        {
+          "id": "L10",
+          "donor": "K:C1",
+          "oxygenIndex": 242,
+          "acceptor": "L:C4",
+          "notation": "α(1→4)"
+        },
+        {
+          "id": "L11",
+          "donor": "L:C1",
+          "oxygenIndex": 74,
+          "acceptor": "D:C6",
+          "notation": "α(1→6)"
+        }
+      ],
+      "branchPointsFromGraph": [
+        {
+          "residue": "D",
+          "carbon": "C6",
+          "bond": "L11"
+        }
+      ],
+      "fragmentLinkCounts": {
+        "alpha1-4": 10,
+        "alpha1-6": 1
+      },
+      "nonReducingEndsFromGraph": [
+        "A",
+        "I"
+      ],
+      "branchDepthFromGraph": {
+        "A": 0,
+        "B": 0,
+        "C": 0,
+        "D": 0,
+        "E": 0,
+        "F": 0,
+        "G": 0,
+        "H": 0,
+        "I": 1,
+        "J": 1,
+        "K": 1,
+        "L": 1
+      },
+      "biologicalArchitectureStatus": "UNCERTAIN: representative fragment; no unique full biological polymer/conformer established",
+      "overallStatus": "VERIFIED"
+    },
+    {
+      "id": "GLYCOGEN",
+      "structureStatus": "VERIFIED",
+      "atomCount": 339,
+      "elementCountsFromGraph": {
+        "C": 96,
+        "O": 81,
+        "H": 162
+      },
+      "ringSizesCheckedAgainstGraph": [
+        6,
+        6,
+        6,
+        6,
+        6,
+        6,
+        6,
+        6,
+        6,
+        6,
+        6,
+        6,
+        6,
+        6,
+        6,
+        6
+      ],
+      "residues": [
+        {
+          "residue": "A",
+          "identityFromGraphAndHandedness": "alpha-D-glucopyranose",
+          "sourceMonomer": "GLC",
+          "centersChecked": {
+            "C1": {
+              "sourceCIP": "S",
+              "sourceVolume": -2.405928,
+              "actualVolume": -2.161254
+            },
+            "C2": {
+              "sourceCIP": "R",
+              "sourceVolume": -2.586024,
+              "actualVolume": -2.58483
+            },
+            "C3": {
+              "sourceCIP": "S",
+              "sourceVolume": 2.590921,
+              "actualVolume": 2.590375
+            },
+            "C4": {
+              "sourceCIP": "S",
+              "sourceVolume": -2.583206,
+              "actualVolume": -2.582719
+            },
+            "C5": {
+              "sourceCIP": "R",
+              "sourceVolume": -2.57299,
+              "actualVolume": -2.572881
+            }
+          },
+          "projectionNormalAndTurnedMatch": true,
+          "anomericCarbon": "C1",
+          "freeAnomericHydroxyl": false,
+          "projectionSides": {
+            "O1": "down",
+            "O2": "down",
+            "O3": "up",
+            "O4": "down",
+            "C6": "up"
+          }
+        },
+        {
+          "residue": "B",
+          "identityFromGraphAndHandedness": "alpha-D-glucopyranose",
+          "sourceMonomer": "GLC",
+          "centersChecked": {
+            "C1": {
+              "sourceCIP": "S",
+              "sourceVolume": -2.405928,
+              "actualVolume": -2.160749
+            },
+            "C2": {
+              "sourceCIP": "R",
+              "sourceVolume": -2.586024,
+              "actualVolume": -2.584751
+            },
+            "C3": {
+              "sourceCIP": "S",
+              "sourceVolume": 2.590921,
+              "actualVolume": 2.590486
+            },
+            "C4": {
+              "sourceCIP": "S",
+              "sourceVolume": -2.583206,
+              "actualVolume": -2.583174
+            },
+            "C5": {
+              "sourceCIP": "R",
+              "sourceVolume": -2.57299,
+              "actualVolume": -2.573283
+            }
+          },
+          "projectionNormalAndTurnedMatch": true,
+          "anomericCarbon": "C1",
+          "freeAnomericHydroxyl": false,
+          "projectionSides": {
+            "O1": "down",
+            "O2": "down",
+            "O3": "up",
+            "O4": "down",
+            "C6": "up"
+          }
+        },
+        {
+          "residue": "C",
+          "identityFromGraphAndHandedness": "alpha-D-glucopyranose",
+          "sourceMonomer": "GLC",
+          "centersChecked": {
+            "C1": {
+              "sourceCIP": "S",
+              "sourceVolume": -2.405928,
+              "actualVolume": -2.16124
+            },
+            "C2": {
+              "sourceCIP": "R",
+              "sourceVolume": -2.586024,
+              "actualVolume": -2.584924
+            },
+            "C3": {
+              "sourceCIP": "S",
+              "sourceVolume": 2.590921,
+              "actualVolume": 2.590885
+            },
+            "C4": {
+              "sourceCIP": "S",
+              "sourceVolume": -2.583206,
+              "actualVolume": -2.583277
+            },
+            "C5": {
+              "sourceCIP": "R",
+              "sourceVolume": -2.57299,
+              "actualVolume": -2.57326
+            }
+          },
+          "projectionNormalAndTurnedMatch": true,
+          "anomericCarbon": "C1",
+          "freeAnomericHydroxyl": false,
+          "projectionSides": {
+            "O1": "down",
+            "O2": "down",
+            "O3": "up",
+            "O4": "down",
+            "C6": "up"
+          }
+        },
+        {
+          "residue": "D",
+          "identityFromGraphAndHandedness": "alpha-D-glucopyranose",
+          "sourceMonomer": "GLC",
+          "centersChecked": {
+            "C1": {
+              "sourceCIP": "S",
+              "sourceVolume": -2.405928,
+              "actualVolume": -2.161007
+            },
+            "C2": {
+              "sourceCIP": "R",
+              "sourceVolume": -2.586024,
+              "actualVolume": -2.585097
+            },
+            "C3": {
+              "sourceCIP": "S",
+              "sourceVolume": 2.590921,
+              "actualVolume": 2.590811
+            },
+            "C4": {
+              "sourceCIP": "S",
+              "sourceVolume": -2.583206,
+              "actualVolume": -2.583383
+            },
+            "C5": {
+              "sourceCIP": "R",
+              "sourceVolume": -2.57299,
+              "actualVolume": -2.572922
+            }
+          },
+          "projectionNormalAndTurnedMatch": true,
+          "anomericCarbon": "C1",
+          "freeAnomericHydroxyl": false,
+          "projectionSides": {
+            "O1": "down",
+            "O2": "down",
+            "O3": "up",
+            "O4": "down",
+            "C6": "up"
+          }
+        },
+        {
+          "residue": "E",
+          "identityFromGraphAndHandedness": "alpha-D-glucopyranose",
+          "sourceMonomer": "GLC",
+          "centersChecked": {
+            "C1": {
+              "sourceCIP": "S",
+              "sourceVolume": -2.405928,
+              "actualVolume": -2.161534
+            },
+            "C2": {
+              "sourceCIP": "R",
+              "sourceVolume": -2.586024,
+              "actualVolume": -2.584643
+            },
+            "C3": {
+              "sourceCIP": "S",
+              "sourceVolume": 2.590921,
+              "actualVolume": 2.590641
+            },
+            "C4": {
+              "sourceCIP": "S",
+              "sourceVolume": -2.583206,
+              "actualVolume": -2.583241
+            },
+            "C5": {
+              "sourceCIP": "R",
+              "sourceVolume": -2.57299,
+              "actualVolume": -2.573169
+            }
+          },
+          "projectionNormalAndTurnedMatch": true,
+          "anomericCarbon": "C1",
+          "freeAnomericHydroxyl": false,
+          "projectionSides": {
+            "O1": "down",
+            "O2": "down",
+            "O3": "up",
+            "O4": "down",
+            "C6": "up"
+          }
+        },
+        {
+          "residue": "F",
+          "identityFromGraphAndHandedness": "alpha-D-glucopyranose",
+          "sourceMonomer": "GLC",
+          "centersChecked": {
+            "C1": {
+              "sourceCIP": "S",
+              "sourceVolume": -2.405928,
+              "actualVolume": -2.161668
+            },
+            "C2": {
+              "sourceCIP": "R",
+              "sourceVolume": -2.586024,
+              "actualVolume": -2.584969
+            },
+            "C3": {
+              "sourceCIP": "S",
+              "sourceVolume": 2.590921,
+              "actualVolume": 2.590488
+            },
+            "C4": {
+              "sourceCIP": "S",
+              "sourceVolume": -2.583206,
+              "actualVolume": -2.583361
+            },
+            "C5": {
+              "sourceCIP": "R",
+              "sourceVolume": -2.57299,
+              "actualVolume": -2.573052
+            }
+          },
+          "projectionNormalAndTurnedMatch": true,
+          "anomericCarbon": "C1",
+          "freeAnomericHydroxyl": false,
+          "projectionSides": {
+            "O1": "down",
+            "O2": "down",
+            "O3": "up",
+            "O4": "down",
+            "C6": "up"
+          }
+        },
+        {
+          "residue": "G",
+          "identityFromGraphAndHandedness": "alpha-D-glucopyranose",
+          "sourceMonomer": "GLC",
+          "centersChecked": {
+            "C1": {
+              "sourceCIP": "S",
+              "sourceVolume": -2.405928,
+              "actualVolume": -2.404674
+            },
+            "C2": {
+              "sourceCIP": "R",
+              "sourceVolume": -2.586024,
+              "actualVolume": -2.58596
+            },
+            "C3": {
+              "sourceCIP": "S",
+              "sourceVolume": 2.590921,
+              "actualVolume": 2.590959
+            },
+            "C4": {
+              "sourceCIP": "S",
+              "sourceVolume": -2.583206,
+              "actualVolume": -2.583326
+            },
+            "C5": {
+              "sourceCIP": "R",
+              "sourceVolume": -2.57299,
+              "actualVolume": -2.573266
+            }
+          },
+          "projectionNormalAndTurnedMatch": true,
+          "anomericCarbon": "C1",
+          "freeAnomericHydroxyl": true,
+          "projectionSides": {
+            "O1": "down",
+            "O2": "down",
+            "O3": "up",
+            "O4": "down",
+            "C6": "up"
+          }
+        },
+        {
+          "residue": "H",
+          "identityFromGraphAndHandedness": "alpha-D-glucopyranose",
+          "sourceMonomer": "GLC",
+          "centersChecked": {
+            "C1": {
+              "sourceCIP": "S",
+              "sourceVolume": -2.405928,
+              "actualVolume": -2.16112
+            },
+            "C2": {
+              "sourceCIP": "R",
+              "sourceVolume": -2.586024,
+              "actualVolume": -2.584631
+            },
+            "C3": {
+              "sourceCIP": "S",
+              "sourceVolume": 2.590921,
+              "actualVolume": 2.590385
+            },
+            "C4": {
+              "sourceCIP": "S",
+              "sourceVolume": -2.583206,
+              "actualVolume": -2.582672
+            },
+            "C5": {
+              "sourceCIP": "R",
+              "sourceVolume": -2.57299,
+              "actualVolume": -2.573083
+            }
+          },
+          "projectionNormalAndTurnedMatch": true,
+          "anomericCarbon": "C1",
+          "freeAnomericHydroxyl": false,
+          "projectionSides": {
+            "O1": "down",
+            "O2": "down",
+            "O3": "up",
+            "O4": "down",
+            "C6": "up"
+          }
+        },
+        {
+          "residue": "I",
+          "identityFromGraphAndHandedness": "alpha-D-glucopyranose",
+          "sourceMonomer": "GLC",
+          "centersChecked": {
+            "C1": {
+              "sourceCIP": "S",
+              "sourceVolume": -2.405928,
+              "actualVolume": -2.161351
+            },
+            "C2": {
+              "sourceCIP": "R",
+              "sourceVolume": -2.586024,
+              "actualVolume": -2.58491
+            },
+            "C3": {
+              "sourceCIP": "S",
+              "sourceVolume": 2.590921,
+              "actualVolume": 2.590826
+            },
+            "C4": {
+              "sourceCIP": "S",
+              "sourceVolume": -2.583206,
+              "actualVolume": -2.582881
+            },
+            "C5": {
+              "sourceCIP": "R",
+              "sourceVolume": -2.57299,
+              "actualVolume": -2.572568
+            }
+          },
+          "projectionNormalAndTurnedMatch": true,
+          "anomericCarbon": "C1",
+          "freeAnomericHydroxyl": false,
+          "projectionSides": {
+            "O1": "down",
+            "O2": "down",
+            "O3": "up",
+            "O4": "down",
+            "C6": "up"
+          }
+        },
+        {
+          "residue": "J",
+          "identityFromGraphAndHandedness": "alpha-D-glucopyranose",
+          "sourceMonomer": "GLC",
+          "centersChecked": {
+            "C1": {
+              "sourceCIP": "S",
+              "sourceVolume": -2.405928,
+              "actualVolume": -2.161152
+            },
+            "C2": {
+              "sourceCIP": "R",
+              "sourceVolume": -2.586024,
+              "actualVolume": -2.585114
+            },
+            "C3": {
+              "sourceCIP": "S",
+              "sourceVolume": 2.590921,
+              "actualVolume": 2.590651
+            },
+            "C4": {
+              "sourceCIP": "S",
+              "sourceVolume": -2.583206,
+              "actualVolume": -2.583102
+            },
+            "C5": {
+              "sourceCIP": "R",
+              "sourceVolume": -2.57299,
+              "actualVolume": -2.572956
+            }
+          },
+          "projectionNormalAndTurnedMatch": true,
+          "anomericCarbon": "C1",
+          "freeAnomericHydroxyl": false,
+          "projectionSides": {
+            "O1": "down",
+            "O2": "down",
+            "O3": "up",
+            "O4": "down",
+            "C6": "up"
+          }
+        },
+        {
+          "residue": "K",
+          "identityFromGraphAndHandedness": "alpha-D-glucopyranose",
+          "sourceMonomer": "GLC",
+          "centersChecked": {
+            "C1": {
+              "sourceCIP": "S",
+              "sourceVolume": -2.405928,
+              "actualVolume": -2.161107
+            },
+            "C2": {
+              "sourceCIP": "R",
+              "sourceVolume": -2.586024,
+              "actualVolume": -2.584992
+            },
+            "C3": {
+              "sourceCIP": "S",
+              "sourceVolume": 2.590921,
+              "actualVolume": 2.590696
+            },
+            "C4": {
+              "sourceCIP": "S",
+              "sourceVolume": -2.583206,
+              "actualVolume": -2.583073
+            },
+            "C5": {
+              "sourceCIP": "R",
+              "sourceVolume": -2.57299,
+              "actualVolume": -2.572933
+            }
+          },
+          "projectionNormalAndTurnedMatch": true,
+          "anomericCarbon": "C1",
+          "freeAnomericHydroxyl": false,
+          "projectionSides": {
+            "O1": "down",
+            "O2": "down",
+            "O3": "up",
+            "O4": "down",
+            "C6": "up"
+          }
+        },
+        {
+          "residue": "L",
+          "identityFromGraphAndHandedness": "alpha-D-glucopyranose",
+          "sourceMonomer": "GLC",
+          "centersChecked": {
+            "C1": {
+              "sourceCIP": "S",
+              "sourceVolume": -2.405928,
+              "actualVolume": -2.161671
+            },
+            "C2": {
+              "sourceCIP": "R",
+              "sourceVolume": -2.586024,
+              "actualVolume": -2.584971
+            },
+            "C3": {
+              "sourceCIP": "S",
+              "sourceVolume": 2.590921,
+              "actualVolume": 2.590523
+            },
+            "C4": {
+              "sourceCIP": "S",
+              "sourceVolume": -2.583206,
+              "actualVolume": -2.583239
+            },
+            "C5": {
+              "sourceCIP": "R",
+              "sourceVolume": -2.57299,
+              "actualVolume": -2.573393
+            }
+          },
+          "projectionNormalAndTurnedMatch": true,
+          "anomericCarbon": "C1",
+          "freeAnomericHydroxyl": false,
+          "projectionSides": {
+            "O1": "down",
+            "O2": "down",
+            "O3": "up",
+            "O4": "down",
+            "C6": "up"
+          }
+        },
+        {
+          "residue": "M",
+          "identityFromGraphAndHandedness": "alpha-D-glucopyranose",
+          "sourceMonomer": "GLC",
+          "centersChecked": {
+            "C1": {
+              "sourceCIP": "S",
+              "sourceVolume": -2.405928,
+              "actualVolume": -2.161008
+            },
+            "C2": {
+              "sourceCIP": "R",
+              "sourceVolume": -2.586024,
+              "actualVolume": -2.58473
+            },
+            "C3": {
+              "sourceCIP": "S",
+              "sourceVolume": 2.590921,
+              "actualVolume": 2.590659
+            },
+            "C4": {
+              "sourceCIP": "S",
+              "sourceVolume": -2.583206,
+              "actualVolume": -2.582706
+            },
+            "C5": {
+              "sourceCIP": "R",
+              "sourceVolume": -2.57299,
+              "actualVolume": -2.572825
+            }
+          },
+          "projectionNormalAndTurnedMatch": true,
+          "anomericCarbon": "C1",
+          "freeAnomericHydroxyl": false,
+          "projectionSides": {
+            "O1": "down",
+            "O2": "down",
+            "O3": "up",
+            "O4": "down",
+            "C6": "up"
+          }
+        },
+        {
+          "residue": "N",
+          "identityFromGraphAndHandedness": "alpha-D-glucopyranose",
+          "sourceMonomer": "GLC",
+          "centersChecked": {
+            "C1": {
+              "sourceCIP": "S",
+              "sourceVolume": -2.405928,
+              "actualVolume": -2.161131
+            },
+            "C2": {
+              "sourceCIP": "R",
+              "sourceVolume": -2.586024,
+              "actualVolume": -2.58473
+            },
+            "C3": {
+              "sourceCIP": "S",
+              "sourceVolume": 2.590921,
+              "actualVolume": 2.590561
+            },
+            "C4": {
+              "sourceCIP": "S",
+              "sourceVolume": -2.583206,
+              "actualVolume": -2.583192
+            },
+            "C5": {
+              "sourceCIP": "R",
+              "sourceVolume": -2.57299,
+              "actualVolume": -2.57295
+            }
+          },
+          "projectionNormalAndTurnedMatch": true,
+          "anomericCarbon": "C1",
+          "freeAnomericHydroxyl": false,
+          "projectionSides": {
+            "O1": "down",
+            "O2": "down",
+            "O3": "up",
+            "O4": "down",
+            "C6": "up"
+          }
+        },
+        {
+          "residue": "O",
+          "identityFromGraphAndHandedness": "alpha-D-glucopyranose",
+          "sourceMonomer": "GLC",
+          "centersChecked": {
+            "C1": {
+              "sourceCIP": "S",
+              "sourceVolume": -2.405928,
+              "actualVolume": -2.160976
+            },
+            "C2": {
+              "sourceCIP": "R",
+              "sourceVolume": -2.586024,
+              "actualVolume": -2.585018
+            },
+            "C3": {
+              "sourceCIP": "S",
+              "sourceVolume": 2.590921,
+              "actualVolume": 2.590715
+            },
+            "C4": {
+              "sourceCIP": "S",
+              "sourceVolume": -2.583206,
+              "actualVolume": -2.583061
+            },
+            "C5": {
+              "sourceCIP": "R",
+              "sourceVolume": -2.57299,
+              "actualVolume": -2.572876
+            }
+          },
+          "projectionNormalAndTurnedMatch": true,
+          "anomericCarbon": "C1",
+          "freeAnomericHydroxyl": false,
+          "projectionSides": {
+            "O1": "down",
+            "O2": "down",
+            "O3": "up",
+            "O4": "down",
+            "C6": "up"
+          }
+        },
+        {
+          "residue": "P",
+          "identityFromGraphAndHandedness": "alpha-D-glucopyranose",
+          "sourceMonomer": "GLC",
+          "centersChecked": {
+            "C1": {
+              "sourceCIP": "S",
+              "sourceVolume": -2.405928,
+              "actualVolume": -2.161566
+            },
+            "C2": {
+              "sourceCIP": "R",
+              "sourceVolume": -2.586024,
+              "actualVolume": -2.585115
+            },
+            "C3": {
+              "sourceCIP": "S",
+              "sourceVolume": 2.590921,
+              "actualVolume": 2.59023
+            },
+            "C4": {
+              "sourceCIP": "S",
+              "sourceVolume": -2.583206,
+              "actualVolume": -2.582984
+            },
+            "C5": {
+              "sourceCIP": "R",
+              "sourceVolume": -2.57299,
+              "actualVolume": -2.573659
+            }
+          },
+          "projectionNormalAndTurnedMatch": true,
+          "anomericCarbon": "C1",
+          "freeAnomericHydroxyl": false,
+          "projectionSides": {
+            "O1": "down",
+            "O2": "down",
+            "O3": "up",
+            "O4": "down",
+            "C6": "up"
+          }
+        }
+      ],
+      "reducingEndsFromGraph": [
+        "G"
+      ],
+      "linksFromGraph": [
+        {
+          "id": "L1",
+          "donor": "A:C1",
+          "oxygenIndex": 30,
+          "acceptor": "B:C4",
+          "notation": "α(1→4)"
+        },
+        {
+          "id": "L2",
+          "donor": "B:C1",
+          "oxygenIndex": 51,
+          "acceptor": "C:C4",
+          "notation": "α(1→4)"
+        },
+        {
+          "id": "L3",
+          "donor": "C:C1",
+          "oxygenIndex": 72,
+          "acceptor": "D:C4",
+          "notation": "α(1→4)"
+        },
+        {
+          "id": "L4",
+          "donor": "D:C1",
+          "oxygenIndex": 93,
+          "acceptor": "E:C4",
+          "notation": "α(1→4)"
+        },
+        {
+          "id": "L5",
+          "donor": "E:C1",
+          "oxygenIndex": 113,
+          "acceptor": "F:C4",
+          "notation": "α(1→4)"
+        },
+        {
+          "id": "L6",
+          "donor": "F:C1",
+          "oxygenIndex": 135,
+          "acceptor": "G:C4",
+          "notation": "α(1→4)"
+        },
+        {
+          "id": "L7",
+          "donor": "H:C1",
+          "oxygenIndex": 179,
+          "acceptor": "I:C4",
+          "notation": "α(1→4)"
+        },
+        {
+          "id": "L8",
+          "donor": "I:C1",
+          "oxygenIndex": 200,
+          "acceptor": "J:C4",
+          "notation": "α(1→4)"
+        },
+        {
+          "id": "L9",
+          "donor": "J:C1",
+          "oxygenIndex": 221,
+          "acceptor": "K:C4",
+          "notation": "α(1→4)"
+        },
+        {
+          "id": "L10",
+          "donor": "K:C1",
+          "oxygenIndex": 241,
+          "acceptor": "L:C4",
+          "notation": "α(1→4)"
+        },
+        {
+          "id": "L11",
+          "donor": "L:C1",
+          "oxygenIndex": 95,
+          "acceptor": "E:C6",
+          "notation": "α(1→6)"
+        },
+        {
+          "id": "L12",
+          "donor": "M:C1",
+          "oxygenIndex": 284,
+          "acceptor": "N:C4",
+          "notation": "α(1→4)"
+        },
+        {
+          "id": "L13",
+          "donor": "N:C1",
+          "oxygenIndex": 305,
+          "acceptor": "O:C4",
+          "notation": "α(1→4)"
+        },
+        {
+          "id": "L14",
+          "donor": "O:C1",
+          "oxygenIndex": 326,
+          "acceptor": "P:C4",
+          "notation": "α(1→4)"
+        },
+        {
+          "id": "L15",
+          "donor": "P:C1",
+          "oxygenIndex": 223,
+          "acceptor": "K:C6",
+          "notation": "α(1→6)"
+        }
+      ],
+      "branchPointsFromGraph": [
+        {
+          "residue": "E",
+          "carbon": "C6",
+          "bond": "L11"
+        },
+        {
+          "residue": "K",
+          "carbon": "C6",
+          "bond": "L15"
+        }
+      ],
+      "fragmentLinkCounts": {
+        "alpha1-4": 13,
+        "alpha1-6": 2
+      },
+      "nonReducingEndsFromGraph": [
+        "A",
+        "H",
+        "M"
+      ],
+      "branchDepthFromGraph": {
+        "A": 0,
+        "B": 0,
+        "C": 0,
+        "D": 0,
+        "E": 0,
+        "F": 0,
+        "G": 0,
+        "H": 1,
+        "I": 1,
+        "J": 1,
+        "K": 1,
+        "L": 1,
+        "M": 2,
+        "N": 2,
+        "O": 2,
+        "P": 2
+      },
+      "biologicalArchitectureStatus": "UNCERTAIN: representative fragment; no unique full biological polymer/conformer established",
+      "overallStatus": "VERIFIED"
+    },
+    {
+      "id": "CELLULOSE",
+      "structureStatus": "VERIFIED",
+      "atomCount": 171,
+      "elementCountsFromGraph": {
+        "C": 48,
+        "O": 41,
+        "H": 82
+      },
+      "ringSizesCheckedAgainstGraph": [
+        6,
+        6,
+        6,
+        6,
+        6,
+        6,
+        6,
+        6
+      ],
+      "residues": [
+        {
+          "residue": "A",
+          "identityFromGraphAndHandedness": "beta-D-glucopyranose",
+          "sourceMonomer": "BGC",
+          "centersChecked": {
+            "C2": {
+              "sourceCIP": "R",
+              "sourceVolume": -2.589266,
+              "actualVolume": -2.588761
+            },
+            "C3": {
+              "sourceCIP": "S",
+              "sourceVolume": 2.59056,
+              "actualVolume": 2.590327
+            },
+            "C4": {
+              "sourceCIP": "S",
+              "sourceVolume": -2.585197,
+              "actualVolume": -2.584571
+            },
+            "C5": {
+              "sourceCIP": "R",
+              "sourceVolume": -2.576236,
+              "actualVolume": -2.575935
+            },
+            "C1": {
+              "sourceCIP": "R",
+              "sourceVolume": 2.409836,
+              "actualVolume": 2.434433
+            }
+          },
+          "projectionNormalAndTurnedMatch": true,
+          "anomericCarbon": "C1",
+          "freeAnomericHydroxyl": false,
+          "projectionSides": {
+            "O1": "up",
+            "O2": "down",
+            "O3": "up",
+            "O4": "down",
+            "C6": "up"
+          }
+        },
+        {
+          "residue": "B",
+          "identityFromGraphAndHandedness": "beta-D-glucopyranose",
+          "sourceMonomer": "BGC",
+          "centersChecked": {
+            "C2": {
+              "sourceCIP": "R",
+              "sourceVolume": -2.589266,
+              "actualVolume": -2.588937
+            },
+            "C3": {
+              "sourceCIP": "S",
+              "sourceVolume": 2.59056,
+              "actualVolume": 2.590223
+            },
+            "C4": {
+              "sourceCIP": "S",
+              "sourceVolume": -2.585197,
+              "actualVolume": -2.585168
+            },
+            "C5": {
+              "sourceCIP": "R",
+              "sourceVolume": -2.576236,
+              "actualVolume": -2.576108
+            },
+            "C1": {
+              "sourceCIP": "R",
+              "sourceVolume": 2.409836,
+              "actualVolume": 2.43491
+            }
+          },
+          "projectionNormalAndTurnedMatch": true,
+          "anomericCarbon": "C1",
+          "freeAnomericHydroxyl": false,
+          "projectionSides": {
+            "O1": "up",
+            "O2": "down",
+            "O3": "up",
+            "O4": "down",
+            "C6": "up"
+          }
+        },
+        {
+          "residue": "C",
+          "identityFromGraphAndHandedness": "beta-D-glucopyranose",
+          "sourceMonomer": "BGC",
+          "centersChecked": {
+            "C2": {
+              "sourceCIP": "R",
+              "sourceVolume": -2.589266,
+              "actualVolume": -2.589048
+            },
+            "C3": {
+              "sourceCIP": "S",
+              "sourceVolume": 2.59056,
+              "actualVolume": 2.590454
+            },
+            "C4": {
+              "sourceCIP": "S",
+              "sourceVolume": -2.585197,
+              "actualVolume": -2.584959
+            },
+            "C5": {
+              "sourceCIP": "R",
+              "sourceVolume": -2.576236,
+              "actualVolume": -2.576176
+            },
+            "C1": {
+              "sourceCIP": "R",
+              "sourceVolume": 2.409836,
+              "actualVolume": 2.434726
+            }
+          },
+          "projectionNormalAndTurnedMatch": true,
+          "anomericCarbon": "C1",
+          "freeAnomericHydroxyl": false,
+          "projectionSides": {
+            "O1": "up",
+            "O2": "down",
+            "O3": "up",
+            "O4": "down",
+            "C6": "up"
+          }
+        },
+        {
+          "residue": "D",
+          "identityFromGraphAndHandedness": "beta-D-glucopyranose",
+          "sourceMonomer": "BGC",
+          "centersChecked": {
+            "C2": {
+              "sourceCIP": "R",
+              "sourceVolume": -2.589266,
+              "actualVolume": -2.588968
+            },
+            "C3": {
+              "sourceCIP": "S",
+              "sourceVolume": 2.59056,
+              "actualVolume": 2.590103
+            },
+            "C4": {
+              "sourceCIP": "S",
+              "sourceVolume": -2.585197,
+              "actualVolume": -2.58511
+            },
+            "C5": {
+              "sourceCIP": "R",
+              "sourceVolume": -2.576236,
+              "actualVolume": -2.576173
+            },
+            "C1": {
+              "sourceCIP": "R",
+              "sourceVolume": 2.409836,
+              "actualVolume": 2.434573
+            }
+          },
+          "projectionNormalAndTurnedMatch": true,
+          "anomericCarbon": "C1",
+          "freeAnomericHydroxyl": false,
+          "projectionSides": {
+            "O1": "up",
+            "O2": "down",
+            "O3": "up",
+            "O4": "down",
+            "C6": "up"
+          }
+        },
+        {
+          "residue": "E",
+          "identityFromGraphAndHandedness": "beta-D-glucopyranose",
+          "sourceMonomer": "BGC",
+          "centersChecked": {
+            "C2": {
+              "sourceCIP": "R",
+              "sourceVolume": -2.589266,
+              "actualVolume": -2.588642
+            },
+            "C3": {
+              "sourceCIP": "S",
+              "sourceVolume": 2.59056,
+              "actualVolume": 2.59032
+            },
+            "C4": {
+              "sourceCIP": "S",
+              "sourceVolume": -2.585197,
+              "actualVolume": -2.584972
+            },
+            "C5": {
+              "sourceCIP": "R",
+              "sourceVolume": -2.576236,
+              "actualVolume": -2.576118
+            },
+            "C1": {
+              "sourceCIP": "R",
+              "sourceVolume": 2.409836,
+              "actualVolume": 2.434771
+            }
+          },
+          "projectionNormalAndTurnedMatch": true,
+          "anomericCarbon": "C1",
+          "freeAnomericHydroxyl": false,
+          "projectionSides": {
+            "O1": "up",
+            "O2": "down",
+            "O3": "up",
+            "O4": "down",
+            "C6": "up"
+          }
+        },
+        {
+          "residue": "F",
+          "identityFromGraphAndHandedness": "beta-D-glucopyranose",
+          "sourceMonomer": "BGC",
+          "centersChecked": {
+            "C2": {
+              "sourceCIP": "R",
+              "sourceVolume": -2.589266,
+              "actualVolume": -2.58875
+            },
+            "C3": {
+              "sourceCIP": "S",
+              "sourceVolume": 2.59056,
+              "actualVolume": 2.590172
+            },
+            "C4": {
+              "sourceCIP": "S",
+              "sourceVolume": -2.585197,
+              "actualVolume": -2.585052
+            },
+            "C5": {
+              "sourceCIP": "R",
+              "sourceVolume": -2.576236,
+              "actualVolume": -2.575998
+            },
+            "C1": {
+              "sourceCIP": "R",
+              "sourceVolume": 2.409836,
+              "actualVolume": 2.434785
+            }
+          },
+          "projectionNormalAndTurnedMatch": true,
+          "anomericCarbon": "C1",
+          "freeAnomericHydroxyl": false,
+          "projectionSides": {
+            "O1": "up",
+            "O2": "down",
+            "O3": "up",
+            "O4": "down",
+            "C6": "up"
+          }
+        },
+        {
+          "residue": "G",
+          "identityFromGraphAndHandedness": "beta-D-glucopyranose",
+          "sourceMonomer": "BGC",
+          "centersChecked": {
+            "C2": {
+              "sourceCIP": "R",
+              "sourceVolume": -2.589266,
+              "actualVolume": -2.588809
+            },
+            "C3": {
+              "sourceCIP": "S",
+              "sourceVolume": 2.59056,
+              "actualVolume": 2.590397
+            },
+            "C4": {
+              "sourceCIP": "S",
+              "sourceVolume": -2.585197,
+              "actualVolume": -2.585141
+            },
+            "C5": {
+              "sourceCIP": "R",
+              "sourceVolume": -2.576236,
+              "actualVolume": -2.57616
+            },
+            "C1": {
+              "sourceCIP": "R",
+              "sourceVolume": 2.409836,
+              "actualVolume": 2.434479
+            }
+          },
+          "projectionNormalAndTurnedMatch": true,
+          "anomericCarbon": "C1",
+          "freeAnomericHydroxyl": false,
+          "projectionSides": {
+            "O1": "up",
+            "O2": "down",
+            "O3": "up",
+            "O4": "down",
+            "C6": "up"
+          }
+        },
+        {
+          "residue": "H",
+          "identityFromGraphAndHandedness": "beta-D-glucopyranose",
+          "sourceMonomer": "BGC",
+          "centersChecked": {
+            "C2": {
+              "sourceCIP": "R",
+              "sourceVolume": -2.589266,
+              "actualVolume": -2.589207
+            },
+            "C3": {
+              "sourceCIP": "S",
+              "sourceVolume": 2.59056,
+              "actualVolume": 2.590104
+            },
+            "C4": {
+              "sourceCIP": "S",
+              "sourceVolume": -2.585197,
+              "actualVolume": -2.585244
+            },
+            "C5": {
+              "sourceCIP": "R",
+              "sourceVolume": -2.576236,
+              "actualVolume": -2.576885
+            },
+            "C1": {
+              "sourceCIP": "R",
+              "sourceVolume": 2.409836,
+              "actualVolume": 2.4097
+            }
+          },
+          "projectionNormalAndTurnedMatch": true,
+          "anomericCarbon": "C1",
+          "freeAnomericHydroxyl": true,
+          "projectionSides": {
+            "O1": "up",
+            "O2": "down",
+            "O3": "up",
+            "O4": "down",
+            "C6": "up"
+          }
+        }
+      ],
+      "reducingEndsFromGraph": [
+        "H"
+      ],
+      "linksFromGraph": [
+        {
+          "id": "L1",
+          "donor": "A:C1",
+          "oxygenIndex": 30,
+          "acceptor": "B:C4",
+          "notation": "β(1→4)"
+        },
+        {
+          "id": "L2",
+          "donor": "B:C1",
+          "oxygenIndex": 51,
+          "acceptor": "C:C4",
+          "notation": "β(1→4)"
+        },
+        {
+          "id": "L3",
+          "donor": "C:C1",
+          "oxygenIndex": 72,
+          "acceptor": "D:C4",
+          "notation": "β(1→4)"
+        },
+        {
+          "id": "L4",
+          "donor": "D:C1",
+          "oxygenIndex": 93,
+          "acceptor": "E:C4",
+          "notation": "β(1→4)"
+        },
+        {
+          "id": "L5",
+          "donor": "E:C1",
+          "oxygenIndex": 114,
+          "acceptor": "F:C4",
+          "notation": "β(1→4)"
+        },
+        {
+          "id": "L6",
+          "donor": "F:C1",
+          "oxygenIndex": 135,
+          "acceptor": "G:C4",
+          "notation": "β(1→4)"
+        },
+        {
+          "id": "L7",
+          "donor": "G:C1",
+          "oxygenIndex": 157,
+          "acceptor": "H:C4",
+          "notation": "β(1→4)"
+        }
+      ],
+      "branchPointsFromGraph": [],
+      "fragmentLinkCounts": {
+        "beta1-4": 7
+      },
+      "nonReducingEndsFromGraph": [
+        "A"
+      ],
+      "branchDepthFromGraph": {
+        "A": 0,
+        "B": 0,
+        "C": 0,
+        "D": 0,
+        "E": 0,
+        "F": 0,
+        "G": 0,
+        "H": 0
+      },
+      "biologicalArchitectureStatus": "UNCERTAIN: representative fragment; no unique full biological polymer/conformer established",
+      "overallStatus": "VERIFIED"
+    }
+  ],
+  "summary": {
+    "structuresVerified": 14,
+    "residuesComparedToRawCcd": 60,
+    "projectionGraphAndHandednessChecks": 120,
+    "wholeCcdGraphAndGeometryChecks": 10,
+    "overallClassification": {
+      "VERIFIED": 10,
+      "CORRECTED": 4
+    },
+    "coordinateOrConnectivityCorrections": 0
+  }
+}

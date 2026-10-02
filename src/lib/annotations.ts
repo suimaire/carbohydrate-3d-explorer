@@ -32,6 +32,7 @@ export const atomLabelStyle = (atom: AtomSpec, color = COLOR.text, offset = 0.55
   position: { x: atom.x! + offset, y: atom.y! + offset, z: atom.z! + 0.35 },
   fontSize: 15, fontColor: color, backgroundColor: "#ffffff",
   backgroundOpacity: 0.92, borderColor: color, borderThickness: 0.5, inFront: true,
+  alignment: "center",
 });
 /** Labels are the first thing that makes a large fragment unreadable. */
 const LABEL_BUDGET = 30;
@@ -62,6 +63,8 @@ export function applyAnnotations(
   const can = capabilitiesOf(m.id);
   const atoms = v.getModel().selectedAtoms({});
   const residueById = new Map(data.residues.map((r) => [r.id, r]));
+  const focusedResidue = (focus.residue && residueById.get(focus.residue)) || data.residues[0];
+  const focusedCarbon = focus.carbon ? focusedResidue?.carbons[focus.carbon] : undefined;
   const style = (color?: string): AtomStyleSpec =>
     o.representation === "spacefill"
       ? {
@@ -89,6 +92,7 @@ export function applyAnnotations(
     if (!o.hydrogen) v.setStyle({ elem: "H", index: data.hydroxylAtoms }, {});
   }
   let placed = 0;
+  const placedLabels: ReturnType<GLViewer["addLabel"]>[] = [];
   const label = (
     text: string,
     atom: AtomSpec,
@@ -102,7 +106,7 @@ export function applyAnnotations(
       y: atom.y! + offset,
       z: atom.z! + 0.35,
     };
-    v.addLabel(text, atomLabelStyle(atom, color, offset));
+    placedLabels.push(v.addLabel(text, atomLabelStyle(atom, color, offset)));
     v.addLine({
       start: { x: atom.x!, y: atom.y!, z: atom.z! },
       end: position,
@@ -123,6 +127,7 @@ export function applyAnnotations(
     for (const residue of data.residues) {
       if (!visible.has(residue.id)) continue;
       for (const [name, index] of Object.entries(residue.carbons)) {
+        if (index === focusedCarbon) continue;
         if (o.anomeric && index === residue.anomericAtom) continue;
         label(atomLabel(data.residues, residue.id, name), atoms[index]);
       }
@@ -131,6 +136,7 @@ export function applyAnnotations(
     v.setStyle({ index: anomericAtoms }, style(COLOR.anomeric));
     for (const residue of data.residues) {
       if (can.crowded && !visible.has(residue.id)) continue;
+      if (residue.anomericAtom === focusedCarbon) continue;
       const name = atomLabel(
         data.residues,
         residue.id,
@@ -259,12 +265,19 @@ export function applyAnnotations(
     const index = residue?.atoms[focus.carbon];
     if (index !== undefined) {
       v.setStyle({ index }, style(COLOR.focus));
-      if (!o.carbons)
-        label(
-          atomLabel(data.residues, residue.id, focus.carbon),
-          atoms[index],
-          COLOR.focus,
-        );
+      // A persistent text cue distinguishes selection from the display toggles.
+      label(`선택 · ${atomLabel(data.residues, residue.id, focus.carbon)}`,
+        atoms[index], COLOR.focus);
+      // Trace the selected carbon's free OH without recoloring the whole group.
+      // A glycosidic or ring oxygen must never be described as a free hydroxyl.
+      const oxygen = residue.atoms[focus.carbon.replace("C", "O")];
+      if (oxygen !== undefined && data.hydroxylAtoms.includes(oxygen) &&
+          atoms[index].bonds?.includes(oxygen)) {
+        const a = atoms[index], b = atoms[oxygen];
+        v.addCylinder({ start: { x: a.x!, y: a.y!, z: a.z! },
+          end: { x: b.x!, y: b.y!, z: b.z! }, radius: 0.17,
+          color: COLOR.focus, opacity: 0.7, fromCap: 1, toCap: 1 });
+      }
     }
   } else if (focus.residue) {
     const residue = residueById.get(focus.residue);
@@ -287,4 +300,5 @@ export function applyAnnotations(
     }
   }
   v.render();
+  return placedLabels;
 }

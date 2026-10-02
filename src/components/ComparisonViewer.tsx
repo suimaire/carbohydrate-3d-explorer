@@ -1,8 +1,9 @@
-import { useEffect, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 import { MoleculeViewer } from "./MoleculeViewer";
 import { capabilitiesOf, moleculeById, NO_FOCUS } from "../data/carbohydrates";
 import { StructureFormulaPreview } from "./StructureFormulaPreview";
 import { synchronizeViewers } from "../lib/viewSync";
+import { createFramingGroup } from "../lib/viewerFraming";
 import type { GLViewer } from "../lib/molecularViewer";
 import type {
   FocusState,
@@ -64,7 +65,7 @@ export const comparisons: Record<ComparisonKind, ComparisonPair> = {
     question:
       "같은 두 glucose가 같은 1→4 위치로 연결되었는데, α와 β의 차이는 두 고리의 상대적 방향을 어떻게 바꾸나요?",
     answer:
-      "α(1→4)에서는 두 번째 고리가 첫 고리 쪽으로 꺾여 붙고, β(1→4)에서는 반대쪽으로 뻗어 두 고리가 거의 일직선으로 놓입니다. 원자의 종류와 결합 위치는 완전히 같고 C1의 배치만 다릅니다. 이 차이가 반복되면 아밀로스처럼 감기는 사슬과 셀룰로스처럼 펴진 사슬로 갈라집니다. 화면은 각각의 대표 conformer이며, 글리코시드 결합 주위의 회전으로 다른 배치도 가능합니다.",
+      "이 대표 구조에서는 α(1→4)의 두 고리가 꺾여 있고, β(1→4)의 두 고리는 더 펴져 있습니다. 비교의 핵심은 결합을 만드는 공여 잔기의 C1 배치입니다. 현재 두 구조는 자유 환원 말단의 C1도 각각 α형과 β형이므로 한 입체중심만 다른 구조는 아닙니다. α(1→4)와 β(1→4)의 반복은 아밀로스와 셀룰로스의 사슬 형태 차이에 기여합니다. 글리코시드 결합 주위의 회전에 따라 다른 배치도 가능합니다.",
   },
   glucan: {
     left: "AMYLOSE",
@@ -128,6 +129,9 @@ export function ComparisonViewer({
   const [right, setRight] = useState<GLViewer | null>(null);
   const [wasCompared, setWasCompared] = useState(compare);
   const pair = comparisons[kind];
+  const framingGroup = useMemo(() => compare && sync
+    ? createFramingGroup([pair.left, pair.right]) : undefined,
+  [compare, sync, pair.left, pair.right]);
   useEffect(() => {
     if (compare) setWasCompared(true);
   }, [compare]);
@@ -156,6 +160,7 @@ export function ComparisonViewer({
         focus={leftFocus}
         onReady={setLeft}
         interconversion={!compare && interconversion}
+        framingGroup={framingGroup}
       />
       {!interconversion && <StructureFormulaPreview key={leftId} molecule={moleculeById(leftId)}
         focus={leftFocus} onFocus={next => onFormulaFocus(leftId, next)} />}
@@ -168,6 +173,7 @@ export function ComparisonViewer({
             resetToken={resetToken}
             focus={rightFocus}
             onReady={setRight}
+            framingGroup={framingGroup}
           />
           {compare && <StructureFormulaPreview key={pair.right} molecule={moleculeById(pair.right)}
             focus={rightFocus} onFocus={next => onFormulaFocus(pair.right, next)} />}

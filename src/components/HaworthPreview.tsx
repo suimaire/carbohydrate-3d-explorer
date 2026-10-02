@@ -20,10 +20,15 @@ export function HaworthPreview({ id, selected, selectedResidue = null, onSelect,
   const multi = data.residues.length === 2;
   const formulas = data.residues.map(r => formulaResidue(data, r));
   const geometries = formulas.map((f, i) => formulaGeometry(f, i * 300, multi && f.residue.sugar === "fructose"));
+  // Use the shelf for the drawing, retaining room for labels and focus rings.
+  // The turned fructose tail extends farther right than two pyranose rings.
+  const viewBox = multi
+    ? `20 4 ${formulas.some(f => f.residue.sugar === "fructose") ? 580 : 540} 228`
+    : "6 4 280 212";
   const label = `${data.residues.map(r => r.form).join(" + ")}. Haworth 투영식${multi ? `, ${data.glycosidicBonds[0].notation} 결합` : ""}.`;
-  const description = formulas.map((f, i) => `${multi ? `${f.residue.sugarLabel} ${f.residue.id}: ` : ""}${f.substituents.map(s => {
+  const description = formulas.map(f => `${multi ? `${f.residue.sugarLabel} ${f.residue.id}: ` : ""}${f.substituents.map(s => {
     const linked = s.label === "OH" && bondAtCarbon(data, f.residue.id, s.carbon);
-    return `${s.carbon}의 ${linked ? linked.notation + " 결합" : s.label === "CH₂OH" ? `${s.atom} CH₂OH` : s.label} ${geometries[i].direction(s.side) < 0 ? "위" : "아래"}`;
+    return `${s.carbon}의 ${linked ? linked.notation + " 결합" : s.label === "CH₂OH" ? `${s.atom} CH₂OH` : s.label} ${s.side === "up" ? "위" : "아래"}`;
   }).join(", ")}`).join(". ");
   const carbon = (name: string, residue: string, p: FormulaPoint, tail = false, numberBelow = false) => {
     const active = selected === name && (!multi || selectedResidue === residue);
@@ -36,19 +41,25 @@ export function HaworthPreview({ id, selected, selectedResidue = null, onSelect,
       onKeyDown={interactive ? e => {
         if (e.key === "Enter" || e.key === " ") { e.preventDefault(); choose(); }
       } : undefined}>
-      <rect x={p.x - (tail ? 36 : 15)} y={p.y - 12} width={tail ? 72 : 30} height="24" rx="5"
-        fill={active ? "#126354" : "#fff"} stroke={active ? "#126354" : "#bbc9cc"} />
-      <text x={p.x} y={p.y + 5} textAnchor="middle" fontSize="14" fill={active ? "#fff" : "#264a5c"}>
+      {interactive && <rect className="formula-hit-target" x={p.x - (tail ? 41 : 22)} y={p.y - 20}
+        width={tail ? 82 : 44} height="40" rx="5" fill="transparent" />}
+      <rect className="carbon-label" x={p.x - (tail ? 36 : 15)} y={p.y - 12} width={tail ? 72 : 30} height="24" rx="5"
+        fill={active ? "#e4f1ec" : "#fff"} stroke={active ? "#126354" : "#bbc9cc"} />
+      {active && <rect className="formula-selection-marker" aria-hidden="true"
+        x={p.x - (tail ? 39 : 18)} y={p.y - 15} width={tail ? 78 : 36} height="30" rx="7" />}
+      {interactive && <rect className="formula-keyboard-marker" aria-hidden="true"
+        x={p.x - (tail ? 42 : 21)} y={p.y - 18} width={tail ? 84 : 42} height="36" rx="8" />}
+      <text x={p.x} y={p.y + 5} textAnchor="middle" fontSize={multi ? "16" : "14"} fill="#264a5c">
         {tail ? "CH₂OH" : name}
       </text>
       {tail && <text x={numberBelow ? p.x : p.x + 40} y={p.y + (numberBelow ? 28 : 5)}
-        textAnchor={numberBelow ? "middle" : undefined} fontSize="12" fill="#4b5a61">{name}</text>}
+        textAnchor={numberBelow ? "middle" : undefined} fontSize={multi ? "14" : "12"} fill="#4b5a61">{name}</text>}
     </g>;
   };
   return <svg className={`haworth-formula ${multi ? "two-residues" : ""}`}
-    viewBox={`0 0 ${multi ? 620 : 300} 234`} role={interactive ? "group" : "img"} aria-label={label}>
+    viewBox={viewBox} role={interactive ? "group" : "img"} aria-label={label}>
     <title>{label}</title>
-    <desc>{description}. 굵은 고리 변은 앞쪽입니다. 위·아래는 고리 면의 양쪽이며 axial·equatorial과 다릅니다. C2가 CH₂인 디옥시리보스 외의 H는 생략합니다.</desc>
+    <desc>표준 Haworth 방향 기준: {description}. {multi && formulas.some(f => f.residue.sugar === "fructose") && "설탕의 과당은 연결을 보이도록 고리 면을 돌려 그렸습니다. "}굵은 고리 변은 앞쪽입니다. 위·아래는 고리 면의 양쪽이며 axial·equatorial과 다릅니다. C2가 CH₂인 디옥시리보스 외의 H는 생략합니다.</desc>
     {data.glycosidicBonds.map(b => {
       const aIndex = formulas.findIndex(f => f.residue.id === b.donorResidue);
       const bIndex = formulas.findIndex(f => f.residue.id === b.acceptorResidue);
@@ -68,11 +79,13 @@ export function HaworthPreview({ id, selected, selectedResidue = null, onSelect,
         aria-pressed={interactive ? active : undefined}
         onClick={interactive ? choose : undefined}
         onKeyDown={interactive ? e => { if (e.key === "Enter" || e.key === " ") { e.preventDefault(); choose(); } } : undefined}>
-        <path d={d} fill="none" stroke="transparent" strokeWidth="18" />
-        <path d={d} fill="none" stroke={active ? "#126354" : "#2f5fa8"} strokeWidth={active ? 4 : 2.6} />
+        <path className="formula-hit-target" d={d} fill="none" stroke="transparent" strokeWidth="24" />
+        <path className="formula-bond-line" d={d} fill="none" stroke={active ? "#126354" : "#2f5fa8"} strokeWidth={active ? 4 : 2.6} />
         <circle cx={ox} cy={oy} r="12" fill="#fff" />
+        {active && <circle className="formula-selection-marker" aria-hidden="true" cx={ox} cy={oy} r="14" />}
+        {interactive && <circle className="formula-keyboard-marker" aria-hidden="true" cx={ox} cy={oy} r="18" />}
         <text x={ox} y={oy + 6} textAnchor="middle" fill="#23477e" fontSize="20">O</text>
-        <text x={ox} y="224" textAnchor="middle" fill="#23477e" fontSize="17" fontWeight="600">{b.notation}</text>
+        <text x={ox} y="224" textAnchor="middle" fill="#23477e" fontSize="19" fontWeight="600">{b.notation}</text>
       </g>;
     })}
     {formulas.map((f, index) => {
@@ -95,7 +108,7 @@ export function HaworthPreview({ id, selected, selectedResidue = null, onSelect,
           return <g key={s.atom} data-carbon={s.carbon} data-substituent={s.atom} data-side={s.side}>
             <line aria-hidden="true" x1={p.x} y1={p.y} x2={end.x} y2={end.y} stroke="#6e7c81" strokeWidth="1.7" />
             {tail ? carbon(s.atom, r.id, end, true, turnedTail) : <text aria-hidden="true" x={end.x} y={end.y + (dy < 0 ? -5 : 16)}
-              textAnchor="middle" fill={s.label === "H" ? "#53636a" : "#ae3535"} fontSize="17">{s.label}</text>}
+              textAnchor="middle" fill={s.label === "H" ? "#53636a" : "#ae3535"} fontSize={multi ? "19" : "17"}>{s.label}</text>}
           </g>;
         })}
         {f.ring.map(n => n.startsWith("C") ? carbon(n, r.id, ring[n]) :

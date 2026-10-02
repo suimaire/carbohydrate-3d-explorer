@@ -797,7 +797,7 @@ dialog h3 {
 .schematic-link rect[role="button"] {
   cursor: pointer;
 }
-.schematic-node:hover circle {
+.schematic-node:hover .residue-label {
   stroke: #126354;
   stroke-width: 2.6;
 }
@@ -1011,8 +1011,9 @@ header .breadcrumb a:hover {
   gap: 8px;
   margin-bottom: 4px;
 }
-.reference-heading h3 { display: flex; align-items: baseline; gap: 10px; font-size: 12px; font-weight: 400; color: #5b696f; margin: 0; }
-.reference-heading button { font-size: 12px; min-height: 34px; padding: 4px 9px; background: #fff; }
+.reference-heading h3 { display: flex; align-items: baseline; gap: 5px; font-size: 12px; font-weight: 400; color: #5b696f; margin: 0; }
+.reference-heading h3 span { white-space: nowrap; }
+.reference-heading button { flex-shrink: 0; font-size: 12px; min-height: 34px; padding: 4px 9px; background: #fff; }
 .reference-body { height: 220px; display: grid; grid-template-rows: minmax(0, 1fr) auto; align-items: center; gap: 3px; }
 .reference-drawing { min-width: 0; min-height: 0; height: 100%; display: flex; align-items: center; justify-content: center; }
 .haworth-formula { display: block; width: 100%; height: 100%; max-height: 100%; min-height: 0; font-family: Arial, "Malgun Gothic", sans-serif; }
@@ -1022,12 +1023,19 @@ header .breadcrumb a:hover {
 .reference-reducing { color: #326249; }
 .reference-linkages { display: flex; gap: 4px 14px; flex-wrap: wrap; }
 .reference-linkages span { color: #69318b; }
-.reference-drawing .schematic { border: 0; margin: 0; width: 100%; height: 100%; max-width: 620px; display: flex; align-items: center; }
+.reference-drawing .schematic { border: 0; margin: 0; width: 100%; height: 100%; max-width: 660px; display: flex; align-items: center; }
 .reference-drawing .schematic svg { display: block; margin: 0; height: 100%; max-height: 100%; }
-.haworth-carbon:hover rect, .haworth-carbon:focus-visible rect { stroke: var(--accent); stroke-width: 2.5; }
-.haworth-carbon.is-selected rect { stroke-width: 2.5; }
+.haworth-carbon:hover .carbon-label { stroke: var(--accent); stroke-width: 2; }
+.haworth-carbon.is-selected .carbon-label { stroke-width: 1.5; }
+.formula-selection-marker { fill: none; stroke: #126354; stroke-width: 1.6; pointer-events: none; }
+.formula-keyboard-marker { fill: none; stroke: #264a5c; stroke-width: 2; stroke-dasharray: 3 3; visibility: hidden; pointer-events: none; }
+.haworth-carbon:focus, .formula-bond:focus, .schematic-node:focus, .schematic-link-target:focus { outline: none; }
+.haworth-carbon:focus-visible .formula-keyboard-marker,
+.formula-bond:focus-visible .formula-keyboard-marker,
+.schematic-node:focus-visible .formula-keyboard-marker { visibility: visible; }
+.schematic-link-target:focus-visible { outline: none; stroke: #264a5c; stroke-width: 1.6; stroke-dasharray: 3 3; }
 .formula-bond { cursor: pointer; }
-.formula-bond:hover path:nth-of-type(2), .formula-bond:focus-visible path:nth-of-type(2) { stroke-width: 4; }
+.formula-bond:hover .formula-bond-line { stroke-width: 4; }
 .formula-dialog { max-width: 940px; max-height: calc(100dvh - 32px); overflow: auto; }
 .formula-dialog h2 { font-size: 20px; }
 .formula-dialog p { font-size: 14px; color: #52635e; }

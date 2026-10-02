@@ -11,8 +11,12 @@ import type { FocusState, MoleculeId } from "../src/types/carbohydrate";
 import type { GLViewer } from "3dmol";
 import { readSdf } from "./sdf";
 function mockViewer(id: MoleculeId) {
+  const sdf = readSdf(id);
+  const atoms = sdf.atoms.map(a => ({ ...a, bonds: sdf.bonds
+    .filter(([x, y]) => x === a.index || y === a.index)
+    .map(([x, y]) => x === a.index ? y : x) }));
   return {
-    getModel: () => ({ selectedAtoms: () => readSdf(id).atoms }),
+    getModel: () => ({ selectedAtoms: () => atoms }),
     setStyle: vi.fn(),
     removeAllLabels: vi.fn(),
     removeAllShapes: vi.fn(),
@@ -94,9 +98,29 @@ describe("teaching annotations sent to 3Dmol", () => {
   });
 });
 describe("multi-residue annotations", () => {
+  it("selection stays named and unambiguous with carbon and anomeric toggles on", () => {
+    const { labels } = run("BGC", { carbons: true, anomeric: true },
+      { carbon: "C1", residue: null, bond: null });
+    expect(labels.filter(text => text.includes("C1"))).toEqual(["선택 · C1"]);
+    expect(labels).toHaveLength(6);
+  });
+  it.each(["GLC", "BGC"] as const)("%s selection traces the actual C1–OH bond", id => {
+    const { v } = run(id, {}, { carbon: "C1", residue: null, bond: null });
+    const atoms = readSdf(id).atoms;
+    const r = structures[id].residues[0];
+    expect(v.addCylinder).toHaveBeenCalledTimes(1);
+    expect(v.addCylinder.mock.calls[0][0]).toMatchObject({
+      start: { x: atoms[r.carbons.C1].x, y: atoms[r.carbons.C1].y, z: atoms[r.carbons.C1].z },
+      end: { x: atoms[r.atoms.O1].x, y: atoms[r.atoms.O1].y, z: atoms[r.atoms.O1].z },
+    });
+  });
+  it("a deoxy carbon and sucrose's bound anomeric carbon have no free OH trace", () => {
+    expect(run("2DR", {}, { carbon: "C2", residue: null, bond: null }).v.addCylinder).not.toHaveBeenCalled();
+    expect(run("SUC", {}, { carbon: "C2", residue: "B", bond: null }).v.addCylinder).not.toHaveBeenCalled();
+  });
   it("a reference carbon selection uses residue B, including sucrose's fructose C2", () => {
     const { v, labels } = run("SUC", {}, { carbon: "C2", residue: "B", bond: null });
-    expect(labels).toEqual(["Fru B · C2"]);
+    expect(labels).toEqual(["선택 · Fru B · C2"]);
     expect(v.setStyle).toHaveBeenCalledWith(
       { index: structures.SUC.residues[1].carbons.C2 },
       expect.objectContaining({ sphere: expect.objectContaining({ color: "#087d91" }) }),

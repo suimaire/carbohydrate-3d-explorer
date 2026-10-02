@@ -50,7 +50,7 @@ export function StructureFormulaPreview({ molecule, focus, onFocus }: {
     : "환원 말단 없음 · 두 아노머 탄소가 결합에 참여");
   return <section className={`structure-reference reference-${molecule.category}`} aria-label={`${molecule.name} 2D 구조식`}>
     <div className="reference-heading">
-      <h3><span className="section-kicker">2D 구조식</span><span>{polymer ? "반복·가지 개념도" : "Haworth"}</span></h3>
+      <h3><span className="section-kicker">2D 구조식</span><span> · {polymer ? "반복·가지 개념도" : "Haworth 투영식"}</span></h3>
       <button ref={opener} onClick={() => setExpanded(true)} aria-label={`${molecule.name} 2D 구조식 크게 보기`}>크게 보기 ↗</button>
     </div>
     <div className="reference-body">

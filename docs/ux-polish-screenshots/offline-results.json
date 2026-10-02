@@ -1,0 +1,120 @@
+{
+  "build": "index-Dlw1sh1X.js",
+  "cacheVersion": "8abcee2d95557ccb",
+  "origin": "http://127.0.0.1:4193",
+  "originConfirmedStopped": true,
+  "records": [
+    {
+      "canvas": true,
+      "errors": 0,
+      "id": "GLC",
+      "refs": [
+        "α-D-glucose 2D 구조식"
+      ]
+    },
+    {
+      "canvas": true,
+      "errors": 0,
+      "id": "BGC",
+      "refs": [
+        "β-D-glucose 2D 구조식"
+      ]
+    },
+    {
+      "canvas": true,
+      "errors": 0,
+      "id": "GAL",
+      "refs": [
+        "D-galactose 2D 구조식"
+      ]
+    },
+    {
+      "canvas": true,
+      "errors": 0,
+      "id": "FRU",
+      "refs": [
+        "D-fructose 2D 구조식"
+      ]
+    },
+    {
+      "canvas": true,
+      "errors": 0,
+      "id": "BDR",
+      "refs": [
+        "D-ribose 2D 구조식"
+      ]
+    },
+    {
+      "canvas": true,
+      "errors": 0,
+      "id": "2DR",
+      "refs": [
+        "2-deoxy-D-ribose 2D 구조식"
+      ]
+    },
+    {
+      "canvas": true,
+      "errors": 0,
+      "id": "MAL",
+      "refs": [
+        "Maltose 2D 구조식"
+      ]
+    },
+    {
+      "canvas": true,
+      "errors": 0,
+      "id": "CBI",
+      "refs": [
+        "Cellobiose 2D 구조식"
+      ]
+    },
+    {
+      "canvas": true,
+      "errors": 0,
+      "id": "LAT",
+      "refs": [
+        "Lactose 2D 구조식"
+      ]
+    },
+    {
+      "canvas": true,
+      "errors": 0,
+      "id": "SUC",
+      "refs": [
+        "Sucrose 2D 구조식"
+      ]
+    },
+    {
+      "canvas": true,
+      "errors": 0,
+      "id": "AMYLOSE",
+      "refs": [
+        "Amylose 2D 구조식"
+      ]
+    },
+    {
+      "canvas": true,
+      "errors": 0,
+      "id": "AMYLOPECTIN",
+      "refs": [
+        "Amylopectin 2D 구조식"
+      ]
+    },
+    {
+      "canvas": true,
+      "errors": 0,
+      "id": "GLYCOGEN",
+      "refs": [
+        "Glycogen 2D 구조식"
+      ]
+    },
+    {
+      "canvas": true,
+      "errors": 0,
+      "id": "CELLULOSE",
+      "refs": [
+        "Cellulose 2D 구조식"
+      ]
+    }
+  ]
+}

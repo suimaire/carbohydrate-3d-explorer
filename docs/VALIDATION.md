@@ -251,3 +251,158 @@ pane은 아래로 스크롤해 보는 구성이다.
 여러 3D 라벨을 동시에 켜면 일부 시점에서 겹칠 수 있다. 작은 화면의 이당류 세부 표기는
 확대 창에서 읽을 수 있다. Haworth는 투영, 다당류는 대표 fragment의 연결도이며 실제
 conformation/평형·고분자 전체 크기를 재현하지 않는다. commit/push/배포는 수행하지 않았다.
+
+## 2026-10-03 · 최종 UX polish와 독립 과학 감사
+
+### 시작 상태와 보존
+
+전달문에는 미커밋 변경이 있다고 되어 있었으나 실제 시작 시 `main...origin/main`,
+`git status --short`와 `git diff --stat` 및 전체 diff는 모두 비어 있었다.
+기존 2D 구현·검증 문서·JSON·스크린샷을 먼저 읽고 **12개 파일 / 159개 테스트 통과**를
+기준선으로 확인했다. 기존 산출물을 수정하거나 지우지 않았으며 commit/push/배포는 하지 않았다.
+
+### 3D 기본 시점과 초기화
+
+- `src/lib/viewerFraming.ts`와 `MoleculeViewer.tsx`에서 기존 `zoomTo(); zoom(1.05)`의
+  정적 확대를 실제 원자 범위 기반 계산으로 교체했다. 설치된 3Dmol의 `zoomTo`가 작은
+  분자에도 적용하는 5 Å 최소 반경을 조사한 뒤, 표시 원자의 좌표·C/O/H 표시 반지름,
+  회전 중 필요한 구면 범위, 카메라 시야각, canvas 비율과 실제 라벨 크기를 사용했다.
+  분자 ID별 확대율이나 일괄 20% 상수는 없다.
+- H·공간채움·라벨을 켜면 아직 조작하지 않은 기본 시점만 안전 범위에 맞춘다. 학생이
+  이미 회전·이동·확대한 시점은 유지하며, 시점 초기화와 키보드 `0`은 현재 표시 옵션의
+  기본 시점으로 돌아온다. 화면 크기가 바뀌면 초기화 기준도 갱신한다.
+- 맥아당/셀로비오스는 기존 동기화가 왼쪽의 중심까지 복사해서 특정 회전에서 오른쪽
+  분자 범위가 반높이의 112.3%에 이를 수 있었다. `ComparisonViewer.tsx`의 작은 공유
+  framing 객체가 현재 비교쌍의 원자·양쪽 라벨·양쪽 canvas를 합쳐 같은 중심과 거리를
+  계산하도록 고쳤다. 기존 양방향 회전·확대·이동 동기화와 수동 조작은 유지했다.
+- 고리–사슬 모드는 기존 카메라 기준을 유지하고 보간 중 매 장면 다시 맞추지 않는다.
+
+### 실제 BEFORE / AFTER 측정
+
+동일한 기본 공-막대·H 숨김·라벨 없음 상태를 비교했다. 3D 수치는 캡처에서 연결된 분자
+픽셀의 경계이며 canvas 자체 크기가 아니다. 흰 배경의 JPEG 잡음과 떨어진 UI 글자는
+제외했다. 2D는 실제 SVG 도형·글자의 DOM 경계 합집합이다. 픽셀 반올림/안티앨리어싱
+오차는 약 1–2px이며, 스크립트와 원본을 함께 남겼다.
+
+| 화면 | 3D 분자 경계 전 → 후 (px) | 변화 | 2D 그림 변화 |
+| --- | --- | --- | --- |
+| 1600 β glucose | 205×165 → 238×193 | 폭 +16.1%, 높이 +17.0% | 폭 +10.2%, 높이 +10.5% |
+| 1600 α/β 비교 · α | 143×146 → 166×169 | 폭 +16.1%, 높이 +15.8% | 약 +10.3% |
+| 1600 α/β 비교 · β | 181×145 → 209×169 | 폭 +15.5%, 높이 +16.6% | 약 +10.3% |
+| 390 β glucose | 180×145 → 208×169 | 폭 +15.6%, 높이 +16.6% | 약 +10.3% |
+| 1600 maltose/cellobiose | 222×125 / 269×184 → 204×115 / 247×170 | 약 −8%; 공통 회전 안전 범위 확보 | 그림 +2.6%; C/CH₂OH 글자는 약 +17% |
+| 1600 amylose/cellulose | 275×71 / 267×50 → 251×64 / 244×46 | 약 −9%; 긴 fragment 여유 유지 | 폭 +6.1% / +7.7% |
+| 1600 sucrose | 278×303 → 256×280 | 약 −8%; 회전 안전 여유 | 그림 +2.6%; OH·결합 글자는 약 +15% |
+| 768 sucrose | 295×320 → 273×297 | 약 −7% | 그림 +2.6% |
+
+α/β 비교의 3D 세로 점유율은 약 54%에서 **62.6%**로, 일반 β glucose는 53.6%에서
+62.7%로 늘었다. 이당류와 다당류까지 모두 커졌다고 주장하지 않는다. 긴 구조에는
+안전한 기본 크기를 적용했다. 이 측정 상태에서 3D canvas 높이와 2D 참조 높이는
+수정 전후 동일하다(참조 desktop 282px / mobile 287px).
+
+수치: [ux-polish-validation.json](ux-polish-validation.json).
+재현: 번들 Pillow가 있는 Python으로 `scripts/measure-ux-screenshots.py` 실행.
+`ux-polish-screenshots/measurements.json`은 DOM 원본 기록이다. 주석을 켠 interaction
+캡처의 픽셀 경계는 라벨을 포함할 수 있어 확대율의 근거로 사용하지 않는다.
+
+### 2D 크기·선택·접근성
+
+- Haworth의 사용하지 않는 viewBox 여백을 줄였다. 과당 회전 꼬리의 C6에는 별도 안전
+  여백을 보존한다. 다당류는 기존 개념도의 여백과 최대 폭만 조정했다.
+- 높이 제한을 받는 넓은 화면 이당류는 그림 전체 확대가 +2.6%에 그치므로 번호/CH₂OH
+  14→16, OH/결합 표기 17→19, 꼬리 번호 12→14로 읽기 쉬운 글자 크기를 적용했다.
+  작은 화면의 기존 글자 확대 규칙은 유지했다. 오른쪽 설명 패널과 참조 배치는 그대로다.
+- 선택은 연한 배경과 **지속되는 이중 테두리**, 키보드 포커스는 **별도의 점선 테두리**로
+  구분한다. 결합은 산소 또는 선 중앙의 윤곽 표식도 사용한다. 색만으로 전달하지 않는다.
+- 3D는 기존 focus 색을 재사용하고 `선택 · C1` 같은 라벨을 항상 표시한다. 탄소 번호나
+  아노머 표시와 겹치는 동일 탄소 라벨은 중복하지 않는다. 실제 자유 OH에 연결된 경우만
+  얇은 C–O 강조를 덧붙인다. 2DR C2와 설탕의 결합된 아노머 탄소는 OH로 오인하지 않는다.
+- `FocusState`는 그대로이며 다른 비교 pane에 선택을 공유하지 않는다. C1 좌→우 선택,
+  Enter/Space, 해제, 확대 창 Escape 후 원래 버튼으로 포커스 복귀를 확인했다.
+- 390px 실측 선택 영역의 최소 짧은 변: glucose 탄소 **32.49px**, sucrose 탄소
+  **24.21px**, amylopectin 결합 **28.38px**. 투명한 클릭 영역만 넓혔다.
+- 제목은 `2D 구조식 · Haworth 투영식`, 다당류는 `2D 구조식 · 반복·가지 개념도`다.
+
+### 화면·기능 회귀 검증
+
+Codex 내장 Chromium/WebGL에서 1600×1000, 1366×768, 1024×900, 768×1024,
+390×844를 확인했다. **40개 DOM/크기 기록, 44개 캡처**를 남겼다. 필수 일반 구조 6개,
+비교 3개, 고리–사슬 화면과 각 viewport가 포함된다.
+
+- 모든 기록에서 가로 overflow, SVG 잉크 경계의 SVG 바깥 넘침, 구조 로드 오류 없음.
+  각 3D 바로 아래 해당 2D, 390px 비교는 3D→2D→다음 3D→2D 흐름을 유지한다.
+- drag 회전, wheel 확대, 자동 회전의 서로 다른 두 프레임, 초기화, 공-막대/공간채움,
+  H·탄소 번호·OH·아노머·axial/equatorial, 글리코시드·환원 말단·가지, 잔기 선택을 확인했다.
+  비교 회전 동기화 ON/OFF 및 H+공간채움 상태의 maltose/cellobiose 회전도 확인했다.
+- 고리→사슬→α 닫기 및 다시 사슬→β 닫기, 일반 모드 복귀, 고정 2D 숨김·복원을 확인했다.
+- reduced-motion과 비동기 로딩/뷰어 수명주기 등은 기존 자동 검사를 유지했다.
+- 많은 3D 라벨을 한꺼번에 켜면 시점에 따라 일부 라벨이 겹친다. 가장자리 잘림은
+  확인한 기본/회전 장면에서 없었지만 라벨 자동 배치 기능을 새로 만들지는 않았다.
+  실물 태블릿의 터치·pinch, 프로젝터 및 여러 GPU는 **미검증**이다.
+
+캡처 폴더: [ux-polish-screenshots](ux-polish-screenshots/).
+대표 결과: [최종 C1 비교](ux-polish-screenshots/final-compare-C1.jpg),
+[모바일 H/번호/OH](ux-polish-screenshots/interaction-390-numbering-OH-H.jpg),
+[설탕 확대](ux-polish-screenshots/after-390-SUC-expanded.jpg).
+
+### 독립 과학 검증
+
+원본 CCD 10종의 atom/bond loop와 좌표를 별도 파서로 읽고 SDF 및 실제 투영 모델을
+독립 비교했다. 이전 validation 결과나 생성기의 결론은 정답으로 사용하지 않았다.
+**14종 / 60개 잔기 / 120개 정상·회전 투영 검사 / 10개 전체 CCD 구조 검사 통과**.
+원본 CCD↔SDF 원자쌍 거리 최대 차이는 0.0001275 Å였다.
+
+14종 표와 출처: [SCIENTIFIC_POLISH_AUDIT.md](SCIENTIFIC_POLISH_AUDIT.md).
+원자별 결과: [scientific-polish-audit.json](scientific-polish-audit.json).
+
+- **VERIFIED:** 14종의 고리·번호·D/α/β·OH·CH₂OH·연결·말단·실제 fragment 가지가 일치.
+  과당은 β-D-fructofuranose, ribose/deoxyribose는 β furanose, deoxy C2에는 OH 없음.
+  Sucrose α(1→2)β와 두 아노머 탄소 결합, 환원 말단 없음이 일치했다.
+- **CORRECTED:** 구조 데이터 오류는 없었다. MAL/CBI의 비교 해설에서 자유 환원 말단도
+  다름을 명시하고, LAT의 Glc C4 산소를 자유 OH로 부르던 설명을 수정했다. SUC의 회전된
+  그림 접근성 설명은 표준 Haworth up/down과 표시 방향을 명시적으로 구별한다.
+  설명까지 포함한 행 등급은 VERIFIED 10종 / CORRECTED 4종이다.
+- **UNCERTAIN:** 새 RDKit/CIP 재계산은 기존 Python 3.13용 바이너리와 설치된 Python 3.12의
+  불일치 때문에 실행하지 못했다. 대신 연결·번호·입체중심 방향성을 원본 CCD와 독립
+  대조했다. CCD conformer의 에너지/용액 평형, CBI/LAT의 짧은 비결합 접촉의 물리적
+  타당성, 생체 고분자 전체 길이·가지 빈도는 확정하지 않았다. 상세 한계는 감사 문서에 있다.
+
+### 최종 자동 검사와 오프라인
+
+| 검사 | 결과 |
+| --- | --- |
+| 수정 전 npm test | 12개 파일 / 159개 통과 |
+| 최종 npm test | **13개 파일 / 190개 통과** (31개 추가) |
+| npm run typecheck | 통과 |
+| npm run build | 통과; 기존 3Dmol direct-eval 경고 유지 |
+| node scripts/check-build.mjs | 14종 SDF, 배포 경로, 18개 필수 리소스 검사 통과 |
+| python scripts/audit_scientific_polish.py | 14종 독립 검사 통과 |
+| git diff --check | 통과 |
+
+추가 검사는 14종의 회전/화면 비율/원자 반경, 라벨 크기, 공유 비교 범위와 늦은 로딩,
+수동 시점 보존·초기화, 선택의 의미·OH 정확성을 확인한다. CSS 특정 수치에 고정한 테스트는 없다.
+
+최종 빌드 `index-Dlw1sh1X.js`, offline cache `8abcee2d95557ccb`를 로컬 정적 서버
+127.0.0.1:4193에서 캐시했다. **이 서버를 실제 중단하고 별도 HTTP 연결 실패를 확인한 뒤**
+브라우저를 새로고침하여 14종 모두 전환했다. 각 3D와 2D가 로드되었고 오류는 0이었다.
+오프라인 사슬형 전환도 통과했다. 이는 앱 원본 서버 중단 검사이며 운영 배포 서버나
+브라우저의 장기 캐시 보존 정책 전체를 검증한 것은 아니다.
+근거: [offline-results.json](ux-polish-screenshots/offline-results.json),
+[오프라인 사슬형 캡처](ux-polish-screenshots/offline-final-build-ring-chain.jpg).
+
+### 변경 파일과 Git 상태
+
+- 3D: `src/lib/viewerFraming.ts` (신규), `src/components/MoleculeViewer.tsx`,
+  `src/components/ComparisonViewer.tsx`, `src/lib/annotations.ts`.
+- 2D: `src/components/HaworthPreview.tsx`, `src/components/PolymerSchematic.tsx`,
+  `src/components/StructureFormulaPreview.tsx`, `src/styles/app.css`.
+- 설명: `src/data/carbohydrates.ts` (비교 해설 수정은 ComparisonViewer에도 포함).
+- 검사: `tests/viewerFraming.test.ts` (신규), `tests/MoleculeViewer.test.tsx`,
+  `tests/annotations.test.ts`, `tests/structureFormulaUI.test.tsx`.
+- 재현: `scripts/audit_scientific_polish.py`, `scripts/measure-ux-screenshots.py`,
+  `scripts/serve-ux-validation.py` (모두 신규, 외부 의존성 추가 없음).
+- 문서: 이 파일, `docs/SCIENTIFIC_POLISH_AUDIT.md`, `docs/scientific-polish-audit.json`,
+  `docs/ux-polish-validation.json`, `docs/ux-polish-screenshots/` (새 캡처·측정·오프라인 기록).
+
+최종 `main...origin/main`, 변경은 모두 unstaged/untracked working tree에 남긴다.
+기존 검증 폴더, SDF/CIF/구조 metadata, package.json/lockfile은 그대로이며 commit/push 없음.

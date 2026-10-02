@@ -1,0 +1,444 @@
+{
+  "records": 40,
+  "comparisons": [
+    {
+      "case": "1600-BGC",
+      "threeD": [
+        {
+          "before": {
+            "x": 365,
+            "y": 55,
+            "width": 205,
+            "height": 165,
+            "widthOccupancy": 0.22299272554218505,
+            "heightOccupancy": 0.5357142857142857,
+            "edgeMargin": 55
+          },
+          "after": {
+            "x": 350,
+            "y": 37,
+            "width": 238,
+            "height": 193,
+            "widthOccupancy": 0.2588891155075124,
+            "heightOccupancy": 0.6266233766233766,
+            "edgeMargin": 37
+          },
+          "widthChangePercent": 16.09756097560975,
+          "heightChangePercent": 16.96969696969697
+        }
+      ],
+      "twoD": [
+        {
+          "before": {
+            "height": 182.5726318359375,
+            "width": 197.43588256835935,
+            "x": 336.4165344238281,
+            "y": 668.5632934570312
+          },
+          "after": {
+            "height": 201.8214111328125,
+            "width": 217.49996948242188,
+            "x": 329.1897277832031,
+            "y": 665.78125
+          },
+          "widthChangePercent": 10.162330500949146,
+          "heightChangePercent": 10.543080363858826,
+          "shelfHeightChange": 0
+        }
+      ]
+    },
+    {
+      "case": "1600-compare-anomer",
+      "threeD": [
+        {
+          "before": {
+            "x": 200,
+            "y": 50,
+            "width": 143,
+            "height": 146,
+            "widthOccupancy": 0.25444839857651247,
+            "heightOccupancy": 0.5407407407407407,
+            "edgeMargin": 50
+          },
+          "after": {
+            "x": 186,
+            "y": 34,
+            "width": 166,
+            "height": 169,
+            "widthOccupancy": 0.29537366548042704,
+            "heightOccupancy": 0.6259259259259259,
+            "edgeMargin": 34
+          },
+          "widthChangePercent": 16.083916083916083,
+          "heightChangePercent": 15.753424657534243
+        },
+        {
+          "before": {
+            "x": 200,
+            "y": 50,
+            "width": 181,
+            "height": 145,
+            "widthOccupancy": 0.3220640569395018,
+            "heightOccupancy": 0.5370370370370371,
+            "edgeMargin": 50
+          },
+          "after": {
+            "x": 186,
+            "y": 34,
+            "width": 209,
+            "height": 169,
+            "widthOccupancy": 0.3718861209964413,
+            "heightOccupancy": 0.6259259259259259,
+            "edgeMargin": 34
+          },
+          "widthChangePercent": 15.469613259668513,
+          "heightChangePercent": 16.551724137931046
+        }
+      ],
+      "twoD": [
+        {
+          "before": {
+            "height": 162.6640625,
+            "width": 175.546875,
+            "x": 371.5234375,
+            "y": 667.3125
+          },
+          "after": {
+            "height": 179.23297119140625,
+            "width": 193.76400756835935,
+            "x": 364.8911437988281,
+            "y": 664.6627197265625
+          },
+          "widthChangePercent": 10.377360786604338,
+          "heightChangePercent": 10.185967592814936,
+          "shelfHeightChange": 0
+        },
+        {
+          "before": {
+            "height": 162.6640625,
+            "width": 175.546875,
+            "x": 934.5234375,
+            "y": 667.3125
+          },
+          "after": {
+            "height": 179.23297119140625,
+            "width": 193.7640380859375,
+            "x": 927.89111328125,
+            "y": 664.6627197265625
+          },
+          "widthChangePercent": 10.377378170894524,
+          "heightChangePercent": 10.185967592814936,
+          "shelfHeightChange": 0
+        }
+      ]
+    },
+    {
+      "case": "1600-compare-linkage",
+      "threeD": [
+        {
+          "before": {
+            "x": 167,
+            "y": 61,
+            "width": 222,
+            "height": 125,
+            "widthOccupancy": 0.39501779359430605,
+            "heightOccupancy": 0.46296296296296297,
+            "edgeMargin": 61
+          },
+          "after": {
+            "x": 176,
+            "y": 56,
+            "width": 204,
+            "height": 115,
+            "widthOccupancy": 0.36298932384341637,
+            "heightOccupancy": 0.42592592592592593,
+            "edgeMargin": 56
+          },
+          "widthChangePercent": -8.108108108108103,
+          "heightChangePercent": -7.9999999999999964
+        },
+        {
+          "before": {
+            "x": 152,
+            "y": 60,
+            "width": 269,
+            "height": 184,
+            "widthOccupancy": 0.4786476868327402,
+            "heightOccupancy": 0.6814814814814815,
+            "edgeMargin": 26
+          },
+          "after": {
+            "x": 163,
+            "y": 56,
+            "width": 247,
+            "height": 170,
+            "widthOccupancy": 0.4395017793594306,
+            "heightOccupancy": 0.6296296296296297,
+            "edgeMargin": 44
+          },
+          "widthChangePercent": -8.178438661710041,
+          "heightChangePercent": -7.608695652173914
+        }
+      ],
+      "twoD": [
+        {
+          "before": {
+            "height": 162.651123046875,
+            "width": 384.0664978027344,
+            "x": 260.8930358886719,
+            "y": 666.318115234375
+          },
+          "after": {
+            "height": 166.8525390625,
+            "width": 394.1735534667969,
+            "x": 270.8216857910156,
+            "y": 663.46435546875
+          },
+          "widthChangePercent": 2.6315900298217842,
+          "heightChangePercent": 2.5830845412694536,
+          "shelfHeightChange": 0
+        },
+        {
+          "before": {
+            "height": 162.651123046875,
+            "width": 384.06646728515625,
+            "x": 823.8930053710938,
+            "y": 666.318115234375
+          },
+          "after": {
+            "height": 166.8525390625,
+            "width": 394.173583984375,
+            "x": 833.8216552734375,
+            "y": 663.46435546875
+          },
+          "widthChangePercent": 2.6316061307467775,
+          "heightChangePercent": 2.5830845412694536,
+          "shelfHeightChange": 0
+        }
+      ]
+    },
+    {
+      "case": "1600-compare-glucan",
+      "threeD": [
+        {
+          "before": {
+            "x": 143,
+            "y": 99,
+            "width": 275,
+            "height": 71,
+            "widthOccupancy": 0.4893238434163701,
+            "heightOccupancy": 0.26296296296296295,
+            "edgeMargin": 99
+          },
+          "after": {
+            "x": 155,
+            "y": 102,
+            "width": 251,
+            "height": 64,
+            "widthOccupancy": 0.44661921708185054,
+            "heightOccupancy": 0.23703703703703705,
+            "edgeMargin": 102
+          },
+          "widthChangePercent": -8.727272727272728,
+          "heightChangePercent": -9.859154929577462
+        },
+        {
+          "before": {
+            "x": 146,
+            "y": 110,
+            "width": 267,
+            "height": 50,
+            "widthOccupancy": 0.4750889679715303,
+            "heightOccupancy": 0.18518518518518517,
+            "edgeMargin": 110
+          },
+          "after": {
+            "x": 158,
+            "y": 112,
+            "width": 244,
+            "height": 46,
+            "widthOccupancy": 0.43416370106761565,
+            "heightOccupancy": 0.17037037037037037,
+            "edgeMargin": 112
+          },
+          "widthChangePercent": -8.614232209737827,
+          "heightChangePercent": -7.9999999999999964
+        }
+      ],
+      "twoD": [
+        {
+          "before": {
+            "height": 45.38433837890625,
+            "width": 478.1818542480469,
+            "x": 231.9090881347656,
+            "y": 711.8718872070312
+          },
+          "after": {
+            "height": 47.98681640625,
+            "width": 507.54383850097656,
+            "x": 217.2280731201172,
+            "y": 704.6600952148438
+          },
+          "widthChangePercent": 6.1403384490827495,
+          "heightChangePercent": 5.734308619013229,
+          "shelfHeightChange": 0
+        },
+        {
+          "before": {
+            "height": 55.33160400390625,
+            "width": 466.959228515625,
+            "x": 800.5203857421875,
+            "y": 708.55615234375
+          },
+          "after": {
+            "height": 59.35711669921875,
+            "width": 502.879150390625,
+            "x": 782.5604248046875,
+            "y": 699.2664794921875
+          },
+          "widthChangePercent": 7.692303670532996,
+          "heightChangePercent": 7.275250316308046,
+          "shelfHeightChange": 0
+        }
+      ]
+    },
+    {
+      "case": "1600-SUC",
+      "threeD": [
+        {
+          "before": {
+            "x": 306,
+            "y": 22,
+            "width": 278,
+            "height": 303,
+            "widthOccupancy": 0.3023998912230607,
+            "heightOccupancy": 0.8278688524590164,
+            "edgeMargin": 22
+          },
+          "after": {
+            "x": 318,
+            "y": 34,
+            "width": 256,
+            "height": 280,
+            "widthOccupancy": 0.27846896457950915,
+            "heightOccupancy": 0.7650273224043715,
+            "edgeMargin": 34
+          },
+          "widthChangePercent": -7.913669064748197,
+          "heightChangePercent": -7.590759075907593
+        }
+      ],
+      "twoD": [
+        {
+          "before": {
+            "height": 162.651123046875,
+            "width": 417.9547119140625,
+            "x": 534.84619140625,
+            "y": 666.318115234375
+          },
+          "after": {
+            "height": 166.8525390625,
+            "width": 428.95355224609375,
+            "x": 529.3170166015625,
+            "y": 663.46435546875
+          },
+          "widthChangePercent": 2.6315866333127325,
+          "heightChangePercent": 2.5830845412694536,
+          "shelfHeightChange": 0
+        }
+      ]
+    },
+    {
+      "case": "768-SUC",
+      "threeD": [
+        {
+          "before": {
+            "x": 221,
+            "y": 10,
+            "width": 295,
+            "height": 320,
+            "widthOccupancy": 0.39176626826029215,
+            "heightOccupancy": 0.8247422680412371,
+            "edgeMargin": 10
+          },
+          "after": {
+            "x": 233,
+            "y": 22,
+            "width": 273,
+            "height": 297,
+            "widthOccupancy": 0.36254980079681276,
+            "heightOccupancy": 0.7654639175257731,
+            "edgeMargin": 22
+          },
+          "widthChangePercent": -7.457627118644073,
+          "heightChangePercent": -7.187500000000002
+        }
+      ],
+      "twoD": [
+        {
+          "before": {
+            "height": 162.651123046875,
+            "width": 417.9547424316406,
+            "x": 166.39303588867188,
+            "y": 796.708740234375
+          },
+          "after": {
+            "height": 166.8525390625,
+            "width": 428.95355224609375,
+            "x": 160.8638916015625,
+            "y": 793.85498046875
+          },
+          "widthChangePercent": 2.631579139517015,
+          "heightChangePercent": 2.5830845412694536,
+          "shelfHeightChange": 0
+        }
+      ]
+    },
+    {
+      "case": "390-BGC",
+      "threeD": [
+        {
+          "before": {
+            "x": 112,
+            "y": 33,
+            "width": 180,
+            "height": 145,
+            "widthOccupancy": 0.48,
+            "heightOccupancy": 0.5370370370370371,
+            "edgeMargin": 33
+          },
+          "after": {
+            "x": 99,
+            "y": 18,
+            "width": 208,
+            "height": 169,
+            "widthOccupancy": 0.5546666666666666,
+            "heightOccupancy": 0.6259259259259259,
+            "edgeMargin": 18
+          },
+          "widthChangePercent": 15.555555555555545,
+          "heightChangePercent": 16.551724137931046
+        }
+      ],
+      "twoD": [
+        {
+          "before": {
+            "height": 143.57171630859375,
+            "width": 154.55528259277344,
+            "x": 99.91867065429688,
+            "y": 824.6911010742188
+          },
+          "after": {
+            "height": 158.15936279296875,
+            "width": 170.5940399169922,
+            "x": 94.07945251464844,
+            "y": 822.3582153320312
+          },
+          "widthChangePercent": 10.377359515092156,
+          "heightChangePercent": 10.160529426993993,
+          "shelfHeightChange": 0
+        }
+      ]
+    }
+  ]
+}
