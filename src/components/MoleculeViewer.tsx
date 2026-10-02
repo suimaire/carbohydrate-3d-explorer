@@ -175,7 +175,7 @@ export function MoleculeViewer({
               e.preventDefault();
           }}
         >
-          ⌨ 방향키 · + / −
+          키보드: 방향키 회전 · + / − 확대
         </button>
         <span>드래그 회전 · 휠 확대</span>
       </div>

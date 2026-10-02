@@ -52,7 +52,7 @@ it("the sidebar counts each category from the data and lists every molecule", ()
       level: 2,
       name: new RegExp(section.label),
     });
-    expect(heading.textContent).toContain(String(section.count).padStart(2, "0"));
+    expect(heading.textContent).toContain(`${section.count}종`);
     for (const group of section.groups)
       expect(
         screen.getByRole("heading", { level: 3, name: group.name }),

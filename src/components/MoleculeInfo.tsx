@@ -27,7 +27,7 @@ export function MoleculeInfo({
   );
   return (
     <aside className="info">
-      <div className="section-kicker">STRUCTURE NOTES</div>
+      <div className="section-kicker">구조 설명</div>
       <h2>{m.koreanName}</h2>
       <p className="formula">{m.formula}</p>
       {fragment && (

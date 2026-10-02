@@ -16,7 +16,7 @@ export function OfflineStatus() {
       })
       .then(() => navigator.serviceWorker.ready)
       .then(() => {
-        if (active) setState("✓ 오프라인 사용 준비 완료");
+        if (active) setState("인터넷이 끊겨도 사용할 수 있습니다");
       })
       .catch(() => {
         if (active) setState("오프라인 저장 실패 · 연결을 확인하세요");

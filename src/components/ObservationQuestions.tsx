@@ -20,7 +20,7 @@ export function ObservationQuestions({
         aria-expanded={revealed}
         onClick={() => setRevealed((x) => !x)}
       >
-        {revealed ? "해설 접기 −" : "해설 보기 +"}
+        {revealed ? "해설 접기" : "생각해 본 뒤 해설 보기"}
       </button>
       {revealed && <p className="answer">{answer}</p>}
     </section>

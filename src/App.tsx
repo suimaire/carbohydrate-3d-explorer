@@ -103,14 +103,14 @@ export default function App() {
         보기 설정으로 이동
       </a>
       <header>
-        <div className="brand-mark" aria-hidden="true">
-          C₆
-        </div>
         <div>
-          <h1>
-            Carbohydrate <span>3D Explorer</span>
-          </h1>
-          <p>탄수화물 구조 탐색기</p>
+          <nav className="breadcrumb" aria-label="현재 위치">
+            <a href="https://suimaire.github.io/">수업 포털</a>
+            <span aria-hidden="true">›</span>
+            <a href="https://suimaire.github.io/#molecular">분자 · 생화학 탐구</a>
+          </nav>
+          <h1>탄수화물 3D 구조 탐색기</h1>
+          <p>포도당에서 셀룰로스까지, 탄수화물의 입체 구조를 직접 돌려 보고 비교합니다.</p>
         </div>
         <div className="header-actions">
           <button
@@ -118,7 +118,7 @@ export default function App() {
             aria-pressed={compare}
             onClick={toggleCompare}
           >
-            ◫ {compare ? "단일 보기" : "비교 모드"}
+            {compare ? "비교 모드 끝내기" : "비교 모드"}
           </button>
           <button onClick={() => setHelp(true)}>도움말</button>
         </div>
@@ -154,7 +154,7 @@ export default function App() {
                 </select>
               </label>
               <button aria-pressed={sync} onClick={() => setSync((s) => !s)}>
-                회전 동기화 {sync ? "ON" : "OFF"}
+                회전 동기화 {sync ? "켜짐" : "꺼짐"}
               </button>
             </div>
           )}
@@ -207,7 +207,7 @@ export default function App() {
         </div>
         {compare ? (
           <aside className="info comparison-info">
-            <div className="section-kicker">COMPARE &amp; OBSERVE</div>
+            <div className="section-kicker">비교 관찰</div>
             <h2>차이를 찾아보세요</h2>
             <p>{pair.intro}</p>
             <ObservationQuestions
@@ -245,7 +245,7 @@ export default function App() {
           </aside>
         ) : interconversion ? (
           <aside className="info">
-            <div className="section-kicker">RING &amp; CHAIN</div>
+            <div className="section-kicker">고리 ↔ 사슬</div>
             <h2>고리가 열리면?</h2>
             <p>C1–O5 결합이 열리고 C1–O1이 이중 결합인 사슬형으로 바뀝니다.</p>
             <p>C1은 고리형의 사면체 모양에서 사슬형의 평면 삼각형 모양으로 바뀝니다.</p>
@@ -274,13 +274,10 @@ export default function App() {
         />
       </div>
       <footer className="page-footer">
-        <span>Carbohydrate 3D Explorer</span>
+        <span>탄수화물 3D 구조 탐색기</span>
         <OfflineStatus />
-        <span>데이터: wwPDB CCD · PubChem</span>
-        <span className="page-footer__brand">
-          <b>HAFS Biology Lab</b>
-          <span>Teacher-built interactive science tools · CH Park</span>
-        </span>
+        <span>구조 데이터: wwPDB CCD · PubChem</span>
+        <span className="page-footer__brand">HAFS Biology Lab · CH Park</span>
         {/* 조회수: index.html 이 로드하는 포털 공통 모듈이 채움 */}
         <span data-page-views="" hidden />
       </footer>

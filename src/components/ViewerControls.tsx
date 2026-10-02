@@ -80,12 +80,12 @@ export function ViewerControls({
       </div>
       <div className="control-group">
         <span>조작</span>
-        <button onClick={onReset}>↺ 초기화</button>
+        <button onClick={onReset}>시점 초기화</button>
         <button
           aria-pressed={options.spinning}
           onClick={() => toggle("spinning")}
         >
-          자동 회전 {options.spinning ? "ON" : "OFF"}
+          자동 회전 {options.spinning ? "켜짐" : "꺼짐"}
         </button>
       </div>
     </div>

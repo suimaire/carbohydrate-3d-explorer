@@ -1,6 +1,5 @@
 import { sidebarSections } from "../data/carbohydrates";
 import type { MoleculeId } from "../types/carbohydrate";
-const pad = (n: number) => String(n).padStart(2, "0");
 export function MoleculeSidebar({
   selected,
   onSelect,
@@ -10,11 +9,11 @@ export function MoleculeSidebar({
 }) {
   return (
     <nav className="sidebar" aria-label="분자 선택">
-      <div className="section-kicker">MOLECULE LIBRARY</div>
+      <div className="section-kicker">관찰할 분자 고르기</div>
       {sidebarSections().map((section) => (
         <section className="molecule-category" key={section.category}>
           <h2>
-            {section.label} <span>{pad(section.count)}</span>
+            {section.label} <span>{section.count}종</span>
           </h2>
           {section.groups.map((group) => (
             <div className="molecule-group" key={group.name}>
