@@ -1,0 +1,218 @@
+[
+  {
+    "id": "GLC",
+    "expected": "anomer",
+    "errors": [],
+    "kind": "anomer",
+    "names": [
+      "α-D-glucose",
+      "β-D-glucose"
+    ],
+    "exit": [
+      "α-D-glucose"
+    ],
+    "pass": true
+  },
+  {
+    "id": "BGC",
+    "expected": "anomer",
+    "errors": [],
+    "kind": "anomer",
+    "names": [
+      "α-D-glucose",
+      "β-D-glucose"
+    ],
+    "exit": [
+      "β-D-glucose"
+    ],
+    "pass": true
+  },
+  {
+    "id": "GAL",
+    "expected": "epimer",
+    "errors": [],
+    "kind": "epimer",
+    "names": [
+      "β-D-glucose",
+      "D-galactose"
+    ],
+    "exit": [
+      "D-galactose"
+    ],
+    "pass": true
+  },
+  {
+    "id": "FRU",
+    "expected": "aldoseKetose",
+    "errors": [],
+    "kind": "aldoseKetose",
+    "names": [
+      "β-D-glucose",
+      "D-fructose"
+    ],
+    "exit": [
+      "D-fructose"
+    ],
+    "pass": true
+  },
+  {
+    "id": "BDR",
+    "expected": "deoxy",
+    "errors": [],
+    "kind": "deoxy",
+    "names": [
+      "D-ribose",
+      "2-deoxy-D-ribose"
+    ],
+    "manual": "epimer",
+    "manualPass": true,
+    "exit": [
+      "D-ribose"
+    ],
+    "pass": true
+  },
+  {
+    "id": "2DR",
+    "expected": "deoxy",
+    "errors": [],
+    "kind": "deoxy",
+    "names": [
+      "D-ribose",
+      "2-deoxy-D-ribose"
+    ],
+    "manual": "epimer",
+    "manualPass": true,
+    "exit": [
+      "2-deoxy-D-ribose"
+    ],
+    "pass": true
+  },
+  {
+    "id": "MAL",
+    "expected": "linkage",
+    "errors": [],
+    "kind": "linkage",
+    "names": [
+      "Maltose",
+      "Cellobiose"
+    ],
+    "manual": "epimer",
+    "manualPass": true,
+    "exit": [
+      "Maltose"
+    ],
+    "pass": true
+  },
+  {
+    "id": "CBI",
+    "expected": "linkage",
+    "errors": [],
+    "kind": "linkage",
+    "names": [
+      "Maltose",
+      "Cellobiose"
+    ],
+    "manual": "epimer",
+    "manualPass": true,
+    "exit": [
+      "Cellobiose"
+    ],
+    "pass": true
+  },
+  {
+    "id": "LAT",
+    "expected": "disaccharideEpimer",
+    "errors": [],
+    "kind": "disaccharideEpimer",
+    "names": [
+      "Cellobiose",
+      "Lactose"
+    ],
+    "manual": "epimer",
+    "manualPass": true,
+    "exit": [
+      "Lactose"
+    ],
+    "pass": true
+  },
+  {
+    "id": "SUC",
+    "expected": "reducingDisaccharide",
+    "errors": [],
+    "kind": "reducingDisaccharide",
+    "names": [
+      "Maltose",
+      "Sucrose"
+    ],
+    "manual": "epimer",
+    "manualPass": true,
+    "exit": [
+      "Sucrose"
+    ],
+    "pass": true
+  },
+  {
+    "id": "AMYLOSE",
+    "expected": "glucan",
+    "errors": [],
+    "kind": "glucan",
+    "names": [
+      "Amylose",
+      "Cellulose"
+    ],
+    "manual": "epimer",
+    "manualPass": true,
+    "exit": [
+      "Amylose"
+    ],
+    "pass": true
+  },
+  {
+    "id": "CELLULOSE",
+    "expected": "glucan",
+    "errors": [],
+    "kind": "glucan",
+    "names": [
+      "Amylose",
+      "Cellulose"
+    ],
+    "manual": "epimer",
+    "manualPass": true,
+    "exit": [
+      "Cellulose"
+    ],
+    "pass": true
+  },
+  {
+    "id": "AMYLOPECTIN",
+    "expected": "branching",
+    "errors": [],
+    "kind": "branching",
+    "names": [
+      "Amylopectin",
+      "Glycogen"
+    ],
+    "manual": "epimer",
+    "manualPass": true,
+    "exit": [
+      "Amylopectin"
+    ],
+    "pass": true
+  },
+  {
+    "id": "GLYCOGEN",
+    "expected": "branching",
+    "errors": [],
+    "kind": "branching",
+    "names": [
+      "Amylopectin",
+      "Glycogen"
+    ],
+    "manual": "epimer",
+    "manualPass": true,
+    "exit": [
+      "Glycogen"
+    ],
+    "pass": true
+  }
+]

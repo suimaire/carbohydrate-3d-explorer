@@ -1,0 +1,13 @@
+
+> carbohydrate-3d-explorer@1.0.0 test
+> vitest run --reporter=dot
+
+
+ RUN  v5.0.0 D:/Codex/260831 biochemistry/carbohydrate-3d-explorer
+
+··································································································································································································································
+
+ Test Files  14 passed (14)
+      Tests  226 passed (226)
+   Start at  02:40:45
+   Duration  11.71s (tests 47%, environment 22%, transform 21%, import 9%)

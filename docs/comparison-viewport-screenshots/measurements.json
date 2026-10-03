@@ -1,0 +1,3944 @@
+[
+  {
+    "overflow": false,
+    "panes": [
+      {
+        "canvas": {
+          "height": 308,
+          "width": 919,
+          "x": 285.296875,
+          "y": 258.28125
+        },
+        "drawingBuffer": {
+          "height": 616,
+          "width": 1838
+        },
+        "heading": {
+          "height": 102.140625,
+          "width": 919.3125,
+          "x": 285.296875,
+          "y": 170.28125
+        },
+        "headingStyle": {
+          "pointerEvents": "none",
+          "position": "relative"
+        },
+        "host": {
+          "height": 308,
+          "width": 919.3125,
+          "x": 285.296875,
+          "y": 258.28125
+        },
+        "name": "β-D-glucose 3D 구조",
+        "reference": {
+          "height": 282,
+          "width": 919.3125,
+          "x": 285.296875,
+          "y": 608.28125
+        },
+        "stage": {
+          "height": 438,
+          "width": 919.3125,
+          "x": 285.296875,
+          "y": 170.28125
+        }
+      }
+    ],
+    "viewport": {
+      "height": 1000,
+      "width": 1600
+    },
+    "label": "before-1600-BGC",
+    "screenshot": "before-1600-BGC.jpg"
+  },
+  {
+    "overflow": false,
+    "panes": [
+      {
+        "canvas": {
+          "height": 270,
+          "width": 562,
+          "x": 190,
+          "y": 296.28125
+        },
+        "drawingBuffer": {
+          "height": 540,
+          "width": 1124
+        },
+        "heading": {
+          "height": 121.671875,
+          "width": 562,
+          "x": 190,
+          "y": 181.28125
+        },
+        "headingStyle": {
+          "pointerEvents": "none",
+          "position": "relative"
+        },
+        "host": {
+          "height": 270,
+          "width": 562,
+          "x": 190,
+          "y": 296.28125
+        },
+        "name": "α-D-glucose 3D 구조",
+        "reference": {
+          "height": 282,
+          "width": 562,
+          "x": 190,
+          "y": 608.28125
+        },
+        "stage": {
+          "height": 427,
+          "width": 562,
+          "x": 190,
+          "y": 181.28125
+        }
+      },
+      {
+        "canvas": {
+          "height": 270,
+          "width": 562,
+          "x": 753,
+          "y": 296.28125
+        },
+        "drawingBuffer": {
+          "height": 540,
+          "width": 1124
+        },
+        "heading": {
+          "height": 121.671875,
+          "width": 562,
+          "x": 753,
+          "y": 181.28125
+        },
+        "headingStyle": {
+          "pointerEvents": "none",
+          "position": "relative"
+        },
+        "host": {
+          "height": 270,
+          "width": 562,
+          "x": 753,
+          "y": 296.28125
+        },
+        "name": "β-D-glucose 3D 구조",
+        "reference": {
+          "height": 282,
+          "width": 562,
+          "x": 753,
+          "y": 608.28125
+        },
+        "stage": {
+          "height": 427,
+          "width": 562,
+          "x": 753,
+          "y": 181.28125
+        }
+      }
+    ],
+    "viewport": {
+      "height": 1000,
+      "width": 1600
+    },
+    "label": "before-1600-compare-anomer",
+    "screenshot": "before-1600-compare-anomer.jpg"
+  },
+  {
+    "overflow": false,
+    "panes": [
+      {
+        "canvas": {
+          "height": 270,
+          "width": 562,
+          "x": 190,
+          "y": 296.28125
+        },
+        "drawingBuffer": {
+          "height": 540,
+          "width": 1124
+        },
+        "heading": {
+          "height": 121.671875,
+          "width": 562,
+          "x": 190,
+          "y": 181.28125
+        },
+        "headingStyle": {
+          "pointerEvents": "none",
+          "position": "relative"
+        },
+        "host": {
+          "height": 270,
+          "width": 562,
+          "x": 190,
+          "y": 296.28125
+        },
+        "name": "Maltose 3D 구조",
+        "reference": {
+          "height": 282,
+          "width": 562,
+          "x": 190,
+          "y": 608.28125
+        },
+        "stage": {
+          "height": 427,
+          "width": 562,
+          "x": 190,
+          "y": 181.28125
+        }
+      },
+      {
+        "canvas": {
+          "height": 270,
+          "width": 562,
+          "x": 753,
+          "y": 296.28125
+        },
+        "drawingBuffer": {
+          "height": 540,
+          "width": 1124
+        },
+        "heading": {
+          "height": 121.671875,
+          "width": 562,
+          "x": 753,
+          "y": 181.28125
+        },
+        "headingStyle": {
+          "pointerEvents": "none",
+          "position": "relative"
+        },
+        "host": {
+          "height": 270,
+          "width": 562,
+          "x": 753,
+          "y": 296.28125
+        },
+        "name": "Cellobiose 3D 구조",
+        "reference": {
+          "height": 282,
+          "width": 562,
+          "x": 753,
+          "y": 608.28125
+        },
+        "stage": {
+          "height": 427,
+          "width": 562,
+          "x": 753,
+          "y": 181.28125
+        }
+      }
+    ],
+    "viewport": {
+      "height": 1000,
+      "width": 1600
+    },
+    "label": "before-1600-compare-linkage",
+    "screenshot": "before-1600-compare-linkage.jpg"
+  },
+  {
+    "overflow": false,
+    "panes": [
+      {
+        "canvas": {
+          "height": 270,
+          "width": 562,
+          "x": 190,
+          "y": 296.28125
+        },
+        "drawingBuffer": {
+          "height": 540,
+          "width": 1124
+        },
+        "heading": {
+          "height": 121.671875,
+          "width": 562,
+          "x": 190,
+          "y": 181.28125
+        },
+        "headingStyle": {
+          "pointerEvents": "none",
+          "position": "relative"
+        },
+        "host": {
+          "height": 270,
+          "width": 562,
+          "x": 190,
+          "y": 296.28125
+        },
+        "name": "Amylose 3D 구조",
+        "reference": {
+          "height": 282,
+          "width": 562,
+          "x": 190,
+          "y": 608.28125
+        },
+        "stage": {
+          "height": 427,
+          "width": 562,
+          "x": 190,
+          "y": 181.28125
+        }
+      },
+      {
+        "canvas": {
+          "height": 270,
+          "width": 562,
+          "x": 753,
+          "y": 296.28125
+        },
+        "drawingBuffer": {
+          "height": 540,
+          "width": 1124
+        },
+        "heading": {
+          "height": 121.671875,
+          "width": 562,
+          "x": 753,
+          "y": 181.28125
+        },
+        "headingStyle": {
+          "pointerEvents": "none",
+          "position": "relative"
+        },
+        "host": {
+          "height": 270,
+          "width": 562,
+          "x": 753,
+          "y": 296.28125
+        },
+        "name": "Cellulose 3D 구조",
+        "reference": {
+          "height": 282,
+          "width": 562,
+          "x": 753,
+          "y": 608.28125
+        },
+        "stage": {
+          "height": 427,
+          "width": 562,
+          "x": 753,
+          "y": 181.28125
+        }
+      }
+    ],
+    "viewport": {
+      "height": 1000,
+      "width": 1600
+    },
+    "label": "before-1600-compare-glucan",
+    "screenshot": "before-1600-compare-glucan.jpg"
+  },
+  {
+    "overflow": false,
+    "panes": [
+      {
+        "canvas": {
+          "height": 366,
+          "width": 919,
+          "x": 285.296875,
+          "y": 200.28125
+        },
+        "drawingBuffer": {
+          "height": 732,
+          "width": 1838
+        },
+        "heading": {
+          "height": 102.140625,
+          "width": 919.3125,
+          "x": 285.296875,
+          "y": 112.28125
+        },
+        "headingStyle": {
+          "pointerEvents": "none",
+          "position": "relative"
+        },
+        "host": {
+          "height": 366,
+          "width": 919.3125,
+          "x": 285.296875,
+          "y": 200.28125
+        },
+        "name": "Sucrose 3D 구조",
+        "reference": {
+          "height": 282,
+          "width": 919.3125,
+          "x": 285.296875,
+          "y": 608.28125
+        },
+        "stage": {
+          "height": 496,
+          "width": 919.3125,
+          "x": 285.296875,
+          "y": 112.28125
+        }
+      }
+    ],
+    "viewport": {
+      "height": 1000,
+      "width": 1600
+    },
+    "label": "before-1600-SUC",
+    "screenshot": "before-1600-SUC.jpg"
+  },
+  {
+    "overflow": false,
+    "panes": [
+      {
+        "canvas": {
+          "height": 183,
+          "width": 445,
+          "x": 190,
+          "y": 296.28125
+        },
+        "drawingBuffer": {
+          "height": 366,
+          "width": 890
+        },
+        "heading": {
+          "height": 121.671875,
+          "width": 445,
+          "x": 190,
+          "y": 181.28125
+        },
+        "headingStyle": {
+          "pointerEvents": "none",
+          "position": "relative"
+        },
+        "host": {
+          "height": 183,
+          "width": 445,
+          "x": 190,
+          "y": 296.28125
+        },
+        "name": "α-D-glucose 3D 구조",
+        "reference": {
+          "height": 282,
+          "width": 445,
+          "x": 190,
+          "y": 521.28125
+        },
+        "stage": {
+          "height": 340,
+          "width": 445,
+          "x": 190,
+          "y": 181.28125
+        }
+      },
+      {
+        "canvas": {
+          "height": 183,
+          "width": 445,
+          "x": 636,
+          "y": 296.28125
+        },
+        "drawingBuffer": {
+          "height": 366,
+          "width": 890
+        },
+        "heading": {
+          "height": 121.671875,
+          "width": 445,
+          "x": 636,
+          "y": 181.28125
+        },
+        "headingStyle": {
+          "pointerEvents": "none",
+          "position": "relative"
+        },
+        "host": {
+          "height": 183,
+          "width": 445,
+          "x": 636,
+          "y": 296.28125
+        },
+        "name": "β-D-glucose 3D 구조",
+        "reference": {
+          "height": 282,
+          "width": 445,
+          "x": 636,
+          "y": 521.28125
+        },
+        "stage": {
+          "height": 340,
+          "width": 445,
+          "x": 636,
+          "y": 181.28125
+        }
+      }
+    ],
+    "viewport": {
+      "height": 768,
+      "width": 1366
+    },
+    "label": "before-1366-compare-anomer",
+    "screenshot": "before-1366-compare-anomer.jpg"
+  },
+  {
+    "overflow": false,
+    "panes": [
+      {
+        "canvas": {
+          "height": 388,
+          "width": 819,
+          "x": 190,
+          "y": 200.28125
+        },
+        "drawingBuffer": {
+          "height": 776,
+          "width": 1638
+        },
+        "heading": {
+          "height": 102.140625,
+          "width": 819,
+          "x": 190,
+          "y": 112.28125
+        },
+        "headingStyle": {
+          "pointerEvents": "none",
+          "position": "relative"
+        },
+        "host": {
+          "height": 388,
+          "width": 819,
+          "x": 190,
+          "y": 200.28125
+        },
+        "name": "D-fructose 3D 구조",
+        "reference": {
+          "height": 282,
+          "width": 819,
+          "x": 190,
+          "y": 630.28125
+        },
+        "stage": {
+          "height": 518,
+          "width": 819,
+          "x": 190,
+          "y": 112.28125
+        }
+      }
+    ],
+    "viewport": {
+      "height": 900,
+      "width": 1024
+    },
+    "label": "before-1024-FRU",
+    "screenshot": "before-1024-FRU.jpg"
+  },
+  {
+    "overflow": false,
+    "panes": [
+      {
+        "canvas": {
+          "height": 388,
+          "width": 753,
+          "x": 0,
+          "y": 308.671875
+        },
+        "drawingBuffer": {
+          "height": 776,
+          "width": 1506
+        },
+        "heading": {
+          "height": 89.4375,
+          "width": 753,
+          "x": 0,
+          "y": 220.671875
+        },
+        "headingStyle": {
+          "pointerEvents": "none",
+          "position": "relative"
+        },
+        "host": {
+          "height": 388,
+          "width": 753,
+          "x": 0,
+          "y": 308.671875
+        },
+        "name": "Sucrose 3D 구조",
+        "reference": {
+          "height": 282,
+          "width": 753,
+          "x": 0,
+          "y": 738.671875
+        },
+        "stage": {
+          "height": 518,
+          "width": 753,
+          "x": 0,
+          "y": 220.671875
+        }
+      }
+    ],
+    "viewport": {
+      "height": 1024,
+      "width": 768
+    },
+    "label": "before-768-SUC",
+    "screenshot": "before-768-SUC.jpg"
+  },
+  {
+    "overflow": false,
+    "panes": [
+      {
+        "canvas": {
+          "height": 270,
+          "width": 375,
+          "x": 0,
+          "y": 444.859375
+        },
+        "drawingBuffer": {
+          "height": 540,
+          "width": 750
+        },
+        "heading": {
+          "height": 89.4375,
+          "width": 375,
+          "x": 0,
+          "y": 356.859375
+        },
+        "headingStyle": {
+          "pointerEvents": "none",
+          "position": "relative"
+        },
+        "host": {
+          "height": 270,
+          "width": 375,
+          "x": 0,
+          "y": 444.859375
+        },
+        "name": "β-D-glucose 3D 구조",
+        "reference": {
+          "height": 287,
+          "width": 375,
+          "x": 0,
+          "y": 756.859375
+        },
+        "stage": {
+          "height": 400,
+          "width": 375,
+          "x": 0,
+          "y": 356.859375
+        }
+      }
+    ],
+    "viewport": {
+      "height": 844,
+      "width": 390
+    },
+    "label": "before-390-BGC",
+    "screenshot": "before-390-BGC.jpg"
+  },
+  {
+    "overflow": false,
+    "panes": [
+      {
+        "canvas": {
+          "height": 385,
+          "width": 562,
+          "x": 190,
+          "y": 181.28125
+        },
+        "drawingBuffer": {
+          "height": 770,
+          "width": 1124
+        },
+        "heading": {
+          "height": 121.671875,
+          "width": 562,
+          "x": 190,
+          "y": 181.28125
+        },
+        "headingStyle": {
+          "pointerEvents": "none",
+          "position": "absolute"
+        },
+        "host": {
+          "height": 385,
+          "width": 562,
+          "x": 190,
+          "y": 181.28125
+        },
+        "name": "α-D-glucose 3D 구조",
+        "reference": {
+          "height": 282,
+          "width": 562,
+          "x": 190,
+          "y": 608.28125
+        },
+        "stage": {
+          "height": 427,
+          "width": 562,
+          "x": 190,
+          "y": 181.28125
+        }
+      },
+      {
+        "canvas": {
+          "height": 385,
+          "width": 562,
+          "x": 753,
+          "y": 181.28125
+        },
+        "drawingBuffer": {
+          "height": 770,
+          "width": 1124
+        },
+        "heading": {
+          "height": 121.671875,
+          "width": 562,
+          "x": 753,
+          "y": 181.28125
+        },
+        "headingStyle": {
+          "pointerEvents": "none",
+          "position": "absolute"
+        },
+        "host": {
+          "height": 385,
+          "width": 562,
+          "x": 753,
+          "y": 181.28125
+        },
+        "name": "β-D-glucose 3D 구조",
+        "reference": {
+          "height": 282,
+          "width": 562,
+          "x": 753,
+          "y": 608.28125
+        },
+        "stage": {
+          "height": 427,
+          "width": 562,
+          "x": 753,
+          "y": 181.28125
+        }
+      }
+    ],
+    "viewport": {
+      "height": 1000,
+      "width": 1600
+    },
+    "label": "layout-first-1600-compare-anomer",
+    "screenshot": "layout-first-1600-compare-anomer.jpg"
+  },
+  {
+    "overflow": false,
+    "panes": [
+      {
+        "canvas": {
+          "height": 298,
+          "width": 445,
+          "x": 190,
+          "y": 181.28125
+        },
+        "drawingBuffer": {
+          "height": 596,
+          "width": 890
+        },
+        "heading": {
+          "height": 121.671875,
+          "width": 445,
+          "x": 190,
+          "y": 181.28125
+        },
+        "headingStyle": {
+          "pointerEvents": "none",
+          "position": "absolute"
+        },
+        "host": {
+          "height": 298,
+          "width": 445,
+          "x": 190,
+          "y": 181.28125
+        },
+        "name": "α-D-glucose 3D 구조",
+        "reference": {
+          "height": 282,
+          "width": 445,
+          "x": 190,
+          "y": 521.28125
+        },
+        "stage": {
+          "height": 340,
+          "width": 445,
+          "x": 190,
+          "y": 181.28125
+        }
+      },
+      {
+        "canvas": {
+          "height": 298,
+          "width": 445,
+          "x": 636,
+          "y": 181.28125
+        },
+        "drawingBuffer": {
+          "height": 596,
+          "width": 890
+        },
+        "heading": {
+          "height": 121.671875,
+          "width": 445,
+          "x": 636,
+          "y": 181.28125
+        },
+        "headingStyle": {
+          "pointerEvents": "none",
+          "position": "absolute"
+        },
+        "host": {
+          "height": 298,
+          "width": 445,
+          "x": 636,
+          "y": 181.28125
+        },
+        "name": "β-D-glucose 3D 구조",
+        "reference": {
+          "height": 282,
+          "width": 445,
+          "x": 636,
+          "y": 521.28125
+        },
+        "stage": {
+          "height": 340,
+          "width": 445,
+          "x": 636,
+          "y": 181.28125
+        }
+      }
+    ],
+    "viewport": {
+      "height": 768,
+      "width": 1366
+    },
+    "label": "after-1366-compare-anomer",
+    "screenshot": "after-1366-compare-anomer.jpg"
+  },
+  {
+    "overflow": false,
+    "panes": [
+      {
+        "canvas": {
+          "height": 358,
+          "width": 375,
+          "x": 0,
+          "y": 356.859375
+        },
+        "drawingBuffer": {
+          "height": 716,
+          "width": 750
+        },
+        "heading": {
+          "height": 89.4375,
+          "width": 375,
+          "x": 0,
+          "y": 356.859375
+        },
+        "headingStyle": {
+          "pointerEvents": "none",
+          "position": "absolute"
+        },
+        "host": {
+          "height": 358,
+          "width": 375,
+          "x": 0,
+          "y": 356.859375
+        },
+        "name": "β-D-glucose 3D 구조",
+        "reference": {
+          "height": 287,
+          "width": 375,
+          "x": 0,
+          "y": 756.859375
+        },
+        "stage": {
+          "height": 400,
+          "width": 375,
+          "x": 0,
+          "y": 356.859375
+        }
+      }
+    ],
+    "viewport": {
+      "height": 844,
+      "width": 390
+    },
+    "label": "layout-first-390-BGC",
+    "screenshot": "layout-first-390-BGC.jpg"
+  },
+  {
+    "overflow": false,
+    "panes": [
+      {
+        "canvas": {
+          "height": 358,
+          "width": 375,
+          "x": 0,
+          "y": 300.859375
+        },
+        "drawingBuffer": {
+          "height": 716,
+          "width": 750
+        },
+        "heading": {
+          "height": 89.4375,
+          "width": 375,
+          "x": 0,
+          "y": 300.859375
+        },
+        "headingStyle": {
+          "pointerEvents": "none",
+          "position": "absolute"
+        },
+        "host": {
+          "height": 358,
+          "width": 375,
+          "x": 0,
+          "y": 300.859375
+        },
+        "name": "Sucrose 3D 구조",
+        "reference": {
+          "height": 287,
+          "width": 375,
+          "x": 0,
+          "y": 700.859375
+        },
+        "stage": {
+          "height": 400,
+          "width": 375,
+          "x": 0,
+          "y": 300.859375
+        }
+      }
+    ],
+    "viewport": {
+      "height": 844,
+      "width": 390
+    },
+    "label": "layout-first-390-SUC",
+    "screenshot": "layout-first-390-SUC.jpg"
+  },
+  {
+    "overflow": false,
+    "panes": [
+      {
+        "canvas": {
+          "height": 385,
+          "width": 562,
+          "x": 190,
+          "y": 181.28125
+        },
+        "drawingBuffer": {
+          "height": 770,
+          "width": 1124
+        },
+        "heading": {
+          "height": 121.671875,
+          "width": 562,
+          "x": 190,
+          "y": 181.28125
+        },
+        "headingStyle": {
+          "pointerEvents": "none",
+          "position": "absolute"
+        },
+        "host": {
+          "height": 385,
+          "width": 562,
+          "x": 190,
+          "y": 181.28125
+        },
+        "name": "β-D-glucose 3D 구조",
+        "reference": {
+          "height": 282,
+          "width": 562,
+          "x": 190,
+          "y": 608.28125
+        },
+        "stage": {
+          "height": 427,
+          "width": 562,
+          "x": 190,
+          "y": 181.28125
+        }
+      },
+      {
+        "canvas": {
+          "height": 385,
+          "width": 562,
+          "x": 753,
+          "y": 181.28125
+        },
+        "drawingBuffer": {
+          "height": 770,
+          "width": 1124
+        },
+        "heading": {
+          "height": 121.671875,
+          "width": 562,
+          "x": 753,
+          "y": 181.28125
+        },
+        "headingStyle": {
+          "pointerEvents": "none",
+          "position": "absolute"
+        },
+        "host": {
+          "height": 385,
+          "width": 562,
+          "x": 753,
+          "y": 181.28125
+        },
+        "name": "D-fructose 3D 구조",
+        "reference": {
+          "height": 282,
+          "width": 562,
+          "x": 753,
+          "y": 608.28125
+        },
+        "stage": {
+          "height": 427,
+          "width": 562,
+          "x": 753,
+          "y": 181.28125
+        }
+      }
+    ],
+    "viewport": {
+      "height": 1000,
+      "width": 1600
+    },
+    "label": "layout-first-1600-compare-aldoseKetose",
+    "screenshot": "layout-first-1600-compare-aldoseKetose.jpg"
+  },
+  {
+    "overflow": false,
+    "panes": [
+      {
+        "canvas": {
+          "height": 385,
+          "width": 562,
+          "x": 190,
+          "y": 181.28125
+        },
+        "drawingBuffer": {
+          "height": 770,
+          "width": 1124
+        },
+        "heading": {
+          "height": 121.671875,
+          "width": 562,
+          "x": 190,
+          "y": 181.28125
+        },
+        "headingStyle": {
+          "pointerEvents": "none",
+          "position": "absolute"
+        },
+        "host": {
+          "height": 385,
+          "width": 562,
+          "x": 190,
+          "y": 181.28125
+        },
+        "name": "α-D-glucose 3D 구조",
+        "reference": {
+          "height": 282,
+          "width": 562,
+          "x": 190,
+          "y": 608.28125
+        },
+        "stage": {
+          "height": 427,
+          "width": 562,
+          "x": 190,
+          "y": 181.28125
+        }
+      },
+      {
+        "canvas": {
+          "height": 385,
+          "width": 562,
+          "x": 753,
+          "y": 181.28125
+        },
+        "drawingBuffer": {
+          "height": 770,
+          "width": 1124
+        },
+        "heading": {
+          "height": 121.671875,
+          "width": 562,
+          "x": 753,
+          "y": 181.28125
+        },
+        "headingStyle": {
+          "pointerEvents": "none",
+          "position": "absolute"
+        },
+        "host": {
+          "height": 385,
+          "width": 562,
+          "x": 753,
+          "y": 181.28125
+        },
+        "name": "β-D-glucose 3D 구조",
+        "reference": {
+          "height": 282,
+          "width": 562,
+          "x": 753,
+          "y": 608.28125
+        },
+        "stage": {
+          "height": 427,
+          "width": 562,
+          "x": 753,
+          "y": 181.28125
+        }
+      }
+    ],
+    "viewport": {
+      "height": 1000,
+      "width": 1600
+    },
+    "label": "after-1600-compare-anomer",
+    "screenshot": "after-1600-compare-anomer.jpg"
+  },
+  {
+    "overflow": false,
+    "panes": [
+      {
+        "canvas": {
+          "height": 396,
+          "width": 919,
+          "x": 285.296875,
+          "y": 170.28125
+        },
+        "drawingBuffer": {
+          "height": 792,
+          "width": 1838
+        },
+        "heading": {
+          "height": 102.140625,
+          "width": 919.3125,
+          "x": 285.296875,
+          "y": 170.28125
+        },
+        "headingStyle": {
+          "pointerEvents": "none",
+          "position": "absolute"
+        },
+        "host": {
+          "height": 396,
+          "width": 919.3125,
+          "x": 285.296875,
+          "y": 170.28125
+        },
+        "name": "β-D-glucose 3D 구조",
+        "reference": {
+          "height": 282,
+          "width": 919.3125,
+          "x": 285.296875,
+          "y": 608.28125
+        },
+        "stage": {
+          "height": 438,
+          "width": 919.3125,
+          "x": 285.296875,
+          "y": 170.28125
+        }
+      }
+    ],
+    "viewport": {
+      "height": 1000,
+      "width": 1600
+    },
+    "label": "after-1600-BGC",
+    "screenshot": "after-1600-BGC.jpg"
+  },
+  {
+    "overflow": false,
+    "panes": [
+      {
+        "canvas": {
+          "height": 385,
+          "width": 562,
+          "x": 190,
+          "y": 181.28125
+        },
+        "drawingBuffer": {
+          "height": 770,
+          "width": 1124
+        },
+        "heading": {
+          "height": 121.671875,
+          "width": 562,
+          "x": 190,
+          "y": 181.28125
+        },
+        "headingStyle": {
+          "pointerEvents": "none",
+          "position": "absolute"
+        },
+        "host": {
+          "height": 385,
+          "width": 562,
+          "x": 190,
+          "y": 181.28125
+        },
+        "name": "β-D-glucose 3D 구조",
+        "reference": {
+          "height": 282,
+          "width": 562,
+          "x": 190,
+          "y": 608.28125
+        },
+        "stage": {
+          "height": 427,
+          "width": 562,
+          "x": 190,
+          "y": 181.28125
+        }
+      },
+      {
+        "canvas": {
+          "height": 385,
+          "width": 562,
+          "x": 753,
+          "y": 181.28125
+        },
+        "drawingBuffer": {
+          "height": 770,
+          "width": 1124
+        },
+        "heading": {
+          "height": 121.671875,
+          "width": 562,
+          "x": 753,
+          "y": 181.28125
+        },
+        "headingStyle": {
+          "pointerEvents": "none",
+          "position": "absolute"
+        },
+        "host": {
+          "height": 385,
+          "width": 562,
+          "x": 753,
+          "y": 181.28125
+        },
+        "name": "D-galactose 3D 구조",
+        "reference": {
+          "height": 282,
+          "width": 562,
+          "x": 753,
+          "y": 608.28125
+        },
+        "stage": {
+          "height": 427,
+          "width": 562,
+          "x": 753,
+          "y": 181.28125
+        }
+      }
+    ],
+    "viewport": {
+      "height": 1000,
+      "width": 1600
+    },
+    "label": "after-1600-compare-epimer",
+    "screenshot": "after-1600-compare-epimer.jpg"
+  },
+  {
+    "overflow": false,
+    "panes": [
+      {
+        "canvas": {
+          "height": 454,
+          "width": 919,
+          "x": 285.296875,
+          "y": 112.28125
+        },
+        "drawingBuffer": {
+          "height": 908,
+          "width": 1838
+        },
+        "heading": {
+          "height": 102.140625,
+          "width": 919.3125,
+          "x": 285.296875,
+          "y": 112.28125
+        },
+        "headingStyle": {
+          "pointerEvents": "none",
+          "position": "absolute"
+        },
+        "host": {
+          "height": 454,
+          "width": 919.3125,
+          "x": 285.296875,
+          "y": 112.28125
+        },
+        "name": "D-fructose 3D 구조",
+        "reference": {
+          "height": 282,
+          "width": 919.3125,
+          "x": 285.296875,
+          "y": 608.28125
+        },
+        "stage": {
+          "height": 496,
+          "width": 919.3125,
+          "x": 285.296875,
+          "y": 112.28125
+        }
+      }
+    ],
+    "viewport": {
+      "height": 1000,
+      "width": 1600
+    },
+    "label": "after-1600-FRU",
+    "screenshot": "after-1600-FRU.jpg"
+  },
+  {
+    "overflow": false,
+    "panes": [
+      {
+        "canvas": {
+          "height": 385,
+          "width": 562,
+          "x": 190,
+          "y": 181.28125
+        },
+        "drawingBuffer": {
+          "height": 770,
+          "width": 1124
+        },
+        "heading": {
+          "height": 121.671875,
+          "width": 562,
+          "x": 190,
+          "y": 181.28125
+        },
+        "headingStyle": {
+          "pointerEvents": "none",
+          "position": "absolute"
+        },
+        "host": {
+          "height": 385,
+          "width": 562,
+          "x": 190,
+          "y": 181.28125
+        },
+        "name": "β-D-glucose 3D 구조",
+        "reference": {
+          "height": 282,
+          "width": 562,
+          "x": 190,
+          "y": 608.28125
+        },
+        "stage": {
+          "height": 427,
+          "width": 562,
+          "x": 190,
+          "y": 181.28125
+        }
+      },
+      {
+        "canvas": {
+          "height": 385,
+          "width": 562,
+          "x": 753,
+          "y": 181.28125
+        },
+        "drawingBuffer": {
+          "height": 770,
+          "width": 1124
+        },
+        "heading": {
+          "height": 121.671875,
+          "width": 562,
+          "x": 753,
+          "y": 181.28125
+        },
+        "headingStyle": {
+          "pointerEvents": "none",
+          "position": "absolute"
+        },
+        "host": {
+          "height": 385,
+          "width": 562,
+          "x": 753,
+          "y": 181.28125
+        },
+        "name": "D-fructose 3D 구조",
+        "reference": {
+          "height": 282,
+          "width": 562,
+          "x": 753,
+          "y": 608.28125
+        },
+        "stage": {
+          "height": 427,
+          "width": 562,
+          "x": 753,
+          "y": 181.28125
+        }
+      }
+    ],
+    "viewport": {
+      "height": 1000,
+      "width": 1600
+    },
+    "label": "after-1600-compare-aldoseKetose",
+    "screenshot": "after-1600-compare-aldoseKetose.jpg"
+  },
+  {
+    "overflow": false,
+    "panes": [
+      {
+        "canvas": {
+          "height": 454,
+          "width": 919,
+          "x": 285.296875,
+          "y": 112.28125
+        },
+        "drawingBuffer": {
+          "height": 908,
+          "width": 1838
+        },
+        "heading": {
+          "height": 102.140625,
+          "width": 919.3125,
+          "x": 285.296875,
+          "y": 112.28125
+        },
+        "headingStyle": {
+          "pointerEvents": "none",
+          "position": "absolute"
+        },
+        "host": {
+          "height": 454,
+          "width": 919.3125,
+          "x": 285.296875,
+          "y": 112.28125
+        },
+        "name": "D-ribose 3D 구조",
+        "reference": {
+          "height": 282,
+          "width": 919.3125,
+          "x": 285.296875,
+          "y": 608.28125
+        },
+        "stage": {
+          "height": 496,
+          "width": 919.3125,
+          "x": 285.296875,
+          "y": 112.28125
+        }
+      }
+    ],
+    "viewport": {
+      "height": 1000,
+      "width": 1600
+    },
+    "label": "after-1600-BDR",
+    "screenshot": "after-1600-BDR.jpg"
+  },
+  {
+    "overflow": false,
+    "panes": [
+      {
+        "canvas": {
+          "height": 385,
+          "width": 562,
+          "x": 190,
+          "y": 181.28125
+        },
+        "drawingBuffer": {
+          "height": 770,
+          "width": 1124
+        },
+        "heading": {
+          "height": 121.671875,
+          "width": 562,
+          "x": 190,
+          "y": 181.28125
+        },
+        "headingStyle": {
+          "pointerEvents": "none",
+          "position": "absolute"
+        },
+        "host": {
+          "height": 385,
+          "width": 562,
+          "x": 190,
+          "y": 181.28125
+        },
+        "name": "D-ribose 3D 구조",
+        "reference": {
+          "height": 282,
+          "width": 562,
+          "x": 190,
+          "y": 608.28125
+        },
+        "stage": {
+          "height": 427,
+          "width": 562,
+          "x": 190,
+          "y": 181.28125
+        }
+      },
+      {
+        "canvas": {
+          "height": 385,
+          "width": 562,
+          "x": 753,
+          "y": 181.28125
+        },
+        "drawingBuffer": {
+          "height": 770,
+          "width": 1124
+        },
+        "heading": {
+          "height": 121.671875,
+          "width": 562,
+          "x": 753,
+          "y": 181.28125
+        },
+        "headingStyle": {
+          "pointerEvents": "none",
+          "position": "absolute"
+        },
+        "host": {
+          "height": 385,
+          "width": 562,
+          "x": 753,
+          "y": 181.28125
+        },
+        "name": "2-deoxy-D-ribose 3D 구조",
+        "reference": {
+          "height": 282,
+          "width": 562,
+          "x": 753,
+          "y": 608.28125
+        },
+        "stage": {
+          "height": 427,
+          "width": 562,
+          "x": 753,
+          "y": 181.28125
+        }
+      }
+    ],
+    "viewport": {
+      "height": 1000,
+      "width": 1600
+    },
+    "label": "after-1600-compare-deoxy",
+    "screenshot": "after-1600-compare-deoxy.jpg"
+  },
+  {
+    "overflow": false,
+    "panes": [
+      {
+        "canvas": {
+          "height": 385,
+          "width": 562,
+          "x": 190,
+          "y": 181.28125
+        },
+        "drawingBuffer": {
+          "height": 770,
+          "width": 1124
+        },
+        "heading": {
+          "height": 121.671875,
+          "width": 562,
+          "x": 190,
+          "y": 181.28125
+        },
+        "headingStyle": {
+          "pointerEvents": "none",
+          "position": "absolute"
+        },
+        "host": {
+          "height": 385,
+          "width": 562,
+          "x": 190,
+          "y": 181.28125
+        },
+        "name": "Maltose 3D 구조",
+        "reference": {
+          "height": 282,
+          "width": 562,
+          "x": 190,
+          "y": 608.28125
+        },
+        "stage": {
+          "height": 427,
+          "width": 562,
+          "x": 190,
+          "y": 181.28125
+        }
+      },
+      {
+        "canvas": {
+          "height": 385,
+          "width": 562,
+          "x": 753,
+          "y": 181.28125
+        },
+        "drawingBuffer": {
+          "height": 770,
+          "width": 1124
+        },
+        "heading": {
+          "height": 121.671875,
+          "width": 562,
+          "x": 753,
+          "y": 181.28125
+        },
+        "headingStyle": {
+          "pointerEvents": "none",
+          "position": "absolute"
+        },
+        "host": {
+          "height": 385,
+          "width": 562,
+          "x": 753,
+          "y": 181.28125
+        },
+        "name": "Cellobiose 3D 구조",
+        "reference": {
+          "height": 282,
+          "width": 562,
+          "x": 753,
+          "y": 608.28125
+        },
+        "stage": {
+          "height": 427,
+          "width": 562,
+          "x": 753,
+          "y": 181.28125
+        }
+      }
+    ],
+    "viewport": {
+      "height": 1000,
+      "width": 1600
+    },
+    "label": "after-1600-compare-linkage",
+    "screenshot": "after-1600-compare-linkage.jpg"
+  },
+  {
+    "overflow": false,
+    "panes": [
+      {
+        "canvas": {
+          "height": 385,
+          "width": 562,
+          "x": 190,
+          "y": 181.28125
+        },
+        "drawingBuffer": {
+          "height": 770,
+          "width": 1124
+        },
+        "heading": {
+          "height": 121.671875,
+          "width": 562,
+          "x": 190,
+          "y": 181.28125
+        },
+        "headingStyle": {
+          "pointerEvents": "none",
+          "position": "absolute"
+        },
+        "host": {
+          "height": 385,
+          "width": 562,
+          "x": 190,
+          "y": 181.28125
+        },
+        "name": "Cellobiose 3D 구조",
+        "reference": {
+          "height": 282,
+          "width": 562,
+          "x": 190,
+          "y": 608.28125
+        },
+        "stage": {
+          "height": 427,
+          "width": 562,
+          "x": 190,
+          "y": 181.28125
+        }
+      },
+      {
+        "canvas": {
+          "height": 385,
+          "width": 562,
+          "x": 753,
+          "y": 181.28125
+        },
+        "drawingBuffer": {
+          "height": 770,
+          "width": 1124
+        },
+        "heading": {
+          "height": 121.671875,
+          "width": 562,
+          "x": 753,
+          "y": 181.28125
+        },
+        "headingStyle": {
+          "pointerEvents": "none",
+          "position": "absolute"
+        },
+        "host": {
+          "height": 385,
+          "width": 562,
+          "x": 753,
+          "y": 181.28125
+        },
+        "name": "Lactose 3D 구조",
+        "reference": {
+          "height": 282,
+          "width": 562,
+          "x": 753,
+          "y": 608.28125
+        },
+        "stage": {
+          "height": 427,
+          "width": 562,
+          "x": 753,
+          "y": 181.28125
+        }
+      }
+    ],
+    "viewport": {
+      "height": 1000,
+      "width": 1600
+    },
+    "label": "after-1600-compare-disaccharideEpimer",
+    "screenshot": "after-1600-compare-disaccharideEpimer.jpg"
+  },
+  {
+    "overflow": false,
+    "panes": [
+      {
+        "canvas": {
+          "height": 454,
+          "width": 919,
+          "x": 285.296875,
+          "y": 112.28125
+        },
+        "drawingBuffer": {
+          "height": 908,
+          "width": 1838
+        },
+        "heading": {
+          "height": 102.140625,
+          "width": 919.3125,
+          "x": 285.296875,
+          "y": 112.28125
+        },
+        "headingStyle": {
+          "pointerEvents": "none",
+          "position": "absolute"
+        },
+        "host": {
+          "height": 454,
+          "width": 919.3125,
+          "x": 285.296875,
+          "y": 112.28125
+        },
+        "name": "Sucrose 3D 구조",
+        "reference": {
+          "height": 282,
+          "width": 919.3125,
+          "x": 285.296875,
+          "y": 608.28125
+        },
+        "stage": {
+          "height": 496,
+          "width": 919.3125,
+          "x": 285.296875,
+          "y": 112.28125
+        }
+      }
+    ],
+    "viewport": {
+      "height": 1000,
+      "width": 1600
+    },
+    "label": "after-1600-SUC",
+    "screenshot": "after-1600-SUC.jpg"
+  },
+  {
+    "overflow": false,
+    "panes": [
+      {
+        "canvas": {
+          "height": 385,
+          "width": 562,
+          "x": 190,
+          "y": 181.28125
+        },
+        "drawingBuffer": {
+          "height": 770,
+          "width": 1124
+        },
+        "heading": {
+          "height": 121.671875,
+          "width": 562,
+          "x": 190,
+          "y": 181.28125
+        },
+        "headingStyle": {
+          "pointerEvents": "none",
+          "position": "absolute"
+        },
+        "host": {
+          "height": 385,
+          "width": 562,
+          "x": 190,
+          "y": 181.28125
+        },
+        "name": "Maltose 3D 구조",
+        "reference": {
+          "height": 282,
+          "width": 562,
+          "x": 190,
+          "y": 608.28125
+        },
+        "stage": {
+          "height": 427,
+          "width": 562,
+          "x": 190,
+          "y": 181.28125
+        }
+      },
+      {
+        "canvas": {
+          "height": 385,
+          "width": 562,
+          "x": 753,
+          "y": 181.28125
+        },
+        "drawingBuffer": {
+          "height": 770,
+          "width": 1124
+        },
+        "heading": {
+          "height": 121.671875,
+          "width": 562,
+          "x": 753,
+          "y": 181.28125
+        },
+        "headingStyle": {
+          "pointerEvents": "none",
+          "position": "absolute"
+        },
+        "host": {
+          "height": 385,
+          "width": 562,
+          "x": 753,
+          "y": 181.28125
+        },
+        "name": "Sucrose 3D 구조",
+        "reference": {
+          "height": 282,
+          "width": 562,
+          "x": 753,
+          "y": 608.28125
+        },
+        "stage": {
+          "height": 427,
+          "width": 562,
+          "x": 753,
+          "y": 181.28125
+        }
+      }
+    ],
+    "viewport": {
+      "height": 1000,
+      "width": 1600
+    },
+    "label": "after-1600-compare-reducingDisaccharide",
+    "screenshot": "after-1600-compare-reducingDisaccharide.jpg"
+  },
+  {
+    "overflow": false,
+    "panes": [
+      {
+        "canvas": {
+          "height": 385,
+          "width": 562,
+          "x": 190,
+          "y": 181.28125
+        },
+        "drawingBuffer": {
+          "height": 770,
+          "width": 1124
+        },
+        "heading": {
+          "height": 121.671875,
+          "width": 562,
+          "x": 190,
+          "y": 181.28125
+        },
+        "headingStyle": {
+          "pointerEvents": "none",
+          "position": "absolute"
+        },
+        "host": {
+          "height": 385,
+          "width": 562,
+          "x": 190,
+          "y": 181.28125
+        },
+        "name": "Amylose 3D 구조",
+        "reference": {
+          "height": 282,
+          "width": 562,
+          "x": 190,
+          "y": 608.28125
+        },
+        "stage": {
+          "height": 427,
+          "width": 562,
+          "x": 190,
+          "y": 181.28125
+        }
+      },
+      {
+        "canvas": {
+          "height": 385,
+          "width": 562,
+          "x": 753,
+          "y": 181.28125
+        },
+        "drawingBuffer": {
+          "height": 770,
+          "width": 1124
+        },
+        "heading": {
+          "height": 121.671875,
+          "width": 562,
+          "x": 753,
+          "y": 181.28125
+        },
+        "headingStyle": {
+          "pointerEvents": "none",
+          "position": "absolute"
+        },
+        "host": {
+          "height": 385,
+          "width": 562,
+          "x": 753,
+          "y": 181.28125
+        },
+        "name": "Cellulose 3D 구조",
+        "reference": {
+          "height": 282,
+          "width": 562,
+          "x": 753,
+          "y": 608.28125
+        },
+        "stage": {
+          "height": 427,
+          "width": 562,
+          "x": 753,
+          "y": 181.28125
+        }
+      }
+    ],
+    "viewport": {
+      "height": 1000,
+      "width": 1600
+    },
+    "label": "after-1600-compare-glucan",
+    "screenshot": "after-1600-compare-glucan.jpg"
+  },
+  {
+    "overflow": false,
+    "panes": [
+      {
+        "canvas": {
+          "height": 385,
+          "width": 562,
+          "x": 190,
+          "y": 181.28125
+        },
+        "drawingBuffer": {
+          "height": 770,
+          "width": 1124
+        },
+        "heading": {
+          "height": 121.671875,
+          "width": 562,
+          "x": 190,
+          "y": 181.28125
+        },
+        "headingStyle": {
+          "pointerEvents": "none",
+          "position": "absolute"
+        },
+        "host": {
+          "height": 385,
+          "width": 562,
+          "x": 190,
+          "y": 181.28125
+        },
+        "name": "Amylopectin 3D 구조",
+        "reference": {
+          "height": 282,
+          "width": 562,
+          "x": 190,
+          "y": 608.28125
+        },
+        "stage": {
+          "height": 427,
+          "width": 562,
+          "x": 190,
+          "y": 181.28125
+        }
+      },
+      {
+        "canvas": {
+          "height": 385,
+          "width": 562,
+          "x": 753,
+          "y": 181.28125
+        },
+        "drawingBuffer": {
+          "height": 770,
+          "width": 1124
+        },
+        "heading": {
+          "height": 121.671875,
+          "width": 562,
+          "x": 753,
+          "y": 181.28125
+        },
+        "headingStyle": {
+          "pointerEvents": "none",
+          "position": "absolute"
+        },
+        "host": {
+          "height": 385,
+          "width": 562,
+          "x": 753,
+          "y": 181.28125
+        },
+        "name": "Glycogen 3D 구조",
+        "reference": {
+          "height": 282,
+          "width": 562,
+          "x": 753,
+          "y": 608.28125
+        },
+        "stage": {
+          "height": 427,
+          "width": 562,
+          "x": 753,
+          "y": 181.28125
+        }
+      }
+    ],
+    "viewport": {
+      "height": 1000,
+      "width": 1600
+    },
+    "label": "after-1600-compare-branching",
+    "screenshot": "after-1600-compare-branching.jpg"
+  },
+  {
+    "overflow": false,
+    "panes": [
+      {
+        "canvas": {
+          "height": 476,
+          "width": 819,
+          "x": 190,
+          "y": 112.28125
+        },
+        "drawingBuffer": {
+          "height": 952,
+          "width": 1638
+        },
+        "heading": {
+          "height": 102.140625,
+          "width": 819,
+          "x": 190,
+          "y": 112.28125
+        },
+        "headingStyle": {
+          "pointerEvents": "none",
+          "position": "absolute"
+        },
+        "host": {
+          "height": 476,
+          "width": 819,
+          "x": 190,
+          "y": 112.28125
+        },
+        "name": "D-fructose 3D 구조",
+        "reference": {
+          "height": 282,
+          "width": 819,
+          "x": 190,
+          "y": 630.28125
+        },
+        "stage": {
+          "height": 518,
+          "width": 819,
+          "x": 190,
+          "y": 112.28125
+        }
+      }
+    ],
+    "viewport": {
+      "height": 900,
+      "width": 1024
+    },
+    "label": "after-1024-FRU",
+    "screenshot": "after-1024-FRU.jpg"
+  },
+  {
+    "overflow": false,
+    "panes": [
+      {
+        "canvas": {
+          "height": 407,
+          "width": 417,
+          "x": 175,
+          "y": 181.28125
+        },
+        "drawingBuffer": {
+          "height": 814,
+          "width": 834
+        },
+        "heading": {
+          "height": 117.671875,
+          "width": 416.5,
+          "x": 175,
+          "y": 181.28125
+        },
+        "headingStyle": {
+          "pointerEvents": "none",
+          "position": "absolute"
+        },
+        "host": {
+          "height": 407,
+          "width": 416.5,
+          "x": 175,
+          "y": 181.28125
+        },
+        "name": "β-D-glucose 3D 구조",
+        "reference": {
+          "height": 282,
+          "width": 416.5,
+          "x": 175,
+          "y": 630.28125
+        },
+        "stage": {
+          "height": 449,
+          "width": 416.5,
+          "x": 175,
+          "y": 181.28125
+        }
+      },
+      {
+        "canvas": {
+          "height": 407,
+          "width": 417,
+          "x": 592.5,
+          "y": 181.28125
+        },
+        "drawingBuffer": {
+          "height": 814,
+          "width": 834
+        },
+        "heading": {
+          "height": 117.671875,
+          "width": 416.5,
+          "x": 592.5,
+          "y": 181.28125
+        },
+        "headingStyle": {
+          "pointerEvents": "none",
+          "position": "absolute"
+        },
+        "host": {
+          "height": 407,
+          "width": 416.5,
+          "x": 592.5,
+          "y": 181.28125
+        },
+        "name": "D-fructose 3D 구조",
+        "reference": {
+          "height": 282,
+          "width": 416.5,
+          "x": 592.5,
+          "y": 630.28125
+        },
+        "stage": {
+          "height": 449,
+          "width": 416.5,
+          "x": 592.5,
+          "y": 181.28125
+        }
+      }
+    ],
+    "viewport": {
+      "height": 900,
+      "width": 1024
+    },
+    "label": "after-1024-compare-aldoseKetose",
+    "screenshot": "after-1024-compare-aldoseKetose.jpg"
+  },
+  {
+    "overflow": false,
+    "panes": [
+      {
+        "canvas": {
+          "height": 476,
+          "width": 753,
+          "x": 0,
+          "y": 220.671875
+        },
+        "drawingBuffer": {
+          "height": 952,
+          "width": 1506
+        },
+        "heading": {
+          "height": 117.03125,
+          "width": 753,
+          "x": 0,
+          "y": 220.671875
+        },
+        "headingStyle": {
+          "pointerEvents": "none",
+          "position": "absolute"
+        },
+        "host": {
+          "height": 476,
+          "width": 753,
+          "x": 0,
+          "y": 220.671875
+        },
+        "name": "Sucrose 3D 구조",
+        "reference": {
+          "height": 282,
+          "width": 753,
+          "x": 0,
+          "y": 738.671875
+        },
+        "stage": {
+          "height": 518,
+          "width": 753,
+          "x": 0,
+          "y": 220.671875
+        }
+      }
+    ],
+    "viewport": {
+      "height": 1024,
+      "width": 768
+    },
+    "label": "after-768-SUC",
+    "screenshot": "after-768-SUC.jpg"
+  },
+  {
+    "overflow": false,
+    "panes": [
+      {
+        "canvas": {
+          "height": 407,
+          "width": 376,
+          "x": 0,
+          "y": 274.671875
+        },
+        "drawingBuffer": {
+          "height": 814,
+          "width": 752
+        },
+        "heading": {
+          "height": 114.078125,
+          "width": 376,
+          "x": 0,
+          "y": 274.671875
+        },
+        "headingStyle": {
+          "pointerEvents": "none",
+          "position": "absolute"
+        },
+        "host": {
+          "height": 407,
+          "width": 376,
+          "x": 0,
+          "y": 274.671875
+        },
+        "name": "Maltose 3D 구조",
+        "reference": {
+          "height": 282,
+          "width": 376,
+          "x": 0,
+          "y": 723.671875
+        },
+        "stage": {
+          "height": 449,
+          "width": 376,
+          "x": 0,
+          "y": 274.671875
+        }
+      },
+      {
+        "canvas": {
+          "height": 407,
+          "width": 376,
+          "x": 377,
+          "y": 274.671875
+        },
+        "drawingBuffer": {
+          "height": 814,
+          "width": 752
+        },
+        "heading": {
+          "height": 114.078125,
+          "width": 376,
+          "x": 377,
+          "y": 274.671875
+        },
+        "headingStyle": {
+          "pointerEvents": "none",
+          "position": "absolute"
+        },
+        "host": {
+          "height": 407,
+          "width": 376,
+          "x": 377,
+          "y": 274.671875
+        },
+        "name": "Sucrose 3D 구조",
+        "reference": {
+          "height": 282,
+          "width": 376,
+          "x": 377,
+          "y": 723.671875
+        },
+        "stage": {
+          "height": 449,
+          "width": 376,
+          "x": 377,
+          "y": 274.671875
+        }
+      }
+    ],
+    "viewport": {
+      "height": 1024,
+      "width": 768
+    },
+    "label": "after-768-compare-reducingDisaccharide",
+    "screenshot": "after-768-compare-reducingDisaccharide.jpg"
+  },
+  {
+    "overflow": false,
+    "panes": [
+      {
+        "canvas": {
+          "height": 358,
+          "width": 375,
+          "x": 0,
+          "y": 356.859375
+        },
+        "drawingBuffer": {
+          "height": 716,
+          "width": 750
+        },
+        "heading": {
+          "height": 117.03125,
+          "width": 375,
+          "x": 0,
+          "y": 356.859375
+        },
+        "headingStyle": {
+          "pointerEvents": "none",
+          "position": "absolute"
+        },
+        "host": {
+          "height": 358,
+          "width": 375,
+          "x": 0,
+          "y": 356.859375
+        },
+        "name": "β-D-glucose 3D 구조",
+        "reference": {
+          "height": 287,
+          "width": 375,
+          "x": 0,
+          "y": 756.859375
+        },
+        "stage": {
+          "height": 400,
+          "width": 375,
+          "x": 0,
+          "y": 356.859375
+        }
+      }
+    ],
+    "viewport": {
+      "height": 844,
+      "width": 390
+    },
+    "label": "after-390-BGC",
+    "screenshot": "after-390-BGC.jpg"
+  },
+  {
+    "overflow": false,
+    "panes": [
+      {
+        "canvas": {
+          "height": 358,
+          "width": 375,
+          "x": 0,
+          "y": 404.859375
+        },
+        "drawingBuffer": {
+          "height": 716,
+          "width": 750
+        },
+        "heading": {
+          "height": 114.078125,
+          "width": 375,
+          "x": 0,
+          "y": 404.859375
+        },
+        "headingStyle": {
+          "pointerEvents": "none",
+          "position": "absolute"
+        },
+        "host": {
+          "height": 358,
+          "width": 375,
+          "x": 0,
+          "y": 404.859375
+        },
+        "name": "α-D-glucose 3D 구조",
+        "reference": {
+          "height": 287,
+          "width": 375,
+          "x": 0,
+          "y": 804.859375
+        },
+        "stage": {
+          "height": 400,
+          "width": 375,
+          "x": 0,
+          "y": 404.859375
+        }
+      },
+      {
+        "canvas": {
+          "height": 358,
+          "width": 375,
+          "x": 0,
+          "y": 1092.859375
+        },
+        "drawingBuffer": {
+          "height": 716,
+          "width": 750
+        },
+        "heading": {
+          "height": 114.078125,
+          "width": 375,
+          "x": 0,
+          "y": 1092.859375
+        },
+        "headingStyle": {
+          "pointerEvents": "none",
+          "position": "absolute"
+        },
+        "host": {
+          "height": 358,
+          "width": 375,
+          "x": 0,
+          "y": 1092.859375
+        },
+        "name": "β-D-glucose 3D 구조",
+        "reference": {
+          "height": 287,
+          "width": 375,
+          "x": 0,
+          "y": 1492.859375
+        },
+        "stage": {
+          "height": 400,
+          "width": 375,
+          "x": 0,
+          "y": 1092.859375
+        }
+      }
+    ],
+    "viewport": {
+      "height": 844,
+      "width": 390
+    },
+    "label": "after-390-compare-anomer",
+    "screenshot": "after-390-compare-anomer.jpg"
+  },
+  {
+    "overflow": false,
+    "panes": [
+      {
+        "canvas": {
+          "height": 358,
+          "width": 375,
+          "x": 0,
+          "y": 404.859375
+        },
+        "drawingBuffer": {
+          "height": 716,
+          "width": 750
+        },
+        "heading": {
+          "height": 114.078125,
+          "width": 375,
+          "x": 0,
+          "y": 404.859375
+        },
+        "headingStyle": {
+          "pointerEvents": "none",
+          "position": "absolute"
+        },
+        "host": {
+          "height": 358,
+          "width": 375,
+          "x": 0,
+          "y": 404.859375
+        },
+        "name": "D-ribose 3D 구조",
+        "reference": {
+          "height": 287,
+          "width": 375,
+          "x": 0,
+          "y": 804.859375
+        },
+        "stage": {
+          "height": 400,
+          "width": 375,
+          "x": 0,
+          "y": 404.859375
+        }
+      },
+      {
+        "canvas": {
+          "height": 358,
+          "width": 375,
+          "x": 0,
+          "y": 1092.859375
+        },
+        "drawingBuffer": {
+          "height": 716,
+          "width": 750
+        },
+        "heading": {
+          "height": 114.078125,
+          "width": 375,
+          "x": 0,
+          "y": 1092.859375
+        },
+        "headingStyle": {
+          "pointerEvents": "none",
+          "position": "absolute"
+        },
+        "host": {
+          "height": 358,
+          "width": 375,
+          "x": 0,
+          "y": 1092.859375
+        },
+        "name": "2-deoxy-D-ribose 3D 구조",
+        "reference": {
+          "height": 287,
+          "width": 375,
+          "x": 0,
+          "y": 1492.859375
+        },
+        "stage": {
+          "height": 400,
+          "width": 375,
+          "x": 0,
+          "y": 1092.859375
+        }
+      }
+    ],
+    "viewport": {
+      "height": 844,
+      "width": 390
+    },
+    "label": "after-390-compare-deoxy",
+    "screenshot": "after-390-compare-deoxy.jpg"
+  },
+  {
+    "overflow": false,
+    "panes": [
+      {
+        "canvas": {
+          "height": 358,
+          "width": 375,
+          "x": 0,
+          "y": 404.859375
+        },
+        "drawingBuffer": {
+          "height": 716,
+          "width": 750
+        },
+        "heading": {
+          "height": 114.078125,
+          "width": 375,
+          "x": 0,
+          "y": 404.859375
+        },
+        "headingStyle": {
+          "pointerEvents": "none",
+          "position": "absolute"
+        },
+        "host": {
+          "height": 358,
+          "width": 375,
+          "x": 0,
+          "y": 404.859375
+        },
+        "name": "Cellobiose 3D 구조",
+        "reference": {
+          "height": 287,
+          "width": 375,
+          "x": 0,
+          "y": 804.859375
+        },
+        "stage": {
+          "height": 400,
+          "width": 375,
+          "x": 0,
+          "y": 404.859375
+        }
+      },
+      {
+        "canvas": {
+          "height": 358,
+          "width": 375,
+          "x": 0,
+          "y": 1092.859375
+        },
+        "drawingBuffer": {
+          "height": 716,
+          "width": 750
+        },
+        "heading": {
+          "height": 114.078125,
+          "width": 375,
+          "x": 0,
+          "y": 1092.859375
+        },
+        "headingStyle": {
+          "pointerEvents": "none",
+          "position": "absolute"
+        },
+        "host": {
+          "height": 358,
+          "width": 375,
+          "x": 0,
+          "y": 1092.859375
+        },
+        "name": "Lactose 3D 구조",
+        "reference": {
+          "height": 287,
+          "width": 375,
+          "x": 0,
+          "y": 1492.859375
+        },
+        "stage": {
+          "height": 400,
+          "width": 375,
+          "x": 0,
+          "y": 1092.859375
+        }
+      }
+    ],
+    "viewport": {
+      "height": 844,
+      "width": 390
+    },
+    "label": "after-390-compare-disaccharideEpimer",
+    "screenshot": "after-390-compare-disaccharideEpimer.jpg"
+  },
+  {
+    "overflow": false,
+    "panes": [
+      {
+        "canvas": {
+          "height": 358,
+          "width": 375,
+          "x": 0,
+          "y": 300.859375
+        },
+        "drawingBuffer": {
+          "height": 716,
+          "width": 750
+        },
+        "heading": {
+          "height": 117.03125,
+          "width": 375,
+          "x": 0,
+          "y": 300.859375
+        },
+        "headingStyle": {
+          "pointerEvents": "none",
+          "position": "absolute"
+        },
+        "host": {
+          "height": 358,
+          "width": 375,
+          "x": 0,
+          "y": 300.859375
+        },
+        "name": "Sucrose 3D 구조",
+        "reference": {
+          "height": 287,
+          "width": 375,
+          "x": 0,
+          "y": 700.859375
+        },
+        "stage": {
+          "height": 400,
+          "width": 375,
+          "x": 0,
+          "y": 300.859375
+        }
+      }
+    ],
+    "viewport": {
+      "height": 844,
+      "width": 390
+    },
+    "label": "after-390-SUC",
+    "screenshot": "after-390-SUC.jpg"
+  },
+  {
+    "overflow": false,
+    "panes": [
+      {
+        "canvas": {
+          "height": 385,
+          "width": 562,
+          "x": 190,
+          "y": 181.28125
+        },
+        "drawingBuffer": {
+          "height": 770,
+          "width": 1124
+        },
+        "heading": {
+          "height": 121.671875,
+          "width": 562,
+          "x": 190,
+          "y": 181.28125
+        },
+        "headingStyle": {
+          "pointerEvents": "none",
+          "position": "absolute"
+        },
+        "host": {
+          "height": 385,
+          "width": 562,
+          "x": 190,
+          "y": 181.28125
+        },
+        "name": "α-D-glucose 3D 구조",
+        "reference": {
+          "height": 282,
+          "width": 562,
+          "x": 190,
+          "y": 608.28125
+        },
+        "stage": {
+          "height": 427,
+          "width": 562,
+          "x": 190,
+          "y": 181.28125
+        }
+      },
+      {
+        "canvas": {
+          "height": 385,
+          "width": 562,
+          "x": 753,
+          "y": 181.28125
+        },
+        "drawingBuffer": {
+          "height": 770,
+          "width": 1124
+        },
+        "heading": {
+          "height": 121.671875,
+          "width": 562,
+          "x": 753,
+          "y": 181.28125
+        },
+        "headingStyle": {
+          "pointerEvents": "none",
+          "position": "absolute"
+        },
+        "host": {
+          "height": 385,
+          "width": 562,
+          "x": 753,
+          "y": 181.28125
+        },
+        "name": "β-D-glucose 3D 구조",
+        "reference": {
+          "height": 282,
+          "width": 562,
+          "x": 753,
+          "y": 608.28125
+        },
+        "stage": {
+          "height": 427,
+          "width": 562,
+          "x": 753,
+          "y": 181.28125
+        }
+      }
+    ],
+    "viewport": {
+      "height": 1000,
+      "width": 1600
+    },
+    "label": "interaction-heading-drag-sync",
+    "screenshot": "interaction-heading-drag-sync.jpg"
+  },
+  {
+    "overflow": false,
+    "panes": [
+      {
+        "canvas": {
+          "height": 385,
+          "width": 562,
+          "x": 190,
+          "y": 181.28125
+        },
+        "drawingBuffer": {
+          "height": 770,
+          "width": 1124
+        },
+        "heading": {
+          "height": 121.671875,
+          "width": 562,
+          "x": 190,
+          "y": 181.28125
+        },
+        "headingStyle": {
+          "pointerEvents": "none",
+          "position": "absolute"
+        },
+        "host": {
+          "height": 385,
+          "width": 562,
+          "x": 190,
+          "y": 181.28125
+        },
+        "name": "α-D-glucose 3D 구조",
+        "reference": {
+          "height": 282,
+          "width": 562,
+          "x": 190,
+          "y": 608.28125
+        },
+        "stage": {
+          "height": 427,
+          "width": 562,
+          "x": 190,
+          "y": 181.28125
+        }
+      },
+      {
+        "canvas": {
+          "height": 385,
+          "width": 562,
+          "x": 753,
+          "y": 181.28125
+        },
+        "drawingBuffer": {
+          "height": 770,
+          "width": 1124
+        },
+        "heading": {
+          "height": 121.671875,
+          "width": 562,
+          "x": 753,
+          "y": 181.28125
+        },
+        "headingStyle": {
+          "pointerEvents": "none",
+          "position": "absolute"
+        },
+        "host": {
+          "height": 385,
+          "width": 562,
+          "x": 753,
+          "y": 181.28125
+        },
+        "name": "β-D-glucose 3D 구조",
+        "reference": {
+          "height": 282,
+          "width": 562,
+          "x": 753,
+          "y": 608.28125
+        },
+        "stage": {
+          "height": 427,
+          "width": 562,
+          "x": 753,
+          "y": 181.28125
+        }
+      }
+    ],
+    "viewport": {
+      "height": 1000,
+      "width": 1600
+    },
+    "label": "interaction-sync-off-before",
+    "screenshot": "interaction-sync-off-before.jpg"
+  },
+  {
+    "overflow": false,
+    "panes": [
+      {
+        "canvas": {
+          "height": 385,
+          "width": 570,
+          "x": 190,
+          "y": 181.28125
+        },
+        "drawingBuffer": {
+          "height": 770,
+          "width": 1140
+        },
+        "heading": {
+          "height": 121.671875,
+          "width": 569.5,
+          "x": 190,
+          "y": 181.28125
+        },
+        "headingStyle": {
+          "pointerEvents": "none",
+          "position": "absolute"
+        },
+        "host": {
+          "height": 385,
+          "width": 569.5,
+          "x": 190,
+          "y": 181.28125
+        },
+        "name": "α-D-glucose 3D 구조",
+        "reference": {
+          "height": 282,
+          "width": 569.5,
+          "x": 190,
+          "y": 608.28125
+        },
+        "stage": {
+          "height": 427,
+          "width": 569.5,
+          "x": 190,
+          "y": 181.28125
+        }
+      },
+      {
+        "canvas": {
+          "height": 385,
+          "width": 570,
+          "x": 760.5,
+          "y": 181.28125
+        },
+        "drawingBuffer": {
+          "height": 770,
+          "width": 1140
+        },
+        "heading": {
+          "height": 121.671875,
+          "width": 569.5,
+          "x": 760.5,
+          "y": 181.28125
+        },
+        "headingStyle": {
+          "pointerEvents": "none",
+          "position": "absolute"
+        },
+        "host": {
+          "height": 385,
+          "width": 569.5,
+          "x": 760.5,
+          "y": 181.28125
+        },
+        "name": "β-D-glucose 3D 구조",
+        "reference": {
+          "height": 282,
+          "width": 569.5,
+          "x": 760.5,
+          "y": 608.28125
+        },
+        "stage": {
+          "height": 427,
+          "width": 569.5,
+          "x": 760.5,
+          "y": 181.28125
+        }
+      }
+    ],
+    "viewport": {
+      "height": 1000,
+      "width": 1600
+    },
+    "label": "interaction-drag-independent",
+    "screenshot": "interaction-drag-independent.jpg"
+  },
+  {
+    "overflow": false,
+    "panes": [
+      {
+        "canvas": {
+          "height": 385,
+          "width": 562,
+          "x": 190,
+          "y": 181.28125
+        },
+        "drawingBuffer": {
+          "height": 770,
+          "width": 1124
+        },
+        "heading": {
+          "height": 121.671875,
+          "width": 562,
+          "x": 190,
+          "y": 181.28125
+        },
+        "headingStyle": {
+          "pointerEvents": "none",
+          "position": "absolute"
+        },
+        "host": {
+          "height": 385,
+          "width": 562,
+          "x": 190,
+          "y": 181.28125
+        },
+        "name": "α-D-glucose 3D 구조",
+        "reference": {
+          "height": 282,
+          "width": 562,
+          "x": 190,
+          "y": 608.28125
+        },
+        "stage": {
+          "height": 427,
+          "width": 562,
+          "x": 190,
+          "y": 181.28125
+        }
+      },
+      {
+        "canvas": {
+          "height": 385,
+          "width": 562,
+          "x": 753,
+          "y": 181.28125
+        },
+        "drawingBuffer": {
+          "height": 770,
+          "width": 1124
+        },
+        "heading": {
+          "height": 121.671875,
+          "width": 562,
+          "x": 753,
+          "y": 181.28125
+        },
+        "headingStyle": {
+          "pointerEvents": "none",
+          "position": "absolute"
+        },
+        "host": {
+          "height": 385,
+          "width": 562,
+          "x": 753,
+          "y": 181.28125
+        },
+        "name": "β-D-glucose 3D 구조",
+        "reference": {
+          "height": 282,
+          "width": 562,
+          "x": 753,
+          "y": 608.28125
+        },
+        "stage": {
+          "height": 427,
+          "width": 562,
+          "x": 753,
+          "y": 181.28125
+        }
+      }
+    ],
+    "viewport": {
+      "height": 1000,
+      "width": 1600
+    },
+    "label": "interaction-wheel",
+    "screenshot": "interaction-wheel.jpg"
+  },
+  {
+    "overflow": false,
+    "panes": [
+      {
+        "canvas": {
+          "height": 385,
+          "width": 570,
+          "x": 190,
+          "y": 181.28125
+        },
+        "drawingBuffer": {
+          "height": 770,
+          "width": 1140
+        },
+        "heading": {
+          "height": 121.671875,
+          "width": 569.5,
+          "x": 190,
+          "y": 181.28125
+        },
+        "headingStyle": {
+          "pointerEvents": "none",
+          "position": "absolute"
+        },
+        "host": {
+          "height": 385,
+          "width": 569.5,
+          "x": 190,
+          "y": 181.28125
+        },
+        "name": "α-D-glucose 3D 구조",
+        "reference": {
+          "height": 282,
+          "width": 569.5,
+          "x": 190,
+          "y": 608.28125
+        },
+        "stage": {
+          "height": 427,
+          "width": 569.5,
+          "x": 190,
+          "y": 181.28125
+        }
+      },
+      {
+        "canvas": {
+          "height": 385,
+          "width": 570,
+          "x": 760.5,
+          "y": 181.28125
+        },
+        "drawingBuffer": {
+          "height": 770,
+          "width": 1140
+        },
+        "heading": {
+          "height": 121.671875,
+          "width": 569.5,
+          "x": 760.5,
+          "y": 181.28125
+        },
+        "headingStyle": {
+          "pointerEvents": "none",
+          "position": "absolute"
+        },
+        "host": {
+          "height": 385,
+          "width": 569.5,
+          "x": 760.5,
+          "y": 181.28125
+        },
+        "name": "β-D-glucose 3D 구조",
+        "reference": {
+          "height": 282,
+          "width": 569.5,
+          "x": 760.5,
+          "y": 608.28125
+        },
+        "stage": {
+          "height": 427,
+          "width": 569.5,
+          "x": 760.5,
+          "y": 181.28125
+        }
+      }
+    ],
+    "viewport": {
+      "height": 1000,
+      "width": 1600
+    },
+    "label": "interaction-reset",
+    "screenshot": "interaction-reset.jpg"
+  },
+  {
+    "overflow": false,
+    "panes": [
+      {
+        "canvas": {
+          "height": 385,
+          "width": 562,
+          "x": 190,
+          "y": 181.28125
+        },
+        "drawingBuffer": {
+          "height": 770,
+          "width": 1124
+        },
+        "heading": {
+          "height": 121.671875,
+          "width": 562,
+          "x": 190,
+          "y": 181.28125
+        },
+        "headingStyle": {
+          "pointerEvents": "none",
+          "position": "absolute"
+        },
+        "host": {
+          "height": 385,
+          "width": 562,
+          "x": 190,
+          "y": 181.28125
+        },
+        "name": "α-D-glucose 3D 구조",
+        "reference": {
+          "height": 282,
+          "width": 562,
+          "x": 190,
+          "y": 608.28125
+        },
+        "stage": {
+          "height": 427,
+          "width": 562,
+          "x": 190,
+          "y": 181.28125
+        }
+      },
+      {
+        "canvas": {
+          "height": 385,
+          "width": 562,
+          "x": 753,
+          "y": 181.28125
+        },
+        "drawingBuffer": {
+          "height": 770,
+          "width": 1124
+        },
+        "heading": {
+          "height": 121.671875,
+          "width": 562,
+          "x": 753,
+          "y": 181.28125
+        },
+        "headingStyle": {
+          "pointerEvents": "none",
+          "position": "absolute"
+        },
+        "host": {
+          "height": 385,
+          "width": 562,
+          "x": 753,
+          "y": 181.28125
+        },
+        "name": "β-D-glucose 3D 구조",
+        "reference": {
+          "height": 282,
+          "width": 562,
+          "x": 753,
+          "y": 608.28125
+        },
+        "stage": {
+          "height": 427,
+          "width": 562,
+          "x": 753,
+          "y": 181.28125
+        }
+      }
+    ],
+    "viewport": {
+      "height": 1000,
+      "width": 1600
+    },
+    "label": "interaction-auto-1",
+    "screenshot": "interaction-auto-1.jpg"
+  },
+  {
+    "overflow": false,
+    "panes": [
+      {
+        "canvas": {
+          "height": 385,
+          "width": 570,
+          "x": 190,
+          "y": 181.28125
+        },
+        "drawingBuffer": {
+          "height": 770,
+          "width": 1140
+        },
+        "heading": {
+          "height": 121.671875,
+          "width": 569.5,
+          "x": 190,
+          "y": 181.28125
+        },
+        "headingStyle": {
+          "pointerEvents": "none",
+          "position": "absolute"
+        },
+        "host": {
+          "height": 385,
+          "width": 569.5,
+          "x": 190,
+          "y": 181.28125
+        },
+        "name": "α-D-glucose 3D 구조",
+        "reference": {
+          "height": 282,
+          "width": 569.5,
+          "x": 190,
+          "y": 608.28125
+        },
+        "stage": {
+          "height": 427,
+          "width": 569.5,
+          "x": 190,
+          "y": 181.28125
+        }
+      },
+      {
+        "canvas": {
+          "height": 385,
+          "width": 570,
+          "x": 760.5,
+          "y": 181.28125
+        },
+        "drawingBuffer": {
+          "height": 770,
+          "width": 1140
+        },
+        "heading": {
+          "height": 121.671875,
+          "width": 569.5,
+          "x": 760.5,
+          "y": 181.28125
+        },
+        "headingStyle": {
+          "pointerEvents": "none",
+          "position": "absolute"
+        },
+        "host": {
+          "height": 385,
+          "width": 569.5,
+          "x": 760.5,
+          "y": 181.28125
+        },
+        "name": "β-D-glucose 3D 구조",
+        "reference": {
+          "height": 282,
+          "width": 569.5,
+          "x": 760.5,
+          "y": 608.28125
+        },
+        "stage": {
+          "height": 427,
+          "width": 569.5,
+          "x": 760.5,
+          "y": 181.28125
+        }
+      }
+    ],
+    "viewport": {
+      "height": 1000,
+      "width": 1600
+    },
+    "label": "interaction-auto-2",
+    "screenshot": "interaction-auto-2.jpg"
+  },
+  {
+    "overflow": false,
+    "panes": [
+      {
+        "canvas": {
+          "height": 300,
+          "width": 562,
+          "x": 190,
+          "y": 181.28125
+        },
+        "drawingBuffer": {
+          "height": 600,
+          "width": 1124
+        },
+        "heading": {
+          "height": 121.671875,
+          "width": 562,
+          "x": 190,
+          "y": 181.28125
+        },
+        "headingStyle": {
+          "pointerEvents": "none",
+          "position": "absolute"
+        },
+        "host": {
+          "height": 299.8125,
+          "width": 562,
+          "x": 190,
+          "y": 181.28125
+        },
+        "name": "α-D-glucose 3D 구조",
+        "reference": {
+          "height": 282,
+          "width": 562,
+          "x": 190,
+          "y": 523.09375
+        },
+        "stage": {
+          "height": 341.8125,
+          "width": 562,
+          "x": 190,
+          "y": 181.28125
+        }
+      },
+      {
+        "canvas": {
+          "height": 300,
+          "width": 562,
+          "x": 753,
+          "y": 181.28125
+        },
+        "drawingBuffer": {
+          "height": 600,
+          "width": 1124
+        },
+        "heading": {
+          "height": 121.671875,
+          "width": 562,
+          "x": 753,
+          "y": 181.28125
+        },
+        "headingStyle": {
+          "pointerEvents": "none",
+          "position": "absolute"
+        },
+        "host": {
+          "height": 299.8125,
+          "width": 562,
+          "x": 753,
+          "y": 181.28125
+        },
+        "name": "β-D-glucose 3D 구조",
+        "reference": {
+          "height": 282,
+          "width": 562,
+          "x": 753,
+          "y": 523.09375
+        },
+        "stage": {
+          "height": 341.8125,
+          "width": 562,
+          "x": 753,
+          "y": 181.28125
+        }
+      }
+    ],
+    "viewport": {
+      "height": 1000,
+      "width": 1600
+    },
+    "label": "interaction-anomer-all-options",
+    "screenshot": "interaction-anomer-all-options.jpg"
+  },
+  {
+    "overflow": false,
+    "panes": [
+      {
+        "canvas": {
+          "height": 300,
+          "width": 562,
+          "x": 190,
+          "y": 181.28125
+        },
+        "drawingBuffer": {
+          "height": 600,
+          "width": 1124
+        },
+        "heading": {
+          "height": 121.671875,
+          "width": 562,
+          "x": 190,
+          "y": 181.28125
+        },
+        "headingStyle": {
+          "pointerEvents": "none",
+          "position": "absolute"
+        },
+        "host": {
+          "height": 299.8125,
+          "width": 562,
+          "x": 190,
+          "y": 181.28125
+        },
+        "name": "α-D-glucose 3D 구조",
+        "reference": {
+          "height": 282,
+          "width": 562,
+          "x": 190,
+          "y": 523.09375
+        },
+        "stage": {
+          "height": 341.8125,
+          "width": 562,
+          "x": 190,
+          "y": 181.28125
+        }
+      },
+      {
+        "canvas": {
+          "height": 300,
+          "width": 562,
+          "x": 753,
+          "y": 181.28125
+        },
+        "drawingBuffer": {
+          "height": 600,
+          "width": 1124
+        },
+        "heading": {
+          "height": 121.671875,
+          "width": 562,
+          "x": 753,
+          "y": 181.28125
+        },
+        "headingStyle": {
+          "pointerEvents": "none",
+          "position": "absolute"
+        },
+        "host": {
+          "height": 299.8125,
+          "width": 562,
+          "x": 753,
+          "y": 181.28125
+        },
+        "name": "β-D-glucose 3D 구조",
+        "reference": {
+          "height": 282,
+          "width": 562,
+          "x": 753,
+          "y": 523.09375
+        },
+        "stage": {
+          "height": 341.8125,
+          "width": 562,
+          "x": 753,
+          "y": 181.28125
+        }
+      }
+    ],
+    "viewport": {
+      "height": 1000,
+      "width": 1600
+    },
+    "label": "interaction-spacefill-H-labels",
+    "screenshot": "interaction-spacefill-H-labels.jpg"
+  },
+  {
+    "overflow": false,
+    "panes": [
+      {
+        "canvas": {
+          "height": 338,
+          "width": 562,
+          "x": 190,
+          "y": 181.28125
+        },
+        "drawingBuffer": {
+          "height": 676,
+          "width": 1124
+        },
+        "heading": {
+          "height": 121.671875,
+          "width": 562,
+          "x": 190,
+          "y": 181.28125
+        },
+        "headingStyle": {
+          "pointerEvents": "none",
+          "position": "absolute"
+        },
+        "host": {
+          "height": 337.609375,
+          "width": 562,
+          "x": 190,
+          "y": 181.28125
+        },
+        "name": "Maltose 3D 구조",
+        "reference": {
+          "height": 282,
+          "width": 562,
+          "x": 190,
+          "y": 560.890625
+        },
+        "stage": {
+          "height": 379.609375,
+          "width": 562,
+          "x": 190,
+          "y": 181.28125
+        }
+      },
+      {
+        "canvas": {
+          "height": 338,
+          "width": 562,
+          "x": 753,
+          "y": 181.28125
+        },
+        "drawingBuffer": {
+          "height": 676,
+          "width": 1124
+        },
+        "heading": {
+          "height": 121.671875,
+          "width": 562,
+          "x": 753,
+          "y": 181.28125
+        },
+        "headingStyle": {
+          "pointerEvents": "none",
+          "position": "absolute"
+        },
+        "host": {
+          "height": 337.609375,
+          "width": 562,
+          "x": 753,
+          "y": 181.28125
+        },
+        "name": "Sucrose 3D 구조",
+        "reference": {
+          "height": 282,
+          "width": 562,
+          "x": 753,
+          "y": 560.890625
+        },
+        "stage": {
+          "height": 379.609375,
+          "width": 562,
+          "x": 753,
+          "y": 181.28125
+        }
+      }
+    ],
+    "viewport": {
+      "height": 1000,
+      "width": 1600
+    },
+    "label": "interaction-reducing-linkage",
+    "screenshot": "interaction-reducing-linkage.jpg"
+  },
+  {
+    "overflow": false,
+    "panes": [
+      {
+        "canvas": {
+          "height": 338,
+          "width": 562,
+          "x": 190,
+          "y": 181.28125
+        },
+        "drawingBuffer": {
+          "height": 676,
+          "width": 1124
+        },
+        "heading": {
+          "height": 121.671875,
+          "width": 562,
+          "x": 190,
+          "y": 181.28125
+        },
+        "headingStyle": {
+          "pointerEvents": "none",
+          "position": "absolute"
+        },
+        "host": {
+          "height": 337.609375,
+          "width": 562,
+          "x": 190,
+          "y": 181.28125
+        },
+        "name": "Maltose 3D 구조",
+        "reference": {
+          "height": 282,
+          "width": 562,
+          "x": 190,
+          "y": 560.890625
+        },
+        "stage": {
+          "height": 379.609375,
+          "width": 562,
+          "x": 190,
+          "y": 181.28125
+        }
+      },
+      {
+        "canvas": {
+          "height": 338,
+          "width": 562,
+          "x": 753,
+          "y": 181.28125
+        },
+        "drawingBuffer": {
+          "height": 676,
+          "width": 1124
+        },
+        "heading": {
+          "height": 121.671875,
+          "width": 562,
+          "x": 753,
+          "y": 181.28125
+        },
+        "headingStyle": {
+          "pointerEvents": "none",
+          "position": "absolute"
+        },
+        "host": {
+          "height": 337.609375,
+          "width": 562,
+          "x": 753,
+          "y": 181.28125
+        },
+        "name": "Sucrose 3D 구조",
+        "reference": {
+          "height": 282,
+          "width": 562,
+          "x": 753,
+          "y": 560.890625
+        },
+        "stage": {
+          "height": 379.609375,
+          "width": 562,
+          "x": 753,
+          "y": 181.28125
+        }
+      }
+    ],
+    "viewport": {
+      "height": 1000,
+      "width": 1600
+    },
+    "label": "interaction-sucrose-C2-focus",
+    "screenshot": "interaction-sucrose-C2-focus.jpg"
+  },
+  {
+    "overflow": false,
+    "panes": [
+      {
+        "canvas": {
+          "height": 338,
+          "width": 562,
+          "x": 190,
+          "y": 181.28125
+        },
+        "drawingBuffer": {
+          "height": 676,
+          "width": 1124
+        },
+        "heading": {
+          "height": 121.671875,
+          "width": 562,
+          "x": 190,
+          "y": 181.28125
+        },
+        "headingStyle": {
+          "pointerEvents": "none",
+          "position": "absolute"
+        },
+        "host": {
+          "height": 337.609375,
+          "width": 562,
+          "x": 190,
+          "y": 181.28125
+        },
+        "name": "Amylopectin 3D 구조",
+        "reference": {
+          "height": 282,
+          "width": 562,
+          "x": 190,
+          "y": 560.890625
+        },
+        "stage": {
+          "height": 379.609375,
+          "width": 562,
+          "x": 190,
+          "y": 181.28125
+        }
+      },
+      {
+        "canvas": {
+          "height": 338,
+          "width": 562,
+          "x": 753,
+          "y": 181.28125
+        },
+        "drawingBuffer": {
+          "height": 676,
+          "width": 1124
+        },
+        "heading": {
+          "height": 121.671875,
+          "width": 562,
+          "x": 753,
+          "y": 181.28125
+        },
+        "headingStyle": {
+          "pointerEvents": "none",
+          "position": "absolute"
+        },
+        "host": {
+          "height": 337.609375,
+          "width": 562,
+          "x": 753,
+          "y": 181.28125
+        },
+        "name": "Glycogen 3D 구조",
+        "reference": {
+          "height": 282,
+          "width": 562,
+          "x": 753,
+          "y": 560.890625
+        },
+        "stage": {
+          "height": 379.609375,
+          "width": 562,
+          "x": 753,
+          "y": 181.28125
+        }
+      }
+    ],
+    "viewport": {
+      "height": 1000,
+      "width": 1600
+    },
+    "label": "interaction-branch-highlighting",
+    "screenshot": "interaction-branch-highlighting.jpg"
+  },
+  {
+    "overflow": false,
+    "panes": [
+      {
+        "canvas": {
+          "height": 338,
+          "width": 562,
+          "x": 190,
+          "y": 181.28125
+        },
+        "drawingBuffer": {
+          "height": 676,
+          "width": 1124
+        },
+        "heading": {
+          "height": 121.671875,
+          "width": 562,
+          "x": 190,
+          "y": 181.28125
+        },
+        "headingStyle": {
+          "pointerEvents": "none",
+          "position": "absolute"
+        },
+        "host": {
+          "height": 337.609375,
+          "width": 562,
+          "x": 190,
+          "y": 181.28125
+        },
+        "name": "Amylopectin 3D 구조",
+        "reference": {
+          "height": 282,
+          "width": 562,
+          "x": 190,
+          "y": 560.890625
+        },
+        "stage": {
+          "height": 379.609375,
+          "width": 562,
+          "x": 190,
+          "y": 181.28125
+        }
+      },
+      {
+        "canvas": {
+          "height": 338,
+          "width": 562,
+          "x": 753,
+          "y": 181.28125
+        },
+        "drawingBuffer": {
+          "height": 676,
+          "width": 1124
+        },
+        "heading": {
+          "height": 121.671875,
+          "width": 562,
+          "x": 753,
+          "y": 181.28125
+        },
+        "headingStyle": {
+          "pointerEvents": "none",
+          "position": "absolute"
+        },
+        "host": {
+          "height": 337.609375,
+          "width": 562,
+          "x": 753,
+          "y": 181.28125
+        },
+        "name": "Glycogen 3D 구조",
+        "reference": {
+          "height": 282,
+          "width": 562,
+          "x": 753,
+          "y": 560.890625
+        },
+        "stage": {
+          "height": 379.609375,
+          "width": 562,
+          "x": 753,
+          "y": 181.28125
+        }
+      }
+    ],
+    "viewport": {
+      "height": 1000,
+      "width": 1600
+    },
+    "label": "interaction-residue-focus",
+    "screenshot": "interaction-residue-focus.jpg"
+  }
+]

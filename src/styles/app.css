@@ -166,11 +166,15 @@ h2 {
 }
 .canvas-host {
   position: absolute;
-  inset: 88px 0 42px;
+  /* The heading overlays the drawing area; only the interactive footer reserves space. */
+  inset: 0 0 42px;
   touch-action: none;
 }
 .stage-heading {
-  position: relative;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
   z-index: 1;
   display: flex;
   justify-content: space-between;
@@ -370,6 +374,7 @@ h2 {
   }
   .stage-heading {
     padding: 20px 16px;
+    display: block;
   }
   .stage-heading h2 {
     font-size: 19px;
@@ -381,7 +386,10 @@ h2 {
     padding: 14px;
   }
   .form-tag {
-    display: none;
+    display: inline-block;
+    margin-top: 4px;
+    padding: 2px 6px;
+    font-size: 11px;
   }
 }
 :root {
@@ -616,9 +624,6 @@ dialog h3 {
 .comparing .form-tag {
   display: inline-block;
   margin-top: 8px;
-}
-.comparing .canvas-host {
-  top: 115px;
 }
 .comparing .stage-footer {
   padding: 12px;

@@ -406,3 +406,179 @@ Codex 내장 Chromium/WebGL에서 1600×1000, 1366×768, 1024×900, 768×1024,
 
 최종 `main...origin/main`, 변경은 모두 unstaged/untracked working tree에 남긴다.
 기존 검증 폴더, SDF/CIF/구조 metadata, package.json/lockfile은 그대로이며 commit/push 없음.
+
+
+## 2026-10-03 · 분자별 비교 진입과 3D 상단 공간 회수
+
+### 시작 상태와 보존
+
+이번 작업 시작 시 `main...origin/main`, `git status`는 clean이었으며 `git diff`와
+`git diff --stat`는 비어 있었다. 로컬 working tree를 기준으로 기존 2D 구조식,
+framing, focus 연동, 과학 검증 파일과 이전 스크린샷을 유지했다. baseline은
+**13개 파일 / 190개 테스트 통과**였다. commit, push, 배포는 하지 않았다.
+
+### 비교 진입 원인과 수정
+
+`App.tsx`의 `toggleCompare()`가 진입/종료할 때마다 `setKind("anomer")`를 호출했다.
+이제 진입할 때만 `preferredComparisonForMolecule(id)`로 기본 비교를 선택한다.
+기존 비교 정의와 capability 계산을 `src/data/comparisons.ts`에 모으고,
+`preferredComparisonByMolecule`에 `satisfies Record<MoleculeId, ComparisonKind>`를
+적용해 14종의 누락을 타입 검사로도 방지했다.
+
+| 분자 ID | 진입 기본 비교 | 좌 / 우 |
+| --- | --- | --- |
+| GLC | anomer | GLC / BGC |
+| BGC | anomer | GLC / BGC |
+| GAL | epimer | BGC / GAL |
+| FRU | aldoseKetose | BGC / FRU |
+| BDR | deoxy | BDR / 2DR |
+| 2DR | deoxy | BDR / 2DR |
+| MAL | linkage | MAL / CBI |
+| CBI | linkage | MAL / CBI |
+| LAT | disaccharideEpimer | CBI / LAT |
+| SUC | reducingDisaccharide | MAL / SUC |
+| AMYLOSE | glucan | AMYLOSE / CELLULOSE |
+| CELLULOSE | glucan | AMYLOSE / CELLULOSE |
+| AMYLOPECTIN | branching | AMYLOPECTIN / GLYCOGEN |
+| GLYCOGEN | branching | AMYLOPECTIN / GLYCOGEN |
+
+선택 분자는 오른쪽에 있어도 유지된다. dropdown 수동 변경은 그대로 허용하며,
+비교쌍 변경/종료가 단일 보기의 `id`를 덮어쓰지 않는다. 14종 모두 실제 UI에서
+진입 → 다른 pair 수동 선택 → 종료 → 원래 분자 복귀를 확인했다.
+`focus`를 지우는 지점에서 `focusMolecule`도 함께 null로 초기화한다.
+탄소·잔기·결합 선택의 진입/비교 변경/종료 누출을 자동 검사했다.
+
+### 새 비교 3종과 과학 검증
+
+- **BGC / FRU · 알도스와 케토스:** 둘 다 6탄당. 열린 사슬 carbonyl은 glucose C1,
+  fructose C2이며 고리의 아노머 탄소도 각각 C1/C2다. 화면은 β-D-glucopyranose와
+  β-D-fructofuranose를 사용한다. 과당의 다른 고리 형태도 존재한다고 명시했다.
+- **CBI / LAT · Glc와 Gal:** β-D-Glcp-(1→4)-D-Glcp와 β-D-Galp-(1→4)-D-Glcp.
+  β(1→4)와 glucose 수용 잔기 B는 같고, 공여 잔기 A의 Glc/Gal C4 epimer 차이를
+  관찰한다. 현재 대표 구조의 자유 환원 말단은 둘 다 β형임을 구분했다.
+- **MAL / SUC · 환원 말단:** maltose A:C1–O–B:C4에는 B:C1의 자유 OH가 남는다.
+  sucrose는 A:C1–O–B:C2로 양쪽 아노머 탄소가 연결되어 자유 아노머 OH와 환원
+  말단이 없다. 표기는 **α-D-Glcp-(1→2)-β-D-Fruf**를 유지했다.
+
+원본 CIF의 atom/bond loop와 SDF를 독립 파싱하는 기존 감사 코드를 재실행하고,
+결과만 별도 `comparison-science-validation.json`에 저장했다. 이전 감사 결과를
+정답으로 사용하지 않았다. **14종 / 60잔기 / 120개 투영 검증 / 10개 원본 CCD
+전체 구조 대조 통과**. BGC/FRU의 고리와 C1/C2, CBI/LAT의 공여 잔기와 연결,
+MAL/SUC의 자유 아노머 OH 및 sucrose 양쪽 입체배치가 일치한다. 새 좌표·결합 수정은 없다.
+감사 결과의 CORRECTED 분류는 이전 작업의 해설 수정 이력을 나타내며 이번에 구조를
+수정했다는 의미가 아니다. 새로운 RDKit/CIP 계산이나 용액 평형 검증은 하지 않았다.
+
+외부 대조: [RCSB FRU](https://www.rcsb.org/ligand/FRU)는 β-D-fructofuranose와
+C6H12O6를 확인한다. [Essentials of Glycobiology · Monosaccharide Diversity](https://www.ncbi.nlm.nih.gov/books/NBK579981/?report=reader)는
+aldose/ketose, C4 epimer, 아노머 탄소와 환원성의 설명을 뒷받침한다.
+각 원본 구조의 출처와 해시는 독립 감사 JSON에 남겼다.
+
+### 실제 DOM 원인과 배치 수정
+
+수정 전 `.molecule-stage`는 relative, `.stage-heading`은 relative였고,
+`.canvas-host`는 absolute였다. 직접적인 canvas 높이 손실은 heading 자체의
+normal-flow 높이만이 아니라 **명시적 top inset**이었다. 일반 보기 `88px`,
+비교 보기 override `115px`, 하단은 `42px`를 예약하고 있었다.
+
+`.stage-heading`을 top/left/right 0의 absolute overlay로 바꾸고, canvas를
+`inset: 0 0 42px`로 확장했다. 비교 전용 `top:115px`는 제거했다.
+DOM의 h2·형태 설명·배지는 그대로이며 heading 내부에 interactive element가
+없음을 확인했다. 기존 `pointer-events:none`을 유지하여 제목 아래에서도 canvas가
+hit target이 된다. 키보드 버튼이 있는 하단 footer의 42px는 유지했다.
+900px 이하에서 기존에 숨겨지던 형태 배지도 작게 표시하며 제목 아래에 배치한다.
+글꼴 크기·색상 체계·2D 구성·sidebar·header/footer는 재설계하지 않았다.
+
+기존 `viewerFraming.ts`는 변경하지 않았다. canvas가 커지면 ResizeObserver와
+기존 bounds 계산이 표시 반경·H·라벨·공통 비교 범위를 반영한다. layout 변경 후
+관찰 크기가 충분해 별도 zoom 상수나 camera center 보정은 추가하지 않았다.
+공통 framing은 9개 비교쌍 전체를 대상으로 기존 회전 안전 범위 테스트를 확장했다.
+
+### Before / after 수치
+
+단위는 CSS px. stage 높이는 해당 pair에서 전후 동일하다. 분자 높이는 canvas
+높이를 대신 쓴 값이 아니라 저장한 기본 공-막대/H 숨김/라벨 없음 화면의 연결된
+분자 픽셀 경계를 계산한 값이다. JPEG/antialias 오차 약 2px; 전체 페이지 캡처의
+scrollbar 변화로 x좌표/폭이 약 8px 달라질 수 있으므로 높이 위주로 비교했다.
+
+| 화면 | stage 높이 | canvas 전 → 후 | canvas/stage 전 → 후 | 분자 높이 전 → 후 |
+| --- | ---: | ---: | ---: | ---: |
+| 1600 BGC | 438 | 308 → 396 | 70.3% → 90.4% | 193 → 249 |
+| 1600 α/β | 427 | 270 → 385 | 63.2% → 90.2% | 양쪽 169 → 243 |
+| 1600 MAL/CBI | 427 | 270 → 385 | 63.2% → 90.2% | 115 → 165 / 170 → 245 |
+| 1600 AMYLOSE/CELLULOSE | 427 | 270 → 385 | 63.2% → 90.2% | 64 → 93 / 46 → 65 |
+| 1600 SUC | 496 | 366 → 454 | 73.8% → 91.5% | 280 → 348 |
+| 1366 α/β | 340 | 183 → 298 | 53.8% → 87.6% | 양쪽 113 → 187 |
+| 1024 FRU | 518 | 388 → 476 | 74.9% → 91.9% | 242 → 298 |
+| 768 SUC | 518 | 388 → 476 | 74.9% → 91.9% | 297 → 365 |
+| 390 BGC | 400 | 270 → 358 | 67.5% → 89.5% | 169 → 225 |
+
+1600 비교 heading의 bounding height는 전후 **121.67px**로 같고, 일반 BGC는
+**102.14px**로 같다. 제목의 시각적 크기를 줄여 얻은 확대가 아니다.
+canvas 상단은 stage 상단과 일치하여 heading용 높이 예약이 **0px**가 되었다.
+2D reference 높이는 desktop/tablet **282px**, mobile **287px**로 전후 동일하다.
+3Dmol WebGL backing buffer도 CSS px와 별도로 기록했다(예: 비교 540→770px,
+실제 CSS drawing height는 270→385px). 두 pane의 stage와 canvas 높이는 동일하다.
+
+[DOM 및 픽셀 측정](comparison-viewport-validation.json),
+[측정 원본](comparison-viewport-screenshots/measurements.json),
+[α/β 전후 전체 비교](comparison-viewport-screenshots/before-after-anomer-pair.jpg),
+[α pane 동일 크기 확대 비교](comparison-viewport-screenshots/before-after-anomer.jpg).
+두 전후 이미지를 직접 나란히 확인했다. **상단 이름/형태/chair 정보는 유지되며
+그 정보를 위해 canvas 높이를 더 이상 예약하지 않는가? YES.**
+
+### 화면과 조작 회귀
+
+Chromium/WebGL에서 1600×1000, 1366×768, 1024×900, 768×1024, 390×844를 검증했다.
+49개 DOM 측정 기록, 59개 JPG(전후 합성·contact sheet 포함)를 저장했다.
+단당류·이당류·다당류와 9개 비교쌍을 포함한다. 모든 측정에서 가로 overflow는 없고,
+390px 비교는 각 pane의 3D → 해당 2D 순서로 쌓인다. 확인한 기본 pose에서 제목이
+분자를 심하게 가리지 않았으며, 회전 안전 framing과 비교 scale 균형을 유지한다.
+
+- 제목 위에서 실제 mouse drag: 양쪽 회전 동기화. 제목 좌표의 hit target은 CANVAS,
+  interactive heading 자식은 0개, canvas touch-action은 none.
+- 동기화 OFF: 왼쪽만 회전. 오른쪽 분자 경계는 328×225px로 유지.
+- wheel: 왼쪽 분자 경계 286×267 → 236×219px로 변함; 오른쪽 유지.
+- 초기화, 자동 회전 두 프레임, ArrowRight/+/0 키보드, 제목 영역 더블클릭 확인.
+- 공-막대/공간채움, H/번호/OH/아노머/axial-equatorial, 결합/환원 말단/가지 강조 확인.
+  모바일 H+번호+OH 및 공간채움도 직접 확인; 관찰 화면에서 원자와 번호의 잘림 없음.
+- Sucrose의 B:C2, amylopectin 잔기 A 선택이 2D/3D에서 유지됨.
+- 고리→사슬→α 닫기 및 일반 모드 복귀 후 2D 구조식 복원을 확인.
+
+[모든 캡처](comparison-viewport-screenshots/),
+[비교 contact sheet](comparison-viewport-screenshots/comparison-contact-sheet.jpg),
+[UI 진입/복귀 결과](comparison-viewport-screenshots/ui-entry-results.json),
+[요약 JSON](comparison-validation-summary.json).
+
+실제 touch 회전·pinch는 브라우저 도구가 입력 기능을 제공하지 않아 미검증이다.
+실물 기기·여러 GPU·프로젝터도 미검증이다. 많은 annotation을 동시에 켜면 기존처럼
+라벨끼리 겹칠 수 있다. 새 label placement 기능은 범위에 포함하지 않았다.
+중단된 세션 동안 개발 서버가 종료되어 재개 직후 fetch가 실패했으나 같은 서버를
+복구한 후 정상 로드되었다. 사용량 제한에 의한 자동 승인 검토 중단도 재개 후 해소됐다.
+새 빌드의 서버 중단 오프라인 검사는 이번에는 반복하지 않았으며 기존 근거는 보존했다.
+
+### 검사 결과와 변경 파일
+
+| 검사 | 결과 |
+| --- | --- |
+| baseline npm test | 13개 파일 / 190개 통과 |
+| 최종 npm test | **14개 파일 / 226개 통과** |
+| 추가 검사 | mapping/전종 포함/순서/capability 19개 + UI 왕복 14개 + focus 3개 = 36개 |
+| framing 회귀 | 기존 테스트를 9개 pair 및 확장된 canvas 치수로 강화 |
+| npm run typecheck | 통과 |
+| npm run build | 통과; 기존 3Dmol direct-eval 경고만 유지 |
+| node scripts/check-build.mjs | 14종 SDF/배포 경로/18개 offline resource 통과 |
+| 독립 과학 감사 | 14종/60잔기/120투영/10 CCD 대조 통과 |
+| git diff --check | 통과 |
+
+최종 bundle `index-Dj1qmtM-.js`, offline cache `32e27a5f3dc93cfe`.
+추가 dependency 및 기존 테스트 삭제/완화 없음.
+
+수정: `src/App.tsx`, `src/components/ComparisonViewer.tsx`, `src/styles/app.css`,
+`tests/app.test.tsx`, `tests/viewerFraming.test.ts`, `docs/VALIDATION.md`.
+신규: `src/data/comparisons.ts`, `tests/comparisons.test.ts`,
+`scripts/measure-comparison-viewport.py`, `docs/comparison-science-validation.json`,
+`docs/comparison-viewport-validation.json`, `docs/comparison-validation-summary.json`,
+`docs/comparison-test-run.txt`, `docs/comparison-viewport-screenshots/`.
+
+`git status`: 기존 tracked 파일 6개 modified, 위 신규 파일/폴더 untracked.
+모두 working tree에 남겨 두며 **commit / push / 배포 없음**.

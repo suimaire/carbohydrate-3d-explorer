@@ -9,8 +9,9 @@ import {
   within,
 } from "@testing-library/react";
 import App from "../src/App";
-import { moleculeIds, structures } from "../src/data/carbohydrates";
+import { carbohydrates, moleculeById, NO_FOCUS, moleculeIds, structures } from "../src/data/carbohydrates";
 import type { MoleculeId, ViewerOptions } from "../src/types/carbohydrate";
+import { comparisons, preferredComparisonForMolecule } from "../src/data/comparisons";
 import { readSdf } from "./sdf";
 const mocks = vi.hoisted(() => ({ create: vi.fn(), annotate: vi.fn() }));
 vi.mock("../src/lib/molecularViewer", () => ({ createViewer: mocks.create }));
@@ -183,7 +184,7 @@ it("comparison mode offers the new pairs and loads both sides", async () => {
   const select = screen.getByRole("combobox");
   expect(
     [...select.querySelectorAll("option")].map((o) => o.getAttribute("value")),
-  ).toEqual(["anomer", "epimer", "deoxy", "linkage", "glucan", "branching"]);
+  ).toEqual(["anomer", "epimer", "deoxy", "linkage", "glucan", "branching", "aldoseKetose", "disaccharideEpimer", "reducingDisaccharide"]);
   fireEvent.change(select, { target: { value: "linkage" } });
   await waitFor(() => {
     const ids = mocks.annotate.mock.calls.map((c) => c[1].id);
@@ -200,4 +201,58 @@ it("comparison mode offers the new pairs and loads both sides", async () => {
   });
   // Both polymer schematics are offered next to the atomic comparison.
   expect(screen.getAllByRole("group")).toHaveLength(2);
+});
+
+
+it.each(carbohydrates)("$id: entry contains the selected molecule, manual choice works, exit and reentry retain it", async (molecule) => {
+  render(<App />);
+  fireEvent.click(screen.getByRole("button", { name: `${molecule.name}${molecule.koreanName}` }));
+  await waitFor(() => expect(lastMolecule()).toBe(molecule.id));
+  fireEvent.click(screen.getByRole("button", { name: "비교 모드" }));
+  const kind = preferredComparisonForMolecule(molecule.id);
+  const pair = comparisons[kind];
+  expect((screen.getByRole("combobox") as HTMLSelectElement).value).toBe(kind);
+  for (const id of [pair.left, pair.right]) {
+    expect(screen.getByRole("region", { name: `${moleculeById(id).name} 3D 구조` })).toBeTruthy();
+    expect(screen.getByRole("region", { name: `${moleculeById(id).name} 2D 구조식` })).toBeTruthy();
+  }
+  const manual = kind === "epimer" ? "deoxy" : "epimer";
+  fireEvent.change(screen.getByRole("combobox"), { target: { value: manual } });
+  await waitFor(() => expect(lastMolecule()).toBe(comparisons[manual].right));
+  expect((screen.getByRole("combobox") as HTMLSelectElement).value).toBe(manual);
+  mocks.annotate.mockClear();
+  fireEvent.click(screen.getByRole("button", { name: "비교 모드 끝내기" }));
+  await waitFor(() => expect(mocks.annotate.mock.calls.some(c => c[1].id === molecule.id)).toBe(true));
+  expect(screen.getByRole("region", { name: `${molecule.name} 3D 구조` })).toBeTruthy();
+  expect(screen.getByRole("region", { name: `${molecule.name} 2D 구조식` })).toBeTruthy();
+  fireEvent.click(screen.getByRole("button", { name: "비교 모드" }));
+  expect((screen.getByRole("combobox") as HTMLSelectElement).value).toBe(kind);
+});
+
+it.each(["carbon", "residue", "bond"] as const)("clears %s focus on entry, pair change and exit", async (mode) => {
+  render(<App />);
+  await pick(/Maltose/);
+  await waitFor(() => expect(lastMolecule()).toBe("MAL"));
+  const reference = screen.getByRole("region", { name: "Maltose 2D 구조식" });
+  if (mode === "carbon") fireEvent.click(within(reference).getByRole("button", { name: "B · C1 강조" }));
+  if (mode === "bond") fireEvent.click(within(reference).getByRole("button", { name: /A:C1–O–B:C4/ }));
+  if (mode === "residue") fireEvent.click(screen.getByRole("button", { name: /Glc A/ }));
+  expect(lastCall()[3]).not.toEqual(NO_FOCUS);
+  mocks.annotate.mockClear();
+  fireEvent.click(screen.getByRole("button", { name: "비교 모드" }));
+  await waitFor(() => expect(lastMolecule()).toBe("CBI"));
+  expect(mocks.annotate.mock.calls.every(c => JSON.stringify(c[3]) === JSON.stringify(NO_FOCUS))).toBe(true);
+  const right = screen.getByRole("region", { name: "Cellobiose 2D 구조식" });
+  fireEvent.click(within(right).getByRole("button", { name: "A · C4 강조" }));
+  expect(lastCall()[3].carbon).toBe("C4");
+  mocks.annotate.mockClear();
+  // CBI remains mounted on the left in this pair: stale ownership must not survive.
+  fireEvent.change(screen.getByRole("combobox"), { target: { value: "disaccharideEpimer" } });
+  await waitFor(() => expect(lastMolecule()).toBe("LAT"));
+  expect(mocks.annotate.mock.calls.every(c => JSON.stringify(c[3]) === JSON.stringify(NO_FOCUS))).toBe(true);
+  fireEvent.click(within(screen.getByRole("region", { name: "Lactose 2D 구조식" })).getByRole("button", { name: "A · C4 강조" }));
+  mocks.annotate.mockClear();
+  fireEvent.click(screen.getByRole("button", { name: "비교 모드 끝내기" }));
+  await waitFor(() => expect(mocks.annotate.mock.calls.some(c => c[1].id === "MAL")).toBe(true));
+  expect(mocks.annotate.mock.calls.every(c => JSON.stringify(c[3]) === JSON.stringify(NO_FOCUS))).toBe(true);
 });

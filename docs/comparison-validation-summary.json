@@ -1,0 +1,96 @@
+{
+  "date": "2026-10-03",
+  "baseline": {
+    "gitStatus": "main...origin/main; clean",
+    "testFiles": 13,
+    "tests": 190
+  },
+  "result": {
+    "testFiles": 14,
+    "tests": 226,
+    "addedTests": 36,
+    "typecheck": "passed",
+    "build": "passed",
+    "buildAsset": "index-Dj1qmtM-.js",
+    "offlineManifest": "18 resources; 32e27a5f3dc93cfe",
+    "checkBuild": "passed",
+    "gitDiffCheck": "passed"
+  },
+  "browser": {
+    "engine": "Codex in-app Chromium/WebGL",
+    "viewports": [
+      [
+        1600,
+        1000
+      ],
+      [
+        1366,
+        768
+      ],
+      [
+        1024,
+        900
+      ],
+      [
+        768,
+        1024
+      ],
+      [
+        390,
+        844
+      ]
+    ],
+    "entryExitMolecules": 14,
+    "comparisonPairs": 9,
+    "measurementRecords": 49,
+    "screenshots": 59,
+    "horizontalOverflow": false,
+    "nativeTouchPinch": "unverified; browser API exposes no touch/pinch input"
+  },
+  "interactionResults": {
+    "headingHitTest": "CANVAS under both headings; pointer-events none; no interactive heading descendants",
+    "dragFromHeading": "both synchronized panes rotate",
+    "independentDrag": "left changes; right molecular box remains 328 x 225 px",
+    "wheel": "left molecular box changes from 286 x 267 to 236 x 219 px",
+    "reset": "default orientation restored",
+    "autoRotation": "different frames saved; reset stops spinning",
+    "doubleClick": "heading-area double click; zero UI alerts",
+    "keyboard": "ArrowRight, +, 0 exercised",
+    "displayOptions": [
+      "ball-stick",
+      "spacefill",
+      "H",
+      "carbon numbering",
+      "OH",
+      "anomeric carbon",
+      "axial/equatorial",
+      "glycosidic bond",
+      "reducing end",
+      "branch highlighting"
+    ],
+    "focus": "sucrose B:C2 and amylopectin residue A show paired 2D/3D focus; automated carbon/residue/bond reset on all mode boundaries",
+    "ringChain": "beta ring -> open chain -> alpha closure; return restores 2D reference"
+  },
+  "science": {
+    "structures": 14,
+    "residues": 60,
+    "projectionChecks": 120,
+    "rawCcdWholeStructureChecks": 10,
+    "changesToStructures": 0,
+    "newComparisons": "BGC/FRU; CBI/LAT; MAL/SUC verified against raw CCD and shipped SDF",
+    "freshCip": "not rerun; original CCD handedness checked independently"
+  },
+  "limitations": [
+    "No physical touch/pinch, projector or multiple-GPU validation.",
+    "Some 3D annotation labels overlap each other with many overlays enabled; no new label-placement system.",
+    "Screenshot molecular bounds have about 2px tolerance. Full-page capture may reflow horizontal scrollbar gutters.",
+    "Development server stopped during the interrupted turn; a failed fetch recovered after restarting the same local server. This was not a structure-data error.",
+    "No deployment or new offline-origin-stop test for this change. Existing offline evidence preserved."
+  ],
+  "scope": {
+    "framingCodeChanged": false,
+    "twoDCodeChanged": false,
+    "dependenciesAdded": false,
+    "commitPushDeploy": false
+  }
+}

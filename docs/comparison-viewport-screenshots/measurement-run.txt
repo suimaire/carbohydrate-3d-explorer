@@ -1,0 +1,398 @@
+[
+  {
+    "case": "1600-BGC",
+    "panes": [
+      {
+        "name": "モ-D-glucose 3D 备炼",
+        "stageBefore": 438,
+        "stageAfter": 438,
+        "canvasBefore": 308,
+        "canvasAfter": 396,
+        "ratioBefore": 0.7031963470319634,
+        "ratioAfter": 0.9041095890410958,
+        "headingBefore": 102.140625,
+        "headingAfter": 102.140625,
+        "moleculeBefore": {
+          "x": 350,
+          "y": 37,
+          "width": 238,
+          "height": 193,
+          "edgeMargin": 37
+        },
+        "moleculeAfter": {
+          "x": 318,
+          "y": 47,
+          "width": 308,
+          "height": 249,
+          "edgeMargin": 47
+        },
+        "referenceBefore": 282,
+        "referenceAfter": 282
+      }
+    ]
+  },
+  {
+    "case": "1600-compare-anomer",
+    "panes": [
+      {
+        "name": "メ-D-glucose 3D 备炼",
+        "stageBefore": 427,
+        "stageAfter": 427,
+        "canvasBefore": 270,
+        "canvasAfter": 385,
+        "ratioBefore": 0.6323185011709602,
+        "ratioAfter": 0.9016393442622951,
+        "headingBefore": 121.671875,
+        "headingAfter": 121.671875,
+        "moleculeBefore": {
+          "x": 186,
+          "y": 34,
+          "width": 166,
+          "height": 169,
+          "edgeMargin": 34
+        },
+        "moleculeAfter": {
+          "x": 145,
+          "y": 47,
+          "width": 238,
+          "height": 243,
+          "edgeMargin": 47
+        },
+        "referenceBefore": 282,
+        "referenceAfter": 282
+      },
+      {
+        "name": "モ-D-glucose 3D 备炼",
+        "stageBefore": 427,
+        "stageAfter": 427,
+        "canvasBefore": 270,
+        "canvasAfter": 385,
+        "ratioBefore": 0.6323185011709602,
+        "ratioAfter": 0.9016393442622951,
+        "headingBefore": 121.671875,
+        "headingAfter": 121.671875,
+        "moleculeBefore": {
+          "x": 186,
+          "y": 34,
+          "width": 209,
+          "height": 169,
+          "edgeMargin": 34
+        },
+        "moleculeAfter": {
+          "x": 145,
+          "y": 47,
+          "width": 300,
+          "height": 243,
+          "edgeMargin": 47
+        },
+        "referenceBefore": 282,
+        "referenceAfter": 282
+      }
+    ]
+  },
+  {
+    "case": "1600-compare-linkage",
+    "panes": [
+      {
+        "name": "Maltose 3D 备炼",
+        "stageBefore": 427,
+        "stageAfter": 427,
+        "canvasBefore": 270,
+        "canvasAfter": 385,
+        "ratioBefore": 0.6323185011709602,
+        "ratioAfter": 0.9016393442622951,
+        "headingBefore": 121.671875,
+        "headingAfter": 121.671875,
+        "moleculeBefore": {
+          "x": 176,
+          "y": 56,
+          "width": 204,
+          "height": 115,
+          "edgeMargin": 56
+        },
+        "moleculeAfter": {
+          "x": 131,
+          "y": 79,
+          "width": 292,
+          "height": 165,
+          "edgeMargin": 79
+        },
+        "referenceBefore": 282,
+        "referenceAfter": 282
+      },
+      {
+        "name": "Cellobiose 3D 备炼",
+        "stageBefore": 427,
+        "stageAfter": 427,
+        "canvasBefore": 270,
+        "canvasAfter": 385,
+        "ratioBefore": 0.6323185011709602,
+        "ratioAfter": 0.9016393442622951,
+        "headingBefore": 121.671875,
+        "headingAfter": 121.671875,
+        "moleculeBefore": {
+          "x": 163,
+          "y": 56,
+          "width": 247,
+          "height": 170,
+          "edgeMargin": 44
+        },
+        "moleculeAfter": {
+          "x": 111,
+          "y": 78,
+          "width": 355,
+          "height": 245,
+          "edgeMargin": 62
+        },
+        "referenceBefore": 282,
+        "referenceAfter": 282
+      }
+    ]
+  },
+  {
+    "case": "1600-compare-glucan",
+    "panes": [
+      {
+        "name": "Amylose 3D 备炼",
+        "stageBefore": 427,
+        "stageAfter": 427,
+        "canvasBefore": 270,
+        "canvasAfter": 385,
+        "ratioBefore": 0.6323185011709602,
+        "ratioAfter": 0.9016393442622951,
+        "headingBefore": 121.671875,
+        "headingAfter": 121.671875,
+        "moleculeBefore": {
+          "x": 155,
+          "y": 102,
+          "width": 251,
+          "height": 64,
+          "edgeMargin": 102
+        },
+        "moleculeAfter": {
+          "x": 100,
+          "y": 145,
+          "width": 360,
+          "height": 93,
+          "edgeMargin": 100
+        },
+        "referenceBefore": 282,
+        "referenceAfter": 282
+      },
+      {
+        "name": "Cellulose 3D 备炼",
+        "stageBefore": 427,
+        "stageAfter": 427,
+        "canvasBefore": 270,
+        "canvasAfter": 385,
+        "ratioBefore": 0.6323185011709602,
+        "ratioAfter": 0.9016393442622951,
+        "headingBefore": 121.671875,
+        "headingAfter": 121.671875,
+        "moleculeBefore": {
+          "x": 158,
+          "y": 112,
+          "width": 244,
+          "height": 46,
+          "edgeMargin": 112
+        },
+        "moleculeAfter": {
+          "x": 104,
+          "y": 160,
+          "width": 350,
+          "height": 65,
+          "edgeMargin": 104
+        },
+        "referenceBefore": 282,
+        "referenceAfter": 282
+      }
+    ]
+  },
+  {
+    "case": "1600-SUC",
+    "panes": [
+      {
+        "name": "Sucrose 3D 备炼",
+        "stageBefore": 496,
+        "stageAfter": 496,
+        "canvasBefore": 366,
+        "canvasAfter": 454,
+        "ratioBefore": 0.7379032258064516,
+        "ratioAfter": 0.9153225806451613,
+        "headingBefore": 102.140625,
+        "headingAfter": 102.140625,
+        "moleculeBefore": {
+          "x": 318,
+          "y": 35,
+          "width": 256,
+          "height": 280,
+          "edgeMargin": 35
+        },
+        "moleculeAfter": {
+          "x": 283,
+          "y": 42,
+          "width": 319,
+          "height": 348,
+          "edgeMargin": 42
+        },
+        "referenceBefore": 282,
+        "referenceAfter": 282
+      }
+    ]
+  },
+  {
+    "case": "1366-compare-anomer",
+    "panes": [
+      {
+        "name": "メ-D-glucose 3D 备炼",
+        "stageBefore": 340,
+        "stageAfter": 340,
+        "canvasBefore": 183,
+        "canvasAfter": 298,
+        "ratioBefore": 0.538235294117647,
+        "ratioAfter": 0.8764705882352941,
+        "headingBefore": 121.671875,
+        "headingAfter": 121.671875,
+        "moleculeBefore": {
+          "x": 159,
+          "y": 24,
+          "width": 111,
+          "height": 113,
+          "edgeMargin": 24
+        },
+        "moleculeAfter": {
+          "x": 118,
+          "y": 37,
+          "width": 183,
+          "height": 187,
+          "edgeMargin": 37
+        },
+        "referenceBefore": 282,
+        "referenceAfter": 282
+      },
+      {
+        "name": "モ-D-glucose 3D 备炼",
+        "stageBefore": 340,
+        "stageAfter": 340,
+        "canvasBefore": 183,
+        "canvasAfter": 298,
+        "ratioBefore": 0.538235294117647,
+        "ratioAfter": 0.8764705882352941,
+        "headingBefore": 121.671875,
+        "headingAfter": 121.671875,
+        "moleculeBefore": {
+          "x": 159,
+          "y": 24,
+          "width": 140,
+          "height": 113,
+          "edgeMargin": 24
+        },
+        "moleculeAfter": {
+          "x": 118,
+          "y": 37,
+          "width": 231,
+          "height": 187,
+          "edgeMargin": 37
+        },
+        "referenceBefore": 282,
+        "referenceAfter": 282
+      }
+    ]
+  },
+  {
+    "case": "1024-FRU",
+    "panes": [
+      {
+        "name": "D-fructose 3D 备炼",
+        "stageBefore": 518,
+        "stageAfter": 518,
+        "canvasBefore": 388,
+        "canvasAfter": 476,
+        "ratioBefore": 0.749034749034749,
+        "ratioAfter": 0.918918918918919,
+        "headingBefore": 102.140625,
+        "headingAfter": 102.140625,
+        "moleculeBefore": {
+          "x": 287,
+          "y": 85,
+          "width": 290,
+          "height": 242,
+          "edgeMargin": 61
+        },
+        "moleculeAfter": {
+          "x": 257,
+          "y": 104,
+          "width": 357,
+          "height": 298,
+          "edgeMargin": 74
+        },
+        "referenceBefore": 282,
+        "referenceAfter": 282
+      }
+    ]
+  },
+  {
+    "case": "768-SUC",
+    "panes": [
+      {
+        "name": "Sucrose 3D 备炼",
+        "stageBefore": 518,
+        "stageAfter": 518,
+        "canvasBefore": 388,
+        "canvasAfter": 476,
+        "ratioBefore": 0.749034749034749,
+        "ratioAfter": 0.918918918918919,
+        "headingBefore": 89.4375,
+        "headingAfter": 117.03125,
+        "moleculeBefore": {
+          "x": 233,
+          "y": 22,
+          "width": 273,
+          "height": 297,
+          "edgeMargin": 22
+        },
+        "moleculeAfter": {
+          "x": 199,
+          "y": 30,
+          "width": 335,
+          "height": 365,
+          "edgeMargin": 30
+        },
+        "referenceBefore": 282,
+        "referenceAfter": 282
+      }
+    ]
+  },
+  {
+    "case": "390-BGC",
+    "panes": [
+      {
+        "name": "モ-D-glucose 3D 备炼",
+        "stageBefore": 400,
+        "stageAfter": 400,
+        "canvasBefore": 270,
+        "canvasAfter": 358,
+        "ratioBefore": 0.675,
+        "ratioAfter": 0.895,
+        "headingBefore": 89.4375,
+        "headingAfter": 117.03125,
+        "moleculeBefore": {
+          "x": 99,
+          "y": 18,
+          "width": 208,
+          "height": 169,
+          "edgeMargin": 18
+        },
+        "moleculeAfter": {
+          "x": 67,
+          "y": 28,
+          "width": 278,
+          "height": 225,
+          "edgeMargin": 28
+        },
+        "referenceBefore": 287,
+        "referenceAfter": 287
+      }
+    ]
+  }
+]

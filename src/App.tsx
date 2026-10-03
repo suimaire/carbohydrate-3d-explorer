@@ -1,12 +1,13 @@
 import { useCallback, useEffect, useMemo, useState } from "react";
 import { MoleculeSidebar } from "./components/MoleculeSidebar";
 import { MoleculeInfo } from "./components/MoleculeInfo";
+import { ComparisonViewer } from "./components/ComparisonViewer";
 import {
-  ComparisonViewer,
   comparisonCapabilities,
   comparisons,
-} from "./components/ComparisonViewer";
-import type { ComparisonKind } from "./components/ComparisonViewer";
+  preferredComparisonForMolecule,
+} from "./data/comparisons";
+import type { ComparisonKind } from "./data/comparisons";
 import { ObservationQuestions } from "./components/ObservationQuestions";
 import { HelpDialog } from "./components/HelpDialog";
 import { registerExplorerTool } from "./lib/webmcp";
@@ -41,6 +42,7 @@ export default function App() {
     setInterconversion(false);
     setCompare(false);
     setFocus(NO_FOCUS);
+    setFocusMolecule(null);
     setOptions((o) => ({
       ...o,
       axial: false,
@@ -68,14 +70,16 @@ export default function App() {
     setOptions((o) => ({ ...o, spinning: false }));
     setReset((r) => r + 1);
     setFocus(NO_FOCUS);
+    setFocusMolecule(null);
   };
   const toggleCompare = () => {
     setInterconversion(false);
     setCompare((c) => !c);
-    setKind("anomer");
+    if (!compare) setKind(preferredComparisonForMolecule(id));
     setSync(true);
     setOptions((o) => ({ ...o, spinning: false }));
     setFocus(NO_FOCUS);
+    setFocusMolecule(null);
     setReset((r) => r + 1);
   };
   const focusResidue = (residue: string) => {
@@ -137,6 +141,7 @@ export default function App() {
                   onChange={(e) => {
                     setKind(e.target.value as ComparisonKind);
                     setFocus(NO_FOCUS);
+                    setFocusMolecule(null);
                     setOptions((o) => ({
                       ...o,
                       axial: false,
@@ -166,6 +171,7 @@ export default function App() {
                 setInterconversion(active => !active);
                 setOptions(o => ({ ...o, spinning: false }));
                 setFocus(NO_FOCUS);
+                setFocusMolecule(null);
               }}>{interconversion ? "일반 구조 보기로" : "고리 ↔ 사슬 전환"}</button>
               <span>α · 사슬형 · β의 연결을 관찰하세요</span>
             </div>

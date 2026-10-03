@@ -2,11 +2,13 @@ import { describe, expect, it } from "vitest";
 import { carbohydrates, defaultOptions } from "../src/data/carbohydrates";
 import { createFramingGroup, defaultFramingDistance, framingCenter } from "../src/lib/viewerFraming";
 import type { FramingLabel } from "../src/lib/viewerFraming";
+import { comparisons } from "../src/data/comparisons";
 import { readSdf } from "./sdf";
 
 const viewports = [
   { width: 919, height: 308 }, { width: 562, height: 270 },
   { width: 375, height: 270 }, { width: 275, height: 450 },
+  { width: 562, height: 385 }, { width: 445, height: 298 }, { width: 375, height: 358 },
 ];
 const modes = [defaultOptions, { ...defaultOptions, hydrogen: true },
   { ...defaultOptions, representation: "spacefill" as const, hydrogen: true }];
@@ -70,7 +72,7 @@ describe("default molecular framing", () => {
   });
 
   it("fits synchronized pairs around a shared center, including the offset MAL/CBI conformers", () => {
-    for (const [left, right] of [["GLC", "BGC"], ["MAL", "CBI"], ["AMYLOSE", "CELLULOSE"]] as const) {
+    for (const { left, right } of Object.values(comparisons)) {
       for (const options of modes) {
         const atoms = [readSdf(left).atoms, readSdf(right).atoms];
         const group = createFramingGroup([left, right]);

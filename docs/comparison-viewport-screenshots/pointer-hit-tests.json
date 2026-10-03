@@ -1,0 +1,22 @@
+[
+  {
+    "inCanvas": true,
+    "interactiveHeadingCount": 0,
+    "point": {
+      "x": 225,
+      "y": 211.28125
+    },
+    "tag": "CANVAS",
+    "touchAction": "none"
+  },
+  {
+    "inCanvas": true,
+    "interactiveHeadingCount": 0,
+    "point": {
+      "x": 788,
+      "y": 211.28125
+    },
+    "tag": "CANVAS",
+    "touchAction": "none"
+  }
+]
